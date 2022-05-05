@@ -8,7 +8,7 @@ A 2d side scroller where players go from point A to point B using magic to defea
 - a: left
 - d: right
 - s: crouch/fall through platforms
-- aim with the mouse and right click to use magic
+- aim with the mouse and left click to use magic
 
 Jira link: https://rooty-tooty.atlassian.net/jira/software/projects/RT/boards/1/roadmap?shared=&atlOrigin=eyJpIjoiMmRjYmU5NTMxZjhiNDkwY2JjYWY0OWFhZmM0MzQ2NzEiLCJwIjoiaiJ9
 
