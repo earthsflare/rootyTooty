@@ -12,7 +12,7 @@ A 2d side scroller where players go from point A to point B using magic to defea
 
 Jira link: https://rooty-tooty.atlassian.net/jira/software/projects/RT/boards/1/roadmap?shared=&atlOrigin=eyJpIjoiMmRjYmU5NTMxZjhiNDkwY2JjYWY0OWFhZmM0MzQ2NzEiLCJwIjoiaiJ9
 
-Playfab link: 
+Cloud environment: Playfab free-version limited to 100k users.
 
 ---
 
