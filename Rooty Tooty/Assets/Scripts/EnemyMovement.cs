@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [Tooltip("The starting position of the enemy")] 
     public float startingPos;
+    [Tooltip("The distance the enemy can move away from the starting position")]
     public float dist = 5;
+    [Tooltip("The movement speed of the enemy")]
     public float speed = 5;
+    [Tooltip("The direction the enemy is facing; -1 for left +1 for right")]
     public int dir;
+    [Tooltip("A bool for determining whether the enemy is facing left")]
     bool facingLeft = true;
     void Start()
     {
@@ -37,21 +42,21 @@ public class EnemyMovement : MonoBehaviour
         //if the enemy is moving to the left and not facing the left calls the flipSprite function
         if (dir == -1 && !facingLeft)
         {
-            flipSprite();
+            FlipSprite();
             Debug.Log("Flipping Sprite");
         }
         //if the enemy is moving to the right and facing the left calls the flipSprite function
         else if (dir == 1 && facingLeft)
         {
-            flipSprite();
+            FlipSprite();
             Debug.Log("Flipping Sprite");
         }
         //moves the enemy forward based on speed given and direction
-        transform.Translate(Vector3.right * speed * Time.deltaTime * dir);
+        transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
 
     }
     //Flips the sprite along the x axis by multiplying the x scale by -1
-    void flipSprite()
+    void FlipSprite()
     {
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
