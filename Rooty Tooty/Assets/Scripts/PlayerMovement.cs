@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public int MAXJUMPS = 2;                    //Double Jumping or more
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
 
-    private int jumpCounter;                    //Current amount of jumps
+    public int jumpCounter;                    //Current amount of jumps
     private bool isGrounded;
 
     public Rigidbody2D rb;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void start()
     {
-        jumpCounter = 0;
+        jumpCounter = MAXJUMPS;
     }
 
 
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
-        if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
+        if (Input.GetButtonDown("Jump") && jumpCounter > 0)
         {
             isJumping = true;
         }
@@ -60,21 +60,21 @@ public class PlayerMovement : MonoBehaviour
     //Called many times per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
-
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
 
+        rb.velocity = new Vector2(movement.x, rb.velocity.y);
 
         if (isGrounded)
         {
-            jumpCounter = 0;
+            jumpCounter = MAXJUMPS;
         }
 
         //Add jump force if the player used the jump key and perform a jump
-        if (isJumping && jumpCounter < MAXJUMPS)
+        if (isJumping && (jumpCounter > 0))
         {
-            rb.AddForce(new Vector2(0f, jumpHeight));
-            jumpCounter++;
+            Debug.Log("Add Force!");
+            rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            jumpCounter--;
         }
         isJumping = false;
 
