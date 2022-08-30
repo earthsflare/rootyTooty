@@ -22,13 +22,14 @@ public class PlayerMovement : MonoBehaviour
 
     public int jumpCounter;                    //Current amount of jumps
     private bool isGrounded;
+    private bool facingRight = true;            //Which direction the player sprite is facing
 
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
 
     private void start()
     {
-        jumpCounter = MAXJUMPS;
+        jumpCounter = 0;
     }
 
 
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
 
-        if (Input.GetButtonDown("Jump") && jumpCounter > 0)
+        if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
         {
             isJumping = true;
         }
@@ -66,17 +67,32 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
         {
-            jumpCounter = MAXJUMPS;
+            jumpCounter = 0;
         }
 
         //Add jump force if the player used the jump key and perform a jump
-        if (isJumping && (jumpCounter > 0))
+        if (isJumping && (jumpCounter < MAXJUMPS))
         {
             Debug.Log("Add Force!");
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-            jumpCounter--;
+            jumpCounter++;
         }
         isJumping = false;
 
+        if(movement.x > 0 && !facingRight)
+        {
+            flipCharacter();
+        }
+        else if (movement.x < 0 && facingRight)
+        {
+            flipCharacter();
+        }
+
+    }
+    //Flips the character sprite if the movement direction is left or -1
+    private void flipCharacter()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
