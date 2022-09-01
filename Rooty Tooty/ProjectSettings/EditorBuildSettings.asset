@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu - Williams.unity
+    path: Assets/Scenes/Menu.unity
     guid: 1a9f27e8f7f0dec43af3f1b7929cc1ec
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
