@@ -27,24 +27,34 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
-        //if the enemy is moving to the left and not facing the left calls the flipSprite function
-        if (dir == -1 && !facingLeft)
-        {
-            FlipSprite();
-            Debug.Log("Flipping Sprite");
-        }
-        //if the enemy is moving to the right and facing the left calls the flipSprite function
-        else if (dir == 1 && facingLeft)
-        {
-            FlipSprite();
-            Debug.Log("Flipping Sprite");
-        }
         if (playerInRange)
         {
             //moves the enemy forward based on speed given and direction
             Debug.Log("moving toward player");
             Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, inRangeSpeed * Time.deltaTime);
             transform.position = new Vector3(tempVector2.x, tempVector2.y, 0);
+            if (transform.position.x > player.transform.position.x)
+            {
+                dir = -1;
+                Debug.Log("Chasing Player Left");
+            }
+            else if (transform.position.x < player.transform.position.x)
+            {
+                dir = 1;
+                Debug.Log("Chasing Player Right");
+            }
+            //if the enemy is moving to the left and not facing the left calls the flipSprite function
+            if (dir == -1 && !facingLeft)
+            {
+                FlipSprite();
+                Debug.Log("Flipping Sprite");
+            }
+            //if the enemy is moving to the right and facing the left calls the flipSprite function
+            else if (dir == 1 && facingLeft)
+            {
+                FlipSprite();
+                Debug.Log("Flipping Sprite");
+            }
         }
         else
         {
@@ -61,6 +71,19 @@ public class EnemyMovement : MonoBehaviour
                 //flips the direction to the right
                 dir = 1;
                 Debug.Log("Moving Right");
+            }
+
+            //if the enemy is moving to the left and not facing the left calls the flipSprite function
+            if (dir == -1 && !facingLeft)
+            {
+                FlipSprite();
+                Debug.Log("Flipping Sprite");
+            }
+            //if the enemy is moving to the right and facing the left calls the flipSprite function
+            else if (dir == 1 && facingLeft)
+            {
+                FlipSprite();
+                Debug.Log("Flipping Sprite");
             }
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
         }
