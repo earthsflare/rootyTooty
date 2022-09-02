@@ -510,6 +510,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!50 &2059464211 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2740910198714349526, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+  m_PrefabInstance: {fileID: 2740910198177445592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2740910198177445592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,16 +575,24 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2740910198714349524, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 2059464211}
+    - target: {fileID: 2740910198714349524, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
       propertyPath: speed
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2740910198714349524, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1925654141}
     - target: {fileID: 2740910198714349524, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+      propertyPath: jumpHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2740910198714349524, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
       propertyPath: inRangeSpeed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2740910198714349513, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}

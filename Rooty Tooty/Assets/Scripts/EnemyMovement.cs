@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody2D rb;
     public float jumpHeight = 1f;
     float jumpForce;
+    bool readyToChase;
     void Start()
     {
         //starting frame takes the enemy's starting position and their starting direction
@@ -32,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
-        if (playerInRange)
+        if (playerInRange && readyToChase)
         {
             //moves the enemy forward based on speed given and direction
             Debug.Log("moving toward player");
@@ -50,7 +51,7 @@ public class EnemyMovement : MonoBehaviour
             }
             SpriteDirectionCheck();
         }
-        else
+        else if (!playerInRange)
         {
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
             if (transform.position.x > startingPos + dist)
@@ -99,9 +100,10 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator StartCharge()
     {
         Debug.Log("Coroutine Called");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
         rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
+        readyToChase = true;
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -117,6 +119,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log("Exiting Player Range");
             playerInRange = false;
+            readyToChase = false;
         }
     }
 }
