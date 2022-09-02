@@ -6,31 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5706035456075c5f595a592346770841144e492c757870617a2b4f6bbbb76460
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 515556565c07510e5c5e5d2346770740434e1d727f7c7e327c2f4564b2b2676f
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 0508075f52060c580c580a7143770d494f4f487d2f2c2064782c4560bbe13260
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 0053575f5c055e0d555e5826467b084415154f797a7172347d7b4937b3b7353b
-      flags: 0
-    RecentlyUsedSceneGuid-4:
       value: 5757065451040d035f0b0e2312730844464f482f757f73362b714d37e7e4633e
       flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-1:
       value: 52500d0057020c030b590a7214265c4445161e792a792467747b4430e1b1313b
       flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-2:
       value: 00540d0550015b5a5a5e592449215a44424f4b78742a7067787d4561b7b03061
       flags: 0
-    RecentlyUsedSceneGuid-7:
+    RecentlyUsedSceneGuid-3:
       value: 5b5455575d510a0f540f547a437a5b4446154c282e7e75352c2f4a63e4b96239
       flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-4:
       value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 540204510150580f5d0d547048700a44464f1e2b7d7c77672928456ab6b56d6d
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 535702040453080a090c0e7149760f444315407b747e20652e794f60e4e36739
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 5555525651045d5d5556082714745e44464e1a792a2d20652e70486ae1b9643b
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 500055520106595e090d5c2112765c4443154d2f742c2531297d1b66e4e4646a
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+      value: 5b0801055207580b540c0a2415715c444515407c7e7f226574794f36b2b7676f
       flags: 0
     RecentlyUsedScenePath-0:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d

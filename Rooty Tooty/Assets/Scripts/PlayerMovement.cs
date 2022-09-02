@@ -26,11 +26,27 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
 
+    private static GameObject Instance;
+
+// ensures the character is not deleted upon loading a new scene + 
+// removes duplicating the character
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = gameObject;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void start()
     {
         jumpCounter = MAXJUMPS;
     }
-
 
     // Update is called once per frame
     void Update()
@@ -57,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
+
     //Called many times per frame
     void FixedUpdate()
     {
@@ -79,4 +97,11 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
 
     }
+
+    // sends the player to the start position of each level
+    private void OnLevelWasLoaded(int level)
+    {
+        transform.position = GameObject.FindWithTag("StartPos").transform.position;
+    }
+
 }
