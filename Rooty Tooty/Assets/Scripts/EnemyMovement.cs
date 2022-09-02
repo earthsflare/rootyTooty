@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     [Tooltip("The distance the enemy can move away from the starting position")]
     public float dist = 5;
     [Tooltip("The movement speed of the enemy")]
-    public float speed = 0.01f;
+    public float speed = 2f;
     [Tooltip("The direction the enemy is facing; -1 for left +1 for right")]
     public int dir;
     [Tooltip("A bool for determining whether the enemy is facing left")]
@@ -18,12 +18,17 @@ public class EnemyMovement : MonoBehaviour
     //Enemy Vision Range is determined by a Circle Collider 2D on the player GameObject
     bool playerInRange = false;
     public GameObject player;
-    public float inRangeSpeed = 0.01f;
+    public float inRangeSpeed = 4f;
+    public Rigidbody2D rb;
+    public float jumpHeight = 1f;
+    float jumpForce;
     void Start()
     {
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
         dir = -1;
+        //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
+        jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
     }
     void Update()
     {
@@ -43,18 +48,7 @@ public class EnemyMovement : MonoBehaviour
                 dir = 1;
                 Debug.Log("Chasing Player Right");
             }
-            //if the enemy is moving to the left and not facing the left calls the flipSprite function
-            if (dir == -1 && !facingLeft)
-            {
-                FlipSprite();
-                Debug.Log("Flipping Sprite");
-            }
-            //if the enemy is moving to the right and facing the left calls the flipSprite function
-            else if (dir == 1 && facingLeft)
-            {
-                FlipSprite();
-                Debug.Log("Flipping Sprite");
-            }
+            SpriteDirectionCheck();
         }
         else
         {
@@ -72,19 +66,7 @@ public class EnemyMovement : MonoBehaviour
                 dir = 1;
                 Debug.Log("Moving Right");
             }
-
-            //if the enemy is moving to the left and not facing the left calls the flipSprite function
-            if (dir == -1 && !facingLeft)
-            {
-                FlipSprite();
-                Debug.Log("Flipping Sprite");
-            }
-            //if the enemy is moving to the right and facing the left calls the flipSprite function
-            else if (dir == 1 && facingLeft)
-            {
-                FlipSprite();
-                Debug.Log("Flipping Sprite");
-            }
+            SpriteDirectionCheck();
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
         }
 
@@ -92,18 +74,41 @@ public class EnemyMovement : MonoBehaviour
 
     }
     //Flips the sprite along the x axis by multiplying the x scale by -1
-    void FlipSprite()
+    private void FlipSprite()
     {
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         facingLeft = !facingLeft;
     }
+    private void SpriteDirectionCheck()
+    {
+        //if the enemy is moving to the left and not facing the left calls the flipSprite function
+        if (dir == -1 && !facingLeft)
+        {
+            FlipSprite();
+            Debug.Log("Flipping Sprite");
+        }
+        //if the enemy is moving to the right and facing the left calls the flipSprite function
+        else if (dir == 1 && facingLeft)
+        {
+            FlipSprite();
+            Debug.Log("Flipping Sprite");
+        }
+    }
+    IEnumerator StartCharge()
+    {
+        Debug.Log("Coroutine Called");
+        yield return new WaitForSeconds(5);
+        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(5);
+    }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("PlayerAggroRange")){
             Debug.Log("Entering Player Range");
             playerInRange = true;
+            StartCoroutine(StartCharge());
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
