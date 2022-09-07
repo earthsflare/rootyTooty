@@ -6,9 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     // ctrl + shift + / will comment out
 
-    //TODO: Flip Character and create colliders for character and other objects.
-    //TODO: For platforms and Floor give them the ground layer so the program knows when the character is on the ground and won't fall through
-
     public float regSpeed = 5f;
     public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
     public float jumpHeight = 8f;
@@ -73,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
         //Add jump force if the player used the jump key and perform a jump
         if (isJumping && (jumpCounter < MAXJUMPS))
         {
-            Debug.Log("Add Force!");
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
             jumpCounter++;
         }
