@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private void start()
     {
         jumpCounter = 0;
+        animator.SetInteger("JumpCount", jumpCounter);
     }
 
 
@@ -46,9 +47,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
         {
+            animator.SetBool("Jump", true);
             isJumping = true;
         }
 
@@ -65,13 +68,16 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             jumpCounter = 0;
+            animator.SetInteger("JumpCount", jumpCounter);
         }
+        animator.SetBool("Jump", !isGrounded);
 
         //Add jump force if the player used the jump key and perform a jump
         if (isJumping && (jumpCounter < MAXJUMPS))
         {
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
             jumpCounter++;
+            animator.SetInteger("JumpCount", jumpCounter);
         }
         isJumping = false;
 
