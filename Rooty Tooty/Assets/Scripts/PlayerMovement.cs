@@ -26,22 +26,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
 
-    private static GameObject Instance;
-
-// ensures the character is not deleted upon loading a new scene + 
-// removes duplicating the character
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = gameObject;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     private void start()
     {
@@ -99,9 +83,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // sends the player to the start position of each level
-    private void OnLevelWasLoaded(int level)
-    {
-        transform.position = GameObject.FindWithTag("StartPos").transform.position;
-    }
+    //private void OnLevelWasLoaded(int level)
+    //{
+     //   transform.position = GameObject.FindWithTag("StartPos").transform.position;
+   // }
 
 }
