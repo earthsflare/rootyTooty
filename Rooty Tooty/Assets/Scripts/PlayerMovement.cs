@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PlayerAction
 {
     // ctrl + shift + / will comment out
 
@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
-
 
     private void start()
     {
