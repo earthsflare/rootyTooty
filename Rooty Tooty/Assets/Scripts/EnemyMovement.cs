@@ -30,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
     [Tooltip("A bool that ensures the enemy does his charge animation before chasing the player")]
     bool readyToChase;
     public float enemyReactionTime = 1;
+    bool isGrounded = true;
     void Start()
     {
         //starting frame takes the enemy's starting position and their starting direction
@@ -40,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
-        if (playerInRange && readyToChase)
+        if (playerInRange && readyToChase && isGrounded)
         {
             FaceTowardsPlayer();
             CheckSpriteDirection();
@@ -49,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
             Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, chargeSpeed * Time.deltaTime);
             transform.position = new Vector3(tempVector2.x, tempVector2.y, 0);
         }
-        else if (!playerInRange)
+        else if (!playerInRange && isGrounded)
         {
             readyToChase = false;
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
@@ -129,11 +130,17 @@ public class EnemyMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
-        if (collider.CompareTag("PlayerAggroRange")){
+        if (collider.CompareTag("PlayerAggroRange"))
+        {
             Debug.Log("Entering Player Range");
             playerInRange = true;
             StartCoroutine(StartCharge());
         }
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionEnter2D");
+        isGrounded = true;
     }
     //When the enemy leaves the aggro range the playerInRange bool is set to false, the readyToChase bool is set to false to allow for the charge animation to play again, and the charge coroutine is ended in case it is still running
     private void OnTriggerExit2D(Collider2D collider)
@@ -144,7 +151,12 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("Exiting Player Range");
             playerInRange = false;
             readyToChase = false;
-            StopCoroutine(StartCharge());
+            StopAllCoroutines();
         }
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        Debug.Log("OnCollisionExit2D");
+        isGrounded = false;
     }
 }
