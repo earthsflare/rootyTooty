@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : PlayerAction
+public class PlayerMovement : MonoBehaviour
 {
     // ctrl + shift + / will comment out
-
-    //TODO: Flip Character and create colliders for character and other objects.
-    //TODO: For platforms and Floor give them the ground layer so the program knows when the character is on the ground and won't fall through
 
     public float regSpeed = 5f;
     public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
@@ -22,14 +19,17 @@ public class PlayerMovement : PlayerAction
 
     public int jumpCounter;                    //Current amount of jumps
     private bool isGrounded;
+    private bool facingRight = true;            //Which direction the player sprite is facing
 
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
 
     private void start()
     {
-        jumpCounter = MAXJUMPS;
+        jumpCounter = 0;
+        animator.SetInteger("JumpCount", jumpCounter);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -47,16 +47,16 @@ public class PlayerMovement : PlayerAction
         }
 
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && jumpCounter > 0)
+        if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
         {
+            animator.SetBool("Jump", true);
             isJumping = true;
         }
 
 
     }
-
-
 
     //Called many times per frame
     void FixedUpdate()
@@ -67,24 +67,40 @@ public class PlayerMovement : PlayerAction
 
         if (isGrounded)
         {
-            jumpCounter = MAXJUMPS;
+            jumpCounter = 0;
+            animator.SetInteger("JumpCount", jumpCounter);
         }
+        animator.SetBool("Jump", !isGrounded);
 
         //Add jump force if the player used the jump key and perform a jump
-        if (isJumping && (jumpCounter > 0))
+        if (isJumping && (jumpCounter < MAXJUMPS))
         {
-            Debug.Log("Add Force!");
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-            jumpCounter--;
+            jumpCounter++;
+            animator.SetInteger("JumpCount", jumpCounter);
         }
         isJumping = false;
 
+        if (movement.x > 0 && !facingRight)
+        {
+            flipCharacter();
+        }
+        else if (movement.x < 0 && facingRight)
+        {
+            flipCharacter();
+        }
+
+        // sends the player to the start position of each level
+        //private void OnLevelWasLoaded(int level)
+        //{
+        //   transform.position = GameObject.FindWithTag("StartPos").transform.position;
+        // }
+
     }
-
-    // sends the player to the start position of each level
-    //private void OnLevelWasLoaded(int level)
-    //{
-     //   transform.position = GameObject.FindWithTag("StartPos").transform.position;
-   // }
-
+    //Flips the character sprite if the movement direction is left or -1
+    private void flipCharacter()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
 }
