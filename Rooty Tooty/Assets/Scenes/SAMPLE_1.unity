@@ -217,12 +217,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 168470833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8092e8dbffb67f944a305699f9463f25, type: 3}
+  m_Script: {fileID: 11500000, guid: fbe9448740fa71747beda1ab1ad65bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 0
-  startpos: 0
-  cam: {fileID: 519420028}
+  cam: {fileID: 0}
   parallaxEffect: 0
 --- !u!1 &195928160
 GameObject:
@@ -318,12 +316,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 195928160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8092e8dbffb67f944a305699f9463f25, type: 3}
+  m_Script: {fileID: 11500000, guid: fbe9448740fa71747beda1ab1ad65bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 0
-  startpos: 0
-  cam: {fileID: 519420028}
+  cam: {fileID: 0}
   parallaxEffect: 0.7
 --- !u!1 &421360171
 GameObject:
@@ -1234,12 +1230,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1969804412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8092e8dbffb67f944a305699f9463f25, type: 3}
+  m_Script: {fileID: 11500000, guid: fbe9448740fa71747beda1ab1ad65bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 0
-  startpos: 0
-  cam: {fileID: 519420028}
+  cam: {fileID: 0}
   parallaxEffect: 1
 --- !u!1 &2109063277
 GameObject:
