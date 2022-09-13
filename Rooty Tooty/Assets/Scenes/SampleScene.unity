@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
-  parallaxEffect: 0.5
+  parallaxEffect: 0.7
 --- !u!1 &421360171
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,8 +425,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421360171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05809176, y: -3.4163508, z: 0.7791192}
-  m_LocalScale: {x: 205, y: 3.1989307, z: 1.0088}
+  m_LocalPosition: {x: -0.12, y: -5.07, z: 0.7791192}
+  m_LocalScale: {x: 257.5415, y: 2.150067, z: 1.2673554}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2109063278}
@@ -1310,12 +1310,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.07836543, y: 6.8382235}
-      - {x: -19.715378, y: 6.7082253}
-      - {x: -19.808388, y: 1.7853394}
-      - {x: -19.827335, y: -5.0375714}
-      - {x: 19.867214, y: -4.9884853}
-      - {x: 19.921453, y: 6.6421556}
+    - - {x: -0.9718572, y: 7.0615964}
+      - {x: -49.106865, y: 7.0251803}
+      - {x: -49.04091, y: 1.2472959}
+      - {x: -48.881676, y: -6.1136584}
+      - {x: 50.817818, y: -6.109174}
+      - {x: 50.84458, y: 7.0147314}
 --- !u!4 &2125087273
 Transform:
   m_ObjectHideFlags: 0
