@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public loadlevel lLevel;
+    
     public Vector3 nextLevelPosition;
 
     // ensures the character is not deleted upon loading a new scene + 
@@ -17,11 +17,15 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            gameObject.transform.position = nextLevelPosition;
         }
         else if (instance != this)
         {
             Destroy(gameObject);
         }
+        else if (instance != null)
+        {
+            gameObject.transform.position = nextLevelPosition;
+        }
+        gameObject.transform.position = nextLevelPosition;
     }
 }

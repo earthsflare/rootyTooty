@@ -525,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421360171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0232, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0232, y: -1.6, z: 0}
   m_LocalScale: {x: 40.2, y: 1.1513, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -640,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.2, z: -10}
+  m_LocalPosition: {x: 0, y: 8.599999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -942,8 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iLevelToLoad: 4
   sLevelToLoad: Level2
-  Player: {fileID: 1577464340}
-  changeLevelPosition: {x: -15, y: 3, z: 0}
+  changeLevelPosition: {x: 15, y: 3, z: 0}
   useIntegerToLoadLevel: 0
 --- !u!61 &1328701776
 BoxCollider2D:
@@ -1044,7 +1043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328701774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.4, y: 2.0156002, z: 0}
+  m_LocalPosition: {x: 18.4, y: 0.41560018, z: 0}
   m_LocalScale: {x: 1.5585, y: 2.722, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1155,7 +1154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535009953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8, y: 2.8156002, z: 0}
+  m_LocalPosition: {x: 2.8, y: 1.2156001, z: 0}
   m_LocalScale: {x: 3.1167815, y: 1.1513, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1470,7 +1469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577464340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0777, y: 4.5956, z: 0}
+  m_LocalPosition: {x: -0.0777, y: 2.9956002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1605,7 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lLevel: {fileID: 0}
+  nextLevelPosition: {x: -15, y: 3, z: 0}
 --- !u!1 &1830887287
 GameObject:
   m_ObjectHideFlags: 0
