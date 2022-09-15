@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         if (!hasAction)
         {
-            //currentAction = movementScript.currentAction;
+            currentAction = movementScript.currentAction;
         }
     }
 
