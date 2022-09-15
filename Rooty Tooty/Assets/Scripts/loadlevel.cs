@@ -8,7 +8,7 @@ public class loadlevel : MonoBehaviour
     public int iLevelToLoad; //number of level to load
     public string sLevelToLoad; //string name of level to load
 
-    public Vector3 nextLevelPosition;
+    public Vector3 changeLevelPosition;
     public bool useIntegerToLoadLevel = false;
 
     // Start is called before the first frame update
@@ -37,10 +37,14 @@ public class loadlevel : MonoBehaviour
     {
         if(useIntegerToLoadLevel)
         {
+            //Player.transform.position = changeLevelPosition;
+            GameManager.nextLevelPosition = changeLevelPosition;
             SceneManager.LoadScene(iLevelToLoad);
         }
         else
         {
+            //Player.transform.position = changeLevelPosition;
+            GameManager.nextLevelPosition = changeLevelPosition;
             SceneManager.LoadScene(sLevelToLoad);
         }
     }

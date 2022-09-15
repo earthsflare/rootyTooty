@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
+    public static GameManager instance;
+
     public loadlevel lLevel;
+    public Vector3 nextLevelPosition;
 
     // ensures the character is not deleted upon loading a new scene + 
     // removes duplicating the character
-        void Awake()
+    void Awake()
+    {
+        if (instance == null)
         {
-            if (instance != null)
-            {
-            Destroy(gameObject);
-            }
-            else
-            {
-                instance = this;
-                DontDestroyOnLoad(gameObject);
-            gameObject.transform.position = lLevel.nextLevelPosition;
-                
-            }
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            gameObject.transform.position = nextLevelPosition;
         }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

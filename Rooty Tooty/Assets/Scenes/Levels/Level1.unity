@@ -942,6 +942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iLevelToLoad: 4
   sLevelToLoad: Level2
+  Player: {fileID: 1577464340}
+  changeLevelPosition: {x: -15, y: 3, z: 0}
   useIntegerToLoadLevel: 0
 --- !u!61 &1328701776
 BoxCollider2D:
@@ -1603,6 +1605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lLevel: {fileID: 0}
 --- !u!1 &1830887287
 GameObject:
   m_ObjectHideFlags: 0
