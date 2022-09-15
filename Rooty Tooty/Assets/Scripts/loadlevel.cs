@@ -8,7 +8,8 @@ public class loadlevel : MonoBehaviour
     public int iLevelToLoad; //number of level to load
     public string sLevelToLoad; //string name of level to load
 
-    public bool useIntegerToLoadLevel = false; 
+    public Vector3 nextLevelPosition;
+    public bool useIntegerToLoadLevel = false;
 
     // Start is called before the first frame update
     void Start()

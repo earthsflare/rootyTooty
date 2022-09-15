@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
+    public loadlevel lLevel;
 
     // ensures the character is not deleted upon loading a new scene + 
     // removes duplicating the character
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
             {
                 instance = this;
                 DontDestroyOnLoad(gameObject);
+            gameObject.transform.position = lLevel.nextLevelPosition;
+                
             }
         }
 }
