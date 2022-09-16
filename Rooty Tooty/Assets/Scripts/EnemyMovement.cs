@@ -31,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
     bool readyToChase;
     public float enemyReactionTime = 1;
     bool isGrounded = true;
+    public Animator enemyAnimator;
     void Start()
     {
         //starting frame takes the enemy's starting position and their starting direction
@@ -48,7 +49,8 @@ public class EnemyMovement : MonoBehaviour
             //moves the enemy forward based on speed given and direction
             Debug.Log("moving toward player");
             Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, chargeSpeed * Time.deltaTime);
-            transform.position = new Vector3(tempVector2.x, tempVector2.y, 0);
+            transform.position = new Vector3(tempVector2.x, transform.position.y, 0);
+            enemyAnimator.SetBool("isChasing", true);
         }
         else if (!playerInRange && isGrounded)
         {
@@ -69,6 +71,7 @@ public class EnemyMovement : MonoBehaviour
             }
             CheckSpriteDirection();
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
+            enemyAnimator.SetBool("isMoving", true);
         }
 
         //moves towards player when in range
@@ -120,6 +123,7 @@ public class EnemyMovement : MonoBehaviour
         Debug.Log("Coroutine Called");
         FaceTowardsPlayer();
         CheckSpriteDirection();
+        enemyAnimator.SetBool("isMoving", false);
         yield return new WaitForSeconds(enemyReactionTime);
         //adds upward force to make enemy jump
         rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
