@@ -1,0 +1,1814 @@
+fileFormatVersion: 2
+guid: 00e779ed12fe2bf4b81a752c19eaee4a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hobbit - dummy00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3631979f28903d10800000000000000
+      internalID: 2103348356155782715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy01
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1732b2ff4e03d78c0800000000000000
+      internalID: -3999987133943438479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy02
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb35359c7acb77090800000000000000
+      internalID: -8036747581196119109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy03
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc811a30e90f78b0800000000000000
+      internalID: -5152388590037005130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy04
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b268412d8cc338020800000000000000
+      internalID: 2342783064378476075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy05
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac5296651145a2b0800000000000000
+      internalID: -5573977403630134106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy06
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d05502745fe3380800000000000000
+      internalID: -8989478120351003243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy07
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ee2bdd933b8f140800000000000000
+      internalID: 4753746467803557446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb32dc53f4ef2ed0800000000000000
+      internalID: -2436477139498681355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy09
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae824b6eabee0540800000000000000
+      internalID: 4976173772647337632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceee94af11d283ce0800000000000000
+      internalID: -1425339726825918740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8296eb4078b76d520800000000000000
+      internalID: 2726502444249803048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy12
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72396599c57e97800800000000000000
+      internalID: 610773609381008167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy13
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f135d6c5e605e1670800000000000000
+      internalID: 8511328780704109343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy14
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3391511564232a020800000000000000
+      internalID: 2351497233030256947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy15
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116fdb17f8c2f9430800000000000000
+      internalID: 3791798405869467153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec354eb7fb2afca0800000000000000
+      internalID: -5982420811959157526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy17
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6224b365355c22d40800000000000000
+      internalID: 5558221851848294950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy18
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5977b1c78485bf4a0800000000000000
+      internalID: -6558551363991930987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy19
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ca5de9a3fcc7630800000000000000
+      internalID: 3926240825840086122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy20
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966a29cdfb0c128d0800000000000000
+      internalID: -2872803157013780887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy21
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85d565a18f33acb0800000000000000
+      internalID: -4853966147317017202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy22
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e4da4d427bc6cf0800000000000000
+      internalID: -257629709852127649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy23
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02edbe650811467d0800000000000000
+      internalID: -2926194614972195296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a43ea780bb82500800000000000000
+      internalID: 371752614353914455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2f231c75ab836f0800000000000000
+      internalID: -704608455617219932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dece1637b1db8ff0800000000000000
+      internalID: -32701987457937712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy27
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0131544139d515c60800000000000000
+      internalID: 7805122515491427088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy28
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c398ffe15b480ca0800000000000000
+      internalID: -6050503284081781816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy29
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625675e75bde3e8e0800000000000000
+      internalID: -1665226073432431322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy30
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0644ca7903b5fb860800000000000000
+      internalID: 7547851764757447776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy31
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ec6222e3ed66d10800000000000000
+      internalID: 2118625033166704165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2382a9e74f3b22830800000000000000
+      internalID: 4044993278009550898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy33
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0f1e1f722b27770800000000000000
+      internalID: 8607137722490024171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy34
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68eebc93a7c249810800000000000000
+      internalID: 1771089456930745990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy35
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ce4c0ce1de48650800000000000000
+      internalID: 6234368500526541982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy36
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4844aeb83a0356e10800000000000000
+      internalID: 2190210272770802820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy37
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71678b5df673edef0800000000000000
+      internalID: -81566789779556841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy38
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db59a92768cc0ec10800000000000000
+      internalID: 2080887905665586621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy39
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765b1b282df65d700800000000000000
+      internalID: 564480278231364967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e7deaae1309cc30800000000000000
+      internalID: 4380035542846111272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy41
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6918e4d4890b590800000000000000
+      internalID: -7660455508360194386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy42
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e33c7136efcfa40800000000000000
+      internalID: 5403473354491641358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy43
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961068db36a7af730800000000000000
+      internalID: 4033670985063727465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy44
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147d18e80c4e66d20800000000000000
+      internalID: 3271553695006971713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy45
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36bf2336cba8f4a0800000000000000
+      internalID: -6559303989514488259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy46
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6cdea966d415a880800000000000000
+      internalID: -8600445002265469846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy47
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb92e3261a388730800000000000000
+      internalID: 4001512135684430770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498969e4bb4cc1d20800000000000000
+      internalID: 3250689339811076244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy49
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90be40a21e78990a0800000000000000
+      internalID: -6874313955061994743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy50
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed0c1ddbda9f7470800000000000000
+      internalID: 8394598499540012526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy51
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc4bf7a7cc1ae4f0800000000000000
+      internalID: -798794340062507818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy52
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44385226db7d9cb80800000000000000
+      internalID: -8373924823723310268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy53
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae3a6fa334dd95a0800000000000000
+      internalID: -6512816167656472921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy54
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3afbc10d22fa650800000000000000
+      internalID: 6246249485417030620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy55
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331cbd6dfb92f0750800000000000000
+      internalID: 6273278709870608691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6267b07a48ea6e2a0800000000000000
+      internalID: -6708482710160312794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy57
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c829cd8ec888adc60800000000000000
+      internalID: 7843731839802708620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy58
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1ad2bd098b30670800000000000000
+      internalID: 8503843453697630690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy59
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4532599988568490800000000000000
+      internalID: -7744405161210923700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy60
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6cad62303a26bc0800000000000000
+      internalID: -3791288702360434974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy61
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def6ac77655b99a20800000000000000
+      internalID: 3069684004011274221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy62
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14f8e78829eaad80800000000000000
+      internalID: -8238516208032746470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy63
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7199b33361c2d050800000000000000
+      internalID: 5823929899957195132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb59676055c276c0800000000000000
+      internalID: -4147035357731791950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy65
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aed5b9a034c64670800000000000000
+      internalID: 8522715058129985184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy66
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e53f0a1f934db1a0800000000000000
+      internalID: -6792198312388774430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy67
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f17e32614831dd0800000000000000
+      internalID: -2516522536143478913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy68
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a3a1412a5e4f9a0800000000000000
+      internalID: -6200078302697604519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy69
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8330d58fdc31a9710800000000000000
+      internalID: 1700693584641852216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy70
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9c7c55bf2b467d0800000000000000
+      internalID: -2926017065338287699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy71
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a73307cb50e9e60800000000000000
+      internalID: 7970814697386768907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy72
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877bb980e11ed2ce0800000000000000
+      internalID: -1428237987696887944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy73
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7724f8d4acfc1e0800000000000000
+      internalID: -2175297660531869748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy74
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a25e89c4d484540800000000000000
+      internalID: 4992325178318203517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy75
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd002c8f24d50f790800000000000000
+      internalID: -7498390837349187365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy76
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf600bb2854bf420800000000000000
+      internalID: 2664800032305213354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - dummy77
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d9a444b69995750800000000000000
+      internalID: 6294230640213269892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hobbit - dummy20: -2872803157013780887
+      hobbit - dummy10: -1425339726825918740
+      hobbit - dummy12: 610773609381008167
+      hobbit - dummy14: 2351497233030256947
+      hobbit - dummy06: -8989478120351003243
+      hobbit - dummy22: -257629709852127649
+      hobbit - dummy47: 4001512135684430770
+      hobbit - dummy11: 2726502444249803048
+      hobbit - dummy35: 6234368500526541982
+      hobbit - dummy00: 2103348356155782715
+      hobbit - dummy49: -6874313955061994743
+      hobbit - dummy21: -4853966147317017202
+      hobbit - dummy57: 7843731839802708620
+      hobbit - dummy31: 2118625033166704165
+      hobbit - dummy30: 7547851764757447776
+      hobbit - dummy67: -2516522536143478913
+      hobbit - dummy01: -3999987133943438479
+      hobbit - dummy28: -6050503284081781816
+      hobbit - dummy52: -8373924823723310268
+      hobbit - dummy32: 4044993278009550898
+      hobbit - dummy09: 4976173772647337632
+      hobbit - dummy54: 6246249485417030620
+      hobbit - dummy69: 1700693584641852216
+      hobbit - dummy15: 3791798405869467153
+      hobbit - dummy55: 6273278709870608691
+      hobbit - dummy25: -704608455617219932
+      hobbit - dummy45: -6559303989514488259
+      hobbit - dummy44: 3271553695006971713
+      hobbit - dummy03: -5152388590037005130
+      hobbit - dummy29: -1665226073432431322
+      hobbit - dummy24: 371752614353914455
+      hobbit - dummy41: -7660455508360194386
+      hobbit - dummy02: -8036747581196119109
+      hobbit - dummy71: 7970814697386768907
+      hobbit - dummy39: 564480278231364967
+      hobbit - dummy56: -6708482710160312794
+      hobbit - dummy58: 8503843453697630690
+      hobbit - dummy48: 3250689339811076244
+      hobbit - dummy59: -7744405161210923700
+      hobbit - dummy40: 4380035542846111272
+      hobbit - dummy73: -2175297660531869748
+      hobbit - dummy23: -2926194614972195296
+      hobbit - dummy65: 8522715058129985184
+      hobbit - dummy19: 3926240825840086122
+      hobbit - dummy61: 3069684004011274221
+      hobbit - dummy60: -3791288702360434974
+      hobbit - dummy77: 6294230640213269892
+      hobbit - dummy74: 4992325178318203517
+      hobbit - dummy05: -5573977403630134106
+      hobbit - dummy62: -8238516208032746470
+      hobbit - dummy76: 2664800032305213354
+      hobbit - dummy08: -2436477139498681355
+      hobbit - dummy42: 5403473354491641358
+      hobbit - dummy38: 2080887905665586621
+      hobbit - dummy43: 4033670985063727465
+      hobbit - dummy68: -6200078302697604519
+      hobbit - dummy50: 8394598499540012526
+      hobbit - dummy63: 5823929899957195132
+      hobbit - dummy75: -7498390837349187365
+      hobbit - dummy27: 7805122515491427088
+      hobbit - dummy04: 2342783064378476075
+      hobbit - dummy18: -6558551363991930987
+      hobbit - dummy64: -4147035357731791950
+      hobbit - dummy07: 4753746467803557446
+      hobbit - dummy34: 1771089456930745990
+      hobbit - dummy17: 5558221851848294950
+      hobbit - dummy53: -6512816167656472921
+      hobbit - dummy72: -1428237987696887944
+      hobbit - dummy33: 8607137722490024171
+      hobbit - dummy16: -5982420811959157526
+      hobbit - dummy36: 2190210272770802820
+      hobbit - dummy66: -6792198312388774430
+      hobbit - dummy13: 8511328780704109343
+      hobbit - dummy46: -8600445002265469846
+      hobbit - dummy26: -32701987457937712
+      hobbit - dummy51: -798794340062507818
+      hobbit - dummy37: -81566789779556841
+      hobbit - dummy70: -2926017065338287699
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

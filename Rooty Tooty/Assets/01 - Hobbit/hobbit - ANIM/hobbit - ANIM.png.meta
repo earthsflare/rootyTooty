@@ -1,0 +1,1814 @@
+fileFormatVersion: 2
+guid: 42da8030aebd638489e094705ebe32b9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hobbit - ANIM00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8172dc8c79711fc40800000000000000
+      internalID: 5544238556946179864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM01
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9279e4a81ce0570800000000000000
+      internalID: 8434891951879694766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM02
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07edcc96792e93e00800000000000000
+      internalID: 1025099530146471536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM03
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2e14b9b40a2bb50800000000000000
+      internalID: 6607519849893716726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM04
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db50af88bb38257e0800000000000000
+      internalID: -1778214061377714755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM05
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7d801c6925316a0800000000000000
+      internalID: -6479744631418857485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM06
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e080d8d88f1f530800000000000000
+      internalID: 3887161240237641291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM07
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1141
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6668ac1e874befd80800000000000000
+      internalID: -8214930238999984538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75408bbf1cd26d5f0800000000000000
+      internalID: -732347578226047913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM09
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9424279b1d681e170800000000000000
+      internalID: 8205988231363314249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a0704c755e60de0800000000000000
+      internalID: -1367153271746655704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c15e82558e30f8f0800000000000000
+      internalID: -508838015556234811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM12
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b8f56d506205b50800000000000000
+      internalID: 6579800862101572414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM13
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7864c503bee3670800000000000000
+      internalID: 8520506137970640886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM14
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d71ca4b449bc1510800000000000000
+      internalID: 1521294478884476886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM15
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab19c7ea3218b830800000000000000
+      internalID: 4087036706044844968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b106aa7a6b98610800000000000000
+      internalID: 1624029971877993266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM17
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e5740559b7b3230800000000000000
+      internalID: 3619622606749523571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM18
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a0fe5bebf883920800000000000000
+      internalID: 2970282003509742136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM19
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e90000170983c9f0800000000000000
+      internalID: -449364874380703263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM20
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946dd71b1b00deb00800000000000000
+      internalID: 859343867084658249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM21
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876b07d974f59c860800000000000000
+      internalID: 7550671011452073592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM22
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc7f0612502db510800000000000000
+      internalID: 1566443782324321476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM23
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46dde943b8520100800000000000000
+      internalID: 72718071054063182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6dc05fcbbd26b540800000000000000
+      internalID: 5023252719038680428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3509c8d00c2fbed0800000000000000
+      internalID: -2396148094589139654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3365a8d3a3dba80800000000000000
+      internalID: -8449533289888861260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM27
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe666d8178d78db0800000000000000
+      internalID: -4789621696470028558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM28
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60518b30ccdaa9100800000000000000
+      internalID: 115595832198698246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM29
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38acf7e1b03f45d20800000000000000
+      internalID: 3266502858832333443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM30
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d323f04daf5d16c40800000000000000
+      internalID: 5503915492899762749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM31
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b7c20b524c33300800000000000000
+      internalID: 230743672074566512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bec24154431ed50800000000000000
+      internalID: 6764745586583071543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM33
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d82237b1fcc70e10800000000000000
+      internalID: 2163923484507515088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM34
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a176ad65e29b8d0800000000000000
+      internalID: -2830179940259390825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM35
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf272be4ae07fa60800000000000000
+      internalID: 7707645388750532525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM36
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7097fdcdc6be440800000000000000
+      internalID: 4966182710003959751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM37
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0beba32cdc57dd0800000000000000
+      internalID: -2488856984959405901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM38
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c20d6589dbfdaa10800000000000000
+      internalID: 1922469527622058688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM39
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca57abd60e01d9c0800000000000000
+      internalID: -3904323979335738679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b8133b77b28f6d0800000000000000
+      internalID: -2956565362261259441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM41
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e6ee896bb7769b0800000000000000
+      internalID: -5086961229911658929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM42
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f092c512ed40990800000000000000
+      internalID: -7420562051138252978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM43
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815b586f3567c6e80800000000000000
+      internalID: -8184036319848712936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM44
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f7df0716809e7f0800000000000000
+      internalID: -582925462167257260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM45
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c6b079cb5a22120800000000000000
+      internalID: 2387652981866327098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM46
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37fc2574d1c1b030800000000000000
+      internalID: 3508798702941435706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM47
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6eb27215a0ef4260800000000000000
+      internalID: 7084127738460814958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5990535eded8037f0800000000000000
+      internalID: -634851494567016043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM49
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f74d830ab6331c00800000000000000
+      internalID: 870099325564045300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM50
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ba2e926771c8970800000000000000
+      internalID: 8758401171605072661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM51
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e68d69308974fe60800000000000000
+      internalID: 7995148830115727077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM52
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8edc521d3d6db490800000000000000
+      internalID: -7728901276429394292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM53
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8e9a8797e4ce260800000000000000
+      internalID: 7128158593843063002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM54
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790b6d7f1ee2b8040800000000000000
+      internalID: 4650862588250730647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM55
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b39d09f6ee61350800000000000000
+      internalID: 5987234917574589332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093fefbf56bd889a0800000000000000
+      internalID: -6230488853401111664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM57
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ca865416242e640800000000000000
+      internalID: 5107717912935312454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM58
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77490c0e473791970800000000000000
+      internalID: 8726132698831164535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM59
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7947e92a34cf22120800000000000000
+      internalID: 2387748119881086103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM60
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b067c77f3f3078a0800000000000000
+      internalID: -6309473536121020238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM61
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d847d33c310d11a00800000000000000
+      internalID: 725589798281901197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM62
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96602b98004899000800000000000000
+      internalID: 43210809281742441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM63
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd9c6b57f6e29950800000000000000
+      internalID: 6454475166040497662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441e8c8d656636a30800000000000000
+      internalID: 4207319000084439364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM65
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02f4d20c3c71faf0800000000000000
+      internalID: -364373497652907508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM66
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1e026799926ffd0800000000000000
+      internalID: -2308612019892198943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM67
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3b0c2238bb67500800000000000000
+      internalID: 393708189339661281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM68
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784a3f7440ee781d0800000000000000
+      internalID: -3348446095772244857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM69
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4789c9e1e148f5e70800000000000000
+      internalID: 9106142236463896692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM70
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a30db0bd2cce4080800000000000000
+      internalID: -9201192492060572759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM71
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a197f0596c6bd140800000000000000
+      internalID: 4745505831950717344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM72
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ef702953d847920800000000000000
+      internalID: 2987167714076261898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM73
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4a25fa034701e60800000000000000
+      internalID: 7930966696248124645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM74
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0337362dd3514850800000000000000
+      internalID: 6359456358117880590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM75
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c56cca8d35dd8d0800000000000000
+      internalID: -2820005601587340171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM76
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c20311c05c5baa40800000000000000
+      internalID: 5380495681730577093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hobbit - ANIM77
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755f668ebb455e570800000000000000
+      internalID: 8495289438138987863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      hobbit - ANIM31: 230743672074566512
+      hobbit - ANIM47: 7084127738460814958
+      hobbit - ANIM20: 859343867084658249
+      hobbit - ANIM26: -8449533289888861260
+      hobbit - ANIM29: 3266502858832333443
+      hobbit - ANIM09: 8205988231363314249
+      hobbit - ANIM21: 7550671011452073592
+      hobbit - ANIM58: 8726132698831164535
+      hobbit - ANIM34: -2830179940259390825
+      hobbit - ANIM60: -6309473536121020238
+      hobbit - ANIM67: 393708189339661281
+      hobbit - ANIM63: 6454475166040497662
+      hobbit - ANIM23: 72718071054063182
+      hobbit - ANIM27: -4789621696470028558
+      hobbit - ANIM55: 5987234917574589332
+      hobbit - ANIM14: 1521294478884476886
+      hobbit - ANIM15: 4087036706044844968
+      hobbit - ANIM50: 8758401171605072661
+      hobbit - ANIM02: 1025099530146471536
+      hobbit - ANIM70: -9201192492060572759
+      hobbit - ANIM48: -634851494567016043
+      hobbit - ANIM11: -508838015556234811
+      hobbit - ANIM36: 4966182710003959751
+      hobbit - ANIM16: 1624029971877993266
+      hobbit - ANIM24: 5023252719038680428
+      hobbit - ANIM71: 4745505831950717344
+      hobbit - ANIM52: -7728901276429394292
+      hobbit - ANIM25: -2396148094589139654
+      hobbit - ANIM03: 6607519849893716726
+      hobbit - ANIM61: 725589798281901197
+      hobbit - ANIM37: -2488856984959405901
+      hobbit - ANIM01: 8434891951879694766
+      hobbit - ANIM64: 4207319000084439364
+      hobbit - ANIM22: 1566443782324321476
+      hobbit - ANIM38: 1922469527622058688
+      hobbit - ANIM68: -3348446095772244857
+      hobbit - ANIM08: -732347578226047913
+      hobbit - ANIM13: 8520506137970640886
+      hobbit - ANIM54: 4650862588250730647
+      hobbit - ANIM18: 2970282003509742136
+      hobbit - ANIM19: -449364874380703263
+      hobbit - ANIM39: -3904323979335738679
+      hobbit - ANIM72: 2987167714076261898
+      hobbit - ANIM42: -7420562051138252978
+      hobbit - ANIM44: -582925462167257260
+      hobbit - ANIM46: 3508798702941435706
+      hobbit - ANIM12: 6579800862101572414
+      hobbit - ANIM59: 2387748119881086103
+      hobbit - ANIM77: 8495289438138987863
+      hobbit - ANIM74: 6359456358117880590
+      hobbit - ANIM62: 43210809281742441
+      hobbit - ANIM51: 7995148830115727077
+      hobbit - ANIM65: -364373497652907508
+      hobbit - ANIM05: -6479744631418857485
+      hobbit - ANIM75: -2820005601587340171
+      hobbit - ANIM49: 870099325564045300
+      hobbit - ANIM73: 7930966696248124645
+      hobbit - ANIM69: 9106142236463896692
+      hobbit - ANIM56: -6230488853401111664
+      hobbit - ANIM35: 7707645388750532525
+      hobbit - ANIM04: -1778214061377714755
+      hobbit - ANIM53: 7128158593843063002
+      hobbit - ANIM06: 3887161240237641291
+      hobbit - ANIM33: 2163923484507515088
+      hobbit - ANIM66: -2308612019892198943
+      hobbit - ANIM76: 5380495681730577093
+      hobbit - ANIM40: -2956565362261259441
+      hobbit - ANIM41: -5086961229911658929
+      hobbit - ANIM17: 3619622606749523571
+      hobbit - ANIM57: 5107717912935312454
+      hobbit - ANIM43: -8184036319848712936
+      hobbit - ANIM45: 2387652981866327098
+      hobbit - ANIM30: 5503915492899762749
+      hobbit - ANIM10: -1367153271746655704
+      hobbit - ANIM32: 6764745586583071543
+      hobbit - ANIM07: -8214930238999984538
+      hobbit - ANIM00: 5544238556946179864
+      hobbit - ANIM28: 115595832198698246
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1374 @@
+fileFormatVersion: 2
+guid: d9f98dd4fa0afde409282924d65dada1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ogre master - dummy00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f40d05529a3c170800000000000000
+      internalID: 8197581724479147899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy01
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98b42571b57746c0800000000000000
+      internalID: -4159226325818361697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy02
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d582f6da630e2d0800000000000000
+      internalID: -3251538812439339643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy03
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318c485c09643ac30800000000000000
+      internalID: 4369413651082561555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy04
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f146d6453af99aaa0800000000000000
+      internalID: -6149208292352760801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy05
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55caa8e11989976c0800000000000000
+      internalID: -4145114232967746475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy06
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fee940cdc2aaaae0800000000000000
+      internalID: -1537237318215536904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy07
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfb61930934bbfd0800000000000000
+      internalID: -2325190495894585397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy08
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867f68f98b3efe080800000000000000
+      internalID: -9155849135331018904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy09
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a193c92726909020800000000000000
+      internalID: 2346540500808602021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy10
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0eafa188217ce8c0800000000000000
+      internalID: -3968672752831844854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy11
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efe8657e6eb370d50800000000000000
+      internalID: 6703392433273999102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy12
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5bb63379cca3d90800000000000000
+      internalID: -7117151311330822724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy13
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de90b58b0a62b070800000000000000
+      internalID: 8120669675822554839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1980fa4dc6789e2d0800000000000000
+      internalID: -3248916754676643695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy15
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4b37dd57d962700800000000000000
+      internalID: 515272336932582605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy16
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2135186ca2fed0f0800000000000000
+      internalID: -1090167237482565331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy17
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cbf9d3f03d0a5e0800000000000000
+      internalID: -1900286980338500593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy18
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f3af826b64b1ca0800000000000000
+      internalID: -6045160326629277823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy19
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc488bd0ce07f0b0800000000000000
+      internalID: -5695066982307050319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy20
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc82d942541fc50d0800000000000000
+      internalID: -3432603536693843761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8184670da230b7ee0800000000000000
+      internalID: -1262411788126369768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e95a0bf960ee89f0800000000000000
+      internalID: -464186965784634909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy23
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec119663fc0613ae0800000000000000
+      internalID: -1571368351888240178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy24
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac251aded8c232c0800000000000000
+      internalID: -4453276222048883552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy25
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3cb4c3587152270800000000000000
+      internalID: 8225006155471766450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy26
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54091b45051c9a490800000000000000
+      internalID: -7734438334269648827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy27
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ebd8b0047162a70800000000000000
+      internalID: 8801748085581397648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4bcc389d96490e0800000000000000
+      internalID: -2264068329720466263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy29
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f98fe11cd55fd80800000000000000
+      internalID: -8217558861037920430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy30
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ff285a58d8ef5d0800000000000000
+      internalID: -3026826294399402156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy31
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a02bce2605b2c70800000000000000
+      internalID: 8947333470509730350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy32
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c2909ad8b485720800000000000000
+      internalID: 2835099037228149894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy33
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42100b76307c37820800000000000000
+      internalID: 2914892201277260068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy34
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac527bc95d0355930800000000000000
+      internalID: 4131261927197713866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy35
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54635c038afe33800800000000000000
+      internalID: 591079481767441989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy36
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455a24739a7239a80800000000000000
+      internalID: -8461375667168959148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy37
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc033b61162d04770800000000000000
+      internalID: 8593099403457409228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy38
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e17ca7948f30b5e0800000000000000
+      internalID: -1895945604410084896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy39
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c6dac6cc0b89ca0800000000000000
+      internalID: -6009859310682805204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy40
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710efdbe940b4d100800000000000000
+      internalID: 131924120637005847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy41
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a0663b20d614170800000000000000
+      internalID: 8160923858139220572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff28360a135d9a30800000000000000
+      internalID: 4223623396781993970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy43
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dbdea3c084ca9b20800000000000000
+      internalID: 3142039747362216919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy44
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c9f08da7c962780800000000000000
+      internalID: -8708100778049430511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy45
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddce4e07ac7906a70800000000000000
+      internalID: 8818214966124670173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy46
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc0808fc62baa4a0800000000000000
+      internalID: -6581251724361069372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy47
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9572c2d802d77bdc0800000000000000
+      internalID: -3623289796435368103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy48
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8122aa7abadcaf640800000000000000
+      internalID: 5114626463968666136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 357c6ed404faaea80800000000000000
+      internalID: -8436738261205465261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy50
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4285391275ecb460800000000000000
+      internalID: 7258928977626366540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy51
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f270b7f7b32b5df10800000000000000
+      internalID: 2293935553826719535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy52
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48880eaf320e6fb0800000000000000
+      internalID: -4652778892501153716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy53
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3fbe240be11d3c0800000000000000
+      internalID: -4336651223795239981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy54
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d79e04c4bf672c20800000000000000
+      internalID: 3181634483934631893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy55
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81306ecc8e1b15ca0800000000000000
+      internalID: -6029842812644228328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f771d439d8a43e440800000000000000
+      internalID: 4963893186214565759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre master - dummy57
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f00982337222370800000000000000
+      internalID: 8296236564247220059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ogre master - dummy23: -1571368351888240178
+      ogre master - dummy32: 2835099037228149894
+      ogre master - dummy48: 5114626463968666136
+      ogre master - dummy05: -4145114232967746475
+      ogre master - dummy17: -1900286980338500593
+      ogre master - dummy13: 8120669675822554839
+      ogre master - dummy00: 8197581724479147899
+      ogre master - dummy51: 2293935553826719535
+      ogre master - dummy45: 8818214966124670173
+      ogre master - dummy38: -1895945604410084896
+      ogre master - dummy25: 8225006155471766450
+      ogre master - dummy03: 4369413651082561555
+      ogre master - dummy24: -4453276222048883552
+      ogre master - dummy49: -8436738261205465261
+      ogre master - dummy26: -7734438334269648827
+      ogre master - dummy40: 131924120637005847
+      ogre master - dummy30: -3026826294399402156
+      ogre master - dummy18: -6045160326629277823
+      ogre master - dummy27: 8801748085581397648
+      ogre master - dummy34: 4131261927197713866
+      ogre master - dummy42: 4223623396781993970
+      ogre master - dummy50: 7258928977626366540
+      ogre master - dummy29: -8217558861037920430
+      ogre master - dummy06: -1537237318215536904
+      ogre master - dummy54: 3181634483934631893
+      ogre master - dummy52: -4652778892501153716
+      ogre master - dummy56: 4963893186214565759
+      ogre master - dummy36: -8461375667168959148
+      ogre master - dummy04: -6149208292352760801
+      ogre master - dummy53: -4336651223795239981
+      ogre master - dummy10: -3968672752831844854
+      ogre master - dummy44: -8708100778049430511
+      ogre master - dummy31: 8947333470509730350
+      ogre master - dummy47: -3623289796435368103
+      ogre master - dummy15: 515272336932582605
+      ogre master - dummy22: -464186965784634909
+      ogre master - dummy35: 591079481767441989
+      ogre master - dummy28: -2264068329720466263
+      ogre master - dummy07: -2325190495894585397
+      ogre master - dummy08: -9155849135331018904
+      ogre master - dummy43: 3142039747362216919
+      ogre master - dummy12: -7117151311330822724
+      ogre master - dummy37: 8593099403457409228
+      ogre master - dummy14: -3248916754676643695
+      ogre master - dummy57: 8296236564247220059
+      ogre master - dummy01: -4159226325818361697
+      ogre master - dummy39: -6009859310682805204
+      ogre master - dummy20: -3432603536693843761
+      ogre master - dummy41: 8160923858139220572
+      ogre master - dummy09: 2346540500808602021
+      ogre master - dummy33: 2914892201277260068
+      ogre master - dummy02: -3251538812439339643
+      ogre master - dummy46: -6581251724361069372
+      ogre master - dummy55: -6029842812644228328
+      ogre master - dummy16: -1090167237482565331
+      ogre master - dummy11: 6703392433273999102
+      ogre master - dummy21: -1262411788126369768
+      ogre master - dummy19: -5695066982307050319
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

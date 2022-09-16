@@ -1,0 +1,1748 @@
+fileFormatVersion: 2
+guid: 9789e843302929f4491f4205a4e1c8c7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ogre warrior - dummy00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50e9bee48f627210800000000000000
+      internalID: 1329247456759242843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy01
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d6e33dbfa77c220800000000000000
+      internalID: 2506106939654434153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy02
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af8226870433ef20800000000000000
+      internalID: 3450658946415759266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy03
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39aad456ff485cf0800000000000000
+      internalID: -263372658797008579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy04
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b14170189476ae0800000000000000
+      internalID: -1556194327714849915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy05
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635512b4bbbc78830800000000000000
+      internalID: 4073448393259701558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy06
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13359fcd0eb6e4de0800000000000000
+      internalID: -1347020625013025999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy07
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 1027
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a85f30f913ecda0800000000000000
+      internalID: -5922741900909639112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf58f817145bea50800000000000000
+      internalID: 6551422541120430002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy09
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2928fafdcd2130c80800000000000000
+      internalID: -8357815743614582126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy10
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e62d84ec22384680800000000000000
+      internalID: -8770705105909635351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab69b8f20c990680800000000000000
+      internalID: -8788321661260043359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy12
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b382e0f08b299d620800000000000000
+      internalID: 2799429962611697723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy13
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7b8440dbc01b850800000000000000
+      internalID: 6390903352175671295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy14
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f8b6fc584c3cdf0800000000000000
+      internalID: -161069082665578721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy15
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 913
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ba0bff6907bd5b0800000000000000
+      internalID: -5342552739107788031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3619c8a801f03e0800000000000000
+      internalID: -2085429915199380562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy17
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9888e2f9a1cafe3f0800000000000000
+      internalID: -869286972719462263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy18
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0b77826fc2dac80800000000000000
+      internalID: -8309936301676187394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy19
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fb3b06a729f2fb0800000000000000
+      internalID: -4670353234253856871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy20
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab2071d72fd47c20800000000000000
+      internalID: 3203430597077773228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy21
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373e3435982dd3c40800000000000000
+      internalID: 5493778607711183731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy22
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b79e5465fc18d90800000000000000
+      internalID: -7097163568312124534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy23
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 799
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b094234853298c0800000000000000
+      internalID: -3994071077628605685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771c7b18bc0598210800000000000000
+      internalID: 1335687599476949367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b015b112a0cc6ba0800000000000000
+      internalID: -6094284393424809801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy26
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc6ea8546709fee0800000000000000
+      internalID: -1226941295915799367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy27
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf95d4b799086070800000000000000
+      internalID: 8099734477004447660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy28
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1241e53dcf88ed7d0800000000000000
+      internalID: -2891723291265985503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy29
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80a21adedd82f680800000000000000
+      internalID: -8722753539982319473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy30
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1487584bef96ef00800000000000000
+      internalID: 1145778988092195866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy31
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 685
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea6632522bc58de0800000000000000
+      internalID: -1331434766549488925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ea38a6740675a40800000000000000
+      internalID: 5356856141626453506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy33
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf717a378d8d9af30800000000000000
+      internalID: 4587436119618426875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy34
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a62fb7e789cf8af0800000000000000
+      internalID: -391873057012111712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy35
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caca6cb3f5545aad0800000000000000
+      internalID: -2691668926956917588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy36
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b8d57e1b435bb70800000000000000
+      internalID: 8914088976145288029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy37
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38f6b12d462819f0800000000000000
+      internalID: -497605646104463297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy38
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3806d0470fdb450800000000000000
+      internalID: 6106301051015562203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy39
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 571
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d7d896e2054f400800000000000000
+      internalID: 356998430738709836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea054262ff530ea0800000000000000
+      internalID: -5907772791544542496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy41
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b532fccbdba2040800000000000000
+      internalID: 4623716586075937603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy42
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2ff6af4611004b0800000000000000
+      internalID: -5476358021486480692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy43
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb94f168d6de1070800000000000000
+      internalID: 8079131006393949122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy44
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaddeb8cedba3f320800000000000000
+      internalID: 2590603184007208362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy45
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76704c1e06ab10db0800000000000000
+      internalID: -4827372400297113753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy46
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0cdee683c4b5d7a0800000000000000
+      internalID: -6352972947460793332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy47
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 457
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465d296f4829ec600800000000000000
+      internalID: 490490509200119140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de2a810fdc7b6a10800000000000000
+      internalID: 1903752564739550932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy49
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a796fc37fbbbae0800000000000000
+      internalID: -1532420744067581440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy50
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d1e6f11bffd6240800000000000000
+      internalID: 4786763115166309750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy51
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30880ecab9361b710800000000000000
+      internalID: 1707255254021605379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy52
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac36dcb9ea94b540800000000000000
+      internalID: 5022809813111159980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy53
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a3cc0a7ed950460800000000000000
+      internalID: 7207340396837091980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy54
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7532d001475a0a0800000000000000
+      internalID: -6870958044195104802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy55
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 343
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f6607e774d4747f0800000000000000
+      internalID: -628448653535582475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e20869b685f314d0800000000000000
+      internalID: -3164916154126302493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy57
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c0fc7da77f4fbc0800000000000000
+      internalID: -3750100482714039288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy58
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a84c51314aecb070800000000000000
+      internalID: 8123625393591437472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy59
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75672d083ecf09700800000000000000
+      internalID: 545213608960882263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy60
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b9a803209e27e60800000000000000
+      internalID: 7958679687130684272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy61
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb0b499f8de5c210800000000000000
+      internalID: 1352748464102640582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy62
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5d74a872d28c7a0800000000000000
+      internalID: -6356781226186517075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy63
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 229
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b6350112c567500800000000000000
+      internalID: 393603314519075634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729a7b2fc9fa53120800000000000000
+      internalID: 2393011865639168295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy65
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc6273a2abe08470800000000000000
+      internalID: 8394968789178019018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy66
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7403003c07878e0800000000000000
+      internalID: -1695481276880893963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy67
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63691ccaa40ff920800000000000000
+      internalID: 3026142606231429994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy68
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f68927525d47220800000000000000
+      internalID: 2482843651401084769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy69
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28ef2a69aefc5e80800000000000000
+      internalID: -8188390018881951702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy70
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee85fff5bc438bc0800000000000000
+      internalID: -3782094917494010134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy71
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 115
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854a8259d87548240800000000000000
+      internalID: 4793052169033524312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy72
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97780f6ce3cbe4000800000000000000
+      internalID: 22162025995077497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy73
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb9b0ad68b37df50800000000000000
+      internalID: 6906054003965795261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ogre warrior - dummy74
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1
+        width: 144
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599f441bdb43e1a50800000000000000
+      internalID: 6493685702042384789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ogre warrior - dummy50: 4786763115166309750
+      ogre warrior - dummy42: -5476358021486480692
+      ogre warrior - dummy56: -3164916154126302493
+      ogre warrior - dummy70: -3782094917494010134
+      ogre warrior - dummy04: -1556194327714849915
+      ogre warrior - dummy62: -6356781226186517075
+      ogre warrior - dummy14: -161069082665578721
+      ogre warrior - dummy53: 7207340396837091980
+      ogre warrior - dummy34: -391873057012111712
+      ogre warrior - dummy64: 2393011865639168295
+      ogre warrior - dummy71: 4793052169033524312
+      ogre warrior - dummy32: 5356856141626453506
+      ogre warrior - dummy10: -8770705105909635351
+      ogre warrior - dummy29: -8722753539982319473
+      ogre warrior - dummy35: -2691668926956917588
+      ogre warrior - dummy73: 6906054003965795261
+      ogre warrior - dummy55: -628448653535582475
+      ogre warrior - dummy31: -1331434766549488925
+      ogre warrior - dummy21: 5493778607711183731
+      ogre warrior - dummy08: 6551422541120430002
+      ogre warrior - dummy61: 1352748464102640582
+      ogre warrior - dummy02: 3450658946415759266
+      ogre warrior - dummy09: -8357815743614582126
+      ogre warrior - dummy22: -7097163568312124534
+      ogre warrior - dummy44: 2590603184007208362
+      ogre warrior - dummy12: 2799429962611697723
+      ogre warrior - dummy66: -1695481276880893963
+      ogre warrior - dummy18: -8309936301676187394
+      ogre warrior - dummy25: -6094284393424809801
+      ogre warrior - dummy49: -1532420744067581440
+      ogre warrior - dummy47: 490490509200119140
+      ogre warrior - dummy58: 8123625393591437472
+      ogre warrior - dummy20: 3203430597077773228
+      ogre warrior - dummy54: -6870958044195104802
+      ogre warrior - dummy03: -263372658797008579
+      ogre warrior - dummy59: 545213608960882263
+      ogre warrior - dummy51: 1707255254021605379
+      ogre warrior - dummy60: 7958679687130684272
+      ogre warrior - dummy24: 1335687599476949367
+      ogre warrior - dummy26: -1226941295915799367
+      ogre warrior - dummy01: 2506106939654434153
+      ogre warrior - dummy57: -3750100482714039288
+      ogre warrior - dummy19: -4670353234253856871
+      ogre warrior - dummy46: -6352972947460793332
+      ogre warrior - dummy36: 8914088976145288029
+      ogre warrior - dummy38: 6106301051015562203
+      ogre warrior - dummy41: 4623716586075937603
+      ogre warrior - dummy63: 393603314519075634
+      ogre warrior - dummy07: -5922741900909639112
+      ogre warrior - dummy05: 4073448393259701558
+      ogre warrior - dummy30: 1145778988092195866
+      ogre warrior - dummy67: 3026142606231429994
+      ogre warrior - dummy37: -497605646104463297
+      ogre warrior - dummy39: 356998430738709836
+      ogre warrior - dummy43: 8079131006393949122
+      ogre warrior - dummy68: 2482843651401084769
+      ogre warrior - dummy40: -5907772791544542496
+      ogre warrior - dummy23: -3994071077628605685
+      ogre warrior - dummy28: -2891723291265985503
+      ogre warrior - dummy72: 22162025995077497
+      ogre warrior - dummy65: 8394968789178019018
+      ogre warrior - dummy15: -5342552739107788031
+      ogre warrior - dummy33: 4587436119618426875
+      ogre warrior - dummy27: 8099734477004447660
+      ogre warrior - dummy74: 6493685702042384789
+      ogre warrior - dummy52: 5022809813111159980
+      ogre warrior - dummy00: 1329247456759242843
+      ogre warrior - dummy48: 1903752564739550932
+      ogre warrior - dummy11: -8788321661260043359
+      ogre warrior - dummy06: -1347020625013025999
+      ogre warrior - dummy17: -869286972719462263
+      ogre warrior - dummy45: -4827372400297113753
+      ogre warrior - dummy13: 6390903352175671295
+      ogre warrior - dummy16: -2085429915199380562
+      ogre warrior - dummy69: -8188390018881951702
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2144 @@
+fileFormatVersion: 2
+guid: 6ccd78c263db4a34490e71e55d829ac8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Golem - ANIM00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905ef68219273f7e0800000000000000
+      internalID: -1732915463833262839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM01
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87dd7dd810feb1670800000000000000
+      internalID: 8510658710800424312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM02
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d3f9e5c8a208440800000000000000
+      internalID: 4935991973969345848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM03
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee16c7c2da4afa20800000000000000
+      internalID: 3096869962925874920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM04
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e63f215c5e9c73f0800000000000000
+      internalID: -901671706044713239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM05
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970568249b105d030800000000000000
+      internalID: 3518720579056586873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM06
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08860acfb2bc3c610800000000000000
+      internalID: 1640378079075395712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM07
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1369
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4211e38999ccf6b70800000000000000
+      internalID: 8894552749136285988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 352e3c2c6b9f990f0800000000000000
+      internalID: -1109581269823135149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM09
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9338d6c460fd300800000000000000
+      internalID: 278948627244857844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM10
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c9d2de2749d5860800000000000000
+      internalID: 7520330174104968254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM11
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390afda665f94ca40800000000000000
+      internalID: 5387606247751000211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM12
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff20c60842250410800000000000000
+      internalID: 1442596948388360186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM13
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cf16e7b498a0580800000000000000
+      internalID: -8860118359562126316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM14
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8e5f8383e30af90800000000000000
+      internalID: -6944482214210574090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM15
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1255
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce82159bbdf3bbea0800000000000000
+      internalID: -5856016677525706516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faebe499be35d9e40800000000000000
+      internalID: 5664776177656446639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM17
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa6b1caf74f272a0800000000000000
+      internalID: -6741056863034709331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM18
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7f50e6c53a7b4d0800000000000000
+      internalID: -3118844599552575526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM19
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eafd1d4270d6b0d0800000000000000
+      internalID: -3407306878720541978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM20
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdbf74415543b330800000000000000
+      internalID: 3725397532109422078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM21
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f6b0862b2cb8210800000000000000
+      internalID: 1336375785951031060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM22
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d2d9afb406ce060800000000000000
+      internalID: 6984063001588215056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM23
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1141
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1cd7e008e5cfecb0800000000000000
+      internalID: -4832426274906973154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108b8874bd48d4790800000000000000
+      internalID: -7544227723442866175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM25
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6572e9d0bfc771de0800000000000000
+      internalID: -1362482944549181610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM26
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ee9eda9dad27930800000000000000
+      internalID: 4139611635967454872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM27
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 414cc341a2e406c10800000000000000
+      internalID: 2044720173461324820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM28
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aee014c8656103460800000000000000
+      internalID: 7219294763650977514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM29
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbcd5f1c0d107220800000000000000
+      internalID: 2481515332584197107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM30
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1dc6470f0be9dee0800000000000000
+      internalID: -1235698172957373156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM31
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 1027
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9ae8e3ed658d7c0800000000000000
+      internalID: -4046388752660125186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddc02010f1f5cf70800000000000000
+      internalID: 9207031026593877467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM33
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03370ab55225e27c0800000000000000
+      internalID: -4094244690828692688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM34
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92111035d8d9b9540800000000000000
+      internalID: 5015775840315707689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM35
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f86d33cc3453380800000000000000
+      internalID: -8992206536653238489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM36
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b615cdc2a6c41a960800000000000000
+      internalID: 7611448864135729515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM37
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1facc5fe39a1160800000000000000
+      internalID: 6997067627336757737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM38
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc320c8bc101ad50800000000000000
+      internalID: 6746675690516659450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM39
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 913
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0846c079bd773e3a0800000000000000
+      internalID: -6637329640798264192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42379d65ff717c640800000000000000
+      internalID: 5100071488461566756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM41
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ff33fe240fd9c10800000000000000
+      internalID: 2062068374677225353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM42
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88dc0b6354e5c6fe0800000000000000
+      internalID: -1194476149796713080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM43
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5b42b2c633cfb30800000000000000
+      internalID: 4322386282042144212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM44
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07bf2419e3df89d0800000000000000
+      internalID: -2769762247790053620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM45
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acaa1d0c711b75050800000000000000
+      internalID: 5789290561585392330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM46
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480d4e9256465cd30800000000000000
+      internalID: 4451074192382939268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM47
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 799
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4b58f3db1da7e70800000000000000
+      internalID: 9113827406682371232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af48eaa529270f950800000000000000
+      internalID: 6480805836698322170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM49
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f8bcd546bb406c0800000000000000
+      internalID: -4178008514548232290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM50
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9f6b1645b2d43f0800000000000000
+      internalID: -915027507869714001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM51
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e1ce2e974901120800000000000000
+      internalID: 2382567454098071108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM52
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3cdbcbde8e78800800000000000000
+      internalID: 614715981930808240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM53
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd832df38b5702c0800000000000000
+      internalID: -4465499883068748341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM54
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1bafa5f75540780800000000000000
+      internalID: -8717748973206851145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM55
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 685
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d48384b3af44ea30800000000000000
+      internalID: 4243604313416631512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb3c8e1b1deb0d00800000000000000
+      internalID: 940105647969287089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM57
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a9473fa8d582660800000000000000
+      internalID: 7361236442308450894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM58
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3fa186bdcad03f0800000000000000
+      internalID: -932899489451412535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM59
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640291175e28aec30800000000000000
+      internalID: 4389464708782563398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM60
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0080db2f52aef630800000000000000
+      internalID: 3962783251773292559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM61
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83eaf5965c6ff6ba0800000000000000
+      internalID: -6093380443072123336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM62
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4df11892b6cb1490800000000000000
+      internalID: -7774401861367235252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM63
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 571
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4e73ab59c0cf180800000000000000
+      internalID: -9080368911471876943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba5630efccc3f670800000000000000
+      internalID: 8571419709008140977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM65
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75a6781d37d24cb30800000000000000
+      internalID: 4306617119132838487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM66
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ea47263851e7d80800000000000000
+      internalID: -8251133813259456937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM67
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1080be672d6be4d90800000000000000
+      internalID: -7111545746516932607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM68
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e8de5dcb521c080800000000000000
+      internalID: -9169005873376424434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM69
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1ba0651c4f633a0800000000000000
+      internalID: -6685887485575515711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM70
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0ec1087f7f22ea80800000000000000
+      internalID: -8439130527218151923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM71
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 457
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d625afee029346560800000000000000
+      internalID: 7306027309112906349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM72
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e569e9bcfb6bd160800000000000000
+      internalID: 7051348374773655016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM73
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2f48742b2b05fc0800000000000000
+      internalID: -3508107630947798345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM74
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bb4499104712f30800000000000000
+      internalID: 4549044648836119350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM75
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968e8ee4adea31530800000000000000
+      internalID: 3824592761217673321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM76
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479197dfb29934e90800000000000000
+      internalID: -7042616978062108300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM77
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d346139b385b54b70800000000000000
+      internalID: 8882705417410536509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM78
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7c3b01d1ea57260800000000000000
+      internalID: 7094768227849586615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM79
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 343
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189d5bb6d6f7397b0800000000000000
+      internalID: -5218687435257030271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM80
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7da0e270a8506a90800000000000000
+      internalID: -7322755547959087747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM81
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c399e9d5c1ed37870800000000000000
+      internalID: 8679525120284203324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM82
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12013239042dc4780800000000000000
+      internalID: -8697345605570981855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM83
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2d823eca72a5a20800000000000000
+      internalID: 3051795320995893928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM84
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bedd84497fa9c190800000000000000
+      internalID: -7941623532515107151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM85
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13561795e548b740800000000000000
+      internalID: 5167957424792294175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM86
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21000cbe215f3b70800000000000000
+      internalID: 8880906251362369836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM87
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 229
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7df32838e87b870800000000000000
+      internalID: 8698577900766484401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM88
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8daf8349ab820d20800000000000000
+      internalID: 3243308240759401867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM89
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 115
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e166ac0bcf15f60800000000000000
+      internalID: 8021470247563697818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM90
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 115
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d8cc1e582819a00800000000000000
+      internalID: 761533323532864826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM91
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 115
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a672c792a7a8990800000000000000
+      internalID: -7382954320525301222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem - ANIM92
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 115
+        width: 176
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83be17b6a7fd1f6c0800000000000000
+      internalID: -4111259267930920136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Golem - ANIM36: 7611448864135729515
+      Golem - ANIM79: -5218687435257030271
+      Golem - ANIM69: -6685887485575515711
+      Golem - ANIM27: 2044720173461324820
+      Golem - ANIM48: 6480805836698322170
+      Golem - ANIM46: 4451074192382939268
+      Golem - ANIM64: 8571419709008140977
+      Golem - ANIM86: 8880906251362369836
+      Golem - ANIM47: 9113827406682371232
+      Golem - ANIM34: 5015775840315707689
+      Golem - ANIM62: -7774401861367235252
+      Golem - ANIM10: 7520330174104968254
+      Golem - ANIM83: 3051795320995893928
+      Golem - ANIM22: 6984063001588215056
+      Golem - ANIM91: -7382954320525301222
+      Golem - ANIM32: 9207031026593877467
+      Golem - ANIM35: -8992206536653238489
+      Golem - ANIM76: -7042616978062108300
+      Golem - ANIM59: 4389464708782563398
+      Golem - ANIM40: 5100071488461566756
+      Golem - ANIM53: -4465499883068748341
+      Golem - ANIM78: 7094768227849586615
+      Golem - ANIM11: 5387606247751000211
+      Golem - ANIM20: 3725397532109422078
+      Golem - ANIM90: 761533323532864826
+      Golem - ANIM92: -4111259267930920136
+      Golem - ANIM77: 8882705417410536509
+      Golem - ANIM08: -1109581269823135149
+      Golem - ANIM56: 940105647969287089
+      Golem - ANIM52: 614715981930808240
+      Golem - ANIM67: -7111545746516932607
+      Golem - ANIM58: -932899489451412535
+      Golem - ANIM82: -8697345605570981855
+      Golem - ANIM39: -6637329640798264192
+      Golem - ANIM28: 7219294763650977514
+      Golem - ANIM31: -4046388752660125186
+      Golem - ANIM84: -7941623532515107151
+      Golem - ANIM89: 8021470247563697818
+      Golem - ANIM00: -1732915463833262839
+      Golem - ANIM01: 8510658710800424312
+      Golem - ANIM74: 4549044648836119350
+      Golem - ANIM07: 8894552749136285988
+      Golem - ANIM51: 2382567454098071108
+      Golem - ANIM05: 3518720579056586873
+      Golem - ANIM50: -915027507869714001
+      Golem - ANIM24: -7544227723442866175
+      Golem - ANIM09: 278948627244857844
+      Golem - ANIM43: 4322386282042144212
+      Golem - ANIM21: 1336375785951031060
+      Golem - ANIM80: -7322755547959087747
+      Golem - ANIM61: -6093380443072123336
+      Golem - ANIM15: -5856016677525706516
+      Golem - ANIM23: -4832426274906973154
+      Golem - ANIM75: 3824592761217673321
+      Golem - ANIM71: 7306027309112906349
+      Golem - ANIM26: 4139611635967454872
+      Golem - ANIM70: -8439130527218151923
+      Golem - ANIM41: 2062068374677225353
+      Golem - ANIM17: -6741056863034709331
+      Golem - ANIM42: -1194476149796713080
+      Golem - ANIM88: 3243308240759401867
+      Golem - ANIM81: 8679525120284203324
+      Golem - ANIM03: 3096869962925874920
+      Golem - ANIM66: -8251133813259456937
+      Golem - ANIM13: -8860118359562126316
+      Golem - ANIM14: -6944482214210574090
+      Golem - ANIM37: 6997067627336757737
+      Golem - ANIM65: 4306617119132838487
+      Golem - ANIM57: 7361236442308450894
+      Golem - ANIM63: -9080368911471876943
+      Golem - ANIM29: 2481515332584197107
+      Golem - ANIM85: 5167957424792294175
+      Golem - ANIM45: 5789290561585392330
+      Golem - ANIM55: 4243604313416631512
+      Golem - ANIM73: -3508107630947798345
+      Golem - ANIM87: 8698577900766484401
+      Golem - ANIM19: -3407306878720541978
+      Golem - ANIM04: -901671706044713239
+      Golem - ANIM33: -4094244690828692688
+      Golem - ANIM49: -4178008514548232290
+      Golem - ANIM06: 1640378079075395712
+      Golem - ANIM54: -8717748973206851145
+      Golem - ANIM72: 7051348374773655016
+      Golem - ANIM02: 4935991973969345848
+      Golem - ANIM60: 3962783251773292559
+      Golem - ANIM16: 5664776177656446639
+      Golem - ANIM68: -9169005873376424434
+      Golem - ANIM25: -1362482944549181610
+      Golem - ANIM38: 6746675690516659450
+      Golem - ANIM44: -2769762247790053620
+      Golem - ANIM18: -3118844599552575526
+      Golem - ANIM12: 1442596948388360186
+      Golem - ANIM30: -1235698172957373156
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
