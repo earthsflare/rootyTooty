@@ -1667,7 +1667,6 @@ TextureImporter:
     nameFileIdTable:
       ogre warrior - ANIM73: 5912338694106091626
       ogre warrior - ANIM66: -1404135809575185875
-      ogre warrior - ANIM57: -7109227377094636796
       ogre warrior - ANIM64: 3374023576550314172
       ogre warrior - ANIM35: 3596559927992302998
       ogre warrior - ANIM59: -4265038681490614026
@@ -1702,10 +1701,10 @@ TextureImporter:
       ogre warrior - ANIM36: -6493684692037063032
       ogre warrior - ANIM24: -181396613934984441
       ogre warrior - ANIM06: 7300407433387171538
-      ogre warrior - ANIM46: 1469988474010830590
+      ogre warrior - ANIM49: 826542481389175352
       ogre warrior - ANIM17: 8475564982804525825
       ogre warrior - ANIM74: 7981687239751467065
-      ogre warrior - ANIM49: 826542481389175352
+      ogre warrior - ANIM46: 1469988474010830590
       ogre warrior - ANIM50: 6004313846317498290
       ogre warrior - ANIM58: -8532164711061764764
       ogre warrior - ANIM70: 3532621346002542813
@@ -1734,10 +1733,11 @@ TextureImporter:
       ogre warrior - ANIM09: 4760573330054293616
       ogre warrior - ANIM38: -1475632934882928181
       ogre warrior - ANIM40: -4311140063806679700
+      ogre warrior - ANIM57: -7109227377094636796
       ogre warrior - ANIM55: 8018887023242499
       ogre warrior - ANIM47: -4966157449026841502
-      ogre warrior - ANIM52: 3963354749513388678
       ogre warrior - ANIM45: 2403809993038866478
+      ogre warrior - ANIM52: 3963354749513388678
       ogre warrior - ANIM04: -1834964358708262980
       ogre warrior - ANIM54: -1509896493964769191
   spritePackingTag: 

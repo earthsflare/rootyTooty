@@ -1182,10 +1182,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      ogre master - ANIM16: 7251544869840112097
       ogre master - ANIM13: 7446914744324408186
       ogre master - ANIM11: 7952335463996694242
-      ogre master - ANIM25: 8426634794462379925
-      ogre master - ANIM10: 3293656074157341631
       ogre master - ANIM48: 3468371509114747605
       ogre master - ANIM22: -2122595799340352615
       ogre master - ANIM51: -8658188635068266676
@@ -1229,11 +1228,12 @@ TextureImporter:
       ogre master - ANIM18: 4906665841630375386
       ogre master - ANIM27: 3040439640707915617
       ogre master - ANIM36: -8060869009459385329
-      ogre master - ANIM35: -158257172622151048
+      ogre master - ANIM25: 8426634794462379925
       ogre master - ANIM03: 3504605097404921658
+      ogre master - ANIM35: -158257172622151048
       ogre master - ANIM20: 3639055296333098340
       ogre master - ANIM01: 38505766013204737
-      ogre master - ANIM16: 7251544869840112097
+      ogre master - ANIM10: 3293656074157341631
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

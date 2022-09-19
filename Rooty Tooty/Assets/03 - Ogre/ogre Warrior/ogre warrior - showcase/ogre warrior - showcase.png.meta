@@ -1812,7 +1812,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ogre warrior - showcase75: -7531712942933988875
       ogre warrior - showcase13: -9020806900355586198
       ogre warrior - showcase30: 4122073975410562374
       ogre warrior - showcase72: 7299632257494038700
@@ -1822,6 +1821,7 @@ TextureImporter:
       ogre warrior - showcase14: -7422572288151197676
       ogre warrior - showcase03: 557875170834612288
       ogre warrior - showcase00: -2463317042655987187
+      ogre warrior - showcase75: -7531712942933988875
       ogre warrior - showcase62: -7475802671533974124
       ogre warrior - showcase07: -7583545743690941941
       ogre warrior - showcase44: -1161286415286382546
