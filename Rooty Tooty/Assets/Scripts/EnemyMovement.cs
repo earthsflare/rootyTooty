@@ -72,6 +72,7 @@ public class EnemyMovement : MonoBehaviour
             CheckSpriteDirection();
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
             enemyAnimator.SetBool("isMoving", true);
+            enemyAnimator.SetBool("isChasing", false);
         }
 
         //moves towards player when in range
@@ -144,7 +145,9 @@ public class EnemyMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("OnCollisionEnter2D");
-        isGrounded = true;
+        if (col.gameObject.CompareTag("Ground")){
+            isGrounded = true;
+        }
     }
     //When the enemy leaves the aggro range the playerInRange bool is set to false, the readyToChase bool is set to false to allow for the charge animation to play again, and the charge coroutine is ended in case it is still running
     private void OnTriggerExit2D(Collider2D collider)
@@ -161,6 +164,9 @@ public class EnemyMovement : MonoBehaviour
     void OnCollisionExit2D(Collision2D col)
     {
         Debug.Log("OnCollisionExit2D");
-        isGrounded = false;
+        if (col.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
 }

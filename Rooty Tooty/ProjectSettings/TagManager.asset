@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerAggroRange
   - StartPos
+  - Ground
   layers:
   - Default
   - TransparentFX
