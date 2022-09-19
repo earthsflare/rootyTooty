@@ -1910,7 +1910,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 16384
-  sceneName: Doors 1
+  sceneName: Door 1
 --- !u!61 &1026156144
 BoxCollider2D:
   m_ObjectHideFlags: 0
