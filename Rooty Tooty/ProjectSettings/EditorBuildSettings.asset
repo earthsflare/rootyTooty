@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Levels/Level4.unity
     guid: 31a4d30edc0cb5c45b5e8dcad4f5fd02
+  - enabled: 1
+    path: Assets/Scenes/DoorTesting/Door.unity
+    guid: 58a1900e3689b474d951c765a595924e
+  - enabled: 1
+    path: Assets/Scenes/DoorTesting/Door1.unity
+    guid: 7683af07cf4779f4d8ed0eef840149a7
+  - enabled: 1
+    path: Assets/Scenes/DoorTesting/DoorTest1.unity
+    guid: 831d8ffed24a0744e8a5266a06b6a094
   m_configObjects: {}

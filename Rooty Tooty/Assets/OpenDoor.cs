@@ -26,10 +26,9 @@ public class OpenDoor : MonoBehaviour
         // what playerdetected is
         // parameters tell what the origin is and how big/tall it is
         playerDetected = Physics2D.OverlapBox(doorPos.position, new Vector2(width, height), 0, whatIsPlayer);
-            // if detects whatIsPlayer, true
         if (playerDetected == true)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 sceneSwitch.SwitchScene(sceneName);
             }
