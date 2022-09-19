@@ -19,14 +19,14 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 mouse = Input.mousePosition;
+        // Vector2 mouse = Input.mousePosition;
 
-        Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
+        // Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
 
-        Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
+        // Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
 
-        float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f,0f, angle);
+        // float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+        // transform.rotation = Quaternion.Euler(0f,0f, angle);
 
         if(Input.GetMouseButtonDown(0))
         {
