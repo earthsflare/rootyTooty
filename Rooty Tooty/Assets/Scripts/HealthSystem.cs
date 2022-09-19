@@ -17,7 +17,9 @@ public class HealthSystem : MonoBehaviour
     {
         if(dead == true)
         {
+            Destroy(gameObject);
             Debug.Log("Player is dead!");
+            // game over screen overlay
         }
     }
 
