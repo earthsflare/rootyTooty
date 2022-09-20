@@ -21,6 +21,12 @@ public class PlayerProjectile : MonoBehaviour
         // Instantiate(impactAnimation, transform.position, transform.rotation);
 
         // Destroy(gameObject);
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+
         gameObject.SetActive(false);
     }
 }
