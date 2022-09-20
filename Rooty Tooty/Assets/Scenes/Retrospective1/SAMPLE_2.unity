@@ -458,7 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 425131254}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ceilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -1475,7 +1475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850380064}
   - component: {fileID: 850380065}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PlayerAggroRange
   m_TagString: PlayerAggroRange
   m_Icon: {fileID: 0}
@@ -2090,7 +2090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 981588431}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -2939,7 +2939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343940624}
   - component: {fileID: 1343940625}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ProjectilePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3207,7 +3207,7 @@ GameObject:
   - component: {fileID: 1577464347}
   - component: {fileID: 1577464346}
   - component: {fileID: 1577464349}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
