@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
     bool facingLeft = true;
     [Tooltip("A bool for determining whether the player is in range")]
     //Enemy Vision Range is determined by a Box Collider 2D on the player GameObject
-    bool playerInRange = false;
+    bool inAggroRange = false;
     [Tooltip("The playable character's main GameObject")]
     public GameObject player;
     [Tooltip("Th movement speed of the enemy when in charging range of player ")]
@@ -31,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
     bool readyToChase;
     public float enemyReactionTime = 1;
     bool isGrounded = true;
+    bool inMeleeRange = false;
     public Animator enemyAnimator;
     void Start()
     {
@@ -42,7 +43,11 @@ public class EnemyMovement : MonoBehaviour
     }
     void Update()
     {
-        if (playerInRange && readyToChase && isGrounded)
+        if (inMeleeRange)
+        {
+            enemyAnimator.SetBool("inMeleeRange",true);
+        }
+        if (inAggroRange && readyToChase && isGrounded && !inMeleeRange)
         {
             FaceTowardsPlayer();
             CheckSpriteDirection();
@@ -52,7 +57,7 @@ public class EnemyMovement : MonoBehaviour
             transform.position = new Vector3(tempVector2.x, transform.position.y, 0);
             enemyAnimator.SetBool("isChasing", true);
         }
-        else if (!playerInRange && isGrounded)
+        else if (!inAggroRange && isGrounded)
         {
             readyToChase = false;
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
@@ -138,8 +143,13 @@ public class EnemyMovement : MonoBehaviour
         if (collider.CompareTag("PlayerAggroRange"))
         {
             Debug.Log("Entering Player Range");
-            playerInRange = true;
+            inAggroRange = true;
             StartCoroutine(StartCharge());
+        }
+        if (collider.CompareTag("MeleeAttackRange"))
+        {
+            Debug.Log("Entering Melee Range");
+            inMeleeRange = true;
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -156,9 +166,14 @@ public class EnemyMovement : MonoBehaviour
         if (collider.CompareTag("PlayerAggroRange"))
         {
             Debug.Log("Exiting Player Range");
-            playerInRange = false;
+            inAggroRange = false;
             readyToChase = false;
             StopAllCoroutines();
+        }
+        if (collider.CompareTag("MeleeAttackRange"))
+        {
+            Debug.Log("Exiting Melee Range");
+            inMeleeRange = false;
         }
     }
     void OnCollisionExit2D(Collision2D col)
