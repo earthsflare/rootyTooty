@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         //gives -1 or 1 depending on input ex. left is -1 right is 1
         movement.x = Input.GetAxisRaw("Horizontal") * characterSpeed;
 
+        //If user presses Shift the character will sprint
         if (Input.GetKey(KeyCode.LeftShift))
         {
             characterSpeed = regSpeed * 2;
@@ -75,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         //Add jump force if the player used the jump key and perform a jump
         if (isJumping && (jumpCounter < MAXJUMPS))
         {
-            rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            rb.velocity = Vector2.up * jumpHeight;
             jumpCounter++;
             animator.SetInteger("JumpCount", jumpCounter);
         }
