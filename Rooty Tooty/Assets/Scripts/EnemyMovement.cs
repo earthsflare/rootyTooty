@@ -45,19 +45,21 @@ public class EnemyMovement : MonoBehaviour
     {
         if (inMeleeRange)
         {
-            enemyAnimator.SetBool("inMeleeRange",true);
+            meleeAttack();
+            enemyAnimator.SetBool("isChasing", false);
+            enemyAnimator.SetBool("isMoving", false);
+
         }
-        if (inAggroRange && readyToChase && isGrounded && !inMeleeRange)
+        else if (inAggroRange && readyToChase && isGrounded && !inMeleeRange)
         {
             FaceTowardsPlayer();
             CheckSpriteDirection();
             //moves the enemy forward based on speed given and direction
-            Debug.Log("moving toward player");
             Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, chargeSpeed * Time.deltaTime);
             transform.position = new Vector3(tempVector2.x, transform.position.y, 0);
             enemyAnimator.SetBool("isChasing", true);
         }
-        else if (!inAggroRange && isGrounded)
+        else if (!inAggroRange && isGrounded && !inMeleeRange)
         {
             readyToChase = false;
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
@@ -65,14 +67,12 @@ public class EnemyMovement : MonoBehaviour
             {
                 //flips the direction to the left
                 dir = -1;
-                Debug.Log("Moving Left");
             }
             //if the enemy is too far to the left from the starting position flips the enemy's direction to the right
             else if (transform.position.x < startingPos - dist)
             {
                 //flips the direction to the right
                 dir = 1;
-                Debug.Log("Moving Right");
             }
             CheckSpriteDirection();
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
@@ -98,13 +98,11 @@ public class EnemyMovement : MonoBehaviour
         if (dir == -1 && !facingLeft)
         {
             FlipSprite();
-            Debug.Log("Flipping Sprite");
         }
         //if the enemy is moving to the right and facing the left calls the flipSprite function
         else if (dir == 1 && facingLeft)
         {
             FlipSprite();
-            Debug.Log("Flipping Sprite");
         }
     }
     //Function that checks if the enemy is to the left or to the right of the player. Changes the direction accordingly.
@@ -114,14 +112,16 @@ public class EnemyMovement : MonoBehaviour
         if (transform.position.x > player.transform.position.x)
         {
             dir = -1;
-            Debug.Log("Looking At Player (Left)");
         }
         //if enemy is to the left of player look right
         else if (transform.position.x < player.transform.position.x)
         {
             dir = 1;
-            Debug.Log("Looking At Player (Right)");
         }
+    }
+    private void meleeAttack()
+    {
+        enemyAnimator.SetTrigger("Attack");
     }
     //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin chasing.
     IEnumerator StartCharge()
@@ -130,6 +130,7 @@ public class EnemyMovement : MonoBehaviour
         FaceTowardsPlayer();
         CheckSpriteDirection();
         enemyAnimator.SetBool("isMoving", false);
+        enemyAnimator.SetBool("isChasing", false);
         yield return new WaitForSeconds(enemyReactionTime);
         //adds upward force to make enemy jump
         rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -146,7 +147,7 @@ public class EnemyMovement : MonoBehaviour
             inAggroRange = true;
             StartCoroutine(StartCharge());
         }
-        if (collider.CompareTag("MeleeAttackRange"))
+        else if (collider.CompareTag("MeleeAttackRange"))
         {
             Debug.Log("Entering Melee Range");
             inMeleeRange = true;
@@ -169,11 +170,13 @@ public class EnemyMovement : MonoBehaviour
             inAggroRange = false;
             readyToChase = false;
             StopAllCoroutines();
+            enemyAnimator.ResetTrigger("Attack");
         }
-        if (collider.CompareTag("MeleeAttackRange"))
+        else if (collider.CompareTag("MeleeAttackRange"))
         {
             Debug.Log("Exiting Melee Range");
             inMeleeRange = false;
+            enemyAnimator.ResetTrigger("Attack");
         }
     }
     void OnCollisionExit2D(Collision2D col)
