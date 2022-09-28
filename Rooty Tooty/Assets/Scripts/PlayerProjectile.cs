@@ -15,12 +15,16 @@ public class PlayerProjectile : MonoBehaviour
         projectileRB.velocity = transform.right * speed;
     }
 
-    private void OnCollisionEnter2D (Collision2D collision)
+    private void OnTriggerEnter2D (Collider2D collider)
     {
         // Add animation for impact later
         // Instantiate(impactAnimation, transform.position, transform.rotation);
 
         // Destroy(gameObject);
-        gameObject.SetActive(false);
+        if (collider.CompareTag("Enemy"))
+        {
+            Debug.Log("PlayerProjectile collided with " + collider.name);
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -25,7 +25,7 @@ public class ProjectilePooler : MonoBehaviour
         {
             GameObject obj = Instantiate(projectilePrefab);
             obj.SetActive(false);
-            pooledProjectiles.Add(obj); 
+            pooledProjectiles.Add(obj);
         }
     }
 
