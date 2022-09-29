@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageOnCollision : MonoBehaviour
+public class DamageOnPlayer : MonoBehaviour
 {
     private bool canTakeDamage = true;
 
@@ -10,7 +10,16 @@ public class DamageOnCollision : MonoBehaviour
     {
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<HealthSystem>().TakeDamage(1);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            StartCoroutine(damageTimer());
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (canTakeDamage && collider.gameObject.CompareTag("Player"))
+        {
+            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
             StartCoroutine(damageTimer());
         }
     }
