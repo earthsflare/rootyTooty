@@ -5,15 +5,17 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [Tooltip("The starting position of the enemy")]
-    public float startingPos;
-    [Tooltip("The distance the enemy can move away from the starting position")]
-    public float dist = 5;
+    private float startingPos;
+    [Tooltip("The distance the enemy can move Left from the starting position")]
+    public float distL = 5;
+    [Tooltip("The distance the enemy can move Right from the starting position")]
+    public float distR = 5;
     [Tooltip("The movement speed of the enemy")]
     public float speed = 2f;
     [Tooltip("The direction the enemy is facing; -1 for left +1 for right")]
     public int dir;
     [Tooltip("A bool for determining whether the enemy is facing left")]
-    bool facingLeft = true;
+    private bool facingLeft;
     [Tooltip("A bool for determining whether the player is in range")]
     //Enemy Vision Range is determined by a Box Collider 2D on the player GameObject
     bool inAggroRange = false;
@@ -35,9 +37,10 @@ public class EnemyMovement : MonoBehaviour
     public Animator enemyAnimator;
     void Start()
     {
+        dir = (int)gameObject.transform.localScale.x;
+        facingLeft = dir == -1 ? true : false;
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
-        dir = -1;
         //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
         jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
     }
@@ -63,13 +66,13 @@ public class EnemyMovement : MonoBehaviour
         {
             readyToChase = false;
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
-            if (transform.position.x > startingPos + dist)
+            if (transform.position.x > startingPos + distR)
             {
                 //flips the direction to the left
                 dir = -1;
             }
             //if the enemy is too far to the left from the starting position flips the enemy's direction to the right
-            else if (transform.position.x < startingPos - dist)
+            else if (transform.position.x < startingPos - distL)
             {
                 //flips the direction to the right
                 dir = 1;
