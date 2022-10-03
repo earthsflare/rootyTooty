@@ -40,6 +40,7 @@ public class ProjectilePooler : MonoBehaviour
         {
             if(!pooledProjectiles[i].activeInHierarchy)
             {
+                pooledProjectiles[i].SetParent(gameObject);
                 return pooledProjectiles[i];
             }
             if (i == amountToPool - 1)

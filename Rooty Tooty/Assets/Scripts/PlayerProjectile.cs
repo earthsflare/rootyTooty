@@ -11,6 +11,16 @@ public class PlayerProjectile : MonoBehaviour
     public float offsetTime = 2f;
     private float timer = 0f;
 
+    public void SetParent(GameObject newParent)
+    {
+        transform.parent = newParent.transform;
+    }
+
+    public void DetachFromParent()
+    {
+        transform.parent = null;
+    }
+
     // Update is called once per frame
     void Update()
     {
