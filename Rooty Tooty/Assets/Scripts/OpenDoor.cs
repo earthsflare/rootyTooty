@@ -22,7 +22,7 @@ public class OpenDoor : MonoBehaviour
     private string sceneName;
 
     SceneSwitch sceneSwitch;
-    GameManager gameManager;
+    //GameManager gameManager;
 
     private void Start()
     {
@@ -39,7 +39,7 @@ public class OpenDoor : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //o before entering the scene, set where you want the player to be at in the next scene
-                gameManager.instance.NextlevelPos = nextDoorPos;
+                gameManagerScript.instance.NextlevelPos = nextDoorPos;
                 sceneSwitch.SwitchScene(sceneName);
             }
         }

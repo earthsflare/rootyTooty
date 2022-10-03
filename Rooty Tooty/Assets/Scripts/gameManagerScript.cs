@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RootyTooty
-{
-    public class GameManager : MonoBehaviour
+//namespace RootyTooty
+//{
+    public class gameManagerScript : MonoBehaviour
     {
-        public static GameManager instance;
+        public static gameManagerScript instance;
 
 
         private Vector2 nextLevelPosition;
@@ -49,4 +49,4 @@ namespace RootyTooty
             }
         }
     }
-}
+//}
