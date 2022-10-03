@@ -246,7 +246,7 @@ GameObject:
   m_Layer: 0
   m_Name: ceilingCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -343,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00456188, y: -2.094676, z: -10}
+  m_LocalPosition: {x: 0.0045609265, y: -2.095358, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -573,7 +573,7 @@ GameObject:
   m_Layer: 0
   m_Name: groundCheck
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -718,10 +718,11 @@ GameObject:
   - component: {fileID: 1577464344}
   - component: {fileID: 1577464347}
   - component: {fileID: 1577464346}
+  - component: {fileID: 1577464348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -739,17 +740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regSpeed: 5
   characterSpeed: 0
-  jumpHeight: 10
-  isJumping: 0
-  ceilingCheck: {fileID: 425131254}
-  groundCheck: {fileID: 981588431}
-  groundObjects:
-    serializedVersion: 2
-    m_Bits: 256
-  checkRadius: 0
-  MAXJUMPS: 2
   animator: {fileID: 1577464345}
-  jumpCounter: 0
   rb: {fileID: 1577464342}
 --- !u!50 &1577464342
 Rigidbody2D:
@@ -903,6 +894,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52335167, y: 0.47563314}
   m_EdgeRadius: 0
+--- !u!114 &1577464348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f91d32db6c5ad34e9e107bb9ca945e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 8
+  isJumping: 0
+  ceilingCheck: {fileID: 425131254}
+  groundCheck: {fileID: 981588431}
+  groundObjects:
+    serializedVersion: 2
+    m_Bits: 256
+  MAXJUMPS: 2
+  jumpCounter: 0
+  TOTALJUMPTIME: 0.35
+  animator: {fileID: 1577464345}
+  rb: {fileID: 1577464342}
 --- !u!1 &2109063277
 GameObject:
   m_ObjectHideFlags: 0
