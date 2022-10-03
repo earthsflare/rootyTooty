@@ -18,14 +18,19 @@ public class ProjectilePooler : MonoBehaviour
         }
     }
 
+    private void addProjectileToPool()
+    {
+        GameObject obj = Instantiate(projectilePrefab);
+        obj.SetActive(false);
+        pooledProjectiles.Add(obj);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject obj = Instantiate(projectilePrefab);
-            obj.SetActive(false);
-            pooledProjectiles.Add(obj); 
+            addProjectileToPool();
         }
     }
 
@@ -35,7 +40,13 @@ public class ProjectilePooler : MonoBehaviour
         {
             if(!pooledProjectiles[i].activeInHierarchy)
             {
+                pooledProjectiles[i].SetParent(gameObject);
                 return pooledProjectiles[i];
+            }
+            if (i == amountToPool - 1)
+            {
+                addProjectileToPool();
+                amountToPool++;
             }
         }
         return null;
