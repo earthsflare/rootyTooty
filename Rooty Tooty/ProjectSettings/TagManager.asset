@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - MeleeAttackRange
   - Enemy
+  - Potion
   layers:
   - Default
   - TransparentFX
