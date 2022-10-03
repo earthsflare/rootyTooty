@@ -5,9 +5,16 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     private bool playerDetected; // a boolean checking for if a player is detected in the range
+    
+    //o instead of this you can probably reference the position of the OpenDoor script. You don't need to make a child gameObect (tranform.position)
     public Transform doorPos; // empty game object beside the door, where the range starts
+
+    //o instead of this you can reference the door width and height using transform.localScale.x & transform.localScale.y
     public float width; // width of rectangle to fit the door
     public float height; // height of rectangle to fit the door
+
+    //o Instead of using public variables you can use [SerializedField] to diplay the script in the inspector
+    [SerializeField] private Vector2 nextDoorPos = Vector2.zero;
 
     public LayerMask whatIsPlayer;// what to check for to change the bool
 
@@ -30,6 +37,8 @@ public class OpenDoor : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                //o before entering the scene, set where you want the player to be at in the next scene
+                GameManager.instance.NextlevelPos = nextDoorPos;
                 sceneSwitch.SwitchScene(sceneName);
             }
         }
