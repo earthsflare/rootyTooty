@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     
-    private Vector3 nextLevelPosition;
+    private Vector2 nextLevelPosition;
     //o generally better to use getters and setters instead of making variables public
-    public Vector3 NextlevelPos { set => nextLevelPosition = value; }
+    public Vector2 NextlevelPos { set => nextLevelPosition = value; }
 
 
     //Prefab that holds the player character

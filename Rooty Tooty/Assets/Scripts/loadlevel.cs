@@ -38,13 +38,13 @@ public class loadlevel : MonoBehaviour
         if(useIntegerToLoadLevel)
         {
             //Player.transform.position = changeLevelPosition;
-            GameManager.instance.nextLevelPosition = changeLevelPosition;
+            GameManager.instance.NextlevelPos = changeLevelPosition;
             SceneManager.LoadScene(iLevelToLoad);
         }
         else
         {
             //Player.transform.position = changeLevelPosition;
-            GameManager.instance.nextLevelPosition = changeLevelPosition;
+            GameManager.instance.NextlevelPos = changeLevelPosition;
             SceneManager.LoadScene(sLevelToLoad);
         }
         //GameManager.instance.nextLevelPosition = changeLevelPosition;
