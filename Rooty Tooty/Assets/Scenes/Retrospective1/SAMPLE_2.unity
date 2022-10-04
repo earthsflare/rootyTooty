@@ -541,7 +541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.34996, y: -5.709588, z: -10}
+  m_LocalPosition: {x: 32.349968, y: -5.709489, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1258,6 +1258,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3241425054333609183, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
 --- !u!1 &833537910
@@ -1512,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3241425054333609183, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
 --- !u!1 &905785944
@@ -1740,6 +1748,10 @@ PrefabInstance:
     - target: {fileID: 983074412038560166, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241425054333609183, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
@@ -2593,7 +2605,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1238889304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3480,6 +3492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1343940624}
   projectileToFire: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
+  isAvailable: 1
+  cooldownDuration: 1
 --- !u!114 &1577464349
 MonoBehaviour:
   m_ObjectHideFlags: 0

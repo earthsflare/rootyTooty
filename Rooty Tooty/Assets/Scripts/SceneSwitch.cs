@@ -8,6 +8,13 @@ public class SceneSwitch : MonoBehaviour
 
     public static string prevScene;
     public static string currentScene;
+    [SerializeField] private GameObject playerPrefab;
+
+    public void Awake()
+    {
+        if (playerPrefab == null)
+            FindObjectOfType<PlayerMovement>().transform.position = nextLevelPosition;
+    }
 
     public virtual void Start()
     {

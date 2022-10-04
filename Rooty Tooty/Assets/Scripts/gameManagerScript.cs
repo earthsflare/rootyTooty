@@ -15,7 +15,7 @@ using UnityEngine;
 
 
         //Prefab that holds the player character
-        [SerializeField] private GameObject playerPrefab;
+        //[SerializeField] private GameObject playerPrefab;
 
         // ensures the character is not deleted upon loading a new scene + 
         // removes duplicating the character
@@ -41,12 +41,12 @@ using UnityEngine;
             //gameObject.transform.position = nextLevelPosition;
 
             //We want to check if this script is the gameManager
-            if (instance == this)
-            {
+            //if (instance == this)
+            //{
                 //o Probably going to need a player character to add don't destroy on load, but for now we can just find the player through FindObjectOfType
-                if (playerPrefab == null)
-                    FindObjectOfType<PlayerMovement>().transform.position = nextLevelPosition;
-            }
+              //  if (playerPrefab == null)
+                //    FindObjectOfType<PlayerMovement>().transform.position = nextLevelPosition;
+            //}
         }
     }
 //}
