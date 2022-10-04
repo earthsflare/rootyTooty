@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355108036}
   - component: {fileID: 355108037}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerAggroRange
   m_TagString: PlayerAggroRange
   m_Icon: {fileID: 0}
@@ -550,8 +550,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899919753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.5, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 1}
+  m_LocalPosition: {x: -1.19, y: -3.56, z: 0}
+  m_LocalScale: {x: 27.349998, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -722,8 +722,8 @@ MonoBehaviour:
   player: {fileID: 563802633}
   chargeSpeed: 4
   rb: {fileID: 2096683837}
-  jumpHeight: 1
-  enemyReactionTime: 1
+  jumpHeight: 0.1
+  enemyReactionTime: 0.5
   enemyAnimator: {fileID: 2096683835}
 --- !u!95 &2096683835 stripped
 Animator:
@@ -749,6 +749,10 @@ PrefabInstance:
     - target: {fileID: 7454804712025437144, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
       propertyPath: m_Name
       value: Hobbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454804712025437144, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7474234591035092968, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
       propertyPath: m_RootOrder

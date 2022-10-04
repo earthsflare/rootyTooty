@@ -26,11 +26,12 @@ public class HobbitEnemyMovement : MonoBehaviour
     [Tooltip("The Rigidbody2D on the Enemy GameObject")]
     public Rigidbody2D rb;
     [Tooltip("the desired height for a jump")]
-    public float jumpHeight = 1f;
+    public float jumpHeight = 0.1f;
     //calculated jump strength needed to reach desired height 
     private float jumpForce;
-    public float enemyReactionTime = 1;
+    public float enemyReactionTime = 0.5f;
     bool isGrounded = true;
+    bool readyToFire;
     public Animator enemyAnimator;
     void Start()
     {
@@ -47,7 +48,7 @@ public class HobbitEnemyMovement : MonoBehaviour
         {
             FaceTowardsPlayer();
             enemyAnimator.SetBool("isMoving", false);
-            meleeAttack();
+            Attack();
 
         }
 
@@ -110,11 +111,23 @@ public class HobbitEnemyMovement : MonoBehaviour
         }
         CheckSpriteDirection();
     }
-    private void meleeAttack()
+    private void Attack()
     {
         enemyAnimator.SetTrigger("Attack");
     }
-
+    //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin chasing.
+    IEnumerator startShooting()
+    {
+        Debug.Log("Coroutine Called");
+        FaceTowardsPlayer();
+        CheckSpriteDirection();
+        enemyAnimator.SetBool("isMoving", false);
+        yield return new WaitForSeconds(enemyReactionTime);
+        //adds upward force to make enemy jump
+        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(enemyReactionTime);
+        readyToFire = true;
+    }
     //When the enemy enters the aggro range the playerInRange bool is set to true and the charge coroutine is started
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -123,6 +136,7 @@ public class HobbitEnemyMovement : MonoBehaviour
         {
             Debug.Log("Entering Player Range");
             inAggroRange = true;
+            StartCoroutine(startShooting());
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -140,6 +154,7 @@ public class HobbitEnemyMovement : MonoBehaviour
         {
             Debug.Log("Exiting Player Range");
             inAggroRange = false;
+            StopAllCoroutines();
             enemyAnimator.ResetTrigger("Attack");
         }
 

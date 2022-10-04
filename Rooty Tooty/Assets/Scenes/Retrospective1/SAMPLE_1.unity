@@ -713,7 +713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.366833, y: -5.1181426, z: -10}
+  m_LocalPosition: {x: -38.92308, y: -5.108544, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2469,7 +2469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1136180732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3204,6 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02bd428d761f4b44a0e767a87f3ab0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsText: {fileID: 0}
 --- !u!114 &1504387567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,6 +3720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1343940624}
   projectileToFire: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
+  isAvailable: 1
+  cooldownDuration: 1
 --- !u!114 &1577464349
 MonoBehaviour:
   m_ObjectHideFlags: 0
