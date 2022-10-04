@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectilePooler : MonoBehaviour
+public class PlayerProjectilePooler : MonoBehaviour
 {
-    public static ProjectilePooler playerProjectilePool;
+    public static PlayerProjectilePooler playerProjectilePool;
 
     private List<GameObject> pooledProjectiles = new List<GameObject>();
     private int amountToPool = 20;

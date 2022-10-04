@@ -32,7 +32,7 @@ public class PlayerAim : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && isAvailable)
         {
             // Instantiate(projectileToFire, firePoint.position, transform.rotation);
-            GameObject projectile = ProjectilePooler.playerProjectilePool.GetPooledObject();
+            GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject();
 
             if (projectile != null)
             {
