@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3241425054333609186}
   - component: {fileID: 3241425054333609181}
   - component: {fileID: 3241425054333609180}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ogre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa922c767e2182b4c9782b18b929c1d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPos: 0
-  dist: 5
+  distL: 5
+  distR: 5
   speed: 2
   dir: 0
   player: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 3241425055316413674}
   - component: {fileID: 3241425055316413672}
   - component: {fileID: 3241425055316413675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MeleeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
