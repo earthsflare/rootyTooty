@@ -7,7 +7,6 @@ using PlayFab.ClientModels;
 public class PlayfabManager : MonoBehaviour
 {
     [SerializeField] private string displayNameInput;
-    [SerializeField] private string usernameInput;
     [SerializeField] private string emailInput;
     [SerializeField] private string passwordInput;
 
@@ -17,40 +16,70 @@ public class PlayfabManager : MonoBehaviour
         Login();
     }
 
+    #region Valid Information
+
+    //Returns true if the password is valid
+    private bool CheckPassword(string pswd)
+    {
+        if (string.IsNullOrEmpty(pswd))
+            return false;
+        if (pswd.Length <= 4)
+            return false;
+
+        bool hasDigit = false;
+        bool hasChar = false;
+
+        foreach (char c in pswd)
+        {
+            if (char.IsDigit(c))
+                hasDigit = true;
+            if (char.IsLetter(c))
+                hasChar = true;
+        }
+
+
+        return (hasDigit && hasChar);
+    }
+
+    private bool CheckUsername(string displayName)
+    {
+        return false;
+    }
+
+    #endregion
+
+    #region Register Account
     private void Register()
     {
         RegisterPlayFabUserRequest request = new RegisterPlayFabUserRequest
         {
-            //Display name can be anything
-            DisplayName = displayNameInput,
             //Username is case sensitive and gets a # ID (like discord) (10 or 100 different combinations)
             //Different id number = different color for their id 
-            Username = usernameInput,
+            //Display name can be anything
+            DisplayName = displayNameInput,
             //Have email verification before registering
             Email = emailInput,
             //Have checks for safe passwords
             Password = passwordInput
         };
-        PlayFabClientAPI.RegisterPlayFabUser(request, RegisterSuccess, RegisterFail);
+        PlayFabClientAPI.RegisterPlayFabUser(request, RegisterSuccess, PlayFabError);
     }
 
     private void RegisterSuccess(RegisterPlayFabUserResult result)
     {
-
+        Debug.Log("Registered and Logged in!");
     }
-    private void RegisterFail(PlayFabError error)
-    {
+    #endregion
 
-    }
-
+    #region Log in
     private void Login()
     {
-        LoginWithCustomIDRequest request = new LoginWithCustomIDRequest
+        LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
         {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
-            CreateAccount = true
+            Email = emailInput,
+            Password = passwordInput
         };
-        PlayFabClientAPI.LoginWithCustomID(request, LoginSuccess, LoginFail);
+        PlayFabClientAPI.LoginWithEmailAddress(request, LoginSuccess, PlayFabError);
     }
 
     private void LoginSuccess(LoginResult result)
@@ -61,11 +90,48 @@ public class PlayfabManager : MonoBehaviour
             Debug.Log("Login Successful");
     }
 
-    public void LoginFail(PlayFabError error)
+    #endregion
+
+    #region Reset Password
+
+    private void ResetPassword()
     {
-        Debug.Log("Login Error");
-        Debug.Log(error.GenerateErrorReport());
+        SendAccountRecoveryEmailRequest request = new SendAccountRecoveryEmailRequest
+        {
+            Email = emailInput,
+            TitleId = "A6F68"
+        };
+
+        PlayFabClientAPI.SendAccountRecoveryEmail(request, PasswordResetSuccess, PlayFabError);
     }
 
+    private void PasswordResetSuccess(SendAccountRecoveryEmailResult result)
+    {
+        Debug.Log("Passward Reset email sent!");
+    }
 
+    #endregion
+
+    #region Update E-mail
+    private void UpdateEmail()
+    {
+        AddOrUpdateContactEmailRequest request = new AddOrUpdateContactEmailRequest
+        {
+            EmailAddress = emailInput
+        };
+
+        PlayFabClientAPI.AddOrUpdateContactEmail(request, UpdateEmailSuccess, PlayFabError);
+    }
+
+    private void UpdateEmailSuccess(AddOrUpdateContactEmailResult result)
+    {
+        Debug.Log("Email Reset email sent!");
+    }
+
+    #endregion
+
+    private void PlayFabError(PlayFabError error)
+    {
+        Debug.Log(error.ErrorMessage);
+    }
 }
