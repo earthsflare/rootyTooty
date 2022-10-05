@@ -541,7 +541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.349968, y: -5.709489, z: -10}
+  m_LocalPosition: {x: 32.349957, y: -5.7096195, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2113,10 +2113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a346ae057a47e34499fd8f8f579cc276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPos: {fileID: 1577464343}
-  width: 1.5585
-  height: 2.722
-  nextDoorPos: {x: 32.39211, y: -7.175}
+  nextDoorPos: {x: 32.39211, y: -7.175071}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 16384
@@ -2618,6 +2615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58651acec3d3f0418635fa82e1e2a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 0}
   player: {fileID: 1577464343}
   posX: 32.39211
   posY: -7.175
@@ -2634,6 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf78082fcca4a2f4fbb12f227c4582b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 0}
 --- !u!4 &1238889306
 Transform:
   m_ObjectHideFlags: 0
@@ -2661,6 +2660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58651acec3d3f0418635fa82e1e2a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 0}
   player: {fileID: 1577464343}
   posX: -45
   posY: -5
@@ -2946,7 +2946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 1577464340}
 --- !u!4 &1424955805
 Transform:
   m_ObjectHideFlags: 0
