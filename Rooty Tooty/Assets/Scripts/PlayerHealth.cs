@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     private int life;
     private int maxLife;
     private bool dead;
+    public Animator animator;
 
     void Start()
     {
@@ -19,16 +20,20 @@ public class PlayerHealth : MonoBehaviour
     {
         if (dead == true)
         {
+            animator.SetBool("Dead", true);
             Destroy(gameObject);
             Debug.Log("Player is dead!");
             // game over screen overlay
         }
+        animator.SetBool("Dead", false);
+
     }
 
     public void TakeDamage(int d)
     {
         if (life >= 1)
         {
+            animator.SetBool("Damage", true);
             life -= d;
             hearts[life].gameObject.SetActive(false);
             if (life < 1)
@@ -36,6 +41,8 @@ public class PlayerHealth : MonoBehaviour
                 dead = true;
             }
         }
+        animator.SetBool("Damage", false);
+
     }
 
     public void AddLife()
