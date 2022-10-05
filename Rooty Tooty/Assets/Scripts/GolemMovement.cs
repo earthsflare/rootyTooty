@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class GolemMovement : MonoBehaviour
 {
-    [Tooltip("The starting position of the enemy")]
-    private float startingPos;
-    [Tooltip("The distance the enemy can move Left from the starting position")]
-    public float distL = 5;
-    [Tooltip("The distance the enemy can move Right from the starting position")]
-    public float distR = 5;
-    [Tooltip("The movement speed of the enemy")]
-    public float speed = 2f;
     [Tooltip("The direction the enemy is facing; -1 for left +1 for right")]
     public int dir;
     [Tooltip("A bool for determining whether the enemy is facing left")]
@@ -39,8 +31,6 @@ public class GolemMovement : MonoBehaviour
     {
         dir = (int)gameObject.transform.localScale.x;
         facingLeft = dir == -1 ? true : false;
-        //starting frame takes the enemy's starting position and their starting direction
-        startingPos = transform.position.x;
         player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
         //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
@@ -48,44 +38,11 @@ public class GolemMovement : MonoBehaviour
     }
     void Update()
     {
-        if (inMeleeRange)
+        if (inAggroRange)
         {
             meleeAttack();
-            enemyAnimator.SetBool("isChasing", false);
-            enemyAnimator.SetBool("isMoving", false);
 
         }
-        else if (inAggroRange && readyToChase && isGrounded && !inMeleeRange)
-        {
-            FaceTowardsPlayer();
-            CheckSpriteDirection();
-            //moves the enemy forward based on speed given and direction
-            Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, chargeSpeed * Time.deltaTime);
-            transform.position = new Vector3(tempVector2.x, transform.position.y, 0);
-            enemyAnimator.SetBool("isChasing", true);
-        }
-        else if (!inAggroRange && isGrounded && !inMeleeRange)
-        {
-            readyToChase = false;
-            //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
-            if (transform.position.x > startingPos + distR)
-            {
-                //flips the direction to the left
-                dir = -1;
-            }
-            //if the enemy is too far to the left from the starting position flips the enemy's direction to the right
-            else if (transform.position.x < startingPos - distL)
-            {
-                //flips the direction to the right
-                dir = 1;
-            }
-            CheckSpriteDirection();
-            transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
-            enemyAnimator.SetBool("isMoving", true);
-            enemyAnimator.SetBool("isChasing", false);
-        }
-
-        //moves towards player when in range
 
     }
     //Flips the sprite along the x axis by multiplying the x scale by -1 Source: https://www.youtube.com/watch?v=Cr-j7EoM8bg
