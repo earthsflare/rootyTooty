@@ -61,7 +61,9 @@ public class PlayerJump : MonoBehaviour
         //Add jump velocity if the player used the jump key and perform a jump
         if (isJumping && (jumpCounter < MAXJUMPS) && !jumpHold)
         {
-            rb.velocity = Vector2.up * jumpHeight;
+            //rb.velocity = Vector2.up * jumpHeight;
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+
             jumpCounter++;
             animator.SetInteger("JumpCount", jumpCounter);
             jumpHold = true;
@@ -72,7 +74,9 @@ public class PlayerJump : MonoBehaviour
         {
             if (jumpTimeCounter > 0)
             {
-                rb.velocity = Vector2.up * jumpHeight;
+                //rb.velocity = Vector2.up * jumpHeight;
+                rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
