@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HobbitEnemyMovement : MonoBehaviour
+public class HobbitMovement : MonoBehaviour
 {
     [Tooltip("The starting position of the enemy")]
     private float startingPos;
@@ -39,12 +39,14 @@ public class HobbitEnemyMovement : MonoBehaviour
         facingLeft = dir < 0 ? true : false;
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
+        player = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody2D>();
         //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
         jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
     }
     void Update()
     {
-        if (inAggroRange)
+        if (inAggroRange && readyToFire)
         {
             FaceTowardsPlayer();
             enemyAnimator.SetBool("isMoving", false);
@@ -156,6 +158,7 @@ public class HobbitEnemyMovement : MonoBehaviour
             inAggroRange = false;
             StopAllCoroutines();
             enemyAnimator.ResetTrigger("Attack");
+            readyToFire = false;
         }
 
     }

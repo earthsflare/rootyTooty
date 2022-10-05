@@ -13,7 +13,9 @@ public class SceneSwitch : MonoBehaviour
     public void Awake()
     {
         if (playerPrefab == null)
-            FindObjectOfType<PlayerMovement>().transform.position = nextLevelPosition;
+        {
+            //FindObjectOfType<PlayerMovement>().transform.position = nextLevelPosition;
+        }
     }
 
     public virtual void Start()
