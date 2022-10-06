@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectilePooler : MonoBehaviour
+public class EnemyProjectilePooler : MonoBehaviour
 {
-    public static PlayerProjectilePooler playerProjectilePool;
+    public static EnemyProjectilePooler enemyProjectilePool;
 
     private List<GameObject> pooledProjectiles = new List<GameObject>();
     private int amountToPool = 3;
@@ -12,9 +12,9 @@ public class PlayerProjectilePooler : MonoBehaviour
 
     private void Awake()
     {
-        if (playerProjectilePool == null)
+        if (enemyProjectilePool == null)
         {
-            playerProjectilePool = this;
+            enemyProjectilePool = this;
         }
     }
 
