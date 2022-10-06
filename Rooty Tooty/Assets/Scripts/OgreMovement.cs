@@ -45,6 +45,7 @@ public class OgreMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
         jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
+             
     }
     void Update()
     {
@@ -127,6 +128,7 @@ public class OgreMovement : MonoBehaviour
     private void meleeAttack()
     {
         enemyAnimator.SetTrigger("Attack");
+
     }
     //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin chasing.
     IEnumerator StartCharge()
