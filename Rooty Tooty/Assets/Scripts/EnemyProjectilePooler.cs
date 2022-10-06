@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectilePooler : MonoBehaviour
+public class EnemyProjectilePooler : MonoBehaviour
 {
-    public static ProjectilePooler playerProjectilePool;
+    public static EnemyProjectilePooler enemyProjectilePool;
 
     private List<GameObject> pooledProjectiles = new List<GameObject>();
-    private int amountToPool = 20;
+    private int amountToPool = 3;
     [SerializeField] private GameObject projectilePrefab;
 
     private void Awake()
     {
-        if (playerProjectilePool == null)
+        if (enemyProjectilePool == null)
         {
-            playerProjectilePool = this;
+            enemyProjectilePool = this;
         }
     }
 
@@ -38,7 +38,7 @@ public class ProjectilePooler : MonoBehaviour
     {
         for (int i = 0; i < amountToPool; i++)
         {
-            if(!pooledProjectiles[i].activeInHierarchy)
+            if (!pooledProjectiles[i].activeInHierarchy)
             {
                 // pooledProjectiles[i].transform.SetParent(transform, true);
                 return pooledProjectiles[i];

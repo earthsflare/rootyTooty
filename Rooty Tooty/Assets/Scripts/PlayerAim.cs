@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-
+    // Main Camera for mouse aiming calculations
     private Camera mainCam;
-
+    // Transform for the origin of the player projectile
     public Transform firePoint;
+    // Player's projectile
     public GameObject projectileToFire;
+    // Used to make sure player can't shoot while weapon on cooldown
     public bool isAvailable = true;
+    // Weapon cooldown
     public float cooldownDuration = 01.0f;
 
     // Start is called before the first frame update
@@ -21,8 +24,7 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Code for aiming with mouse, right now only shoots in direction player is facing
-
+        // Code for aiming with mouse
         Vector2 mouse = Input.mousePosition;
         Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
         Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
@@ -31,8 +33,8 @@ public class PlayerAim : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) && isAvailable)
         {
-            // Instantiate(projectileToFire, firePoint.position, transform.rotation);
-            GameObject projectile = ProjectilePooler.playerProjectilePool.GetPooledObject();
+            // Get projectile from the projectile pool
+            GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject();
 
             if (projectile != null)
             {
@@ -43,8 +45,9 @@ public class PlayerAim : MonoBehaviour
             StartCoroutine(StartCooldown());
         }
     }
-    
-    public IEnumerator StartCooldown()
+
+    // Coroutine for cooldown on player weapon
+    private IEnumerator StartCooldown()
     {
         isAvailable = false;
         yield return new WaitForSeconds(cooldownDuration);
