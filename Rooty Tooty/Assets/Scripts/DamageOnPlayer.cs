@@ -10,16 +10,16 @@ public class DamageOnPlayer : MonoBehaviour
     {
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            Player.instance.health.TakeDamage(1);
             StartCoroutine(damageTimer());
         }
     }
-
+    // PlayerSingletonManager.instance.health
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (canTakeDamage && collider.gameObject.CompareTag("Player"))
         {
-            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            Player.instance.health.TakeDamage(1);
             StartCoroutine(damageTimer());
         }
     }

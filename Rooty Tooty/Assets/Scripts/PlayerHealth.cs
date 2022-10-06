@@ -29,6 +29,21 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public int getHealth()
+    {
+        return life;
+    }
+
+    public int getMaxHealth()
+    {
+        return maxLife;
+    }
+
+    public bool isDead()
+    {
+        return dead;
+    }
+
     public void TakeDamage(int d)
     {
         if (life >= 1)
@@ -51,15 +66,6 @@ public class PlayerHealth : MonoBehaviour
         {
             hearts[life].gameObject.SetActive(true);
             life += 1;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Potion") && life < maxLife && dead == false)
-        {
-            AddLife();
-            Destroy(collider.gameObject);
         }
     }
 }
