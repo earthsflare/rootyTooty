@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     private bool dead;
     public Animator animator;
 
+    public GameOverScreen GameOverScreen; // for displaying the gameover screen
+
     void Start()
     {
         life = hearts.Length;
@@ -23,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
             animator.SetBool("Dead", true);
             Destroy(gameObject);
             Debug.Log("Player is dead!");
-            // game over screen overlay
+            GameOverScreen.Setup(maxLife); // displays the gameoverscreen with maxLife as the point display
         }
         animator.SetBool("Dead", false);
 
