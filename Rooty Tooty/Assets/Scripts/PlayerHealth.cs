@@ -77,8 +77,4 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    public void GameOver()
-    {
-
-    }
 }
