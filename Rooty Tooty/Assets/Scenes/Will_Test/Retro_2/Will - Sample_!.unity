@@ -382,6 +382,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointsText: {fileID: 2099254840}
+  prefab: {fileID: 1692447060130313569, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  spawnPosition: {x: -45, y: 7}
+  random: 0
 --- !u!4 &357173079
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.357872, y: -5.712812, z: -10}
+  m_LocalPosition: {x: -39.349415, y: -5.712811, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2484,7 +2488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1136180732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2914,7 +2918,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1504387566}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
         m_MethodName: ExitButton
         m_Mode: 1
@@ -3258,14 +3262,13 @@ GameObject:
   - component: {fileID: 1504387565}
   - component: {fileID: 1504387568}
   - component: {fileID: 1504387567}
-  - component: {fileID: 1504387566}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1504387565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3290,19 +3293,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 296, y: 125.854004}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1504387566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504387564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d02bd428d761f4b44a0e767a87f3ab0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsText: {fileID: 2099254840}
 --- !u!114 &1504387567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3836,7 +3826,7 @@ MonoBehaviour:
   - {fileID: 785909323}
   - {fileID: 905785944}
   animator: {fileID: 1577464345}
-  GameOverScreen: {fileID: 1504387566}
+  GameOverScreen: {fileID: 0}
 --- !u!1001 &1643779443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4161,7 +4151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1504387566}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
         m_MethodName: RestartButton
         m_Mode: 1

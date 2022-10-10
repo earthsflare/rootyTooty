@@ -9,6 +9,10 @@ public class gameManagerScript : MonoBehaviour
     public Text pointsText;
     public static gameManagerScript instance;
 
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private Vector2 spawnPosition;
+    [SerializeField] private bool random;
+
     void Awake()
     {
         if (instance == null)
@@ -37,5 +41,10 @@ public class gameManagerScript : MonoBehaviour
     public void ExitButton()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void OnSpawnPlayerPrefab()
+    {
+        Instantiate(prefab, spawnPosition, Quaternion.identity);
     }
 }
