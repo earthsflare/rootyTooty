@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HobbitMovement : MonoBehaviour
 {
@@ -36,7 +37,8 @@ public class HobbitMovement : MonoBehaviour
     void Start()
     {
         dir = (float)gameObject.transform.localScale.x;
-        facingLeft = dir < 0 ? true : false;
+        dir = dir/Math.Abs(dir);
+        facingLeft = dir == -1;
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
         player = GameObject.Find("Player");

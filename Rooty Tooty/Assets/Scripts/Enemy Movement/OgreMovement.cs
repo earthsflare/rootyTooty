@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class OgreMovement : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class OgreMovement : MonoBehaviour
     void Start()
     {
         dir = (int)gameObject.transform.localScale.x;
-        facingLeft = dir == -1 ? true : false;
+        facingLeft = dir == -1;
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
         player = GameObject.Find("Player");
