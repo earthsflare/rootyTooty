@@ -20,19 +20,19 @@ TagManager:
   - Enemy
   - 
   - Ground
-  - 
+  - RollBlock
   - 
   - 
   - 
   - 
   - Player
+  - PlayerHurt
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - PlayerProjectile
+  - EnemyProjectile
   - 
   - 
   - 
