@@ -143,6 +143,7 @@ MonoBehaviour:
   chargeDuration: 1.5
   chargeDistance: 15
   attackCooldown: 1.5
+  chargeAnimationSpeed: 1.8
   distL: 5
   distR: 5
   speed: 2

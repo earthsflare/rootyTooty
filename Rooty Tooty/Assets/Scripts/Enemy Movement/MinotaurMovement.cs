@@ -17,6 +17,7 @@ public class MinotaurMovement : MonoBehaviour
     private bool canAttack = true;
     private bool finishedCharge;
     public float attackCooldown = 2;
+    public float chargeAnimationSpeed = 1.5f;
     [Tooltip("The distance the enemy can move Left from the starting position")]
     public float distL = 5;
     [Tooltip("The distance the enemy can move Right from the starting position")]
@@ -71,6 +72,8 @@ public class MinotaurMovement : MonoBehaviour
         }
         if ((transform.position.x == startingPos.x - chargeDistance || transform.position.x == startingPos.x + chargeDistance) && !finishedCharge)
         {
+            enemyAnimator.speed = 1;
+            enemyAnimator.SetBool("isCharging", false);
             finishedCharge = true;
             chargeAttack = false;
             StartCoroutine(AttackCooldown());
@@ -121,22 +124,26 @@ public class MinotaurMovement : MonoBehaviour
         finishedCharge = false;
         startingPos = transform.position;
         endPos = new Vector3(transform.position.x + (chargeDistance * dir), transform.position.y, transform.position.z);
+        enemyAnimator.speed = chargeAnimationSpeed;
+        enemyAnimator.SetBool("isCharging", true);
     }
-    private void JumpAttack()
+    private void AxeAttack()
     {
-
+        enemyAnimator.SetTrigger("axeAttack");
+        //enemyAnimator.ResetTrigger("axeAttack");
     }
     private void Attack()
     {
         attackProbability = UnityEngine.Random.Range(0, 101);
-        if (attackProbability > 0)
+        if (attackProbability > 100)
         {
             Debug.Log("Charge Attack");
             ChargeAttack();
         }
         else
         {
-            JumpAttack();
+            Debug.Log("Axe Attack");
+            AxeAttack();
         }
     }
     IEnumerator AttackCooldown()
