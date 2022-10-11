@@ -21,9 +21,12 @@ public class PlayerJump : MonoBehaviour
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     public Rigidbody2D rb;
 
+    PlayerMovement Movement;
+
     // Start is called before the first frame update
     void Start()
     {
+        Movement = GetComponent<PlayerMovement>();
         jumpCounter = 0;
         animator.SetInteger("JumpCount", jumpCounter);
     }
@@ -31,6 +34,12 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Movement.isDashing)
+        {
+            jumpHold = false;
+            isJumping = false;
+            return;
+        }
         animator.SetFloat("yVelocity", rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
@@ -49,6 +58,11 @@ public class PlayerJump : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Movement.isDashing)
+        {
+            return;
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
 
         if (isGrounded)

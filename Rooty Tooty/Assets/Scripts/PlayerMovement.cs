@@ -13,10 +13,10 @@ public class PlayerMovement : MonoBehaviour
 
     //Player Dash Variables
     private bool canDash = true;
-    private bool isDashing;
-    private float dashingSpd = 2f;
-    private float dashingTime = 1f;
-    private float dashingCooldown = 2f;
+    [HideInInspector] public bool isDashing;
+    public float dashingSpd = 2f;
+    public float dashingTime = 1f;
+    public float dashingCooldown = 1f;
 
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
@@ -77,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
         animator.SetBool("isDashing", isDashing);
 
+        //We don't want gravity to affect character while dashing in air
+        float currentGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
         if (movement.x == 0)
         {
             if (!facingRight)
@@ -88,9 +92,10 @@ public class PlayerMovement : MonoBehaviour
                 movement.x = 1 * regSpeed;
             }
         }
-        rb.velocity = new Vector2(movement.x * dashingSpd, rb.velocity.y);
+        rb.velocity = new Vector2(movement.x * dashingSpd, 0f);
 
         yield return new WaitForSeconds(dashingTime);
+        rb.gravityScale = currentGravity;
         isDashing = false;
         animator.SetBool("isDashing", isDashing);
 
