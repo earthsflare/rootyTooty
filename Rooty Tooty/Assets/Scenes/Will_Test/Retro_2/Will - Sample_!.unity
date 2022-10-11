@@ -385,7 +385,7 @@ MonoBehaviour:
   pointsText: {fileID: 2099254840}
   prefab: {fileID: 1692447060130313569, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
   spawnPosition: {x: -45, y: 7}
-  random: 0
+  goMenuUI: {fileID: 1189318064}
 --- !u!4 &357173079
 Transform:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.349415, y: -5.712811, z: -10}
+  m_LocalPosition: {x: -39.17562, y: -5.7127957, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3826,7 +3826,7 @@ MonoBehaviour:
   - {fileID: 785909323}
   - {fileID: 905785944}
   animator: {fileID: 1577464345}
-  GameOverScreen: {fileID: 0}
+  tempPoint: 1
 --- !u!1001 &1643779443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4769,7 +4769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf78082fcca4a2f4fbb12f227c4582b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
+  playerPrefab: {fileID: 1692447060130313569, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
 --- !u!4 &2061948196
 Transform:
   m_ObjectHideFlags: 0
