@@ -49,12 +49,15 @@ public class gameManagerScript : MonoBehaviour
     public void RestartButton()
     {
         SceneManager.LoadScene("SAMPLE_1");
-        // 
+        // get rid of restart
     }
 
     public void ExitButton()
     {
+        //before or after
+        goMenuUI.SetActive(false);
         SceneManager.LoadScene("Menu");
+
     }
 
     public void OnSpawnPlayerPrefab()
