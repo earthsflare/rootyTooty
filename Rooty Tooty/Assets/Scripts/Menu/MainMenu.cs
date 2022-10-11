@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement; // used whenever we want to change scenes in 
 
 public class MainMenu : MonoBehaviour
 {
+    void Start()
+    {
+        if (Player.instance != null)
+        {
+            Destroy(Player.instance.gameObject);
+        }
+    }
     // function that is called when the play button is pressed
     public void PlayGame ()
     {

@@ -12,8 +12,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int tempPoint = 1; //temp var to place in gameoverscreen
 
-    //public GameOverScreen GameOverScreen;
-    public gameManagerScript GameManagerScript; // for displaying the gameover screen
+    
 
     void Start()
     {
@@ -73,7 +72,7 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(1.09f);
         Destroy(gameObject);
         Debug.Log("Player is dead!");
-        GameManagerScript.Setup(tempPoint); // displays the gameoverscreen with maxLife as the point display
+        gameManagerScript.instance.Setup(tempPoint); // displays the gameoverscreen with maxLife as the point display
 
     }
 

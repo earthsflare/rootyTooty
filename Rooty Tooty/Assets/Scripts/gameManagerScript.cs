@@ -11,7 +11,11 @@ public class gameManagerScript : MonoBehaviour
 
     [SerializeField] private GameObject prefab;
     [SerializeField] private Vector2 spawnPosition;
-    [SerializeField] private bool random;
+    //[SerializeField] private bool random;
+
+    //gameoverscreen 
+    //public static bool GameIsOver = false;
+    public GameObject goMenuUI;
 
     void Awake()
     {
@@ -24,11 +28,20 @@ public class gameManagerScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+    }
+
+    void Start()
+    {
+        if (Player.instance == null)
+        {
+            OnSpawnPlayerPrefab();
+        }
     }
 
     public void Setup(int score)
     {
-        gameObject.SetActive(true);
+        goMenuUI.SetActive(true);
         pointsText.text = score.ToString() + " POINTS";
 
     }
@@ -36,11 +49,15 @@ public class gameManagerScript : MonoBehaviour
     public void RestartButton()
     {
         SceneManager.LoadScene("SAMPLE_1");
+        // get rid of restart
     }
 
     public void ExitButton()
     {
+        //before or after
+        goMenuUI.SetActive(false);
         SceneManager.LoadScene("Menu");
+
     }
 
     public void OnSpawnPlayerPrefab()
