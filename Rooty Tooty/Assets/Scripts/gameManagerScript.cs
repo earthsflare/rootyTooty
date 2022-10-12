@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class gameManagerScript : MonoBehaviour
 {
-    public Text pointsText;
+    //public Text pointsText;
     public static gameManagerScript instance;
 
     [SerializeField] private GameObject prefab;
@@ -42,15 +42,14 @@ public class gameManagerScript : MonoBehaviour
     public void Setup(int score)
     {
         goMenuUI.SetActive(true);
-        pointsText.text = score.ToString() + " POINTS";
-
+      //  pointsText.text = score.ToString() + " POINTS";
     }
 
-    public void RestartButton()
-    {
-        SceneManager.LoadScene("SAMPLE_1");
+    //public void RestartButton()
+    //{
+        //SceneManager.LoadScene("SAMPLE_1");
         // get rid of restart
-    }
+    //}
 
     public void ExitButton()
     {
