@@ -978,7 +978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.544857, y: -5.1003623, z: -10}
+  m_LocalPosition: {x: -39.04955, y: -5.111279, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2995,6 +2995,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1523601747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1692447059961212794, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1523601749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523601747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcf3315ac9c11c4d8357ee1ad499b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
 --- !u!1 &1530395041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4243,5 +4261,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 905785944}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1692447059961212772, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
