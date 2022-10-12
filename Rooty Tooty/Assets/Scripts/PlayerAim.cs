@@ -31,7 +31,7 @@ public class PlayerAim : MonoBehaviour
         float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
         firePoint.rotation = Quaternion.Euler(0f,0f, angle);
 
-        if(Input.GetMouseButtonDown(0) && isAvailable)
+        if(Input.GetMouseButton(0) && isAvailable)
         {
             // Get projectile from the projectile pool
             GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject();
