@@ -5,17 +5,14 @@ using UnityEngine;
 public class DamageOnPlayer : MonoBehaviour
 {
     private static bool canTakeDamage = true;
-    private static int wait = 0;
     [SerializeField] private int time = 1;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (canTakeDamage && collision.gameObject.CompareTag("Player") && wait <= 0)
+        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
-            wait = wait + 1;
             Player.instance.health.TakeDamage(1);
-            StartCoroutine(damageTimer());
-            wait = wait - 1;
+            StartCoroutine(damageTimer(time));
         }
     }
     // PlayerSingletonManager.instance.health
@@ -23,17 +20,15 @@ public class DamageOnPlayer : MonoBehaviour
     {
         if (canTakeDamage && collider.gameObject.CompareTag("Player"))
         {
-            wait = wait + 1;
             Player.instance.health.TakeDamage(1);
-            StartCoroutine(damageTimer());
-            wait = wait - 1;
+            StartCoroutine(damageTimer(time));
         }
     }
 
-    private IEnumerator damageTimer()
+    private static IEnumerator damageTimer(int t)
     {
         canTakeDamage = false;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(t);
         canTakeDamage = true;
     }
 }
