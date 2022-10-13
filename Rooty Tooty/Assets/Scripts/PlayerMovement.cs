@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     // ctrl + shift + / will comment out
 
     public float regSpeed = 5f;
+    private float characterSpeed;
     //public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     private bool facingRight = true;            //Which direction the player sprite is facing
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //gives -1 or 1 depending on input ex. left is -1 right is 1
-        movement.x = Input.GetAxisRaw("Horizontal") * regSpeed;
+        movement.x = Input.GetAxisRaw("Horizontal") * characterSpeed;
 
         //If user presses Shift the character will sprint this is for testing purposes
         if (Input.GetKey(KeyCode.LeftShift))

@@ -1193,7 +1193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.664246, y: -5.0813127, z: -10}
+  m_LocalPosition: {x: -39.397297, y: -5.1188016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5074,3 +5074,47 @@ PrefabInstance:
       objectReference: {fileID: 905785944}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+--- !u!4 &1692447058620745590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1692447059535158970, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1692447058620745591 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1692447059042925443, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1692447058620745592 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1692447060130313580, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1692447058620745593 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1692447060130313571, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1692447058620745594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aed1f02dd4786469c7461a921de38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 5
+  isJumping: 0
+  ceilingCheck: {fileID: 1692447058620745591}
+  groundCheck: {fileID: 1692447058620745590}
+  groundObjects:
+    serializedVersion: 2
+    m_Bits: 256
+  MAXJUMPS: 2
+  jumpCounter: 0
+  TOTALJUMPTIME: 0.35
+  animator: {fileID: 1692447058620745592}
+  rb: {fileID: 1692447058620745593}
