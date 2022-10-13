@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 296, y: 125.854004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26225008
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 1
 --- !u!114 &92177814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,13 +680,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1345070389}
+        m_TargetAssemblyTypeName: gameManagerScript, Assembly-CSharp
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -857,6 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 1
 --- !u!114 &463659401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1191,7 +1193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.668827, y: -5.1246753, z: -10}
+  m_LocalPosition: {x: -37.664246, y: -5.0813127, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1761,6 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 1
 --- !u!114 &741402606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2858,6 +2861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 1
 --- !u!114 &1123339923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,19 +3134,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1143452853}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: RestartButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1143452853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3559,8 +3551,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345070387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.362238, y: -4.3063097, z: -0.029481169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.362305, y: -4.3062897, z: -0.029481167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
