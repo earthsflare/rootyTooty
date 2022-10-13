@@ -190,7 +190,7 @@ SpriteRenderer:
   m_Size: {x: 100, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &168470835
@@ -289,7 +289,7 @@ SpriteRenderer:
   m_Size: {x: 100, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &195928162
@@ -541,7 +541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0029996424, y: -2.8240004, z: -10}
+  m_LocalPosition: {x: 0.0029997616, y: -2.8240004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -646,7 +646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638820010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0029996424, y: -2.8240004, z: -10}
+  m_LocalPosition: {x: 0.0029997616, y: -2.8240004, z: -10}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -950,6 +950,7 @@ GameObject:
   - component: {fileID: 1577464344}
   - component: {fileID: 1577464347}
   - component: {fileID: 1577464346}
+  - component: {fileID: 1577464348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -970,18 +971,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regSpeed: 5
-  characterSpeed: 0
-  jumpHeight: 10
-  isJumping: 0
-  ceilingCheck: {fileID: 425131254}
-  groundCheck: {fileID: 981588431}
-  groundObjects:
-    serializedVersion: 2
-    m_Bits: 256
-  checkRadius: 0
-  MAXJUMPS: 2
   animator: {fileID: 1577464345}
-  jumpCounter: 0
+  isRolling: 0
+  rollingSpd: 2
+  rollingTime: 1
+  rollingCooldown: 1
   rb: {fileID: 1577464342}
 --- !u!50 &1577464342
 Rigidbody2D:
@@ -1070,7 +1064,7 @@ SpriteRenderer:
   m_Size: {x: 0.8, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1577464345
@@ -1135,6 +1129,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52335167, y: 0.47563314}
   m_EdgeRadius: 0
+--- !u!114 &1577464348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aed1f02dd4786469c7461a921de38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 5
+  isJumping: 0
+  ceilingCheck: {fileID: 425131254}
+  groundCheck: {fileID: 981588431}
+  groundObjects:
+    serializedVersion: 2
+    m_Bits: 256
+  MAXJUMPS: 2
+  jumpCounter: 0
+  TOTALJUMPTIME: 0.35
+  animator: {fileID: 1577464345}
+  rb: {fileID: 1577464342}
 --- !u!1 &1969804412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1220,7 @@ SpriteRenderer:
   m_Size: {x: 100, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1969804414

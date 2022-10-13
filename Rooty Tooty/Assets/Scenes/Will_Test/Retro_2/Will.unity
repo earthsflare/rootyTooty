@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 563802636}
   - component: {fileID: 563802635}
   - component: {fileID: 563802634}
+  - component: {fileID: 563802641}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -330,18 +331,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regSpeed: 5
-  characterSpeed: 0
-  jumpHeight: 10
-  isJumping: 0
-  ceilingCheck: {fileID: 593378253}
-  groundCheck: {fileID: 1164371248}
-  groundObjects:
-    serializedVersion: 2
-    m_Bits: 256
-  checkRadius: 0
-  MAXJUMPS: 2
   animator: {fileID: 563802637}
-  jumpCounter: 0
+  isRolling: 0
+  rollingSpd: 2
+  rollingTime: 1
+  rollingCooldown: 1
   rb: {fileID: 563802639}
 --- !u!50 &563802639
 Rigidbody2D:
@@ -383,6 +377,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563802641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563802633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aed1f02dd4786469c7461a921de38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 5
+  isJumping: 0
+  ceilingCheck: {fileID: 593378253}
+  groundCheck: {fileID: 1164371248}
+  groundObjects:
+    serializedVersion: 2
+    m_Bits: 256
+  MAXJUMPS: 2
+  jumpCounter: 0
+  TOTALJUMPTIME: 0.35
+  animator: {fileID: 563802637}
+  rb: {fileID: 563802639}
 --- !u!1 &593378252
 GameObject:
   m_ObjectHideFlags: 0

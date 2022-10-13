@@ -1407,6 +1407,7 @@ GameObject:
   - component: {fileID: 1577464347}
   - component: {fileID: 1577464346}
   - component: {fileID: 1577464348}
+  - component: {fileID: 1577464349}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1427,18 +1428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regSpeed: 5
-  characterSpeed: 0
-  jumpHeight: 10
-  isJumping: 0
-  ceilingCheck: {fileID: 425131254}
-  groundCheck: {fileID: 981588431}
-  groundObjects:
-    serializedVersion: 2
-    m_Bits: 256
-  checkRadius: 0
-  MAXJUMPS: 2
   animator: {fileID: 1577464345}
-  jumpCounter: 0
+  isRolling: 0
+  rollingSpd: 2
+  rollingTime: 1
+  rollingCooldown: 1
   rb: {fileID: 1577464342}
 --- !u!50 &1577464342
 Rigidbody2D:
@@ -1604,7 +1598,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelPosition: {x: -15, y: 3, z: 0}
+  prefab: {fileID: 0}
+  spawnPosition: {x: 0, y: 0}
+  goMenuUI: {fileID: 0}
+--- !u!114 &1577464349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aed1f02dd4786469c7461a921de38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 5
+  isJumping: 0
+  ceilingCheck: {fileID: 425131254}
+  groundCheck: {fileID: 981588431}
+  groundObjects:
+    serializedVersion: 2
+    m_Bits: 256
+  MAXJUMPS: 2
+  jumpCounter: 0
+  TOTALJUMPTIME: 0.35
+  animator: {fileID: 1577464345}
+  rb: {fileID: 1577464342}
 --- !u!1 &1830887287
 GameObject:
   m_ObjectHideFlags: 0
