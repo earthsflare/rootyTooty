@@ -45,6 +45,7 @@ public class PlayerProjectile : MonoBehaviour
         // Destroy(gameObject);
         if (collider.CompareTag("Enemy"))
         {
+            collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             Debug.Log("PlayerProjectile collided with " + collider.name);
             gameObject.SetActive(false);
         }
