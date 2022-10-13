@@ -22,9 +22,8 @@ public class levelManager : MonoBehaviour
         #endregion
 
         #region Find and set player position
-        GameObject p = FindObjectOfType<PlayerMovement>().gameObject;
-        if(p != null)
-            p.transform.position = instance.nextLevelPosition;
+        if(Player.instance != null)
+            Player.instance.transform.position = instance.nextLevelPosition;
         #endregion
     }
 

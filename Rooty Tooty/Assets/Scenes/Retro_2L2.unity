@@ -993,7 +993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.96534, y: -5.152722, z: -10}
+  m_LocalPosition: {x: -39.668827, y: -5.1246753, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1141,6 +1141,7 @@ GameObject:
   - component: {fileID: 638820012}
   - component: {fileID: 638820011}
   - component: {fileID: 638820013}
+  - component: {fileID: 638820014}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1219,6 +1220,19 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2125087272}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &638820014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638820010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be69dd000b119084688ef91ae7e578b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cVM: {fileID: 638820011}
 --- !u!1 &656095569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,7 +3521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a346ae057a47e34499fd8f8f579cc276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextDoorPos: {x: -32, y: 7}
+  nextDoorPos: {x: 32, y: -2.6}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 16384
@@ -4866,5 +4880,9 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 905785944}
+    - target: {fileID: 1692447060130313577, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
