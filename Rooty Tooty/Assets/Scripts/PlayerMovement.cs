@@ -7,37 +7,34 @@ public class PlayerMovement : MonoBehaviour
     // ctrl + shift + / will comment out
 
     public float regSpeed = 5f;
-    public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
-    public float jumpHeight = 8f;
-    public bool isJumping = false;
-    public Transform ceilingCheck;              //make sure the character can't jump past a ceiling
-    public Transform groundCheck;               //make sure the character doesn't fall through the ground
-    public LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
-    public float checkRadius;
-    public int MAXJUMPS = 2;                    //Double Jumping or more
+    //public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
-
-    public int jumpCounter;                    //Current amount of jumps
-    private bool isGrounded;
     private bool facingRight = true;            //Which direction the player sprite is facing
+
+    //Player Roll Variables
+    private bool canRoll = true;
+    [HideInInspector] public bool isRolling;
+    public float rollingSpd = 2f;
+    public float rollingTime = 1f;
+    public float rollingCooldown = 1f;
 
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
-
-    private void start()
-    {
-        jumpCounter = 0;
-        animator.SetInteger("JumpCount", jumpCounter);
-    }
 
 
     // Update is called once per frame
     void Update()
     {
-        //gives -1 or 1 depending on input ex. left is -1 right is 1
-        movement.x = Input.GetAxisRaw("Horizontal") * characterSpeed;
+        if (isRolling)
+        {
+            return;
+        }
 
-        //If user presses Shift the character will sprint
+
+        //gives -1 or 1 depending on input ex. left is -1 right is 1
+        movement.x = Input.GetAxisRaw("Horizontal") * regSpeed;
+
+        //If user presses Shift the character will sprint this is for testing purposes
         if (Input.GetKey(KeyCode.LeftShift))
         {
             characterSpeed = regSpeed * 2;
@@ -47,40 +44,25 @@ public class PlayerMovement : MonoBehaviour
             characterSpeed = regSpeed;
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(movement.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
+        //Player Roll
+        if (Input.GetKey(KeyCode.X) && canRoll)
         {
-            animator.SetBool("Jump", true);
-            isJumping = true;
+            StartCoroutine(Roll());
         }
 
-
+        animator.SetFloat("Speed", Mathf.Abs(movement.x));
     }
 
     //Called many times per frame
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
+        if (isRolling)
+        {
+            return;
+        }
 
         rb.velocity = new Vector2(movement.x, rb.velocity.y);
 
-        if (isGrounded)
-        {
-            jumpCounter = 0;
-            animator.SetInteger("JumpCount", jumpCounter);
-        }
-        animator.SetBool("Jump", !isGrounded);
-
-        //Add jump force if the player used the jump key and perform a jump
-        if (isJumping && (jumpCounter < MAXJUMPS))
-        {
-            rb.velocity = Vector2.up * jumpHeight;
-            jumpCounter++;
-            animator.SetInteger("JumpCount", jumpCounter);
-        }
-        isJumping = false;
 
         if (movement.x > 0 && !facingRight)
         {
@@ -91,12 +73,6 @@ public class PlayerMovement : MonoBehaviour
             flipCharacter();
         }
 
-        // sends the player to the start position of each level
-        //private void OnLevelWasLoaded(int level)
-        //{
-        //   transform.position = GameObject.FindWithTag("StartPos").transform.position;
-        // }
-
     }
     //Flips the character sprite if the movement direction is left or -1
     private void flipCharacter()
@@ -104,4 +80,43 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
+
+    private IEnumerator Roll()
+    {
+        canRoll = false;
+        isRolling = true;
+        animator.SetBool("isRolling", isRolling);
+
+        //We don't want gravity to affect character while roll/dash in air
+        float currentGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
+        if (movement.x == 0)
+        {
+            if (!facingRight)
+            {
+                movement.x = -1 * regSpeed;
+            }
+            else
+            {
+                movement.x = 1 * regSpeed;
+            }
+        }
+        rb.velocity = new Vector2(movement.x * rollingSpd, 0f);
+
+        yield return new WaitForSeconds(rollingTime);
+        rb.gravityScale = currentGravity;
+        isRolling = false;
+        animator.SetBool("isRolling", isRolling);
+
+        yield return new WaitForSeconds(rollingCooldown);
+        canRoll = true;
+    }
+
+
+    // sends the player to the start position of each level
+    //private void OnLevelWasLoaded(int level)
+    //{
+    //   transform.position = GameObject.FindWithTag("StartPos").transform.position;
+    // }
 }
