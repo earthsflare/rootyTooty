@@ -19,9 +19,17 @@ public class PlayerMovement : MonoBehaviour
     public float rollingTime = 1f;
     public float rollingCooldown = 1f;
 
+    int BushLayer;
+    int PlayerLayer;
+
     public Rigidbody2D rb;
     Vector2 movement;                           //vectors store x and y horizontal and vertical
 
+    void Start()
+    {
+        BushLayer = LayerMask.NameToLayer("RollBlock");
+        PlayerLayer = LayerMask.NameToLayer("Player");
+    }
 
     // Update is called once per frame
     void Update()
@@ -103,12 +111,14 @@ public class PlayerMovement : MonoBehaviour
                 movement.x = 1 * regSpeed;
             }
         }
+        Physics2D.IgnoreLayerCollision(BushLayer, PlayerLayer, true);
         rb.velocity = new Vector2(movement.x * rollingSpd, 0f);
 
         yield return new WaitForSeconds(rollingTime);
         rb.gravityScale = currentGravity;
         isRolling = false;
         animator.SetBool("isRolling", isRolling);
+        Physics2D.IgnoreLayerCollision(BushLayer, PlayerLayer, false);
 
         yield return new WaitForSeconds(rollingCooldown);
         canRoll = true;
