@@ -124,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
         canRoll = true;
     }
 
-
     // sends the player to the start position of each level
     //private void OnLevelWasLoaded(int level)
     //{

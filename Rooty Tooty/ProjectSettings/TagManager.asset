@@ -10,6 +10,7 @@ TagManager:
   - MeleeAttackRange
   - Enemy
   - Potion
+  - RollBlock
   layers:
   - Default
   - TransparentFX
