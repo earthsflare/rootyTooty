@@ -14,9 +14,11 @@ public class MinotaurMovement : MonoBehaviour
     private int attackProbability;
     public float chargeDistance = 10;
     private bool chargeAttack = false;
+    private bool axeAttack = false;
     private bool canAttack = true;
     private bool finishedCharge;
-    public float attackCooldown = 2;
+    public float ChargeCooldown = 2;
+    public float AxeCooldown = 2;
     public float chargeAnimationSpeed = 1.5f;
     [Tooltip("The distance the enemy can move Left from the starting position")]
     public float distL = 5;
@@ -76,7 +78,7 @@ public class MinotaurMovement : MonoBehaviour
             enemyAnimator.SetBool("isCharging", false);
             finishedCharge = true;
             chargeAttack = false;
-            StartCoroutine(AttackCooldown());
+            StartCoroutine(ChargeAttackCooldown());
         }
     }
     //Flips the sprite along the x axis by multiplying the x scale by -1 Source: https://www.youtube.com/watch?v=Cr-j7EoM8bg
@@ -129,13 +131,14 @@ public class MinotaurMovement : MonoBehaviour
     }
     private void AxeAttack()
     {
-        enemyAnimator.SetTrigger("axeAttack");
-        //enemyAnimator.ResetTrigger("axeAttack");
+        canAttack = false;
+        enemyAnimator.Play("00minotaur - export_attack");
+        StartCoroutine(AxeAttackCooldown());
     }
     private void Attack()
     {
         attackProbability = UnityEngine.Random.Range(0, 101);
-        if (attackProbability > 100)
+        if (attackProbability > 50)
         {
             Debug.Log("Charge Attack");
             ChargeAttack();
@@ -146,11 +149,16 @@ public class MinotaurMovement : MonoBehaviour
             AxeAttack();
         }
     }
-    IEnumerator AttackCooldown()
+    IEnumerator ChargeAttackCooldown()
     {
         dir *= -1;
         CheckSpriteDirection();
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(ChargeCooldown);
+        canAttack = true;
+    }
+    IEnumerator AxeAttackCooldown()
+    {
+        yield return new WaitForSeconds(AxeCooldown);
         canAttack = true;
     }
 }
