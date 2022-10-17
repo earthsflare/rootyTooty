@@ -5201,6 +5201,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1692447060130313576, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: knockBackPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692447060130313576, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
       objectReference: {fileID: 656095569}

@@ -12,7 +12,8 @@ public class DamageOnPlayer : MonoBehaviour
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
             Player.instance.health.TakeDamage(1);
-            Player.instance.health.knockBack(Player.instance.transform.position, true);
+            Player.instance.move.canMove = false;
+            Player.instance.health.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, true);
             StartCoroutine(damageTimer(time));
         }
     }
@@ -22,7 +23,8 @@ public class DamageOnPlayer : MonoBehaviour
         if (canTakeDamage && collider.gameObject.CompareTag("Player"))
         {
             Player.instance.health.TakeDamage(1);
-            Player.instance.health.knockBack(Player.instance.transform.position, true);
+            Player.instance.move.canMove = false;
+            Player.instance.health.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, true);
             StartCoroutine(damageTimer(time));
         }
     }
@@ -32,5 +34,6 @@ public class DamageOnPlayer : MonoBehaviour
         canTakeDamage = false;
         yield return new WaitForSeconds(t);
         canTakeDamage = true;
+        Player.instance.move.canMove = true;
     }
 }

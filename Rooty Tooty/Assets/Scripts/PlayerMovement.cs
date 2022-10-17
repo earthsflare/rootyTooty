@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     //public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     private bool facingRight = true;            //Which direction the player sprite is facing
+    [HideInInspector] public bool canMove = true;
+
 
     //Player Roll Variables
     private bool canRoll = true;
@@ -22,11 +24,15 @@ public class PlayerMovement : MonoBehaviour
     int BushLayer;
     int PlayerLayer;
 
+    [HideInInspector] public GameObject Enemy;
+
     public Rigidbody2D rb;
     [HideInInspector] public Vector2 movement;                           //vectors store x and y horizontal and vertical
 
     void Start()
     {
+        Enemy = GameObject.FindWithTag("Enemy");
+
         BushLayer = LayerMask.NameToLayer("RollBlock");
         PlayerLayer = LayerMask.NameToLayer("Player");
     }
@@ -34,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canMove)
+        {
+            return;
+        }
         if (isRolling)
         {
             return;
@@ -65,6 +75,10 @@ public class PlayerMovement : MonoBehaviour
     //Called many times per frame
     void FixedUpdate()
     {
+        if (!canMove)
+        {
+            return;
+        }
         if (isRolling)
         {
             return;
