@@ -142,7 +142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chargeDuration: 1.5
   chargeDistance: 15
-  attackCooldown: 1.5
+  ChargeCooldown: 2
+  AxeCooldown: 2
   chargeAnimationSpeed: 1.8
   distL: 5
   distR: 5
