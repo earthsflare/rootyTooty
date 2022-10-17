@@ -75,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
     void gotHurt()
     {
         var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
-        color.a = 0.8f; // change that color to show
+        color.a = 1.0f; // change that color to show
 
         gotHitScreen.GetComponent<Image>().color = color; //assign it back to the image
 
