@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     private bool dead;
     public Animator animator;
     public float knockBackPower;
+
+    public GameObject gotHitScreen; //reference to the damage screen
 
     public int tempPoint = 1; //temp var to place in gameoverscreen
 
@@ -27,7 +30,18 @@ public class PlayerHealth : MonoBehaviour
         {
             StartCoroutine(deathAnim());
         }
+        if (gotHitScreen != null)
+        {
+            if (gotHitScreen.GetComponent<Image>().color.a > 0)
+            {
+                var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
+                color.a -= 0.01f; // reduce alpha by 0.01 until it reaches 0 
+
+                gotHitScreen.GetComponent<Image>().color = color;
+            }
+        }
     }
+
 
     public int getHealth()
     {
@@ -51,11 +65,20 @@ public class PlayerHealth : MonoBehaviour
             animator.SetTrigger("Damage");
             life -= d;
             hearts[life].gameObject.SetActive(false);
+            gotHurt(); // apply the gothitscreen
             if (life < 1)
             {
                 dead = true;
             }
         }
+    }
+    void gotHurt()
+    {
+        var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
+        color.a = 0.8f; // change that color to show
+
+        gotHitScreen.GetComponent<Image>().color = color; //assign it back to the image
+
     }
 
     public void knockBack(Vector2 EnemyPos, Vector2 PlayerPos, Rigidbody2D rb, bool push)
