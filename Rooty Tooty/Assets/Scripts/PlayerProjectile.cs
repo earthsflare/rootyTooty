@@ -7,7 +7,7 @@ public class PlayerProjectile : MonoBehaviour
     public float speed = 10f;
     public int damage = 1; // Placeholder
     public Rigidbody2D projectileRB;
-    public GameObject impactAnimation;
+    public Animator projectileAnimator;
     public float offsetTime = 2f;
     private float timer = 0f;
 
@@ -19,6 +19,11 @@ public class PlayerProjectile : MonoBehaviour
     public void DetachFromParent()
     {
         transform.parent = null;
+    }
+
+    void Start()
+    {
+        projectileAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,15 +44,23 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D collider)
     {
-        // Add animation for impact later
-        // Instantiate(impactAnimation, transform.position, transform.rotation);
 
         // Destroy(gameObject);
         if (collider.CompareTag("Enemy"))
         {
             collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
             Debug.Log("PlayerProjectile collided with " + collider.name);
-            gameObject.SetActive(false);
+            StartCoroutine(ImpactAnimation());
         }
+    }
+
+    // Coroutine for impact animation
+    private IEnumerator ImpactAnimation()
+    {
+        speed = 0;
+        projectileAnimator.Play("Firebolt_Impact");
+        yield return new WaitForSeconds(0.5f);
+        speed = 10f;
+        gameObject.SetActive(false);
     }
 }
