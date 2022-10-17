@@ -995,7 +995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.263268, y: -5.1375346, z: -10}
+  m_LocalPosition: {x: -39.04955, y: -5.111279, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1311,6 +1311,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656095569}
   m_CullTransparentMesh: 1
+--- !u!1 &711870921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1692447059961212794, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &711870923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711870921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcf3315ac9c11c4d8357ee1ad499b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
 --- !u!1 &718082009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,9 +4904,10 @@ PrefabInstance:
       objectReference: {fileID: 905785944}
     - target: {fileID: 1692447060130313577, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1692447059961212772, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
 --- !u!4 &1692447058620745590 stripped
 Transform:
