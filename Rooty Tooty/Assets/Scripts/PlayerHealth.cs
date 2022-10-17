@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private int maxLife;
     private bool dead;
     public Animator animator;
+    public float knockBackPower;
 
     public int tempPoint = 1; //temp var to place in gameoverscreen
 
@@ -57,13 +58,18 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void knockBack(Vector2 PlayerPos, bool push)
+    public void knockBack(Vector2 EnemyPos, Vector2 PlayerPos, Rigidbody2D rb, bool push)
     {
         if (push)
         {
-            PlayerPos = new Vector2(PlayerPos.x * -20f, PlayerPos.y);
-            
-            Debug.Log("Adding Push");
+            if (EnemyPos.x > PlayerPos.x)
+            {
+                rb.velocity = new Vector2(-knockBackPower, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(knockBackPower, rb.velocity.y);
+            }
         }
     }
 
