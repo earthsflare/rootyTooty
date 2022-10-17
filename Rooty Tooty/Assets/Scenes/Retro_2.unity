@@ -1351,7 +1351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.04955, y: -5.111279, z: -10}
+  m_LocalPosition: {x: -39.397297, y: -5.1188016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5220,6 +5220,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[4]
       value: 
       objectReference: {fileID: 905785944}
+    - target: {fileID: 1692447060130313578, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: 1692447058620745602}
     m_RemovedComponents:
     - {fileID: 1692447059961212772, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
@@ -5267,3 +5271,14 @@ MonoBehaviour:
   TOTALJUMPTIME: 0.35
   animator: {fileID: 1692447058620745592}
   rb: {fileID: 1692447058620745593}
+--- !u!114 &1692447058620745602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1692447060130313568, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  m_PrefabInstance: {fileID: 1692447058620745589}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f478f3957db55294aa9879b4ac47cf0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

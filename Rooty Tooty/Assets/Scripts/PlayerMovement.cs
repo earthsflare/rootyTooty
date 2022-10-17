@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     int PlayerLayer;
 
     public Rigidbody2D rb;
-    Vector2 movement;                           //vectors store x and y horizontal and vertical
+    [HideInInspector] public Vector2 movement;                           //vectors store x and y horizontal and vertical
 
     void Start()
     {

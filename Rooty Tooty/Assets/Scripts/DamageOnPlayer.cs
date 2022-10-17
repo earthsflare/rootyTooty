@@ -12,6 +12,7 @@ public class DamageOnPlayer : MonoBehaviour
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
             Player.instance.health.TakeDamage(1);
+            Player.instance.health.knockBack(Player.instance.transform.position, true);
             StartCoroutine(damageTimer(time));
         }
     }
@@ -21,6 +22,7 @@ public class DamageOnPlayer : MonoBehaviour
         if (canTakeDamage && collider.gameObject.CompareTag("Player"))
         {
             Player.instance.health.TakeDamage(1);
+            Player.instance.health.knockBack(Player.instance.transform.position, true);
             StartCoroutine(damageTimer(time));
         }
     }

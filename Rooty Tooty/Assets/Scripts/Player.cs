@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance { get; private set; }
     public PlayerHealth health;
+    public PlayerMovement move;
 
     void Awake()
     {

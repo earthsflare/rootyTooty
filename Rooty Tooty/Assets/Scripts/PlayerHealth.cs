@@ -57,6 +57,16 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void knockBack(Vector2 PlayerPos, bool push)
+    {
+        if (push)
+        {
+            PlayerPos = new Vector2(PlayerPos.x * -20f, PlayerPos.y);
+            
+            Debug.Log("Adding Push");
+        }
+    }
+
     public void AddLife()
     {
         if (life < maxLife && dead == false)
