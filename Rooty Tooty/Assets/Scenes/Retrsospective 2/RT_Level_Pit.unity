@@ -149,8 +149,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30149988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 6, z: 0}
-  m_LocalScale: {x: 2.0001001, y: 23.996698, z: 1}
+  m_LocalPosition: {x: -15, y: 6.9999986, z: 0}
+  m_LocalScale: {x: 2.0001001, y: 25.995623, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1376290605}
@@ -359,8 +359,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180507469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 18.5, z: 0}
-  m_LocalScale: {x: 7.0008183, y: 1, z: 1}
+  m_LocalPosition: {x: -16.5, y: 20.5, z: 0}
+  m_LocalScale: {x: 7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1722452022}
@@ -680,8 +680,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337474560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.5, y: 22.5, z: 0}
-  m_LocalScale: {x: 6.9999566, y: 1, z: 1}
+  m_LocalPosition: {x: -16.5, y: 24.5, z: 0}
+  m_LocalScale: {x: 7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1722452022}
@@ -994,8 +994,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417442545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 6, z: 0}
-  m_LocalScale: {x: 2.0001001, y: 23.998362, z: 1}
+  m_LocalPosition: {x: -3, y: 6.9999986, z: 0}
+  m_LocalScale: {x: 2.0001001, y: 25.997425, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1376290605}
@@ -1462,7 +1462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589274162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.5, y: 20.5, z: 0}
+  m_LocalPosition: {x: -20.5, y: 22.5, z: 0}
   m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3981,10 +3981,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regSpeed: 5
   animator: {fileID: 1577464345}
+  canMove: 1
   isRolling: 0
   rollingSpd: 2
   rollingTime: 1
   rollingCooldown: 1
+  Enemy: {fileID: 0}
   rb: {fileID: 1577464342}
   movement: {x: 0, y: 0}
 --- !u!50 &1577464342
@@ -4176,6 +4178,8 @@ MonoBehaviour:
   - {fileID: 785909323}
   - {fileID: 905785944}
   animator: {fileID: 1577464345}
+  knockBackPower: 0
+  gotHitScreen: {fileID: 0}
   tempPoint: 1
 --- !u!114 &1577464350
 MonoBehaviour:
