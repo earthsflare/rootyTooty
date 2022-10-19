@@ -42,7 +42,7 @@ public class OgreMovement : MonoBehaviour
         facingLeft = dir == -1;
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
-        player = GameObject.Find("Player");
+        player = Player.instance.gameObject;
         rb = GetComponent<Rigidbody2D>();
         //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
         jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));

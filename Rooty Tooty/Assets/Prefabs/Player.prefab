@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692447059397919317}
   - component: {fileID: 1692447059397919316}
-  m_Layer: 14
+  m_Layer: 3
   m_Name: PlayerAggroRange
   m_TagString: PlayerAggroRange
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1692447059397919338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1692447060130313570}
@@ -87,7 +87,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 3}
+  m_Size: {x: 8, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &1692447059535158971
 GameObject:
@@ -162,6 +162,8 @@ Transform:
   - {fileID: 1692447059042925443}
   - {fileID: 1692447059535158970}
   - {fileID: 1692447059397919317}
+  - {fileID: 2799179883496977602}
+  - {fileID: 5144649581783811081}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -203,11 +205,12 @@ MonoBehaviour:
   canMove: 1
   isRolling: 0
   rollingSpd: 2
-  rollingTime: 1
-  rollingCooldown: 1
+  rollingTime: 0.3
+  rollingCooldown: 0.3
   Enemy: {fileID: 0}
   rb: {fileID: 1692447060130313571}
   movement: {x: 0, y: 0}
+  spriteRenderer: {fileID: 1692447060130313581}
 --- !u!114 &1692447060130313577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf82b15aae2c914a879662b0f3b94f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 1692447060130313570}
-  projectileToFire: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
+  firePoint: {fileID: 5144649581783811081}
   isAvailable: 1
   cooldownDuration: 1
 --- !u!95 &1692447060130313580
@@ -410,3 +412,92 @@ MonoBehaviour:
   TOTALJUMPTIME: 0.35
   animator: {fileID: 1692447060130313580}
   rb: {fileID: 1692447060130313571}
+--- !u!1 &4029051224002792146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5144649581783811081}
+  m_Layer: 14
+  m_Name: shootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5144649581783811081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4029051224002792146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1692447060130313570}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9023746215053629369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2799179883496977602}
+  - component: {fileID: 5844241735099621025}
+  m_Layer: 3
+  m_Name: MeleeAttackRange
+  m_TagString: MeleeAttackRange
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2799179883496977602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023746215053629369}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1692447060130313570}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5844241735099621025
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9023746215053629369}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.5}
+  m_EdgeRadius: 0

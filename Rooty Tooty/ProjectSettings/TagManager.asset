@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Potion
   - RollBlock
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -51,6 +52,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Bullet
+  - name: Projectile
     uniqueID: 6873123
     locked: 0

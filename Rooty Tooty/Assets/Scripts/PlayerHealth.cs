@@ -26,10 +26,12 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        /*
         if (dead == true)
         {
             StartCoroutine(deathAnim());
         }
+        */
         if (gotHitScreen != null)
         {
             if (gotHitScreen.GetComponent<Image>().color.a > 0)
@@ -65,16 +67,17 @@ public class PlayerHealth : MonoBehaviour
             animator.SetTrigger("Damage");
             life -= d;
             hearts[life].gameObject.SetActive(false);
-            gotHurt(); // apply the gothitscreen
+            //gotHurt(); // apply the gothitscreen
             if (life < 1)
             {
                 dead = true;
+                StartCoroutine(deathAnim());
             }
         }
     }
     void gotHurt()
     {
-        var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
+        var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image   
         color.a = 1.0f; // change that color to show
 
         gotHitScreen.GetComponent<Image>().color = color; //assign it back to the image
@@ -107,12 +110,11 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator deathAnim()
     {
+        gameManagerScript.instance.Setup(tempPoint); // displays the gameoverscreen with maxLife as the point display
         animator.SetBool("Dead", dead);
         yield return new WaitForSeconds(1.09f);
-        Destroy(gameObject);
         Debug.Log("Player is dead!");
-        gameManagerScript.instance.Setup(tempPoint); // displays the gameoverscreen with maxLife as the point display
-
+        //Delete player
     }
 
 }

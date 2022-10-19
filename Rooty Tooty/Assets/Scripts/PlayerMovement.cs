@@ -29,12 +29,17 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector] public Vector2 movement;                           //vectors store x and y horizontal and vertical
 
+    [SerializeField] private SpriteRenderer spriteRenderer = null;
+
     void Start()
     {
         Enemy = GameObject.FindWithTag("Enemy");
 
         BushLayer = LayerMask.NameToLayer("RollBlock");
         PlayerLayer = LayerMask.NameToLayer("Player");
+
+        if(spriteRenderer == null)
+            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -101,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     private void flipCharacter()
     {
         facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
+        spriteRenderer.flipX = !facingRight;
     }
 
     private IEnumerator Roll()

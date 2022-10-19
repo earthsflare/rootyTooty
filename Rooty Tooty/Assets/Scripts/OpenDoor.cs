@@ -39,19 +39,25 @@ public class OpenDoor : MonoBehaviour
         playerDetected = Physics2D.OverlapBox(transform.position, transform.lossyScale, 0, whatIsPlayer);
         if (playerDetected == true)
         {
+            /*
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //o before entering the scene, set where you want the player to be at in the next scene
                 levelManager.instance.SetNextLevelPos(nextDoorPos);
                 levelManager.instance.LoadScene(sceneName);
             }
+            */
+
+            levelManager.instance.SetNextLevelPos(nextDoorPos);
+            levelManager.instance.LoadScene(sceneName);
         }
     }
-
+    /*
     // draws the box for the player to see
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(transform.position, new Vector3(transform.lossyScale.x, transform.lossyScale.y, 1)); 
     }
+    */
 }

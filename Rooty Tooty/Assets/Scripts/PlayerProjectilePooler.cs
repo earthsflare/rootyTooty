@@ -32,7 +32,7 @@ public class PlayerProjectilePooler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < amountToPool; i++)
+        while(pooledProjectiles.Count < amountToPool)
         {
             addProjectileToPool();
         }
