@@ -10,9 +10,12 @@ public class gameManagerScript : MonoBehaviour
     public static gameManagerScript instance;
 
     [SerializeField] private GameObject prefab;
+    [Header("Read Only")]
     [SerializeField] private Vector2 spawnPosition;
     //[SerializeField] private bool random;
 
+
+    [Header("Object References")]
     //gameoverscreen 
     //public static bool GameIsOver = false;
     public GameObject goMenuUI;
@@ -62,5 +65,12 @@ public class gameManagerScript : MonoBehaviour
     public void OnSpawnPlayerPrefab()
     {
         Instantiate(prefab, spawnPosition, Quaternion.identity);
+    }
+
+    public static void UndoDontDestroyOnLoad(GameObject g)
+    {
+        if (g == null)
+            return;
+        SceneManager.MoveGameObjectToScene(g, SceneManager.GetActiveScene());
     }
 }

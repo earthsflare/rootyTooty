@@ -8,8 +8,9 @@ public class PlayerAim : MonoBehaviour
     private Camera mainCam;
     // Transform for the origin of the player projectile
     public Transform firePoint;
-    // Player's projectile
-    public GameObject projectileToFire;
+    
+    // Player's projectile //public GameObject projectileToFire;
+
     // Used to make sure player can't shoot while weapon on cooldown
     public bool isAvailable = true;
     // Weapon cooldown

@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Retrospective1/Menu.unity
     guid: 1a9f27e8f7f0dec43af3f1b7929cc1ec
   - enabled: 1
-    path: Assets/Scenes/Retrospective2/Retro_2.unity
+    path: Assets/Scenes/Retrospective2/Retrospective2_Old/Retro_2.unity
     guid: 55e133ef8fc0431499089009940697a3
   - enabled: 1
-    path: Assets/Scenes/Retrospective2/Retro_2L2.unity
+    path: Assets/Scenes/Retrospective2/Retrospective2_Old/Retro_2L2.unity
     guid: 603b5d00965a51d4c9e6485d9307cdb5
   - enabled: 0
     path: Assets/Scenes/Retrospective1/SAMPLE_1.unity

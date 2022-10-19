@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7388893596293862922}
   - component: {fileID: -2358005687312304418}
   - component: {fileID: 1808276425141572417}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 6873123
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1438186443, guid: 7fcf6f7de32f5db43b3c092bee9d31b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f9e7b32ca48054aadb44249b74ecc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  projectileSpeed: 10
   damage: 1
+  offsetTime: 5
   projectileRB: {fileID: 7388893596293862922}
   projectileAnimator: {fileID: 1808276425141572417}
-  offsetTime: 2
 --- !u!50 &7388893596293862922
 Rigidbody2D:
   serializedVersion: 4

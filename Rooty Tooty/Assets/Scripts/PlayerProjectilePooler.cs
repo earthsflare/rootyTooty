@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerProjectilePooler : MonoBehaviour
 {
     public static PlayerProjectilePooler playerProjectilePool;
+    [SerializeField] private int amountToPool = 3;
 
-    private List<GameObject> pooledProjectiles = new List<GameObject>();
-    private int amountToPool = 3;
+    [Header("Prefab Reference")]
     [SerializeField] private GameObject projectilePrefab;
+
+    [Header("Debug: Read Only")]
+    [SerializeField] private List<GameObject> pooledProjectiles = new List<GameObject>();
 
     private void Awake()
     {
@@ -21,6 +24,7 @@ public class PlayerProjectilePooler : MonoBehaviour
     private void addProjectileToPool()
     {
         GameObject obj = Instantiate(projectilePrefab);
+        obj.transform.parent = transform;
         obj.SetActive(false);
         pooledProjectiles.Add(obj);
     }
