@@ -30,7 +30,9 @@ public class HobbitMovement : MonoBehaviour
     public float jumpHeight = 0.1f;
     //calculated jump strength needed to reach desired height 
     private float jumpForce;
+    private bool weaponCoolingDown = false;
     public float enemyReactionTime = 0.5f;
+    float cooldownDuration = 1f;
     bool isGrounded = true;
     bool readyToFire;
     public Animator enemyAnimator;
@@ -53,7 +55,18 @@ public class HobbitMovement : MonoBehaviour
             FaceTowardsPlayer();
             enemyAnimator.SetBool("isMoving", false);
             Attack();
-
+            if (!weaponCoolingDown)
+            {
+                Debug.Log("Getting Hobbit projectile from pool");
+                // Get projectile from the projectile pool
+                GameObject projectile = HobbitProjectilePooler.hobbitProjectilePool.GetPooledObject();
+                if (projectile != null)
+                {
+                    projectile.transform.position = transform.position;
+                    projectile.SetActive(true);
+                }
+                StartCoroutine(StartCooldown());
+            }
         }
 
         else if (!inAggroRange && isGrounded)
@@ -119,7 +132,7 @@ public class HobbitMovement : MonoBehaviour
     {
         enemyAnimator.SetTrigger("Attack");
     }
-    //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin chasing.
+    //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin shooting.
     IEnumerator startShooting()
     {
         Debug.Log("Coroutine Called");
@@ -132,7 +145,7 @@ public class HobbitMovement : MonoBehaviour
         yield return new WaitForSeconds(enemyReactionTime);
         readyToFire = true;
     }
-    //When the enemy enters the aggro range the playerInRange bool is set to true and the charge coroutine is started
+    //When the enemy enters the aggro range the playerInRange bool is set to true and the shooting coroutine is started
     private void OnTriggerEnter2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
@@ -150,7 +163,7 @@ public class HobbitMovement : MonoBehaviour
             isGrounded = true;
         }
     }
-    //When the enemy leaves the aggro range the playerInRange bool is set to false, the readyToChase bool is set to false to allow for the charge animation to play again, and the charge coroutine is ended in case it is still running
+    //When the enemy leaves the aggro range the playerInRange bool is set to false, the readyToFire bool is set to false to allow for the shoot animation to play again, and the shoot coroutine is ended in case it is still running
     private void OnTriggerExit2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
@@ -171,5 +184,13 @@ public class HobbitMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    // Coroutine for cooldown on enemy weapon
+    private IEnumerator StartCooldown()
+    {
+        weaponCoolingDown = true;
+        yield return new WaitForSeconds(cooldownDuration);
+        weaponCoolingDown = false;
     }
 }
