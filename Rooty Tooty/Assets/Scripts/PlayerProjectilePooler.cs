@@ -40,9 +40,10 @@ public class PlayerProjectilePooler : MonoBehaviour
         {
             if (!pooledProjectiles[i].activeInHierarchy)
             {
-                // pooledProjectiles[i].transform.SetParent(transform, true);
                 return pooledProjectiles[i];
             }
+
+            // Add more projectiles if pool is empty and projectile is requested
             if (i == amountToPool - 1)
             {
                 addProjectileToPool();
