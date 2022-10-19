@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Potion
   - RollBlock
+  - PickUpRoll
+  - PickUpJump
   layers:
   - Default
   - TransparentFX
