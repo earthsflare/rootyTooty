@@ -2,29 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectilePooler : MonoBehaviour
+public class HobbitProjectilePooler : MonoBehaviour
 {
-    public static PlayerProjectilePooler playerProjectilePool;
-    [SerializeField] private int amountToPool = 3;
+    public static HobbitProjectilePooler hobbitProjectilePool;
 
-    [Header("Prefab Reference")]
+    private List<GameObject> pooledProjectiles = new List<GameObject>();
+    private int amountToPool = 3;
     [SerializeField] private GameObject projectilePrefab;
-
-    [Header("Debug: Read Only")]
-    [SerializeField] private List<GameObject> pooledProjectiles = new List<GameObject>();
 
     private void Awake()
     {
-        if (playerProjectilePool == null)
+        if (hobbitProjectilePool == null)
         {
-            playerProjectilePool = this;
+            hobbitProjectilePool = this;
         }
     }
 
     private void addProjectileToPool()
     {
         GameObject obj = Instantiate(projectilePrefab);
-        obj.transform.parent = transform;
         obj.SetActive(false);
         pooledProjectiles.Add(obj);
     }
