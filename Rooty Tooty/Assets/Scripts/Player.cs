@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public static Player instance { get; private set; }
     public PlayerHealth health;
     public PlayerMovement move;
+    public PlayerJump jump;
 
     void Awake()
     {

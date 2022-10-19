@@ -11,7 +11,7 @@ public class PlayerJump : MonoBehaviour
     public Transform groundCheck;               //make sure the character doesn't fall through the ground
     public LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
     private float checkRadius;
-    public int MAXJUMPS = 2;                    //Double Jumping or more
+    private int MAXJUMPS = 1;                    //Double Jumping or more
     public int jumpCounter;                    //Current amount of jumps
     private bool isGrounded;
     private float jumpTimeCounter;
@@ -101,5 +101,15 @@ public class PlayerJump : MonoBehaviour
                 jumpHold = false;
             }
         }
+    }
+
+    public int getJump()
+    {
+        return MAXJUMPS;
+    }
+
+    public void enableDoubleJump()
+    {
+        MAXJUMPS = 2;
     }
 }

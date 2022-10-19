@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Player Roll Variables
-    private bool canRoll = true;
+    public bool canRoll;
     [HideInInspector] public bool isRolling;
     public float rollingSpd = 2f;
     public float rollingTime = 1f;
@@ -29,17 +29,13 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector] public Vector2 movement;                           //vectors store x and y horizontal and vertical
 
-    [SerializeField] private SpriteRenderer spriteRenderer = null;
-
     void Start()
     {
         Enemy = GameObject.FindWithTag("Enemy");
 
         BushLayer = LayerMask.NameToLayer("RollBlock");
         PlayerLayer = LayerMask.NameToLayer("Player");
-
-        if(spriteRenderer == null)
-            spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        canRoll = false;
     }
 
     // Update is called once per frame
@@ -102,11 +98,22 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+    public bool getRoll()
+    {
+        return canRoll;
+    }
+
+    public void enableRoll()
+    {
+        canRoll = true;
+    }
+
     //Flips the character sprite if the movement direction is left or -1
     private void flipCharacter()
     {
         facingRight = !facingRight;
-        spriteRenderer.flipX = !facingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 
     private IEnumerator Roll()
