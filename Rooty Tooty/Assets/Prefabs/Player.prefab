@@ -203,6 +203,7 @@ MonoBehaviour:
   regSpeed: 4
   animator: {fileID: 1692447060130313580}
   canMove: 1
+  canRoll: 0
   isRolling: 0
   rollingSpd: 2
   rollingTime: 0.3
@@ -210,7 +211,6 @@ MonoBehaviour:
   Enemy: {fileID: 0}
   rb: {fileID: 1692447060130313571}
   movement: {x: 0, y: 0}
-  spriteRenderer: {fileID: 1692447060130313581}
 --- !u!114 &1692447060130313577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 1692447060130313576}
   move: {fileID: 0}
+  jump: {fileID: 0}
 --- !u!114 &1692447060130313576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +408,6 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 256
-  MAXJUMPS: 2
   jumpCounter: 0
   TOTALJUMPTIME: 0.35
   animator: {fileID: 1692447060130313580}
@@ -499,5 +499,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 3, y: 1.5}
   m_EdgeRadius: 0

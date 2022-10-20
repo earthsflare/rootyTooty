@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else if (instance != this)
             gameObject.SetActive(false);
@@ -28,7 +28,7 @@ public class CameraManager : MonoBehaviour
             return;
 
         instance = null;
-        gameManagerScript.UndoDontDestroyOnLoad(gameObject);
+        //gameManagerScript.UndoDontDestroyOnLoad(gameObject);
     }
 
 
@@ -58,5 +58,11 @@ public class CameraManager : MonoBehaviour
         if (CMBoundingShape.I != null && cmConfiner != null)
             cmConfiner.m_BoundingShape2D = CMBoundingShape.BoundingCollider;
 
+    }
+    private void Update()
+    {
+        if(cmConfiner.m_BoundingShape2D == null)
+            if (CMBoundingShape.I != null && cmConfiner != null)
+                cmConfiner.m_BoundingShape2D = CMBoundingShape.BoundingCollider;
     }
 }

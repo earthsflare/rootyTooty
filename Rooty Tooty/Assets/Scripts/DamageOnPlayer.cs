@@ -5,9 +5,17 @@ using UnityEngine;
 public class DamageOnPlayer : MonoBehaviour
 {
     private static bool canTakeDamage = true;
-    [SerializeField] private int time = 1;
+    [SerializeField] private float time = 1;
+    [SerializeField] private bool canKnock = true;
+    [SerializeField] private Transform knockbackCenter = null;
 
     private float timer = 0;
+
+    private void Awake()
+    {
+        if (knockbackCenter == null)
+            knockbackCenter = transform;
+    }
 
     private void Update()
     {
@@ -32,7 +40,9 @@ public class DamageOnPlayer : MonoBehaviour
             timer += time;
             Player.instance.health.TakeDamage(1);
             Player.instance.move.canMove = false;
-            Player.instance.health.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, true);
+
+            //Debug.Log("Enemy Pos: " + knockbackCenter.position.x + " Player Pos: " + Player.instance.transform.position.x);
+            Player.instance.health.knockBack(knockbackCenter.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
             //StartCoroutine(damageTimer(time));
         }
     }
@@ -47,7 +57,7 @@ public class DamageOnPlayer : MonoBehaviour
 
             Player.instance.health.TakeDamage(1);
             Player.instance.move.canMove = false;
-            Player.instance.health.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, true);
+            Player.instance.health.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
             //StartCoroutine(damageTimer(time));
         }
     }

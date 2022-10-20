@@ -59,7 +59,6 @@ public class gameManagerScript : MonoBehaviour
         //before or after
         goMenuUI.SetActive(false);
         SceneManager.LoadScene("Menu");
-
     }
 
     public void OnSpawnPlayerPrefab()

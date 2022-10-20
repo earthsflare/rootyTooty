@@ -29,7 +29,8 @@ public class EnemyProjectile : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             Debug.Log("EnemyProjectile collided with " + collider.name);
-            collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            Player.instance.health.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false);
             gameObject.SetActive(false);
         }
     }

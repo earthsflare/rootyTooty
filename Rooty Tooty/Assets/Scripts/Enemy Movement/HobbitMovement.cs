@@ -63,6 +63,11 @@ public class HobbitMovement : MonoBehaviour
                 if (projectile != null)
                 {
                     projectile.transform.position = transform.position;
+
+                    Vector3 dir = Player.instance.transform.position - projectile.transform.position;
+                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                    projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
                     projectile.SetActive(true);
                 }
                 StartCoroutine(StartCooldown());
@@ -171,7 +176,6 @@ public class HobbitMovement : MonoBehaviour
         {
             Debug.Log("Exiting Player Range");
             inAggroRange = false;
-            StopAllCoroutines();
             enemyAnimator.ResetTrigger("Attack");
             readyToFire = false;
         }
