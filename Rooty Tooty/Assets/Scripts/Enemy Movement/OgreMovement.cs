@@ -36,6 +36,8 @@ public class OgreMovement : MonoBehaviour
     bool isGrounded = true;
     bool inMeleeRange = false;
     public Animator enemyAnimator;
+    public GameObject meleeHitBox;
+    private bool inPatrolRange;
     void Start()
     {
         dir = (int)gameObject.transform.localScale.x;
@@ -43,32 +45,49 @@ public class OgreMovement : MonoBehaviour
         //starting frame takes the enemy's starting position and their starting direction
         startingPos = transform.position.x;
         player = Player.instance.gameObject;
+        meleeHitBox = gameObject.transform.GetChild(0).gameObject;
         rb = GetComponent<Rigidbody2D>();
         //jump calculation from https://gamedevbeginner.com/how-to-jump-in-unity-with-or-without-physics/#jump_unity
         jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
-             
+        meleeHitBox.SetActive(false);
+
     }
     void Update()
     {
         if (inMeleeRange)
         {
+            meleeHitBox.SetActive(true);
             meleeAttack();
             enemyAnimator.SetBool("isChasing", false);
             enemyAnimator.SetBool("isMoving", false);
 
         }
-        else if (inAggroRange && readyToChase && isGrounded && !inMeleeRange)
+        if (inAggroRange && readyToChase && isGrounded && !inMeleeRange && inPatrolRange)
         {
+            meleeHitBox.SetActive(false);
             FaceTowardsPlayer();
             CheckSpriteDirection();
             //moves the enemy forward based on speed given and direction
             Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, chargeSpeed * Time.deltaTime);
             transform.position = new Vector3(tempVector2.x, transform.position.y, 0);
             enemyAnimator.SetBool("isChasing", true);
+            if (transform.position.x > startingPos + distR || transform.position.x < startingPos - distL)
+            {
+                inPatrolRange = false;
+            }
         }
-        else if (!inAggroRange && isGrounded && !inMeleeRange)
+        if (!inAggroRange && isGrounded && !inMeleeRange && !inPatrolRange)
         {
+            meleeHitBox.SetActive(false);
             readyToChase = false;
+            if (transform.position.x > startingPos + distR || transform.position.x < startingPos - distL)
+            {
+                inPatrolRange = false;
+            }
+            else
+            {
+                inPatrolRange = true;
+            }
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
             if (transform.position.x > startingPos + distR)
             {

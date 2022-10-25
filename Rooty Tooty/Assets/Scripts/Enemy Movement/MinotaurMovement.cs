@@ -48,7 +48,7 @@ public class MinotaurMovement : MonoBehaviour
         facingLeft = dir == -1;
         //starting frame takes the enemy's starting position and their starting direction
         endPos = new Vector3(transform.position.x + (chargeDistance * dir), transform.position.y, transform.position.z);
-        player = GameObject.Find("Player");
+        player = Player.instance.gameObject;
     }
     void Update()
     {
