@@ -89,7 +89,7 @@ public class PlayerProjectile : MonoBehaviour
         yield return new WaitForSeconds(projectileLifespan);
         if (gameObject.activeInHierarchy)
         {
-            gameObject.SetActive(false);
+            StartCoroutine(ImpactAnimation());
         }
     }
 }
