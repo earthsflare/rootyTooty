@@ -45,7 +45,8 @@ public class gameManagerScript : MonoBehaviour
     public void Setup(int score)
     {
         goMenuUI.SetActive(true);
-      //  pointsText.text = score.ToString() + " POINTS";
+        Time.timeScale = 0f;
+        //  pointsText.text = score.ToString() + " POINTS";
     }
 
     //public void RestartButton()
