@@ -85,6 +85,7 @@ public class gameManagerScript : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        
         GameIsPaused = true;
     }
 
