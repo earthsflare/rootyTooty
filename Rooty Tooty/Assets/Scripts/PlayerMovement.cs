@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool canMove = true;
     [HideInInspector] public bool isRolling;
 
+    public float knockBackPower;
+
     [HideInInspector] public GameObject Enemy;
 
     public Rigidbody2D rb;
@@ -84,6 +86,25 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+    public void knockBack(Vector2 EnemyPos, Vector2 PlayerPos, Rigidbody2D rb, bool push)
+    {
+        if (push)
+        {
+            if (EnemyPos.x > PlayerPos.x)
+            {
+                rb.velocity = new Vector2(-knockBackPower, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(knockBackPower, rb.velocity.y);
+            }
+
+            //add coroutine later
+            canMove = true;
+        }
+    }
+
 
     //Flips the character sprite if the movement direction is left or -1
     private void flipCharacter()

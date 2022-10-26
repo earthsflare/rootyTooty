@@ -30,7 +30,7 @@ public class EnemyProjectile : MonoBehaviour
         {
             Debug.Log("EnemyProjectile collided with " + collider.name);
             collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
-            Player.instance.health.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false);
+            Player.instance.move.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false);
             gameObject.SetActive(false);
         }
     }

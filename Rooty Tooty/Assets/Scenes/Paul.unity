@@ -3104,6 +3104,7 @@ MonoBehaviour:
   facingRight: 1
   canMove: 1
   isRolling: 0
+  knockBackPower: 0
   Enemy: {fileID: 0}
   rb: {fileID: 1577464342}
   movement: {x: 0, y: 0}
@@ -3296,7 +3297,6 @@ MonoBehaviour:
   - {fileID: 785909323}
   - {fileID: 905785944}
   animator: {fileID: 1577464345}
-  knockBackPower: 0
   gotHitScreen: {fileID: 0}
   tempPoint: 1
 --- !u!114 &1577464350
@@ -3336,8 +3336,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canRoll: 0
   rollingSpd: 2
-  rollingTime: 1
-  rollingCooldown: 1
+  rollingTime: 0.5
+  rollingCooldown: 0.5
 --- !u!1001 &1643779443
 PrefabInstance:
   m_ObjectHideFlags: 0

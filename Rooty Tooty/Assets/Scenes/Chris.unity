@@ -489,8 +489,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canRoll: 0
   rollingSpd: 2
-  rollingTime: 1
-  rollingCooldown: 1
+  rollingTime: 0.5
+  rollingCooldown: 0.5
 --- !u!4 &1838905830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1692447059535158970, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}

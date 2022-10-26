@@ -42,7 +42,7 @@ public class DamageOnPlayer : MonoBehaviour
             Player.instance.move.canMove = false;
 
             //Debug.Log("Enemy Pos: " + knockbackCenter.position.x + " Player Pos: " + Player.instance.transform.position.x);
-            Player.instance.health.knockBack(knockbackCenter.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
+            Player.instance.move.knockBack(knockbackCenter.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
             //StartCoroutine(damageTimer(time));
         }
     }
@@ -57,7 +57,7 @@ public class DamageOnPlayer : MonoBehaviour
 
             Player.instance.health.TakeDamage(1);
             Player.instance.move.canMove = false;
-            Player.instance.health.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
+            Player.instance.move.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
             //StartCoroutine(damageTimer(time));
         }
     }
