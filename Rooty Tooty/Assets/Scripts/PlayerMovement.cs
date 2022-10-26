@@ -10,19 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private float characterSpeed;
     //public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
-    private bool facingRight = true;            //Which direction the player sprite is facing
+    [HideInInspector] public bool facingRight = true;            //Which direction the player sprite is facing
+   
     [HideInInspector] public bool canMove = true;
-
-
-    //Player Roll Variables
-    public bool canRoll;
     [HideInInspector] public bool isRolling;
-    public float rollingSpd = 2f;
-    public float rollingTime = 1f;
-    public float rollingCooldown = 1f;
-
-    int BushLayer;
-    int PlayerLayer;
 
     [HideInInspector] public GameObject Enemy;
 
@@ -34,10 +25,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Enemy = GameObject.FindWithTag("Enemy");
-
-        BushLayer = LayerMask.NameToLayer("RollBlock");
-        PlayerLayer = LayerMask.NameToLayer("Player");
-        canRoll = true;
 
         if(spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
@@ -60,19 +47,13 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal") * characterSpeed;
 
         //If user presses Shift the character will sprint this is for testing purposes
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetButton("Sprint"))
         {
             characterSpeed = regSpeed * 2;
         }
         else
         {
             characterSpeed = regSpeed;
-        }
-
-        //Player Roll
-        if (Input.GetKey(KeyCode.X) && canRoll)
-        {
-            StartCoroutine(Roll());
         }
 
         animator.SetFloat("Speed", Mathf.Abs(movement.x));
@@ -104,60 +85,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public bool getRoll()
-    {
-        return canRoll;
-    }
-
-    public void enableRoll()
-    {
-        canRoll = true;
-    }
-
     //Flips the character sprite if the movement direction is left or -1
     private void flipCharacter()
     {
         facingRight = !facingRight;
         spriteRenderer.flipX = !facingRight;
     }
-
-    private IEnumerator Roll()
-    {
-        canRoll = false;
-        isRolling = true;
-        animator.SetBool("isRolling", isRolling);
-
-        //We don't want gravity to affect character while roll/dash in air
-        float currentGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-
-        if (movement.x == 0)
-        {
-            if (!facingRight)
-            {
-                movement.x = -1 * regSpeed;
-            }
-            else
-            {
-                movement.x = 1 * regSpeed;
-            }
-        }
-        Physics2D.IgnoreLayerCollision(BushLayer, PlayerLayer, true);
-        rb.velocity = new Vector2(movement.x * rollingSpd, 0f);
-
-        yield return new WaitForSeconds(rollingTime);
-        rb.gravityScale = currentGravity;
-        isRolling = false;
-        animator.SetBool("isRolling", isRolling);
-        Physics2D.IgnoreLayerCollision(BushLayer, PlayerLayer, false);
-
-        yield return new WaitForSeconds(rollingCooldown);
-        canRoll = true;
-    }
-
-    // sends the player to the start position of each level
-    //private void OnLevelWasLoaded(int level)
-    //{
-    //   transform.position = GameObject.FindWithTag("StartPos").transform.position;
-    // }
 }

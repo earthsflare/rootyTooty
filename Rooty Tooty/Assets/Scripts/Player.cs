@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public PlayerHealth health;
     public PlayerMovement move;
     public PlayerJump jump;
+    public PlayerRoll roll;
 
     void Awake()
     {
