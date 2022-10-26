@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject gotHitScreen; //reference to the damage screen
 
-    public int tempPoint = 1; //temp var to place in gameoverscreen
+    //public int tempPoint = 1; //temp var to place in gameoverscreen
 
     
 
@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
             if (gotHitScreen.GetComponent<Image>().color.a > 0)
             {
                 var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
-                color.a -= 0.01f; // reduce alpha by 0.01 until it reaches 0 
+                color.a -= 0.001f; // reduce alpha by 0.01 until it reaches 0 
 
                 gotHitScreen.GetComponent<Image>().color = color;
             }
@@ -66,10 +66,11 @@ public class PlayerHealth : MonoBehaviour
             animator.SetTrigger("Damage");
             life -= d;
             hearts[life].gameObject.SetActive(false);
-            //gotHurt(); // apply the gothitscreen
+            gotHurt(); // apply the gothitscreen
             if (life < 1)
             {
                 dead = true;
+                gameManagerScript.instance.Setup();
                 StartCoroutine(deathAnim());
             }
         }
@@ -77,7 +78,7 @@ public class PlayerHealth : MonoBehaviour
     void gotHurt()
     {
         var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image   
-        color.a = 1.0f; // change that color to show
+        color.a = 0.5f; // change that color to show
 
         gotHitScreen.GetComponent<Image>().color = color; //assign it back to the image
 
@@ -94,7 +95,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator deathAnim()
     {
-        gameManagerScript.instance.Setup(tempPoint); // displays the gameoverscreen with maxLife as the point display
+        //gameManagerScript.instance.Setup(tempPoint); // displays the gameoverscreen with maxLife as the point display
         animator.SetBool("Dead", dead);
         yield return new WaitForSeconds(1.09f);
         Debug.Log("Player is dead!");

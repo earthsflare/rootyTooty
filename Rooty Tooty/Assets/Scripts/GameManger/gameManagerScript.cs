@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class gameManagerScript : MonoBehaviour
 {
@@ -100,7 +101,7 @@ public class gameManagerScript : MonoBehaviour
     }
 
 
-    public void Setup(int score)
+    public void Setup()
     {
         goMenuUI.SetActive(true);
         Time.timeScale = 0f;
