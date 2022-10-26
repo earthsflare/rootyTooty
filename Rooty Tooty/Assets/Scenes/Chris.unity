@@ -475,6 +475,22 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1692447060130313571, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
   m_PrefabInstance: {fileID: 799356566}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1750565962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750565950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfe2508fd283a445b92300fa6a9c0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRoll: 0
+  rollingSpd: 2
+  rollingTime: 1
+  rollingCooldown: 1
 --- !u!4 &1838905830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1692447059535158970, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}

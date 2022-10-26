@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  canKnock: 1
+  knockbackCenter: {fileID: 0}
 --- !u!114 &92177814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  canKnock: 1
+  knockbackCenter: {fileID: 0}
 --- !u!114 &463659401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +984,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.66391, y: -5.1462016, z: -10}
+  m_LocalPosition: {x: -39.397297, y: -5.1188016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1537,6 +1541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  canKnock: 1
+  knockbackCenter: {fileID: 0}
 --- !u!114 &741402606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2635,6 +2641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+  canKnock: 1
+  knockbackCenter: {fileID: 0}
 --- !u!114 &1123339923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,6 +3295,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f478f3957db55294aa9879b4ac47cf0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1577464355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577464340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfe2508fd283a445b92300fa6a9c0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRoll: 0
+  rollingSpd: 2
+  rollingTime: 1
+  rollingCooldown: 1
 --- !u!1001 &1643779443
 PrefabInstance:
   m_ObjectHideFlags: 0
