@@ -15,7 +15,9 @@ public class PlayerHealth : MonoBehaviour
 
     //public int tempPoint = 1; //temp var to place in gameoverscreen
 
-    
+
+    [SerializeField] private float decreaseAlpha;
+    [SerializeField] private float initialAlpha;
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
             if (gotHitScreen.GetComponent<Image>().color.a > 0)
             {
                 var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
-                color.a -= 0.001f; // reduce alpha by 0.01 until it reaches 0 
+                color.a -= decreaseAlpha; // reduce alpha by 0.01 until it reaches 0 
 
                 gotHitScreen.GetComponent<Image>().color = color;
             }
@@ -78,7 +80,7 @@ public class PlayerHealth : MonoBehaviour
     void gotHurt()
     {
         var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image   
-        color.a = 0.5f; // change that color to show
+        color.a = initialAlpha; // change that color to show
 
         gotHitScreen.GetComponent<Image>().color = color; //assign it back to the image
 

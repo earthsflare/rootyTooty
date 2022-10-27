@@ -1424,7 +1424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.67003, y: -5.1679654, z: -10}
+  m_LocalPosition: {x: -41.667423, y: -5.16791, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3616,6 +3616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 1
   canKnock: 1
+  knockBackTime: 3
   knockbackCenter: {fileID: 1441467119}
 --- !u!1 &1530395041
 GameObject:
@@ -4968,6 +4969,14 @@ PrefabInstance:
       propertyPath: gotHitScreen
       value: 
       objectReference: {fileID: 44255698}
+    - target: {fileID: 1692447060130313576, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: initialAlpha
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692447060130313576, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: decreaseAlpha
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 1692447060130313576, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: knockBackPower
       value: 10
