@@ -3735,6 +3735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 1
   canKnock: 1
+  knockBackTime: 0
   knockbackCenter: {fileID: 1441467119}
 --- !u!1 &1530395041
 GameObject:
@@ -5210,6 +5211,10 @@ PrefabInstance:
       propertyPath: move
       value: 
       objectReference: {fileID: 1692447058620745602}
+    - target: {fileID: 1692447060130313578, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: roll
+      value: 
+      objectReference: {fileID: 1692447058620745614}
     - target: {fileID: 2260591736451806352, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: jumpCounter
       value: 2

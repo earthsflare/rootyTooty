@@ -7,6 +7,7 @@ public class DamageOnPlayer : MonoBehaviour
     private static bool canTakeDamage = true;
     [SerializeField] private float time = 1;
     [SerializeField] private bool canKnock = true;
+    public int knockBackTime = 3;
     [SerializeField] private Transform knockbackCenter = null;
 
     private float timer = 0;
@@ -39,10 +40,7 @@ public class DamageOnPlayer : MonoBehaviour
             canTakeDamage = false;
             timer += time;
             Player.instance.health.TakeDamage(1);
-            Player.instance.move.canMove = false;
-
-            //Debug.Log("Enemy Pos: " + knockbackCenter.position.x + " Player Pos: " + Player.instance.transform.position.x);
-            Player.instance.move.knockBack(knockbackCenter.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
+            Player.instance.move.knockBack(knockbackCenter.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             //StartCoroutine(damageTimer(time));
         }
     }
@@ -56,8 +54,7 @@ public class DamageOnPlayer : MonoBehaviour
             timer += time;
 
             Player.instance.health.TakeDamage(1);
-            Player.instance.move.canMove = false;
-            Player.instance.move.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock);
+            Player.instance.move.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             //StartCoroutine(damageTimer(time));
         }
     }
