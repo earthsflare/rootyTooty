@@ -38,6 +38,7 @@ public class MenuManager : MonoBehaviour
     {
         if (GameIsOver == false)
         {
+            goMenuUI.SetActive(false);
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (GameIsPaused)
