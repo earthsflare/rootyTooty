@@ -22,6 +22,8 @@ public class MainMenu : MonoBehaviour
         // load the next level
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // loads the next level in the queue
         // done by getting the currently loaded level and increase it by 1
+        MenuManager.instance.Resume();
+        MenuManager.GameIsOver = false;
     }
 
     public void QuitGame ()

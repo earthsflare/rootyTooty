@@ -7,6 +7,7 @@ public class EnemyProjectile : MonoBehaviour
     public int damage = 1;
     public float speed = 5f;
     public Rigidbody2D projectileRB;
+    public int knockBackTime = 0;
     public float projectileLifespan = 2f;
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class EnemyProjectile : MonoBehaviour
         {
             Debug.Log("EnemyProjectile collided with " + collider.name);
             collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
-            Player.instance.move.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false);
+            Player.instance.move.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false, knockBackTime);
             gameObject.SetActive(false);
         }
     }

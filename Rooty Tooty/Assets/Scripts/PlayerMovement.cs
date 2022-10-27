@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove)
         {
+            Debug.Log("HERE");
             return;
         }
         if (isRolling)
@@ -87,10 +88,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void knockBack(Vector2 EnemyPos, Vector2 PlayerPos, Rigidbody2D rb, bool push)
+    public void knockBack(Vector2 EnemyPos, Vector2 PlayerPos, Rigidbody2D rb, bool push, int knockbackTime)
     {
         if (push)
         {
+            canMove = false;
+
             if (EnemyPos.x > PlayerPos.x)
             {
                 rb.velocity = new Vector2(-knockBackPower, rb.velocity.y);
@@ -100,8 +103,8 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(knockBackPower, rb.velocity.y);
             }
 
-            //add coroutine later
-            canMove = true;
+            // start coroutine
+            StartCoroutine(knockBackTimer(knockbackTime));
         }
     }
 
@@ -111,5 +114,12 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight;
         spriteRenderer.flipX = !facingRight;
+    }
+
+    private IEnumerator knockBackTimer(int time)
+    {
+        yield return new WaitForSeconds(time);
+
+        canMove = true;
     }
 }
