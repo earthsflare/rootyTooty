@@ -37,7 +37,7 @@ public class OgreMovement : MonoBehaviour
     bool inMeleeRange = false;
     public Animator enemyAnimator;
     public GameObject meleeHitBox;
-    private bool inPatrolRange;
+    public bool inPatrolRange;
     void Start()
     {
         dir = (int)gameObject.transform.localScale.x;
@@ -54,6 +54,7 @@ public class OgreMovement : MonoBehaviour
     }
     void Update()
     {
+        //attack loop
         if (inMeleeRange)
         {
             meleeHitBox.SetActive(true);
@@ -62,6 +63,7 @@ public class OgreMovement : MonoBehaviour
             enemyAnimator.SetBool("isMoving", false);
 
         }
+        //chase loop
         if (inAggroRange && readyToChase && isGrounded && !inMeleeRange && inPatrolRange)
         {
             meleeHitBox.SetActive(false);
@@ -76,17 +78,18 @@ public class OgreMovement : MonoBehaviour
                 inPatrolRange = false;
             }
         }
-        if (!inAggroRange && isGrounded && !inMeleeRange && !inPatrolRange)
+        //patrol loop
+        if (!inAggroRange && isGrounded && !inMeleeRange && inPatrolRange)
         {
             meleeHitBox.SetActive(false);
             readyToChase = false;
-            if (transform.position.x > startingPos + distR || transform.position.x < startingPos - distL)
+            if (transform.position.x <= startingPos + distR + 1 && transform.position.x >= startingPos - distL - 1)
             {
-                inPatrolRange = false;
+                inPatrolRange = true;
             }
             else
             {
-                inPatrolRange = true;
+                inPatrolRange = false;
             }
             //if the enemy is too far to the right from the starting position flips the enemy's direction to the left
             if (transform.position.x > startingPos + distR)
@@ -104,6 +107,18 @@ public class OgreMovement : MonoBehaviour
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
             enemyAnimator.SetBool("isMoving", true);
             enemyAnimator.SetBool("isChasing", false);
+        }
+        if (!inPatrolRange)
+        {
+            FaceTowardsSpawnPosition();
+            CheckSpriteDirection();
+            transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
+            enemyAnimator.SetBool("isMoving", true);
+            enemyAnimator.SetBool("isChasing", false);
+            if (transform.position.x == startingPos)
+            {
+                inPatrolRange = true;
+            }
         }
 
         //moves towards player when in range
@@ -141,6 +156,17 @@ public class OgreMovement : MonoBehaviour
         }
         //if enemy is to the left of player look right
         else if (transform.position.x < player.transform.position.x)
+        {
+            dir = 1;
+        }
+    }
+    private void FaceTowardsSpawnPosition()
+    {
+        if (transform.position.x > startingPos)
+        {
+            dir = -1;
+        }
+        else if (transform.position.x < startingPos)
         {
             dir = 1;
         }
@@ -183,7 +209,8 @@ public class OgreMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("OnCollisionEnter2D");
-        if (col.gameObject.CompareTag("Ground")){
+        if (col.gameObject.CompareTag("Ground"))
+        {
             isGrounded = true;
         }
     }
