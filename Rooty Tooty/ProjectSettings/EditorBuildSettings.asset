@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Retrospective2_Old/Retro_2.unity
     guid: 55e133ef8fc0431499089009940697a3
   - enabled: 0
-    path: Assets/Scenes/Retrospective2_Old/Retro_2L2.unity
+    path: Assets/Scenes/Will_Test/Retro_3/Retro_3L2.unity
     guid: 603b5d00965a51d4c9e6485d9307cdb5
   - enabled: 0
     path: Assets/Scenes/Retrospective1/SAMPLE_1.unity
