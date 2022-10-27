@@ -70,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
             if (life < 1)
             {
                 dead = true;
-                gameManagerScript.instance.Setup();
+                MenuManager.instance.Setup();
                 StartCoroutine(deathAnim());
             }
         }
