@@ -11,6 +11,8 @@ public class OgreMovement : MonoBehaviour
     public float distL = 5;
     [Tooltip("The distance the enemy can move Right from the starting position")]
     public float distR = 5;
+    public float patrolDistL = 4;
+    public float patrolDistR = 4;
     [Tooltip("The movement speed of the enemy")]
     public float speed = 2f;
     [Tooltip("The direction the enemy is facing; -1 for left +1 for right")]
@@ -73,7 +75,7 @@ public class OgreMovement : MonoBehaviour
             Vector2 tempVector2 = Vector2.MoveTowards(transform.position, player.transform.position, chargeSpeed * Time.deltaTime);
             transform.position = new Vector3(tempVector2.x, transform.position.y, 0);
             enemyAnimator.SetBool("isChasing", true);
-            if (transform.position.x > startingPos + distR || transform.position.x < startingPos - distL)
+            if (transform.position.x > startingPos + distR + patrolDistR || transform.position.x < startingPos - distL - patrolDistL)
             {
                 inPatrolRange = false;
             }
@@ -83,7 +85,7 @@ public class OgreMovement : MonoBehaviour
         {
             meleeHitBox.SetActive(false);
             readyToChase = false;
-            if (transform.position.x <= startingPos + distR + 1 && transform.position.x >= startingPos - distL - 1)
+            if (transform.position.x <= startingPos + distR + patrolDistR && transform.position.x >= startingPos - distL - patrolDistL)
             {
                 inPatrolRange = true;
             }
@@ -115,7 +117,7 @@ public class OgreMovement : MonoBehaviour
             transform.Translate(dir * speed * Time.deltaTime * Vector3.right);
             enemyAnimator.SetBool("isMoving", true);
             enemyAnimator.SetBool("isChasing", false);
-            if (transform.position.x == startingPos)
+            if (transform.position.x <= startingPos + 0.5 && transform.position.x >= startingPos - 0.5)
             {
                 inPatrolRange = true;
             }
