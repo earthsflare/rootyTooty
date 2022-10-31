@@ -6,7 +6,6 @@ public class PlayerProjectile : MonoBehaviour
 {
     [Header("Projectile Properties")]
     [SerializeField] private int damage = 1; // Placeholder
-    //  [SerializeField] public float offsetTime = 2f;
     [SerializeField] public float projectileLifespan = 2f;
     [SerializeField] private float maxSpeed = 10f;
 
@@ -91,5 +90,21 @@ public class PlayerProjectile : MonoBehaviour
         {
             StartCoroutine(ImpactAnimation());
         }
+    }
+}
+
+public class Firebolt : PlayerProjectile
+{
+    public Firebolt()
+    {
+
+    }
+}
+
+public class Waterball : PlayerProjectile
+{
+    public Waterball()
+    {
+
     }
 }

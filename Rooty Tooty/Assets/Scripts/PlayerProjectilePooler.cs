@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerProjectile
+{
+    Firebolt,
+    Waterball,
+}
+
 public class PlayerProjectilePooler : MonoBehaviour
 {
     public static PlayerProjectilePooler playerProjectilePool;
