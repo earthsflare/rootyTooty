@@ -35,6 +35,10 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         //Can't jump while in the middle of rolling animation
+        if (!Movement.canMove)
+        {
+            return;
+        }
         if (Movement.isRolling)
         {
             jumpHold = false;
@@ -59,6 +63,11 @@ public class PlayerJump : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!Movement.canMove)
+        {
+            return;
+        }
+
         //Can't jump while in the middle of rolling animation
         if (Movement.isRolling)
         {

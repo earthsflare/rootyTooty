@@ -26,8 +26,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        Enemy = GameObject.FindWithTag("Enemy");
-
         if(spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -35,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Enemy = GameObject.FindWithTag("Enemy");
+
         if (!canMove)
         {
             return;
@@ -66,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove)
         {
-            Debug.Log("HERE");
             return;
         }
         if (isRolling)

@@ -3573,8 +3573,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1692447060130313569, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
   spawnPosition: {x: -45, y: 7}
-  goMenuUI: {fileID: 26225006}
-  pauseMenuUI: {fileID: 0}
 --- !u!4 &1345070390
 Transform:
   m_ObjectHideFlags: 0
@@ -3736,7 +3734,6 @@ MonoBehaviour:
   time: 1
   canKnock: 1
   knockBackTime: 0
-  knockbackCenter: {fileID: 1441467119}
 --- !u!1 &1530395041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5121,7 +5118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1692447060130313568, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: knockBackPower
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1692447060130313568, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: spriteRenderer
