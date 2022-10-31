@@ -30,16 +30,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Chris.unity
     guid: ce9c542a705f9be448328b67548250d9
   - enabled: 0
-    path: Assets/Scenes/Levels/Level1.unity
+    path: Assets/Scenes/Level_Testing/Level1.unity
     guid: 895c72109bffe2c43b8627d5902e0737
   - enabled: 0
-    path: Assets/Scenes/Levels/Level2.unity
+    path: Assets/Scenes/Level_Testing/Level2.unity
     guid: 6df0414f88ded7a409b3fef5c959c90c
   - enabled: 0
-    path: Assets/Scenes/Levels/Level3.unity
+    path: Assets/Scenes/Level_Testing/Level3.unity
     guid: 0f6bafa1dbb395045b8186f5c023fc3a
   - enabled: 0
-    path: Assets/Scenes/Levels/Level4.unity
+    path: Assets/Scenes/Level_Testing/Level4.unity
     guid: 31a4d30edc0cb5c45b5e8dcad4f5fd02
   - enabled: 0
     path: Assets/Scenes/DoorTesting/Door.unity
