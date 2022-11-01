@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject heart;
     public GameObject[] hearts;
     private int life;
     private int maxLife;
