@@ -209,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   maxLife: 3
+  enemyAnimator: {fileID: 3241425054333609180}
 --- !u!1 &3241425055316413669
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,21 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class EnemyHealth : MonoBehaviour
 {
     public int life;
     public int maxLife = 3;
+    public Animator enemyAnimator;
 
     void Start()
     {
         life = maxLife;
     }
-
-    public void TakeDamage(int damage)
+    IEnumerator death()
     {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
+    }
+
+        public void TakeDamage(int damage)
+    {
+        enemyAnimator.Play("export_hit");
         life -= damage;
         if (life <= 0)
         {
-            Destroy(gameObject);
+            enemyAnimator.Play("export_death");
+            StartCoroutine(death());
         }
     }
 }
