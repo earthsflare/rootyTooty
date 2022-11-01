@@ -36,12 +36,12 @@ public class DamageOnPlayer : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        if (canTakeDamage && collision.gameObject.CompareTag("Enemy"))
         {
             canTakeDamage = false;
             timer += time;
             Player.instance.health.TakeDamage(1);
-            Player.instance.move.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
+            Player.instance.move.knockBack(collision.gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             //StartCoroutine(damageTimer(time));
         }
     }
@@ -49,14 +49,14 @@ public class DamageOnPlayer : MonoBehaviour
     // PlayerSingletonManager.instance.health
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (canTakeDamage && collider.gameObject.CompareTag("Player"))
+        if (canTakeDamage && collider.gameObject.CompareTag("Enemy"))
         {
 
             canTakeDamage = false;
             timer += time;
 
             Player.instance.health.TakeDamage(1);
-            Player.instance.move.knockBack(Player.instance.move.Enemy.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
+            Player.instance.move.knockBack(collider.gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             //StartCoroutine(damageTimer(time));
         }
     }

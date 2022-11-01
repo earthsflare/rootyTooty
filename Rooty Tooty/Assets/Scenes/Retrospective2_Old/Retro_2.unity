@@ -1330,7 +1330,7 @@ SpriteRenderer:
   m_Size: {x: 0.29, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &516135282
@@ -3734,6 +3734,7 @@ MonoBehaviour:
   time: 1
   canKnock: 1
   knockBackTime: 0
+  knockbackCenter: {fileID: 0}
 --- !u!1 &1530395041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5118,7 +5119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1692447060130313568, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: knockBackPower
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1692447060130313568, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: spriteRenderer
