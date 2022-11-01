@@ -695,7 +695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724915307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9905073, y: -2.5629308, z: -0.05445957}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -972,11 +972,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   regSpeed: 5
   animator: {fileID: 1577464345}
+  canMove: 1
+  canRoll: 0
   isRolling: 0
   rollingSpd: 2
   rollingTime: 1
   rollingCooldown: 1
+  Enemy: {fileID: 0}
   rb: {fileID: 1577464342}
+  movement: {x: 0, y: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!50 &1577464342
 Rigidbody2D:
   serializedVersion: 4
@@ -1148,7 +1153,6 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 256
-  MAXJUMPS: 2
   jumpCounter: 0
   TOTALJUMPTIME: 0.35
   animator: {fileID: 1577464345}
