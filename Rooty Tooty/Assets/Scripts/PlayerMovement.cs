@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     //public float characterSpeed = 0f;                //characterSpeed changes if the player chooses to sprint
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     [HideInInspector] public bool facingRight = true;            //Which direction the player sprite is facing
-   
+
+    public bool canRoll = false;
     [HideInInspector] public bool canMove = true;
     [HideInInspector] public bool isRolling;
 
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if (isRolling)
+        if (isRolling && canRoll)
         {
             return;
         }
@@ -68,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        if (isRolling)
+        if (isRolling && canRoll)
         {
             return;
         }
@@ -107,7 +108,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     //Flips the character sprite if the movement direction is left or -1
     private void flipCharacter()
     {
@@ -120,5 +120,15 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         canMove = true;
+    }
+
+    public bool getRoll()
+    {
+        return canRoll;
+    }
+
+    public void enableRoll()
+    {
+        canRoll = true;
     }
 }

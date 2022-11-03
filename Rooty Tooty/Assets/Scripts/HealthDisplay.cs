@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class HealthDisplay : Player
+public class HealthDisplay : MonoBehaviour
 {
     public static HealthDisplay instance { get; private set; }
-    void Awake()
+
+    [SerializeField] private GameObject heartPrefab;
+
+    public void Awake()
     {
         if (instance == null)
         {
@@ -15,6 +19,24 @@ public class HealthDisplay : Player
         else if (instance != this)
         {
             Destroy(gameObject);
+            //GameObject p = Instantiate(heartPrefab);
+        }
+    }
+
+    public void drawHeart(int hearts, int maxHearts)
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        for(int i = 0; i < maxHearts; i++)
+        {
+            if(i + 1 <= hearts)
+            {
+                GameObject heart = Instantiate(heartPrefab, transform.position, Quaternion.identity);
+                heart.transform.parent = transform;
+            }
         }
     }
 }
