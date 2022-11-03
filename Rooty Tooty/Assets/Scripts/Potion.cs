@@ -8,7 +8,7 @@ public class Potion : MonoBehaviour
     {
         if (collider.CompareTag("Potion") && Player.instance.health.getHealth() < Player.instance.health.getMaxHealth() && Player.instance.health.isDead() == false)
         {
-            Player.instance.health.AddLife();
+            Player.instance.health.AddLife(1);
             Destroy(collider.gameObject);
         }
     }
