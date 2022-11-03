@@ -13,11 +13,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        GetComponent<Animation>().Play("ogre warrior - export_hit");
+        GetComponent<Animation>().Play("export_hit");
         life -= damage;
         if (life <= 0)
         {
-            GetComponent<Animation>().Play("ogre warrior -export_death");
+            GetComponent<Animation>().Play("export_death");
+            GetComponent<OgreMovement>().enabled = false;
             Destroy(gameObject);
         }
     }
