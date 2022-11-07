@@ -152,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distL: 5
   distR: 5
+  patrolDistL: 4
+  patrolDistR: 4
   speed: 2
   dir: 0
   player: {fileID: 0}
@@ -160,6 +162,8 @@ MonoBehaviour:
   jumpHeight: 0.1
   enemyReactionTime: 0.5
   enemyAnimator: {fileID: 3241425054333609180}
+  meleeHitBox: {fileID: 0}
+  inPatrolRange: 0
 --- !u!95 &3241425054333609180
 Animator:
   serializedVersion: 4
@@ -194,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0.2
   canKnock: 1
+  knockBackTime: 3
   knockbackCenter: {fileID: 0}
 --- !u!114 &1183076977315148500
 MonoBehaviour:
@@ -209,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   maxLife: 3
+  enemyAnimator: {fileID: 3241425054333609180}
 --- !u!1 &3241425055316413669
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,4 +310,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0.2
   canKnock: 1
+  knockBackTime: 3
   knockbackCenter: {fileID: 3241425054333609183}

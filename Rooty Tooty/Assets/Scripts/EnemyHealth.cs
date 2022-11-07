@@ -13,11 +13,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        GetComponent<Animation>().Play("export_hit");
+        enemyAnimator.Play("export_hit");
         life -= damage;
         if (life <= 0)
         {
-            GetComponent<Animation>().Play("export_death");
+            enemyAnimator.Play("export_death");
             GetComponent<OgreMovement>().enabled = false;
             Destroy(gameObject);
         }
