@@ -8,6 +8,7 @@ public class PlayerWallJump : MonoBehaviour
     int jump = 0;
     bool canJump = false;
     bool isSliding;
+    float slideTime;
 
 
     // Start is called before the first frame update
@@ -20,5 +21,11 @@ public class PlayerWallJump : MonoBehaviour
     void Update()
     {
         
+    }
+
+    //Time for sliding
+    private IEnumerator Slide()
+    {
+
     }
 }
