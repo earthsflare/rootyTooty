@@ -11,6 +11,8 @@ public class levelManager : MonoBehaviour
 
     public Animator animator;
 
+    private string levelToLoad;
+
     [SerializeField] private Vector2 nextLevelPosition = new Vector2(-45f, -7f);
     public void SetNextLevelPos(Vector2 p) { nextLevelPosition = p; }
     
@@ -27,11 +29,19 @@ public class levelManager : MonoBehaviour
         if(Player.instance != null)
             Player.instance.transform.position = instance.nextLevelPosition;
         #endregion
+
     }
 
-    public void LoadScene(string sceneName)
+
+    public void FadeToLevel (string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        levelToLoad = sceneName;
         animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(levelToLoad);
+        
     }
 }

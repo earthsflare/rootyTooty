@@ -12,12 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Will_Test/Retro_3/Menu.unity
     guid: 1a9f27e8f7f0dec43af3f1b7929cc1ec
   - enabled: 1
+    path: Assets/Scenes/Will_Test/Retro_3/Test.unity
+    guid: 59f46903d091b5f44a04ab26e1d5fe66
+  - enabled: 1
+    path: Assets/Scenes/Will_Test/Retro_3/Test_L2.unity
+    guid: f710573169c04dc48883bebc57890cf4
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_3/Will - Retro_3 1.unity
     guid: cf9bea15ea6349844b27848935a9c52e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_3/Retro_3L2.unity
     guid: 603b5d00965a51d4c9e6485d9307cdb5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_3/Retro_3L3.unity
     guid: e4a66f7ca0638d747ba5b04fe021e39d
   - enabled: 0

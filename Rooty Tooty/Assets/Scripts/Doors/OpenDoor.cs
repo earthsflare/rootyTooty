@@ -33,6 +33,7 @@ public class OpenDoor : MonoBehaviour
     private void Start()
     {
         sceneSwitch = FindObjectOfType<SceneSwitch>();
+        levelManager.instance.animator.SetTrigger("FadeIn");
     }
 
     private void Update()
@@ -52,15 +53,10 @@ public class OpenDoor : MonoBehaviour
             */
 
             levelManager.instance.SetNextLevelPos(nextDoorPos);
-            levelManager.instance.LoadScene(sceneName);
+            //levelManager.instance.LoadScene(sceneName);
+            levelManager.instance.FadeToLevel(sceneName);
             //FadeToLevel(levelName);
         }
-    }
-
-    public void OnFadeComplete()
-    {
-        //levelManager.instance.SetNextLevelPos(nextDoorPos);
-        //levelManager.instance.LoadScene(sceneName);
     }
 
     //public void FadeToLevel(string levelName)
