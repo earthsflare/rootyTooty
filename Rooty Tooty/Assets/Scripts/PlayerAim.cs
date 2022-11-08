@@ -13,6 +13,8 @@ public class PlayerAim : MonoBehaviour
     public bool isAvailable = true;
     // Weapon cooldown
     public float cooldownDuration = 01.0f;
+    // Player's current projectile
+    public int currentProjectile = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,16 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("NextProjectile"))
+        {
+            currentProjectile += 1;
+            if (currentProjectile == PlayerProjectilePooler.playerProjectilePool.getProjectilePrefabCount())
+            {
+                currentProjectile = 0;
+            }
+            Debug.Log("Changed projectile to : " + PlayerProjectilePooler.playerProjectilePool.getProjectileName(currentProjectile));
+        }
+
         if (Time.timeScale == 0f)
         {
             isAvailable = false;
@@ -33,7 +45,7 @@ public class PlayerAim : MonoBehaviour
             {
                 // Get projectile from the projectile pool
                 GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
-                    (PlayerProjectileType)PlayerProjectilePooler.playerProjectilePool.getCurrentPlayerProjectileType());
+                    currentProjectile);
 
                 if (projectile != null)
                 {

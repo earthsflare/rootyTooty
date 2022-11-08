@@ -9,7 +9,6 @@ public class PlayerProjectile : MonoBehaviour
     [SerializeField] protected int damage = 1; // Placeholder
     [SerializeField] public float projectileLifespan = 2f;
     [SerializeField] protected float maxSpeed = 10f;
-    [SerializeField] protected PlayerProjectileType projectileType = PlayerProjectileType.Firebolt;
 
     [Header("Object References")]
     [SerializeField] protected Rigidbody2D projectileRB;

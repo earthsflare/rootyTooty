@@ -2,12 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerProjectileType
-{
-    Firebolt,
-    Waterball,
-    MaxNumPlayerProjectiles
-}
+
 public class PlayerProjectilePooler : MonoBehaviour
 {
     public static PlayerProjectilePooler playerProjectilePool;
@@ -15,7 +10,6 @@ public class PlayerProjectilePooler : MonoBehaviour
     // May wish to have different amounts for each projectile
     // More complicated, probably out of scope
     [SerializeField] private int amountToPool = 3;
-    [SerializeField] public int currentPlayerProjectile = 0;
 
     [Header("Prefab Reference")]
     [SerializeField] private GameObject[] projectilesPrefab;
@@ -31,66 +25,68 @@ public class PlayerProjectilePooler : MonoBehaviour
         }
     }
 
-    private void addProjectileToPool(PlayerProjectileType projectileType)
+    private void addProjectileToPool(int projectileType)
     {
-        GameObject obj = Instantiate(projectilesPrefab[(int)projectileType]);
+        GameObject obj = Instantiate(projectilesPrefab[projectileType]);
         obj.transform.parent = transform;
         obj.SetActive(false);
-        pooledProjectiles[(int)projectileType].Add(obj);
+        pooledProjectiles[projectileType].Add(obj);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < (int)PlayerProjectileType.MaxNumPlayerProjectiles; i++)
+        for (int i = 0; i < projectilesPrefab.Length; i++)
         {
             pooledProjectiles.Add(new List<GameObject>());
             while(pooledProjectiles[i].Count < amountToPool)
             {
-                addProjectileToPool((PlayerProjectileType)i);
+                addProjectileToPool(i);
             }
         }
     }
 
     void Update()
     {
-        if (Input.GetButton("NextProjectile"))
-        {
-            currentPlayerProjectile += 1;
-            if (currentPlayerProjectile == (int)PlayerProjectileType.MaxNumPlayerProjectiles)
-            {
-                currentPlayerProjectile = 0;
-            }
-        }
+
     }
 
-    public GameObject GetPooledObject(PlayerProjectileType projectileType)
+    public GameObject GetPooledObject(int projectileType)
     {
-        Debug.Log("count " + pooledProjectiles.Count);
-        int poolCount = pooledProjectiles[(int)projectileType].Count;
+        int poolCount = pooledProjectiles[projectileType].Count;
         for (int i = 0; i < poolCount; i++)
         {
             // Return projectile if inactive
-            if (!pooledProjectiles[(int)projectileType][i].activeInHierarchy)
+            if (!pooledProjectiles[projectileType][i].activeInHierarchy)
             {
-                return pooledProjectiles[(int)projectileType][i];
+                return pooledProjectiles[projectileType][i];
             }
 
             // Add more projectiles if pool is empty and projectile is requested
             if (i == poolCount - 1)
             {
                 addProjectileToPool(projectileType);
-                if (!pooledProjectiles[(int)projectileType][i+1].activeInHierarchy)
+                if (!pooledProjectiles[projectileType][i+1].activeInHierarchy)
                 {
-                    return pooledProjectiles[(int)projectileType][i+1];
+                    return pooledProjectiles[projectileType][i+1];
                 }
             }
         }
         return null;
     }
-
-    public int getCurrentPlayerProjectileType()
+    
+    public int getProjectilePrefabCount()
     {
-        return currentPlayerProjectile;
+        return projectilesPrefab.Length;
     }
+        
+    public string getProjectileName(int projectileType)
+    {
+        if (projectileType < projectilesPrefab.Length)
+        {
+            return projectilesPrefab[projectileType].name;
+        }
+	return "Invalid projectile type";
+    }
+
 }
