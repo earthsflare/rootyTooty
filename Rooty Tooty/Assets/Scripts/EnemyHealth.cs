@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
     }
     IEnumerator death()
     {
-        gameObject.Find("gameobject").GetComponent("Enemy Health").enabled = false;
+        this.GetComponent<EnemyHealth>().enabled = false;
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }

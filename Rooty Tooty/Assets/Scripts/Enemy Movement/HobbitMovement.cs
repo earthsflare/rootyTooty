@@ -32,9 +32,11 @@ public class HobbitMovement : MonoBehaviour
     private float jumpForce;
     private bool weaponCoolingDown = false;
     public float enemyReactionTime = 0.5f;
-    float cooldownDuration = 1f;
+    public float slingChargeTime = .5f;
+    public float cooldownDuration = 1.6f;
     bool isGrounded = true;
     bool readyToFire;
+    bool slingReady = false;
     public Animator enemyAnimator;
     void Start()
     {
@@ -50,27 +52,31 @@ public class HobbitMovement : MonoBehaviour
     }
     void Update()
     {
-        if (inAggroRange && readyToFire)
+        if (inAggroRange && readyToFire && isGrounded)
         {
             FaceTowardsPlayer();
             enemyAnimator.SetBool("isMoving", false);
-            Attack();
             if (!weaponCoolingDown)
             {
-                Debug.Log("Getting Hobbit projectile from pool");
-                // Get projectile from the projectile pool
-                GameObject projectile = HobbitProjectilePooler.hobbitProjectilePool.GetPooledObject();
-                if (projectile != null)
+                Attack();
+                StartCoroutine(WaitSlingCharge());
+                if (slingReady)
                 {
-                    projectile.transform.position = transform.position;
+                    Debug.Log("Getting Hobbit projectile from pool");
+                    // Get projectile from the projectile pool
+                    GameObject projectile = HobbitProjectilePooler.hobbitProjectilePool.GetPooledObject();
+                    if (projectile != null)
+                    {
+                        projectile.transform.position = transform.position;
 
-                    Vector3 dir = Player.instance.transform.position - projectile.transform.position;
-                    float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                        Vector3 dir = Player.instance.transform.position - projectile.transform.position;
+                        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                        projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-                    projectile.SetActive(true);
+                        projectile.SetActive(true);
+                    }
+                    StartCoroutine(StartCooldown());
                 }
-                StartCoroutine(StartCooldown());
             }
         }
 
@@ -196,5 +202,11 @@ public class HobbitMovement : MonoBehaviour
         weaponCoolingDown = true;
         yield return new WaitForSeconds(cooldownDuration);
         weaponCoolingDown = false;
+        slingReady = false;
+    }
+    private IEnumerator WaitSlingCharge()
+    {
+        yield return new WaitForSeconds(slingChargeTime);
+        slingReady = true;
     }
 }
