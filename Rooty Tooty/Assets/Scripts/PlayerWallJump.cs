@@ -44,6 +44,6 @@ public class PlayerWallJump : MonoBehaviour
     //Time for sliding
     private IEnumerator Slide()
     {
-
+        yield return new WaitForSeconds(slideTime);
     }
 }
