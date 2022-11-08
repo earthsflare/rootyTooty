@@ -27,6 +27,9 @@ public class OpenDoor : MonoBehaviour
     SceneSwitch sceneSwitch;
     //GameManager gameManager;
 
+    //public Animator animator; //fade to black screen animation
+
+
     private void Start()
     {
         sceneSwitch = FindObjectOfType<SceneSwitch>();
@@ -50,9 +53,26 @@ public class OpenDoor : MonoBehaviour
 
             levelManager.instance.SetNextLevelPos(nextDoorPos);
             levelManager.instance.LoadScene(sceneName);
+            //FadeToLevel(levelName);
         }
     }
+
+    public void OnFadeComplete()
+    {
+        //levelManager.instance.SetNextLevelPos(nextDoorPos);
+        //levelManager.instance.LoadScene(sceneName);
+    }
+
+    //public void FadeToLevel(string levelName)
+    //{
+        //sceneName = levelName;
+        //animator.SetTrigger("FadeOut");
+    //}
+
+
     /*
+     * 
+
     // draws the box for the player to see
     private void OnDrawGizmosSelected()
     {
