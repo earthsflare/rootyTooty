@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerWallJump : MonoBehaviour
 {
-    bool collideWall = false;
-    int jump = 0;
-    bool canJump = false;
-    bool isSliding;
-    float slideTime;
+    public int jump;
+    private bool collideWall = false;
+    private bool canJump = false;
+    private bool isSliding;
+    private bool isWallJumping;
+    public float slideTime;
+    public float wallJumpForce;
 
 
     // Start is called before the first frame update
@@ -21,6 +23,11 @@ public class PlayerWallJump : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void isWallSliding()
+    {
+
     }
 
     //Time for sliding
