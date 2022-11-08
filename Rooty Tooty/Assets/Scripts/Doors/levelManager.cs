@@ -9,6 +9,8 @@ public class levelManager : MonoBehaviour
     private static levelManager _levelManager;
     public static levelManager instance { get { return _levelManager; } }
 
+    public Animator animator;
+
     [SerializeField] private Vector2 nextLevelPosition = new Vector2(-45f, -7f);
     public void SetNextLevelPos(Vector2 p) { nextLevelPosition = p; }
     
@@ -30,5 +32,6 @@ public class levelManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        animator.SetTrigger("FadeOut");
     }
 }
