@@ -10,19 +10,30 @@ public class PlayerWallJump : MonoBehaviour
     private bool isSliding;
     private bool isWallJumping;
     public float slideTime;
+    public float wallSlidingSpeed;
     public float wallJumpForce;
+
+    public Transform wallCheck;
+    public LayerMask WallLayer;
+
+    [HideInInspector] PlayerMovement Movement;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Movement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void collidingWall()
+    {
+
     }
 
     void isWallSliding()
