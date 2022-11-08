@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterBall_Travel
+  m_Name: Waterball_Travel
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0

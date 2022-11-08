@@ -8,8 +8,6 @@ public class PlayerAim : MonoBehaviour
     private Camera mainCam;
     // Transform for the origin of the player projectile
     public Transform firePoint;
-    
-    // Player's projectile //public GameObject projectileToFire;
 
     // Used to make sure player can't shoot while weapon on cooldown
     public bool isAvailable = true;
@@ -31,20 +29,22 @@ public class PlayerAim : MonoBehaviour
         }
         else
         {
-            // Code for aiming with mouse
-            Vector2 mouse = Input.mousePosition;
-            Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
-            Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-            float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-            firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
-
             if (Input.GetMouseButton(0) && isAvailable)
             {
                 // Get projectile from the projectile pool
-                GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject();
+                GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
+                    (PlayerProjectileType)PlayerProjectilePooler.playerProjectilePool.getCurrentPlayerProjectileType());
 
                 if (projectile != null)
                 {
+                    // Code to calculate projectile trajectory
+                    Vector2 mouse = Input.mousePosition;
+                    Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
+                    Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
+                    float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+                    firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
+
+                    // Aims projectile transform at the position of the mouse
                     projectile.transform.position = firePoint.position;
                     projectile.transform.rotation = firePoint.rotation;
                     projectile.SetActive(true);

@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerProjectile : MonoBehaviour
 {
     [Header("Projectile Properties")]
-    [SerializeField] private int damage = 1; // Placeholder
+    [SerializeField] protected int damage = 1; // Placeholder
     [SerializeField] public float projectileLifespan = 2f;
-    [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] protected float maxSpeed = 10f;
+    [SerializeField] protected PlayerProjectileType projectileType = PlayerProjectileType.Firebolt;
 
     [Header("Object References")]
-    [SerializeField] private Rigidbody2D projectileRB;
-    [SerializeField] private Animator projectileAnimator;
-    [SerializeField] private Collider2D projectileCollider;
+    [SerializeField] protected Rigidbody2D projectileRB;
+    [SerializeField] protected Animator projectileAnimator;
+    [SerializeField] protected Collider2D projectileCollider;
 
-    private float currentSpeed = 10f;
+    protected float currentSpeed = 10f;
 
     public void SetParent(GameObject newParent)
     {
@@ -56,7 +58,7 @@ public class PlayerProjectile : MonoBehaviour
     }
 
     private void OnTriggerEnter2D (Collider2D collider)
-    {       
+    {
         // Destroy(gameObject);
         if (collider.CompareTag("Enemy"))
         {
@@ -74,10 +76,9 @@ public class PlayerProjectile : MonoBehaviour
     }
 
     // Coroutine for impact animation
-    private IEnumerator ImpactAnimation()
+    protected virtual IEnumerator ImpactAnimation()
     {
         currentSpeed = 0;
-        projectileAnimator.Play("Firebolt_Impact");
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }
@@ -90,21 +91,5 @@ public class PlayerProjectile : MonoBehaviour
         {
             StartCoroutine(ImpactAnimation());
         }
-    }
-}
-
-public class Firebolt : PlayerProjectile
-{
-    public Firebolt()
-    {
-
-    }
-}
-
-public class Waterball : PlayerProjectile
-{
-    public Waterball()
-    {
-
     }
 }
