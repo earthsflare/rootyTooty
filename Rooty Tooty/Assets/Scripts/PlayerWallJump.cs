@@ -4,46 +4,74 @@ using UnityEngine;
 
 public class PlayerWallJump : MonoBehaviour
 {
-    public int jump;
-    private bool collideWall = false;
-    private bool canJump = false;
+    private bool collideWall;
     private bool isSliding;
-    private bool isWallJumping;
-    public float slideTime;
     public float wallSlidingSpeed;
-    public float wallJumpForce;
+
+    [HideInInspector] public bool isWallJumping;
+    public float wallJumpForcex;
+    public float wallJumpForcey;
+    public float wallJumpTime;
 
     public Transform wallCheck;
     public LayerMask WallLayer;
 
     [HideInInspector] PlayerMovement Movement;
+    [HideInInspector] PlayerJump Jump;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Movement = GetComponent<PlayerMovement>();
+        Jump = GetComponent<PlayerJump>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        collideWall = Physics2D.OverlapCircle(wallCheck.position, Jump.checkRadius, WallLayer);
+
+
+        if (collideWall && !Jump.isGrounded && Movement.movement.x != 0)
+        {
+            isSliding = true;
+        }
+        else
+        {
+            isSliding = false;
+        }
+
+        if (Input.GetButtonDown("Jump") && isSliding)
+        {
+            isWallJumping = true;
+            Invoke("SetWallJumping", wallJumpTime);
+        }
+
     }
 
-    void collidingWall()
+    void FixedUpdate()
     {
+        if (isSliding)
+        {
+            Movement.rb.velocity = new Vector2(Movement.rb.velocity.x, Mathf.Clamp(Movement.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+
+        if (isWallJumping)
+        {
+            Movement.rb.velocity = new Vector2(-wallJumpForcex * Movement.movement.x, wallJumpForcey);
+        }
 
     }
 
-    void isWallSliding()
+    void SetWallJumping()
     {
-
+        isWallJumping = false;
     }
 
-    //Time for sliding
+/*    //Time for sliding
     private IEnumerator Slide()
     {
         yield return new WaitForSeconds(slideTime);
-    }
+    }*/
 }
