@@ -25,7 +25,7 @@ public class PlayerRoll : MonoBehaviour
 
         BushLayer = LayerMask.NameToLayer("RollBlock");
         PlayerLayer = LayerMask.NameToLayer("Player");
-        canRoll = true;
+        canRoll = false;
     }
 
     // Update is called once per frame
