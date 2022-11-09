@@ -30,12 +30,13 @@ public class HealthDisplay : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        for(int i = 0; i < maxHearts; i++)
+        for(int i = 1; i <= maxHearts; i++)
         {
-            if(i + 1 <= hearts)
+            if(i <= hearts)
             {
                 GameObject heart = Instantiate(heartPrefab, transform.position, Quaternion.identity);
-                heart.transform.parent = transform;
+                //heart.transform.parent = transform;
+                heart.transform.SetParent(transform, false);
             }
         }
     }

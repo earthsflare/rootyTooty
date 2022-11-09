@@ -103,5 +103,6 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(1.09f);
         Debug.Log("Player is dead!");
         //Delete player
+        Destroy(gameObject);
     }
 }

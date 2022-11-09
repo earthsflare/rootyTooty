@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamageOnPlayer : MonoBehaviour
 {
+    [SerializeField] private int damage = 1;
     private static bool canTakeDamage = true;
     [SerializeField] private float time = 1;
     [SerializeField] private bool canKnock = true;
@@ -40,7 +41,7 @@ public class DamageOnPlayer : MonoBehaviour
         {
             canTakeDamage = false;
             timer += time;
-            Player.instance.health.TakeDamage(1);
+            Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             //StartCoroutine(damageTimer(time));
         }
@@ -55,7 +56,7 @@ public class DamageOnPlayer : MonoBehaviour
             canTakeDamage = false;
             timer += time;
 
-            Player.instance.health.TakeDamage(1);
+            Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             //StartCoroutine(damageTimer(time));
         }

@@ -1876,6 +1876,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1941262891, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1941262892, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1935,6 +1939,10 @@ PrefabInstance:
     - target: {fileID: 3677857332163932774, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
       propertyPath: m_Name
       value: Hobbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677857332163932774, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
@@ -3253,47 +3261,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343449353}
   m_CullTransparentMesh: 1
---- !u!1 &1441467113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3677857332163932774, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
-  m_PrefabInstance: {fileID: 793800889}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1441467119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3677857332163932703, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
   m_PrefabInstance: {fileID: 793800889}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1441467120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441467113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b421a2e4e006d40a7f2b0a9411727a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 0
-  maxLife: 2
-  enemyAnimator: {fileID: 0}
---- !u!114 &1441467121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441467113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 1
-  canKnock: 1
-  knockBackTime: 0
-  knockbackCenter: {fileID: 0}
 --- !u!1 &1530395041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,7 +4038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1941262892
 Transform:
   m_ObjectHideFlags: 0
