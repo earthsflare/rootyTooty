@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Unity user settings
+Rooty\ Tooty/UserSettings/
+*.dwlt
