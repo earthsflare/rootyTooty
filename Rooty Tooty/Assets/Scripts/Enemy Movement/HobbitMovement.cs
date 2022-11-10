@@ -58,7 +58,7 @@ public class HobbitMovement : MonoBehaviour
             enemyAnimator.SetBool("isMoving", false);
             if (!weaponCoolingDown)
             {
-                Attack();
+                enemyAnimator.Play("01 hobbit - export_slingshot");
                 StartCoroutine(WaitSlingCharge());
                 if (slingReady)
                 {
@@ -160,7 +160,7 @@ public class HobbitMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
-        if (collider.CompareTag("PlayerAggroRange"))
+        if (collider.CompareTag("RangedPlayerAggroRange"))
         {
             Debug.Log("Entering Player Range");
             inAggroRange = true;
@@ -178,7 +178,7 @@ public class HobbitMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
-        if (collider.CompareTag("PlayerAggroRange"))
+        if (collider.CompareTag("RangedPlayerAggroRange"))
         {
             Debug.Log("Exiting Player Range");
             inAggroRange = false;
