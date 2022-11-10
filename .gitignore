@@ -59,4 +59,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Unity user settings
+Rooty\ Tooty/UserSettings/
 *.dwlt
