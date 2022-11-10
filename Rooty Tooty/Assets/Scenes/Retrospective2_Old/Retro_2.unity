@@ -5199,6 +5199,30 @@ PrefabInstance:
       propertyPath: jumpCounter
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2725625474842506791, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_Name
+      value: wallCheckRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168776546067564338, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168776546067564338, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168776546067564338, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168776546067564338, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168776546067564338, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7130218330384611769, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.262

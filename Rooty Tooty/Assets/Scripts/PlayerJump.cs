@@ -38,20 +38,23 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         //Can't jump while in the middle of rolling animation
-        if (WallJump.isWallJumping)
+       
+/*        if (WallJump.isWallJumping)
         {
             return;
-        }
+        }*/
         if (!Movement.canMove)
         {
             return;
         }
+
         if (Movement.isRolling)
         {
             jumpHold = false;
             isJumping = false;
             return;
         }
+
         animator.SetFloat("yVelocity", rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && jumpCounter < MAXJUMPS)
@@ -70,10 +73,10 @@ public class PlayerJump : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (WallJump.isWallJumping)
+/*        if (WallJump.isWallJumping)
         {
             return;
-        }
+        }*/
         if (!Movement.canMove)
         {
             return;

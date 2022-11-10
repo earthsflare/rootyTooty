@@ -13,7 +13,8 @@ public class PlayerWallJump : MonoBehaviour
     public float wallJumpForcey;
     public float wallJumpTime;
 
-    public Transform wallCheck;
+    public Transform wallCheckRight;
+    public Transform wallCheckLeft;
     public LayerMask WallLayer;
 
     [HideInInspector] PlayerMovement Movement;
@@ -30,7 +31,13 @@ public class PlayerWallJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        collideWall = Physics2D.OverlapCircle(wallCheck.position, Jump.checkRadius, WallLayer);
+        if (!collideWall) {
+            collideWall = Physics2D.OverlapCircle(wallCheckRight.position, Jump.checkRadius, WallLayer);
+        }
+        if (!collideWall)
+        {
+            collideWall = Physics2D.OverlapCircle(wallCheckLeft.position, Jump.checkRadius, WallLayer);
+        }
 
 
         if (collideWall && !Jump.isGrounded && Movement.movement.x != 0)
@@ -69,8 +76,9 @@ public class PlayerWallJump : MonoBehaviour
         isWallJumping = false;
     }
 
-/*    //Time for sliding
-    private IEnumerator Slide()
+
+    //Time for sliding
+/*    private IEnumerator Slide()
     {
         yield return new WaitForSeconds(slideTime);
     }*/
