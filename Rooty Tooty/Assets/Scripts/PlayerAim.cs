@@ -8,13 +8,13 @@ public class PlayerAim : MonoBehaviour
     private Camera mainCam;
     // Transform for the origin of the player projectile
     public Transform firePoint;
-    
-    // Player's projectile //public GameObject projectileToFire;
 
     // Used to make sure player can't shoot while weapon on cooldown
     public bool isAvailable = true;
     // Weapon cooldown
     public float cooldownDuration = 01.0f;
+    // Player's current projectile
+    public int currentProjectile = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,26 +25,38 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("NextProjectile"))
+        {
+            currentProjectile += 1;
+            if (currentProjectile == PlayerProjectilePooler.playerProjectilePool.getProjectilePrefabCount())
+            {
+                currentProjectile = 0;
+            }
+            Debug.Log("Changed projectile to : " + PlayerProjectilePooler.playerProjectilePool.getProjectileName(currentProjectile));
+        }
+
         if (Time.timeScale == 0f)
         {
             isAvailable = false;
         }
         else
         {
-            // Code for aiming with mouse
-            Vector2 mouse = Input.mousePosition;
-            Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
-            Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-            float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-            firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
-
             if (Input.GetMouseButton(0) && isAvailable)
             {
                 // Get projectile from the projectile pool
-                GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject();
+                GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
+                    currentProjectile);
 
                 if (projectile != null)
                 {
+                    // Code to calculate projectile trajectory
+                    Vector2 mouse = Input.mousePosition;
+                    Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
+                    Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
+                    float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+                    firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
+
+                    // Aims projectile transform at the position of the mouse
                     projectile.transform.position = firePoint.position;
                     projectile.transform.rotation = firePoint.rotation;
                     projectile.SetActive(true);

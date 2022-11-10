@@ -32,8 +32,8 @@ public class HobbitMovement : MonoBehaviour
     private float jumpForce;
     private bool weaponCoolingDown = false;
     public float enemyReactionTime = 0.5f;
-    public float slingChargeTime = .5f;
-    public float cooldownDuration = 1.6f;
+    private float slingChargeTime = 1.2f;
+    public float cooldownDuration = 1.5f;
     bool isGrounded = true;
     bool readyToFire;
     bool slingReady = false;
@@ -160,7 +160,7 @@ public class HobbitMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
-        if (collider.CompareTag("RangedPlayerAggroRange"))
+        if (collider.CompareTag("RangedAttackRange"))
         {
             Debug.Log("Entering Player Range");
             inAggroRange = true;
@@ -178,7 +178,7 @@ public class HobbitMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         //checks the triggers tag to ensure it is the aggro range
-        if (collider.CompareTag("RangedPlayerAggroRange"))
+        if (collider.CompareTag("RangedAttackRange"))
         {
             Debug.Log("Exiting Player Range");
             inAggroRange = false;
