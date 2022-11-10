@@ -13,11 +13,16 @@ public class levelManager : MonoBehaviour
 
     private string levelToLoad;
 
+    [SerializeField] private float fadeAlphaSpeed;
+    //[SerializeField] private float initialAlpha;
+
     [SerializeField] private Vector2 nextLevelPosition = new Vector2(-45f, -7f);
     public void SetNextLevelPos(Vector2 p) { nextLevelPosition = p; }
     
+
     private void Awake()
     {
+        animator.SetFloat("AnimationSpeed", fadeAlphaSpeed);
         #region Setup Singleton
         if (_levelManager == null)
             _levelManager = this;
@@ -41,7 +46,9 @@ public class levelManager : MonoBehaviour
 
     public void OnFadeComplete()
     {
-        SceneManager.LoadScene(levelToLoad);
         
+        SceneManager.LoadScene(levelToLoad);
+        animator.SetTrigger("FadeIn");
+
     }
 }
