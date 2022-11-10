@@ -1435,6 +1435,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1941262892, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3677857332163932703, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4287,6 +4291,7 @@ MonoBehaviour:
   life: 0
   maxLife: 2
   enemyAnimator: {fileID: 0}
+  deathTime: 1.5
 --- !u!114 &1441467121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4646,6 +4651,10 @@ PrefabInstance:
     - target: {fileID: 3474301171513832324, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5263668162169684144, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: fadeAlphaSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5989601586628967911, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
       propertyPath: m_Name
