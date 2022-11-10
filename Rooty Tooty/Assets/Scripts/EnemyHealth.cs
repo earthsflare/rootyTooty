@@ -1,11 +1,13 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
+using System;
 public class EnemyHealth : MonoBehaviour
 {
     public int life;
     public int maxLife = 3;
     public Animator enemyAnimator;
-
+    public float deathTime = 1.5f;
     void Start()
     {
         life = maxLife;
@@ -17,9 +19,13 @@ public class EnemyHealth : MonoBehaviour
         life -= damage;
         if (life <= 0)
         {
-            enemyAnimator.Play("export_death");
-            GetComponent<OgreMovement>().enabled = false;
-            Destroy(gameObject);
+            StartCoroutine(Death());
         }
+    }
+    private IEnumerator Death()
+    {
+        enemyAnimator.Play("export_death");
+        yield return new WaitForSeconds(deathTime);
+        Destroy(gameObject);
     }
 }
