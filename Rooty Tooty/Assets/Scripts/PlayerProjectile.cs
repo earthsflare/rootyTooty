@@ -37,15 +37,10 @@ public class PlayerProjectile : MonoBehaviour
             projectileCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        projectileRB.velocity = transform.right * currentSpeed;
-    }
-
     // Called when PlayerProjectile is SetActive(true)
     void OnEnable()
     {
+        projectileRB.velocity = transform.right * currentSpeed;
         StartCoroutine(ProjectileTimeout());
     }
 
@@ -78,6 +73,7 @@ public class PlayerProjectile : MonoBehaviour
     protected virtual IEnumerator ImpactAnimation()
     {
         currentSpeed = 0;
+        projectileRB.velocity = transform.right * currentSpeed;
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
     }

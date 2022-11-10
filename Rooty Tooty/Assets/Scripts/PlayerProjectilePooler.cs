@@ -86,7 +86,7 @@ public class PlayerProjectilePooler : MonoBehaviour
         {
             return projectilesPrefab[projectileType].name;
         }
-	return "Invalid projectile type";
+        return "Invalid projectile type";
     }
 
 }

@@ -51,7 +51,6 @@ MonoBehaviour:
   damage: 1
   projectileLifespan: 0.5
   maxSpeed: 7
-  projectileType: 1
   projectileRB: {fileID: 7209563444793084764}
   projectileAnimator: {fileID: 3737299321835113606}
   projectileCollider: {fileID: -8086037964066870827}
@@ -70,7 +69,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
