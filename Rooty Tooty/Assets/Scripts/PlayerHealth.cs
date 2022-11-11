@@ -15,9 +15,6 @@ public class PlayerHealth : MonoBehaviour
 
     //public int tempPoint = 1; //temp var to place in gameoverscreen
 
-    [SerializeField] private float decreaseAlpha;
-    [SerializeField] private float initialAlpha;
-
     void Start()
     {
         currentLife = maxLife;
@@ -39,36 +36,6 @@ public class PlayerHealth : MonoBehaviour
     {
         return dead;
     }
-
-    public void Update()
-    {
-        /*
-        if (dead == true)
-        {
-            StartCoroutine(deathAnim());
-        }
-        */
-        if (gotHitScreen != null)
-        {
-            if (gotHitScreen.GetComponent<Image>().color.a > 0)
-            {
-                var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image
-                color.a -= decreaseAlpha; // reduce alpha by 0.01 until it reaches 0 
-
-                gotHitScreen.GetComponent<Image>().color = color;
-            }
-        }
-    }
-
-    public void gotHurt()
-    {
-        var color = gotHitScreen.GetComponent<Image>().color; // set variable color to color of image   
-        color.a = initialAlpha; // change that color to show
-
-        gotHitScreen.GetComponent<Image>().color = color; //assign it back to the image
-
-    }
-
     public void TakeDamage(int d)
     {
         if (currentLife > 0)
@@ -76,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
             animator.SetTrigger("Damage");
             currentLife -= d;
             HealthDisplay.instance.drawHeart(currentLife, maxLife);
-            gotHurt(); // apply the gothitscreen
+            gotHurtUI.instance.gotHurt(); // apply the gothitscreen
             if (currentLife < 1)
             {
                 dead = true;

@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5263668162169684145}
+  fadeAlphaSpeed: 0
   nextLevelPosition: {x: -45, y: -7}
 --- !u!95 &5263668162169684145
 Animator:
@@ -307,8 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountToPool: 1
-  projectilePrefab: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
-  pooledProjectiles: []
+  projectilesPrefab: []
 --- !u!1001 &1319129840707493695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -316,6 +316,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3145110831189345040}
     m_Modifications:
+    - target: {fileID: 6422777384096398385, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+      propertyPath: m_Name
+      value: GetHurt
+      objectReference: {fileID: 0}
     - target: {fileID: 6422777384582629587, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
       propertyPath: m_Name
       value: Health UI Canvas
@@ -411,3 +415,32 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6422777384582629615, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
   m_PrefabInstance: {fileID: 1319129840707493695}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5434779983778587404 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6422777384096398387, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+  m_PrefabInstance: {fileID: 1319129840707493695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5434779983778587406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5434779983778587406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6422777384096398385, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+  m_PrefabInstance: {fileID: 1319129840707493695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6545112190505436392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5434779983778587406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f2d20b01e516c4681b163c53ca495e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gotHurtScreen: {fileID: 5434779983778587404}
