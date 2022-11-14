@@ -14,6 +14,7 @@ TagManager:
   - Projectile
   - PickUpJump
   - PickUpRoll
+  - Wall
   layers:
   - Default
   - TransparentFX

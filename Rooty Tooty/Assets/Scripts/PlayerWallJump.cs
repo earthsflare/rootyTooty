@@ -31,9 +31,11 @@ public class PlayerWallJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!collideWall) {
+        if (!collideWall)
+        {
             collideWall = Physics2D.OverlapCircle(wallCheckRight.position, Jump.checkRadius, WallLayer);
         }
+       
         if (!collideWall)
         {
             collideWall = Physics2D.OverlapCircle(wallCheckLeft.position, Jump.checkRadius, WallLayer);
@@ -48,6 +50,12 @@ public class PlayerWallJump : MonoBehaviour
         {
             isSliding = false;
         }
+        if (Jump.isGrounded)
+        {
+            isSliding = false;
+            collideWall = false;
+        }
+
 
         if (Input.GetButtonDown("Jump") && isSliding)
         {
@@ -66,7 +74,15 @@ public class PlayerWallJump : MonoBehaviour
 
         if (isWallJumping)
         {
-            Movement.rb.velocity = new Vector2(-wallJumpForcex * Movement.movement.x, wallJumpForcey);
+            //collideWall = false;
+            Movement.canMove = false;
+            if (Movement.facingRight) {
+                Movement.rb.velocity = new Vector2(-wallJumpForcex, wallJumpForcey);
+            }
+            else
+            {
+                Movement.rb.velocity = new Vector2(wallJumpForcex, wallJumpForcey);
+            }
         }
 
     }
@@ -74,6 +90,7 @@ public class PlayerWallJump : MonoBehaviour
     void SetWallJumping()
     {
         isWallJumping = false;
+        Movement.canMove = true;
     }
 
 
