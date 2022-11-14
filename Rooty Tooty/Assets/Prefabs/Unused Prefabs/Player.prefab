@@ -324,7 +324,7 @@ MonoBehaviour:
   health: {fileID: 1692447060130313576}
   move: {fileID: 1692447060130313568}
   jump: {fileID: 2260591736451806352}
-  roll: {fileID: 0}
+  roll: {fileID: 3027364636945540658}
 --- !u!114 &1692447060130313576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,11 +358,11 @@ MonoBehaviour:
   canRoll: 0
   canMove: 1
   isRolling: 0
-  knockBackPower: 0
+  knockBackPower: 2
   Enemy: {fileID: 0}
   rb: {fileID: 1692447060130313571}
   movement: {x: 0, y: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1692447060130313581}
 --- !u!114 &2260591736451806352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,9 +381,9 @@ MonoBehaviour:
   groundCheck: {fileID: 1692447059535158970}
   groundObjects:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   checkRadius: 0
-  jumpCounter: 0
+  jumpCounter: 2
   isGrounded: 0
   TOTALJUMPTIME: 0.35
   animator: {fileID: 1692447060130313580}
@@ -469,15 +469,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSlidingSpeed: 2
-  isWallJumping: 0
-  wallJumpForcex: 5
-  wallJumpForcey: 5
-  wallJumpTime: 0.5
-  wallCheckRight: {fileID: 3391506209929081828}
-  wallCheckLeft: {fileID: 8575990271890074561}
+  wallJumpForcex: 7
+  wallJumpForcey: 7
+  wallJumpTime: 0.2
+  checkRadius: 0.2
   WallLayer:
     serializedVersion: 2
     m_Bits: 1024
+  isWallJumping: 0
+  wallCheckRight: {fileID: 3391506209929081828}
+  wallCheckLeft: {fileID: 8575990271890074561}
 --- !u!1 &4029051224002792146
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,9 +519,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3391506209929081828}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: WallCheckRight
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4111961566858141138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.262, y: -0.108, z: 0}
+  m_LocalPosition: {x: 0.253, y: -0.108, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -549,9 +550,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8575990271890074561}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: WallCheckLeft
-  m_TagString: Wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3064607298443006154
 Transform:
   m_ObjectHideFlags: 0

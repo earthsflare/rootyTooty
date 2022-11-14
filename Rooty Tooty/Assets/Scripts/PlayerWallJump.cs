@@ -4,65 +4,62 @@ using UnityEngine;
 
 public class PlayerWallJump : MonoBehaviour
 {
-    private bool collideWall;
+    [SerializeField] private float wallSlidingSpeed = 2f;
+    [SerializeField] private float wallJumpForcex = 1f;
+    [SerializeField] private float wallJumpForcey = 1f;
+    [SerializeField] private float wallJumpTime = 0.2f;
+    [SerializeField] private float checkRadius = 0.2f;
+    [SerializeField] private LayerMask WallLayer;
+
+    private bool collideLeftWall = false;
+    private bool collideRightWall = false;
+    private int wallJumpDirection = 0;
+    private bool collideWall { get => (collideLeftWall || collideRightWall); }
+    private void StopCollideWall() { collideLeftWall = false; collideRightWall = false; }
+
     private bool isSliding;
-    public float wallSlidingSpeed;
 
     [HideInInspector] public bool isWallJumping;
-    public float wallJumpForcex;
-    public float wallJumpForcey;
-    public float wallJumpTime;
 
-    public Transform wallCheckRight;
-    public Transform wallCheckLeft;
-    public LayerMask WallLayer;
-
-    [HideInInspector] PlayerMovement Movement;
-    [HideInInspector] PlayerJump Jump;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Movement = GetComponent<PlayerMovement>();
-        Jump = GetComponent<PlayerJump>();
-    }
+    [Header("References")]
+    [SerializeField] private Transform wallCheckRight;
+    [SerializeField] private Transform wallCheckLeft;
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (!collideWall)
-        {
-            collideWall = Physics2D.OverlapCircle(wallCheckRight.position, Jump.checkRadius, WallLayer);
-        }
+        collideRightWall = Physics2D.OverlapCircle(wallCheckRight.position, checkRadius, WallLayer);
+        collideLeftWall = Physics2D.OverlapCircle(wallCheckLeft.position, checkRadius, WallLayer);
 
-        if (!collideWall)
-        {
-            collideWall = Physics2D.OverlapCircle(wallCheckLeft.position, Jump.checkRadius, WallLayer);
-        }
-
-
-        if (collideWall && !Jump.isGrounded && Movement.movement.x != 0)
+        if (collideWall && !Player.instance.jump.isGrounded /*&& Movement.movement.x != 0*/)
         {
             isSliding = true;
         }
         else
         {
             isSliding = false;
-            collideWall = false;
+            StopCollideWall();
         }
-/*        if (Jump.isGrounded)
-        {
-            isSliding = false;
-            collideWall = false;
-        }*/
+        /*        if (Jump.isGrounded)
+                {
+                    isSliding = false;
+                    collideWall = false;
+                }*/
 
 
-        if (Input.GetButtonDown("Jump") && isSliding)
+        if (Input.GetButtonDown("Jump") && isSliding && !(collideLeftWall && collideRightWall))
         {
+            if (collideRightWall)
+                wallJumpDirection = -1;
+            else
+                wallJumpDirection = 1;
+
             isWallJumping = true;
             Invoke("SetWallJumping", wallJumpTime);
         }
+        else if(!isWallJumping)
+            wallJumpDirection = 0;
 
     }
 
@@ -70,22 +67,15 @@ public class PlayerWallJump : MonoBehaviour
     {
         if (isSliding)
         {
-            Movement.rb.velocity = new Vector2(Movement.rb.velocity.x, Mathf.Clamp(Movement.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            Player.instance.move.rb.velocity = new Vector2(Player.instance.move.rb.velocity.x, Mathf.Clamp(Player.instance.move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
         if (isWallJumping)
         {
-            collideWall = false;
+            StopCollideWall();
             isSliding = false;
-            Movement.canMove = false;
-            if (Movement.facingRight)
-            {
-                Movement.rb.velocity = new Vector2(-wallJumpForcex, wallJumpForcey);
-            }
-            else
-            {
-                Movement.rb.velocity = new Vector2(wallJumpForcex, wallJumpForcey);
-            }
+            Player.instance.move.canMove = false;
+            Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
         }
 
     }
@@ -93,7 +83,7 @@ public class PlayerWallJump : MonoBehaviour
     void SetWallJumping()
     {
         isWallJumping = false;
-        Movement.canMove = true;
+        Player.instance.move.canMove = true;
     }
 
 

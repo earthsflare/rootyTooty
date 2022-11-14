@@ -10,7 +10,7 @@ public class PlayerJump : MonoBehaviour
     public Transform ceilingCheck;              //make sure the character can't jump past a ceiling
     public Transform groundCheck;               //make sure the character doesn't fall through the ground
     public LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
-    [HideInInspector] public float checkRadius;
+    [HideInInspector] public float checkRadius = 0.1f;
     private int MAXJUMPS = 1;                    //Double Jumping or more
     public int jumpCounter;                    //Current amount of jumps
     [HideInInspector] public bool isGrounded;
