@@ -40,6 +40,8 @@ public class OgreMovement : MonoBehaviour
     public Animator enemyAnimator;
     public GameObject meleeHitBox;
     public bool inPatrolRange;
+    bool finishedAttack;
+    public float attackSpeed = 1.1f;
     void Start()
     {
         dir = (int)gameObject.transform.localScale.x;
@@ -57,16 +59,12 @@ public class OgreMovement : MonoBehaviour
     void Update()
     {
         //attack loop
-        if (inMeleeRange)
+        if (inMeleeRange && finishedAttack)
         {
-            meleeHitBox.SetActive(true);
-            meleeAttack();
-            enemyAnimator.SetBool("isChasing", false);
-            enemyAnimator.SetBool("isMoving", false);
-
+            StartCoroutine(StartAttack());
         }
         //chase loop
-        if (inAggroRange && readyToChase && isGrounded && !inMeleeRange && inPatrolRange)
+        if (inAggroRange && readyToChase && isGrounded && !inMeleeRange && inPatrolRange && finishedAttack)
         {
             meleeHitBox.SetActive(false);
             FaceTowardsPlayer();
@@ -173,11 +171,6 @@ public class OgreMovement : MonoBehaviour
             dir = 1;
         }
     }
-    private void meleeAttack()
-    {
-        enemyAnimator.SetTrigger("Attack");
-
-    }
     //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin chasing.
     IEnumerator StartCharge()
     {
@@ -190,6 +183,19 @@ public class OgreMovement : MonoBehaviour
         //adds upward force to make enemy jump
         rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         yield return new WaitForSeconds(enemyReactionTime);
+        readyToChase = true;
+    }
+    IEnumerator StartAttack()
+    {
+        enemyAnimator.SetBool("isChasing", false);
+        enemyAnimator.SetBool("isMoving", false);
+        FaceTowardsPlayer();
+        CheckSpriteDirection();
+        finishedAttack = false;
+        meleeHitBox.SetActive(true);
+        enemyAnimator.Play("ogre warrior - export_attack");
+        yield return new WaitForSeconds(attackSpeed);
+        finishedAttack = true;
         readyToChase = true;
     }
     //When the enemy enters the aggro range the playerInRange bool is set to true and the charge coroutine is started
@@ -226,7 +232,6 @@ public class OgreMovement : MonoBehaviour
             inAggroRange = false;
             readyToChase = false;
             StopAllCoroutines();
-            enemyAnimator.ResetTrigger("Attack");
         }
         else if (collider.CompareTag("MeleeAttackRange"))
         {
