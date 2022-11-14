@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class DamageOnPlayer : MonoBehaviour
 {
-    [SerializeField] private int damage = 1;
-    private static bool canTakeDamage = true;
-    [SerializeField] private float time = 1;
-    [SerializeField] private bool canKnock = true;
+    [SerializeField] protected int damage = 1;
+    protected static bool canTakeDamage = true;
+    [SerializeField] protected float time = 1;
+    [SerializeField] protected bool canKnock = true;
     public int knockBackTime = 3;
-    [SerializeField] private Transform knockbackCenter = null;
+    [SerializeField] protected Transform knockbackCenter = null;
 
-    private float timer = 0;
+    protected float timer = 0;
 
-    private void Awake()
+    protected void Awake()
     {
         if (knockbackCenter == null)
             knockbackCenter = transform;
     }
 
-    private void Update()
+    protected void Update()
     {
         if (timer <= 0)
             return;
@@ -34,7 +34,7 @@ public class DamageOnPlayer : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
@@ -48,7 +48,7 @@ public class DamageOnPlayer : MonoBehaviour
     }
 
     // PlayerSingletonManager.instance.health
-    private void OnTriggerEnter2D(Collider2D collider)
+    protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
         if (canTakeDamage && collider.gameObject.CompareTag("Player"))
         {
