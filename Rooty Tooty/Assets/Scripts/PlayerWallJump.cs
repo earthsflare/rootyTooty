@@ -49,12 +49,13 @@ public class PlayerWallJump : MonoBehaviour
         else
         {
             isSliding = false;
+            collideWall = false;
         }
-        if (Jump.isGrounded)
+/*        if (Jump.isGrounded)
         {
             isSliding = false;
             collideWall = false;
-        }
+        }*/
 
 
         if (Input.GetButtonDown("Jump") && isSliding)
@@ -74,7 +75,8 @@ public class PlayerWallJump : MonoBehaviour
 
         if (isWallJumping)
         {
-            //collideWall = false;
+            collideWall = false;
+            isSliding = false;
             Movement.canMove = false;
             if (Movement.facingRight)
             {

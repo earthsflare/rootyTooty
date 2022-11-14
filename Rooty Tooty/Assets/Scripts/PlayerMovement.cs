@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool facingRight = true;            //Which direction the player sprite is facing
 
     public bool canRoll = false;
-    [HideInInspector] public bool canMove = true;
+    [HideInInspector] public bool canMove;
     [HideInInspector] public bool isRolling;
 
     public float knockBackPower;
@@ -44,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+        if (isRolling)
+        {
+            return;
+        }
 
 
         //gives -1 or 1 depending on input ex. left is -1 right is 1
@@ -70,6 +74,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         if (isRolling && canRoll)
+        {
+            return;
+        }
+        if (isRolling)
         {
             return;
         }

@@ -5126,7 +5126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391506209929081828, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.245
+      value: 0.253
       objectReference: {fileID: 0}
     - target: {fileID: 4111961566858141138, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_Layer
@@ -5143,14 +5143,22 @@ PrefabInstance:
     - target: {fileID: 6697975472551371407, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837677311313754129, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8575990271890074561, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27
+      value: -0.305
       objectReference: {fileID: 0}
     - target: {fileID: 9149049577227380444, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149049577227380444, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: wallJumpTime
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1692447059961212772, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
