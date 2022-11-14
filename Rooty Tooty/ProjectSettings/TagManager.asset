@@ -15,6 +15,7 @@ TagManager:
   - PickUpJump
   - PickUpRoll
   - RangedAttackRange
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Potion
   - Ground
   - RollBlock
-  - 
+  - Wall
   - 
   - 
   - 

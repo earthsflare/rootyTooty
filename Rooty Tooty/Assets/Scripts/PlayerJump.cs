@@ -10,10 +10,10 @@ public class PlayerJump : MonoBehaviour
     public Transform ceilingCheck;              //make sure the character can't jump past a ceiling
     public Transform groundCheck;               //make sure the character doesn't fall through the ground
     public LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
-    private float checkRadius;
+    [HideInInspector] public float checkRadius;
     private int MAXJUMPS = 1;                    //Double Jumping or more
     public int jumpCounter;                    //Current amount of jumps
-    private bool isGrounded;
+    [HideInInspector] public bool isGrounded;
     private float jumpTimeCounter;
     public float TOTALJUMPTIME = 0.35f;
     private bool jumpHold;
@@ -21,12 +21,15 @@ public class PlayerJump : MonoBehaviour
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     public Rigidbody2D rb;
 
-    PlayerMovement Movement;
+    [HideInInspector] PlayerMovement Movement;
+    [HideInInspector] PlayerWallJump WallJump;
 
     // Start is called before the first frame update
     void Start()
     {
         Movement = GetComponent<PlayerMovement>();
+        WallJump = GetComponent<PlayerWallJump>();
+
         jumpCounter = 0;
         animator.SetInteger("JumpCount", jumpCounter);
     }
