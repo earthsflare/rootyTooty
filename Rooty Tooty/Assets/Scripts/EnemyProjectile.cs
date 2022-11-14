@@ -22,20 +22,6 @@ public class EnemyProjectile : MonoBehaviour
         StartCoroutine(ProjectileTimeout());
     }
 
-    private void OnTriggerEnter2D (Collider2D collider)
-    {
-        // Add animation for impact later
-        // Instantiate(impactAnimation, transform.position, transform.rotation);
-
-        if (collider.CompareTag("Player"))
-        {
-            Debug.Log("EnemyProjectile collided with " + collider.name);
-            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
-            Player.instance.move.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false, knockBackTime);
-            gameObject.SetActive(false);
-        }
-    }
-
     // Coroutine for projectile timeout
     private IEnumerator ProjectileTimeout()
     {
