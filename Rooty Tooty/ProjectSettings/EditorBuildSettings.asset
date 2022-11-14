@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Will_Test/Retro_1/PauseMenu.unity
     guid: 8ea18dc49a8839d40b4bb63eaf70f96a
   - enabled: 1
-    path: Assets/Scenes/4Retro/Menu.unity
+    path: Assets/Scenes/Retro_3/Menu.unity
     guid: 1a9f27e8f7f0dec43af3f1b7929cc1ec
   - enabled: 1
-    path: Assets/Scenes/4Retro/Retro4.unity
+    path: Assets/Scenes/Retro_3/Retro_3.unity
     guid: 41929db2044c20d4b850ea6e85d4e249
+  - enabled: 1
+    path: Assets/Scenes/Retro_3/Retro_3L2.unity
+    guid: a42c8790e01349740bc14e2be7b483cd
   - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_3/Test.unity
     guid: 59f46903d091b5f44a04ab26e1d5fe66
@@ -24,19 +27,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Will_Test/Retro_3/Will - Retro_3 1.unity
     guid: cf9bea15ea6349844b27848935a9c52e
   - enabled: 0
-    path: Assets/Scenes/Will_Test/Retro_3/Retro_3L2.unity
+    path: Assets/Scenes/Will_Test/Retro_3/TestRetro_3L2.unity
     guid: 603b5d00965a51d4c9e6485d9307cdb5
   - enabled: 0
-    path: Assets/Scenes/Will_Test/Retro_3/Retro_3L3.unity
+    path: Assets/Scenes/Will_Test/Retro_3/TestRetro_3L3.unity
     guid: e4a66f7ca0638d747ba5b04fe021e39d
   - enabled: 0
-    path: Assets/Scenes/2Retro/Retro_2.unity
+    path: Assets/Scenes/Old_Retro/2Retro/Retro_2.unity
     guid: 55e133ef8fc0431499089009940697a3
   - enabled: 0
-    path: Assets/Scenes/1Retro/SAMPLE_1.unity
+    path: Assets/Scenes/Old_Retro/1Retro/SAMPLE_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/1Retro/SAMPLE_2.unity
+    path: Assets/Scenes/Old_Retro/1Retro/SAMPLE_2.unity
     guid: c7772e2882e8bac47865f3e4713c55e5
   - enabled: 0
     path: Assets/Scenes/Chris.unity
