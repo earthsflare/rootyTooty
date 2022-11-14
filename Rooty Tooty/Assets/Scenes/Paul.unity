@@ -278,37 +278,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44255698}
   m_CullTransparentMesh: 1
---- !u!1 &120311944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 120311945}
-  m_Layer: 14
-  m_Name: spellbook
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &120311945
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120311944}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1577464343}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &122296259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.664436, y: -5.1678443, z: -10}
+  m_LocalPosition: {x: -40.57887, y: -5.144362, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3634,6 +3603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7b1d635674aff49bef2cab599de7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  fadeAlphaSpeed: 0
   nextLevelPosition: {x: -45, y: -7}
 --- !u!114 &1345070389
 MonoBehaviour:
@@ -3796,6 +3767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   maxLife: 2
+  enemyAnimator: {fileID: 0}
+  deathTime: 1.5
 --- !u!114 &1441467121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3808,6 +3781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   time: 1
   canKnock: 1
   knockBackTime: 0
@@ -4307,14 +4281,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1876343273678429357, guid: 3a2d135bcbbcc724bb35e2db36516e43, type: 3}
       propertyPath: projectilesPrefab.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1876343273678429357, guid: 3a2d135bcbbcc724bb35e2db36516e43, type: 3}
       propertyPath: projectilesPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 3095530216380981121, guid: 101a1346556dc43408807121469e117d, type: 3}
+      objectReference: {fileID: 600869380281264967, guid: e1a982e29d7c6514288425049feac301, type: 3}
     - target: {fileID: 1876343273678429357, guid: 3a2d135bcbbcc724bb35e2db36516e43, type: 3}
       propertyPath: projectilesPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 3095530216380981121, guid: 101a1346556dc43408807121469e117d, type: 3}
+    - target: {fileID: 1876343273678429357, guid: 3a2d135bcbbcc724bb35e2db36516e43, type: 3}
+      propertyPath: projectilesPrefab.Array.data[2]
       value: 
       objectReference: {fileID: 6111911798991445300, guid: f0a9c8f734ea94f4d87a9f5b80c5577b, type: 3}
     m_RemovedComponents: []
