@@ -25,7 +25,7 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("NextProjectile"))
+        if (Input.GetButtonDown("NextProjectile"))
         {
             currentProjectile += 1;
             if (currentProjectile == PlayerProjectilePooler.playerProjectilePool.getProjectilePrefabCount())
@@ -41,7 +41,7 @@ public class PlayerAim : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButton(0) && isAvailable)
+            if (Input.GetButton("Fire1") && isAvailable)
             {
                 // Get projectile from the projectile pool
                 GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
