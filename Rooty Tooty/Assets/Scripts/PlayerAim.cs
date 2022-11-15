@@ -39,19 +39,13 @@ public class PlayerAim : MonoBehaviour
             Debug.Log("Changed projectile to : " + PlayerProjectilePooler.playerProjectilePool.getProjectileName(currentProjectile));
         }
 
-        if (Time.timeScale == 0f)
-        {
-            Debug.Log("Player can switch projectiles again.");
-            isAvailable = false;
-        }
-
         magicCooldownDuration -= Time.deltaTime;
         if (magicCooldownDuration <= 0f)
         {
             canSwitchWeapon = true;
         }
 
-        if (Input.GetButton("Fire1") && isAvailable)
+        if (Input.GetButton("Fire1") && isAvailable && Time.timeScale != 0f)
         {
             // Get projectile from the projectile pool
             GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
