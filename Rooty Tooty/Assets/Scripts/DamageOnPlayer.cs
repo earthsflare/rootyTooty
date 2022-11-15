@@ -36,6 +36,7 @@ public class DamageOnPlayer : MonoBehaviour
     }
     */
 
+    /*
     protected void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -48,7 +49,7 @@ public class DamageOnPlayer : MonoBehaviour
             StartCoroutine(damageTimer(time));
         }
     }
-
+    */
     protected void OnCollisionStay2D(Collision2D collision)
     {
 

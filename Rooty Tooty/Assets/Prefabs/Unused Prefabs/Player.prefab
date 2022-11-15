@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 1692447060130313568}
   - component: {fileID: 2260591736451806352}
   - component: {fileID: 1692447060130313577}
-  - component: {fileID: 1692447060130313579}
   - component: {fileID: 1100624387624777976}
   - component: {fileID: 441241048340462153}
   - component: {fileID: 3027364636945540658}
@@ -405,18 +404,6 @@ MonoBehaviour:
   isAvailable: 1
   cooldownDuration: 1
   currentProjectile: 0
---- !u!114 &1692447060130313579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692447060130313569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64fbe1a05020b804b9f613820f458882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1100624387624777976
 MonoBehaviour:
   m_ObjectHideFlags: 0
