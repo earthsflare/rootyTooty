@@ -30,10 +30,16 @@ public class OpenDoor : MonoBehaviour
     //public Animator animator; //fade to black screen animation
 
 
+    private static bool doorTraveled = false;
+
     private void Start()
     {
+        if (!doorTraveled)
+            return;
+
         sceneSwitch = FindObjectOfType<SceneSwitch>();
         levelManager.instance.animator.SetTrigger("FadeIn");
+        doorTraveled = false;
     }
 
     private void Update()
@@ -51,6 +57,8 @@ public class OpenDoor : MonoBehaviour
                 levelManager.instance.LoadScene(sceneName);
             }
             */
+
+            doorTraveled = true;
 
             levelManager.instance.SetNextLevelPos(nextDoorPos);
             //levelManager.instance.LoadScene(sceneName);
