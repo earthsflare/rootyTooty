@@ -156,7 +156,7 @@ MonoBehaviour:
   patrolDistR: 4
   speed: 2
   dir: 0
-  player: {fileID: 0}
+  player: {fileID: 851081712101719124, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
   chargeSpeed: 4
   rb: {fileID: 3241425054333609187}
   jumpHeight: 0.1
@@ -164,6 +164,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 3241425054333609180}
   meleeHitBox: {fileID: 0}
   inPatrolRange: 0
+  attackSpeed: 1.1
 --- !u!95 &3241425054333609180
 Animator:
   serializedVersion: 4
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   time: 0.2
   canKnock: 1
   knockBackTime: 3
@@ -215,6 +217,8 @@ MonoBehaviour:
   life: 3
   maxLife: 3
   enemyAnimator: {fileID: 3241425054333609180}
+  deathTime: 1.5
+  drop: {fileID: 0}
 --- !u!1 &3241425055316413669
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   time: 0.2
   canKnock: 1
   knockBackTime: 3

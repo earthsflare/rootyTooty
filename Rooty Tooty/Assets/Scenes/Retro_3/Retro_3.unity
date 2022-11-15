@@ -1361,6 +1361,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1183076977315148500, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
+      propertyPath: drop
+      value: 
+      objectReference: {fileID: 4981639773400110553, guid: 2b3c72374bf4d0b44873a046516752ac, type: 3}
     - target: {fileID: 3241425053727012868, guid: c2df599c8d941714d93e1b02c9f8f019, type: 3}
       propertyPath: m_Name
       value: Ogre
@@ -1639,7 +1643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.3756, y: -5.183229, z: -10}
+  m_LocalPosition: {x: -40.522995, y: -5.1431527, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3116,6 +3120,7 @@ MonoBehaviour:
   maxLife: 2
   enemyAnimator: {fileID: 0}
   deathTime: 1.5
+  drop: {fileID: 0}
 --- !u!114 &1441467121
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class DamageOnPlayer : MonoBehaviour
 {
     [SerializeField] protected int damage = 1;
     protected static bool canTakeDamage = true;
-    [SerializeField] protected float time = 1;
+    [SerializeField] protected float time = 3;
     [SerializeField] protected bool canKnock = true;
     public int knockBackTime = 3;
     [SerializeField] protected Transform knockbackCenter = null;
@@ -19,6 +19,7 @@ public class DamageOnPlayer : MonoBehaviour
             knockbackCenter = transform;
     }
 
+    /*
     protected void Update()
     {
         if (timer <= 0)
@@ -33,6 +34,7 @@ public class DamageOnPlayer : MonoBehaviour
             Player.instance.move.canMove = true;
         }
     }
+    */
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
@@ -40,10 +42,23 @@ public class DamageOnPlayer : MonoBehaviour
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
             canTakeDamage = false;
-            timer += time;
+            //timer += time;
             Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
-            //StartCoroutine(damageTimer(time));
+            StartCoroutine(damageTimer(time));
+        }
+    }
+
+    protected void OnCollisionStay2D(Collision2D collision)
+    {
+
+        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        {
+            canTakeDamage = false;
+            //timer += time;
+            Player.instance.health.TakeDamage(damage);
+            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
+            StartCoroutine(damageTimer(time));
         }
     }
 
@@ -54,20 +69,20 @@ public class DamageOnPlayer : MonoBehaviour
         {
 
             canTakeDamage = false;
-            timer += time;
+            //timer += time;
 
             Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
-            //StartCoroutine(damageTimer(time));
+            StartCoroutine(damageTimer(time));
         }
     }
 
-    /*private IEnumerator damageTimer(int t)
+
+
+    private IEnumerator damageTimer(float t)
     {
-        canTakeDamage = false;
         yield return new WaitForSeconds(t);
         canTakeDamage = true;
         Player.instance.move.canMove = true;
     }
-    */
 }

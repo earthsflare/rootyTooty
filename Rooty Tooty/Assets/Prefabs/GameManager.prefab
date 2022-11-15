@@ -369,6 +369,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GetHurt
       objectReference: {fileID: 0}
+    - target: {fileID: 6422777384096398386, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422777384096398386, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 774.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422777384096398386, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.005004883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422777384096398386, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 6422777384582629587, guid: 0ddfc495dd05c2740bd69a41fbb69248, type: 3}
       propertyPath: m_Name
       value: Health UI Canvas

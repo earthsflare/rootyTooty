@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int currentLife = 5;
+    private static int currentLife = 5;
     [SerializeField] private int maxLife = 5;
 
     public Animator animator;

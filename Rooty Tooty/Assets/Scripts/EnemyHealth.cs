@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public int maxLife = 3;
     public Animator enemyAnimator;
     public float deathTime = 1.5f;
+    [SerializeField] public GameObject drop;
+
     void Start()
     {
         life = maxLife;
@@ -27,5 +29,6 @@ public class EnemyHealth : MonoBehaviour
         enemyAnimator.Play("export_death");
         yield return new WaitForSeconds(deathTime);
         Destroy(gameObject);
+        Instantiate(drop, transform.position, drop.transform.rotation);
     }
 }
