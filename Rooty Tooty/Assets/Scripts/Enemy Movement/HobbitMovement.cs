@@ -139,10 +139,6 @@ public class HobbitMovement : MonoBehaviour
         }
         CheckSpriteDirection();
     }
-    private void Attack()
-    {
-        enemyAnimator.SetTrigger("Attack");
-    }
     //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin shooting.
     IEnumerator startShooting()
     {
@@ -182,7 +178,6 @@ public class HobbitMovement : MonoBehaviour
         {
             Debug.Log("Exiting Player Range");
             inAggroRange = false;
-            enemyAnimator.ResetTrigger("Attack");
             readyToFire = false;
         }
 
