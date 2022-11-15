@@ -11,8 +11,12 @@ public class PlayerAim : MonoBehaviour
 
     // Used to make sure player can't shoot while weapon on cooldown
     public bool isAvailable = true;
+    // Used to make sure player can't shoot fireballs and waterballs while on cooldown
+    public bool canSwitchWeapon = true;
     // Weapon cooldown
-    public float cooldownDuration = 01.0f;
+    public float cooldownDuration = 1.0f;
+    // Magic weapon cooldown
+    public float magicCooldownDuration = 5.0f;
     // Player's current projectile
     public int currentProjectile = 0;
 
@@ -25,7 +29,7 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("NextProjectile"))
+        if (Input.GetButtonDown("NextProjectile") && canSwitchWeapon)
         {
             currentProjectile += 1;
             if (currentProjectile == PlayerProjectilePooler.playerProjectilePool.getProjectilePrefabCount())
@@ -37,29 +41,41 @@ public class PlayerAim : MonoBehaviour
 
         if (Time.timeScale == 0f)
         {
+            Debug.Log("Player can switch projectiles again.");
             isAvailable = false;
         }
-        else
+
+        magicCooldownDuration -= Time.deltaTime;
+        if (magicCooldownDuration <= 0f)
         {
-            if (Input.GetButton("Fire1") && isAvailable)
+            canSwitchWeapon = true;
+        }
+
+        if (Input.GetButton("Fire1") && isAvailable)
+        {
+            // Get projectile from the projectile pool
+            GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
+                currentProjectile);
+
+            if (projectile != null)
             {
-                // Get projectile from the projectile pool
-                GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
-                    currentProjectile);
+                // Code to calculate projectile trajectory
+                Vector2 mouse = Input.mousePosition;
+                Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
+                Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
+                float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+                firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
 
-                if (projectile != null)
+                // Aims projectile transform at the position of the mouse
+                projectile.transform.position = firePoint.position;
+                projectile.transform.rotation = firePoint.rotation;
+                projectile.SetActive(true);
+
+                if (currentProjectile > 0)
                 {
-                    // Code to calculate projectile trajectory
-                    Vector2 mouse = Input.mousePosition;
-                    Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
-                    Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-                    float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-                    firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
-
-                    // Aims projectile transform at the position of the mouse
-                    projectile.transform.position = firePoint.position;
-                    projectile.transform.rotation = firePoint.rotation;
-                    projectile.SetActive(true);
+                    currentProjectile = 0;
+                    magicCooldownDuration = 5.0f;
+                    canSwitchWeapon = false;
                 }
                 StartCoroutine(StartCooldown());
             }
