@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Works");
+            //Debug.Log("Works");
         }
     }
 
