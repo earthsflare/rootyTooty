@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6960887560980201778}
   - component: {fileID: 6960887560980201776}
   - component: {fileID: 6960887560980201791}
+  - component: {fileID: 6322811829181483228}
   m_Layer: 0
   m_Name: PIckUpRoll
   m_TagString: PickUpRoll
@@ -133,3 +134,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &6322811829181483228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960887560980201779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5402901a23e00b240bb543c489180d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

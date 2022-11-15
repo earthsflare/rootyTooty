@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7351414817758981048}
   - component: {fileID: 7351414817758981049}
   - component: {fileID: 7351414817758981050}
+  - component: {fileID: 8105637832438049716}
   m_Layer: 0
   m_Name: PickUpJump
   m_TagString: PickUpJump
@@ -133,3 +134,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8105637832438049716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351414817758981051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd1515b271bec347a5cdcabc834033c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

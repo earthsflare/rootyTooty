@@ -19,7 +19,6 @@ public class DamageOnPlayer : MonoBehaviour
             knockbackCenter = transform;
     }
 
-    /*
     protected void Update()
     {
         if (timer <= 0)
@@ -34,29 +33,27 @@ public class DamageOnPlayer : MonoBehaviour
             Player.instance.move.canMove = true;
         }
     }
-    */
 
-    /*
     protected void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
             canTakeDamage = false;
-            //timer += time;
+            timer += time;
             Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             StartCoroutine(damageTimer(time));
         }
     }
-    */
+
     protected void OnCollisionStay2D(Collision2D collision)
     {
 
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
         {
             canTakeDamage = false;
-            //timer += time;
+            timer += time;
             Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
             StartCoroutine(damageTimer(time));
@@ -70,7 +67,7 @@ public class DamageOnPlayer : MonoBehaviour
         {
 
             canTakeDamage = false;
-            //timer += time;
+            timer += time;
 
             Player.instance.health.TakeDamage(damage);
             Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
