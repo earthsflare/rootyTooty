@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876343273678429356}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountToPool: 1
-  projectilePrefab: {fileID: 7388893596293862921, guid: 895a154c05083694581a70789caed194, type: 3}
-  pooledProjectiles: []
+  projectilesPrefab:
+  - {fileID: 600869380281264967, guid: e1a982e29d7c6514288425049feac301, type: 3}
+  - {fileID: 3095530216380981121, guid: 101a1346556dc43408807121469e117d, type: 3}
+  - {fileID: 6111911798991445300, guid: f0a9c8f734ea94f4d87a9f5b80c5577b, type: 3}
