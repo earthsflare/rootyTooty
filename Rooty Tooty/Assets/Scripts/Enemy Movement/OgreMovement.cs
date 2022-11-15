@@ -40,7 +40,7 @@ public class OgreMovement : MonoBehaviour
     public Animator enemyAnimator;
     public GameObject meleeHitBox;
     public bool inPatrolRange;
-    bool finishedAttack;
+    bool finishedAttack = true;
     public float attackSpeed = 1.1f;
     void Start()
     {
