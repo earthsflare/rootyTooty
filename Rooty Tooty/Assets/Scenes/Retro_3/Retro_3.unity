@@ -1643,7 +1643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.522995, y: -5.1431527, z: -10}
+  m_LocalPosition: {x: -40.57887, y: -5.144362, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2083,6 +2083,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1441467120, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
+      propertyPath: enemyAnimator
+      value: 
+      objectReference: {fileID: 1441467125}
     - target: {fileID: 1941262892, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3138,6 +3142,11 @@ MonoBehaviour:
   canKnock: 1
   knockBackTime: 0
   knockbackCenter: {fileID: 0}
+--- !u!95 &1441467125 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3677857332163932772, guid: d9720a55349411e46ab4aa227c9371d7, type: 3}
+  m_PrefabInstance: {fileID: 793800889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1465127364
 GameObject:
   m_ObjectHideFlags: 0
