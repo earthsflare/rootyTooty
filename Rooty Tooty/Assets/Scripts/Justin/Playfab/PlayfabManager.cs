@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEngine.UI;
 
 public class PlayfabManager : MonoBehaviour
 {
-    [SerializeField] private string displayNameInput;
-    [SerializeField] private string emailInput;
-    [SerializeField] private string passwordInput;
 
-
-    private void Start()
-    {
-        Login();
-    }
+    [SerializeField] private Text emailInput = null;
+    [SerializeField] private Text passwordInput = null;
 
     #region Valid Information
 
@@ -41,11 +36,6 @@ public class PlayfabManager : MonoBehaviour
         return (hasDigit && hasChar);
     }
 
-    private bool CheckUsername(string displayName)
-    {
-        return false;
-    }
-
     #endregion
 
     #region Register Account
@@ -53,14 +43,11 @@ public class PlayfabManager : MonoBehaviour
     {
         RegisterPlayFabUserRequest request = new RegisterPlayFabUserRequest
         {
-            //Username is case sensitive and gets a # ID (like discord) (10 or 100 different combinations)
-            //Different id number = different color for their id 
-            //Display name can be anything
-            DisplayName = displayNameInput,
             //Have email verification before registering
-            Email = emailInput,
+            Email = emailInput.text,
             //Have checks for safe passwords
-            Password = passwordInput
+            Password = passwordInput.text,
+            RequireBothUsernameAndEmail = false
         };
         PlayFabClientAPI.RegisterPlayFabUser(request, RegisterSuccess, PlayFabError);
     }
@@ -76,8 +63,8 @@ public class PlayfabManager : MonoBehaviour
     {
         LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
         {
-            Email = emailInput,
-            Password = passwordInput
+            Email = emailInput.text,
+            Password = passwordInput.text
         };
         PlayFabClientAPI.LoginWithEmailAddress(request, LoginSuccess, PlayFabError);
     }
@@ -89,7 +76,7 @@ public class PlayfabManager : MonoBehaviour
         else
             Debug.Log("Login Successful");
     }
-
+    
     #endregion
 
     #region Reset Password
@@ -98,7 +85,7 @@ public class PlayfabManager : MonoBehaviour
     {
         SendAccountRecoveryEmailRequest request = new SendAccountRecoveryEmailRequest
         {
-            Email = emailInput,
+            Email = emailInput.text,
             TitleId = "A6F68"
         };
 
@@ -117,7 +104,7 @@ public class PlayfabManager : MonoBehaviour
     {
         AddOrUpdateContactEmailRequest request = new AddOrUpdateContactEmailRequest
         {
-            EmailAddress = emailInput
+            EmailAddress = emailInput.text
         };
 
         PlayFabClientAPI.AddOrUpdateContactEmail(request, UpdateEmailSuccess, PlayFabError);
