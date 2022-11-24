@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DevAccountEmail: justincheung6@gmail.com
   DevAccountToken: bck1h9x6z8fp9xj9kwuqq9ax8k9mm5e5z3rgmabqew5n8ionzdxdbocfzo5t9rfgcwet4zt94mmz3zc1r1wytncuy8bsfhinwrit85xbk1togtuxcerk8q5s4acho1hnn74m5gmknwq1okhbajp56oodybykbwpodp9wd6nribay9iz498r1e5biams6t4sc3et4rng5
-  SelectedStudio: 
+  SelectedStudio: Team 1
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0

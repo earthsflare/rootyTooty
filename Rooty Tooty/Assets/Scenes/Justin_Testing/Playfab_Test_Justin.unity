@@ -952,7 +952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &246421258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2572,11 +2572,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 818093105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8608eb951d558049b075dfa3e3ce204, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cab7efab398a0f4c88a0bd4fe0c9e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emailInput: {fileID: 0}
-  passwordInput: {fileID: 0}
+  email: jusboy123123@gmail.com
+  titleID: A6F68
+  exampleText: {fileID: 903679060}
 --- !u!1 &826904924
 GameObject:
   m_ObjectHideFlags: 0
