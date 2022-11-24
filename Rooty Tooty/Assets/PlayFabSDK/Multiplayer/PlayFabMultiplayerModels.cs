@@ -1708,6 +1708,27 @@ namespace PlayFab.MultiplayerModels
         public string Type;
     }
 
+    public enum ExternalFriendSources
+    {
+        None,
+        Steam,
+        Facebook,
+        SteamOrFacebook,
+        Xbox,
+        SteamOrXbox,
+        FacebookOrXbox,
+        SteamOrFacebookOrXbox,
+        Psn,
+        SteamOrPsn,
+        FacebookOrPsn,
+        SteamOrFacebookOrPsn,
+        XboxOrPsn,
+        SteamOrXboxOrPsn,
+        FacebookOrXboxOrPsn,
+        SteamOrFacebookOrXboxOrPsn,
+        All
+    }
+
     /// <summary>
     /// Request to find friends lobbies. Only a client can find friend lobbies.
     /// </summary>
@@ -1721,11 +1742,17 @@ namespace PlayFab.MultiplayerModels
         /// <summary>
         /// Controls whether this query should link to friends made on the Facebook network. Defaults to false
         /// </summary>
-        public bool ExcludeFacebookFriends;
+        [Obsolete("Use 'ExternalPlatformFriends' instead", false)]
+        public bool? ExcludeFacebookFriends;
         /// <summary>
         /// Controls whether this query should link to friends made on the Steam network. Defaults to false
         /// </summary>
-        public bool ExcludeSteamFriends;
+        [Obsolete("Use 'ExternalPlatformFriends' instead", false)]
+        public bool? ExcludeSteamFriends;
+        /// <summary>
+        /// Indicates which other platforms' friends this query should link to.
+        /// </summary>
+        public ExternalFriendSources? ExternalPlatformFriends;
         /// <summary>
         /// OData style string that contains one or more filters. Only the following operators are supported: "and" (logical and),
         /// "eq" (equal), "ne" (not equals), "ge" (greater than or equal), "gt" (greater than), "le" (less than or equal), and "lt"
@@ -2281,19 +2308,9 @@ namespace PlayFab.MultiplayerModels
     public class GetMultiplayerServerDetailsRequest : PlayFabRequestCommon
     {
         /// <summary>
-        /// The guid string build ID of the multiplayer server to get details for.
-        /// </summary>
-        [Obsolete("No longer available", true)]
-        public string BuildId;
-        /// <summary>
         /// The optional custom tags associated with the request (e.g. build number, external trace identifiers, etc.).
         /// </summary>
         public Dictionary<string,string> CustomTags;
-        /// <summary>
-        /// The region the multiplayer server is located in to get details for.
-        /// </summary>
-        [Obsolete("No longer available", true)]
-        public string Region;
         /// <summary>
         /// The title generated guid string session ID of the multiplayer server to get details for. This is to keep track of
         /// multiplayer server sessions.
@@ -4381,7 +4398,8 @@ namespace PlayFab.MultiplayerModels
         /// </summary>
         public string PubSubConnectionHandle;
         /// <summary>
-        /// The name of the resource to subscribe to.
+        /// The name of the resource to subscribe to. It follows the format {queueName}|{ticketId} for MatchTicketStatusChange. For
+        /// MatchInvite, ResourceId is @me.
         /// </summary>
         public string ResourceId;
         /// <summary>
@@ -4556,7 +4574,8 @@ namespace PlayFab.MultiplayerModels
         /// </summary>
         public string PubSubConnectionHandle;
         /// <summary>
-        /// The resource to unsubscribe from.
+        /// The name of the resource to unsubscribe from. It follows the format {queueName}|{ticketId} for MatchTicketStatusChange.
+        /// For MatchInvite, ResourceId is @me.
         /// </summary>
         public string ResourceId;
         /// <summary>
