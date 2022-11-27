@@ -20,6 +20,7 @@ public class PlayerJump : MonoBehaviour
 
     public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     public Rigidbody2D rb;
+    public ParticleSystem gust;                 //gust of wind
 
     [HideInInspector] PlayerMovement Movement;
     [HideInInspector] PlayerWallJump WallJump;
@@ -45,6 +46,7 @@ public class PlayerJump : MonoBehaviour
         if (Movement.isRolling)
         {
             jumpHold = false;
+            gust.Stop();
             isJumping = false;
             return;
         }
@@ -59,6 +61,7 @@ public class PlayerJump : MonoBehaviour
 
         if (Input.GetButtonUp("Jump"))
         {
+            gust.Stop();
             isJumping = false;
             jumpHold = false;
         }
@@ -90,11 +93,15 @@ public class PlayerJump : MonoBehaviour
         if (isJumping && (jumpCounter < MAXJUMPS) && !jumpHold)
         {
             //rb.velocity = Vector2.up * jumpHeight;
+            //gust
+            gust.Play();
+
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
 
             jumpCounter++;
             animator.SetInteger("JumpCount", jumpCounter);
             jumpHold = true;
+            
         }
 
         //For a long jump while holding down the button
@@ -109,6 +116,7 @@ public class PlayerJump : MonoBehaviour
             }
             else
             {
+                gust.Stop();
                 isJumping = false;
                 jumpHold = false;
             }

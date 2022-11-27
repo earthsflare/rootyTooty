@@ -10,6 +10,7 @@ public class PlayerWallJump : MonoBehaviour
     [SerializeField] private float wallJumpTime = 0.2f;
     [SerializeField] private float checkRadius = 0.2f;
     [SerializeField] private LayerMask WallLayer;
+    public ParticleSystem dust;
 
     private bool collideLeftWall = false;
     private bool collideRightWall = false;
@@ -39,6 +40,7 @@ public class PlayerWallJump : MonoBehaviour
         else
         {
             isSliding = false;
+            dust.Stop();
             StopCollideWall();
         }
         /*        if (Jump.isGrounded)
@@ -67,6 +69,7 @@ public class PlayerWallJump : MonoBehaviour
     {
         if (isSliding)
         {
+            dust.Play();
             Player.instance.move.rb.velocity = new Vector2(Player.instance.move.rb.velocity.x, Mathf.Clamp(Player.instance.move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
@@ -74,6 +77,7 @@ public class PlayerWallJump : MonoBehaviour
         {
             StopCollideWall();
             isSliding = false;
+            dust.Stop();
             Player.instance.move.canMove = false;
             Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
         }
