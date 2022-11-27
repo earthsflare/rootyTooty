@@ -3666,6 +3666,7 @@ MonoBehaviour:
   maxLife: 2
   enemyAnimator: {fileID: 0}
   deathTime: 1.5
+  drop: {fileID: 0}
 --- !u!114 &1441467121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5004,6 +5005,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 660950236349859838, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1692447060130313568, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: knockBackPower
       value: 2
@@ -5146,7 +5151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6837677311313754129, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575990271890074561, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
       propertyPath: m_LocalPosition.x
