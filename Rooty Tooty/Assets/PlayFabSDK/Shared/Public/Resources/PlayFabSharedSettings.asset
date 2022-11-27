@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: A6F68
   DeveloperSecretKey: REDB1PQQ8Y3B8HYMEJ37XQF5MB18QUXYRAAP7AEW9CT6MWMBUN
   ProductionEnvironmentUrl: 
-  RequestType: 0
+  RequestType: 2
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000
