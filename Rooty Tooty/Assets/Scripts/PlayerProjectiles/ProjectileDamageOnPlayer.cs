@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class ProjectileDamageOnPlayer : DamageOnPlayer
 {
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
+        base.OnCollisionEnter2D(collision);
+    }
+
+    protected override void OnCollisionStay2D(Collision2D collision)
+    {
+
+        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
+        base.OnCollisionStay2D(collision);
+    }
+
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
-        if (canTakeDamage && collider.CompareTag("Player"))
+        if (canTakeDamage && collider.gameObject.CompareTag("Player"))
         {
-            Debug.Log("EnemyProjectile collided with " + collider.name);
-            collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
-            Player.instance.move.knockBack(transform.position, Player.instance.transform.position, Player.instance.move.rb, false, knockBackTime);
             gameObject.SetActive(false);
         }
         base.OnTriggerEnter2D(collider);
