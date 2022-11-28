@@ -10,6 +10,7 @@ public class PlayerWallJump : MonoBehaviour
     [SerializeField] private float wallJumpTime = 0.2f;
     [SerializeField] private float checkRadius = 0.2f;
     [SerializeField] private LayerMask WallLayer;
+
     public ParticleSystem dust;
 
     private bool collideLeftWall = false;
@@ -25,7 +26,17 @@ public class PlayerWallJump : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform wallCheckRight;
     [SerializeField] private Transform wallCheckLeft;
-    
+
+
+    [HideInInspector] PlayerJump Jump;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Jump = GetComponent<PlayerJump>();
+
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -69,17 +80,27 @@ public class PlayerWallJump : MonoBehaviour
     {
         if (isSliding)
         {
+            Jump.jumpCounter = 0;
+            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
+
             dust.Play();
             Player.instance.move.rb.velocity = new Vector2(Player.instance.move.rb.velocity.x, Mathf.Clamp(Player.instance.move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if (isWallJumping)
+        if (isWallJumping && Jump.jumpCounter < 1)
         {
             StopCollideWall();
             isSliding = false;
             dust.Stop();
             Player.instance.move.canMove = false;
             Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
+
+            Jump.jumpCounter++;
+            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
+        }
+        if (isWallJumping && Jump.jumpCounter > 1)
+        {
+            Player.instance.move.canMove = true;
         }
 
     }
