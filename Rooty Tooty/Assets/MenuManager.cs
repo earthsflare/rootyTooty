@@ -39,15 +39,22 @@ public class MenuManager : MonoBehaviour
         if (GameIsOver == false)
         {
             goMenuUI.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (gameManagerScript.GameIsFrozen == true)
             {
-                if (GameIsPaused)
+                Debug.Log("GameIsFrozen");
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    Resume();
-                }
-                else
-                {
-                    Pause();
+                    if (GameIsPaused)
+                    {
+                        Resume();
+                    }
+                    else
+                    {
+                        Pause();
+                    }
                 }
             }
         }
