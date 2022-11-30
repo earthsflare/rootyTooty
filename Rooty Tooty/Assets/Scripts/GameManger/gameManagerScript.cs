@@ -14,7 +14,9 @@ public class gameManagerScript : MonoBehaviour
     [Header("Read Only")]
     [SerializeField] private Vector2 spawnPosition;
     //[SerializeField] private bool random;
+    [SerializeField] private float freezeGameTime = 1f;
 
+    public static bool GameIsFrozen = false;
 
     void Awake()
     {
@@ -50,5 +52,28 @@ public class gameManagerScript : MonoBehaviour
         if (g == null)
             return;
         SceneManager.MoveGameObjectToScene(g, SceneManager.GetActiveScene());
+    }
+
+    public void freezeGame()
+    {
+        Time.timeScale = 0f;
+        GameIsFrozen = true;
+    }
+
+    public void unfreezeGame()
+    {
+        Time.timeScale = 1f;
+        GameIsFrozen = false;
+    }
+    void Update()
+    {
+        if (GameIsFrozen == true)
+        {
+            freezeGameTime -= Time.deltaTime;
+            if (freezeGameTime <= 0)
+            {
+                unfreezeGame();
+            }
+        }
     }
 }
