@@ -12,6 +12,9 @@ public class PlayerWallJump : MonoBehaviour
     [SerializeField] private LayerMask WallLayer;
 
     public ParticleSystem dust;
+    public ParticleSystem dustLeft;
+    public ParticleSystem WallGust;
+    public ParticleSystem WallGustLeft;
 
     private bool collideLeftWall = false;
     private bool collideRightWall = false;
@@ -87,7 +90,14 @@ public class PlayerWallJump : MonoBehaviour
             Jump.jumpCounter = 0;
             Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
 
-            dust.Play();
+            if (collideRightWall)
+            {
+                dust.Play();
+            }
+            else
+            {
+                dustLeft.Play();
+            }
             Player.instance.move.rb.velocity = new Vector2(Player.instance.move.rb.velocity.x, Mathf.Clamp(Player.instance.move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
@@ -96,6 +106,18 @@ public class PlayerWallJump : MonoBehaviour
             StopCollideWall();
             isSliding = false;
             dust.Stop();
+            dustLeft.Stop();
+
+            if (wallJumpDirection < 0)
+            {
+                WallGust.Play();
+
+            }
+            else
+            {
+                WallGustLeft.Play();
+            }
+
             Player.instance.move.canMove = false;
             Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
 
