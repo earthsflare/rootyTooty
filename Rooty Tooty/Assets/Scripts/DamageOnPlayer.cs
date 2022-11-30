@@ -34,7 +34,7 @@ public class DamageOnPlayer : MonoBehaviour
         }
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
 
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
@@ -47,7 +47,7 @@ public class DamageOnPlayer : MonoBehaviour
         }
     }
 
-    protected void OnCollisionStay2D(Collision2D collision)
+    protected virtual void OnCollisionStay2D(Collision2D collision)
     {
 
         if (canTakeDamage && collision.gameObject.CompareTag("Player"))
