@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_1/PauseMenu.unity
     guid: 8ea18dc49a8839d40b4bb63eaf70f96a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_4/Menu.unity
     guid: 1a9f27e8f7f0dec43af3f1b7929cc1ec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_4/Retro_4.unity
     guid: a82fa2a9530077e4db92f42cda33b263
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_4/Retro_4L2.unity
     guid: c173fa142b494dd4c81892186da89807
   - enabled: 0
@@ -74,4 +74,31 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Will_Test/Retro_2/Will - Sample_!.unity
     guid: 0dda8ec05d5116342a535bf59bb7b20e
+  - enabled: 1
+    path: Assets/Scenes/Demo1/R2_Menu.unity
+    guid: 3ec430adc4b96a64ab87f8786f42b718
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level1_Tutorial.unity
+    guid: 927c98ffc1a2b794dae41d6ad4f71d9e
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level2_Pit.unity
+    guid: 9e628a9aecac09f4394f10ab2d2937e4
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level3_BigRoom.unity
+    guid: e0cc09e2f61368b43b885f56716ecb6c
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level4_RightPath.unity
+    guid: dc6d923f06b24f54d9e1d66d11f942dd
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level5_DoubleJump.unity
+    guid: bbdca7496a6359543885a3f7852981cf
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level6_BossRoom.unity
+    guid: afdef4db2c3de0f41b7be57c637a716a
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level7_RollUpgrade.unity
+    guid: 5038c2537fdd754499c8a1a2a7531a24
+  - enabled: 1
+    path: Assets/Scenes/Demo1/RT_Level8_LeftRoom.unity
+    guid: 21fb1ca669e2d8f40b36205bcfc30dd8
   m_configObjects: {}

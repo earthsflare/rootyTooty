@@ -43,7 +43,7 @@ public class PlayerWallJump : MonoBehaviour
         collideRightWall = Physics2D.OverlapCircle(wallCheckRight.position, checkRadius, WallLayer);
         collideLeftWall = Physics2D.OverlapCircle(wallCheckLeft.position, checkRadius, WallLayer);
 
-        if (collideWall && !Player.instance.jump.isGrounded /*&& Movement.movement.x != 0*/)
+        if (collideWall && !Player.instance.Jump.isGrounded /*&& Movement.movement.x != 0*/)
         {
             isSliding = true;
         }
@@ -88,7 +88,7 @@ public class PlayerWallJump : MonoBehaviour
             Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
 
             dust.Play();
-            Player.instance.move.rb.velocity = new Vector2(Player.instance.move.rb.velocity.x, Mathf.Clamp(Player.instance.move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            Player.instance.Move.rb.velocity = new Vector2(Player.instance.Move.rb.velocity.x, Mathf.Clamp(Player.instance.Move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
         if (isWallJumping && Jump.jumpCounter < 1)
@@ -96,15 +96,15 @@ public class PlayerWallJump : MonoBehaviour
             StopCollideWall();
             isSliding = false;
             dust.Stop();
-            Player.instance.move.canMove = false;
-            Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
+            Player.instance.Move.canMove = false;
+            Player.instance.Move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
 
             Jump.jumpCounter++;
             Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
         }
         if (isWallJumping && Jump.jumpCounter > 1)
         {
-            Player.instance.move.canMove = true;
+            Player.instance.Move.canMove = true;
         }
 
     }
@@ -112,7 +112,7 @@ public class PlayerWallJump : MonoBehaviour
     void SetWallJumping()
     {
         isWallJumping = false;
-        Player.instance.move.canMove = true;
+        Player.instance.Move.canMove = true;
     }
 
 

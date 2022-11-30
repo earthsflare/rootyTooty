@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // for switching scenes
 
-//Controls player level transition
+//Controls player level transition and fading animation
 public class levelManager : MonoBehaviour
 {
     private static levelManager _levelManager;
@@ -16,10 +16,6 @@ public class levelManager : MonoBehaviour
     [SerializeField] private float fadeAlphaSpeed;
     //[SerializeField] private float initialAlpha;
 
-    [SerializeField] private Vector2 nextLevelPosition = new Vector2(-45f, -7f);
-    public void SetNextLevelPos(Vector2 p) { nextLevelPosition = p; }
-    
-
     private void Awake()
     {
         animator.SetFloat("AnimationSpeed", fadeAlphaSpeed);
@@ -29,22 +25,21 @@ public class levelManager : MonoBehaviour
         else if (_levelManager != this)
             Destroy(this);
         #endregion
-
-        #region Find and set player position
-        if(Player.instance != null)
-            Player.instance.transform.position = instance.nextLevelPosition;
-        #endregion
-
     }
 
+    private void Start()
+    {
+        //Find and set player position
+        if (Player.instance != null)
+            Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
+        gameManagerScript.instance.SetSpawnSceneIndex(SceneManager.GetActiveScene().buildIndex);
+    }
 
     public void FadeToLevel (string sceneName)
     {
         levelToLoad = sceneName;
         animator.SetTrigger("FadeOut");
     }
-
-
     public void OnFadeComplete()
     {
         

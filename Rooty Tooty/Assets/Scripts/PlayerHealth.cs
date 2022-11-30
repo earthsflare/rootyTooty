@@ -32,6 +32,20 @@ public class PlayerHealth : MonoBehaviour
         return maxLife;
     }
 
+    public void SetLife(int h) 
+    {
+        //currentLife must be a minimum of 1
+        if (h <= 0)
+            currentLife = 1;
+        //currentLife cannot excede maxLife
+        else if (h > maxLife)
+            currentLife = maxLife;
+        else 
+            currentLife = h;
+
+        HealthDisplay.instance.drawHeart(currentLife, maxLife);
+    }
+
     public bool isDead()
     {
         return dead;
