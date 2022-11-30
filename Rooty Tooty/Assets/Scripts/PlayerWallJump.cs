@@ -34,7 +34,6 @@ public class PlayerWallJump : MonoBehaviour
     void Start()
     {
         Jump = GetComponent<PlayerJump>();
-
     }
 
 
@@ -64,9 +63,14 @@ public class PlayerWallJump : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isSliding && !(collideLeftWall && collideRightWall))
         {
             if (collideRightWall)
+            {
                 wallJumpDirection = -1;
+                
+            }
             else
+            {
                 wallJumpDirection = 1;
+            }
 
             isWallJumping = true;
             Invoke("SetWallJumping", wallJumpTime);
