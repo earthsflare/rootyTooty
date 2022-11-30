@@ -6,9 +6,9 @@ public class PickUpJump : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player") && Player.instance.jump.getJump() == 1)
+        if (collider.CompareTag("Player") && Player.instance.Jump.getJump() == 1)
         {
-            Player.instance.jump.enableDoubleJump();
+            Player.instance.Jump.enableDoubleJump();
             Destroy(gameObject);
             Debug.Log("Double jump unlocked!");
         }

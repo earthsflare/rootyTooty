@@ -139,8 +139,6 @@ GameObject:
   - component: {fileID: 1692447060130313568}
   - component: {fileID: 2260591736451806352}
   - component: {fileID: 1692447060130313577}
-  - component: {fileID: 1100624387624777976}
-  - component: {fileID: 441241048340462153}
   - component: {fileID: 3027364636945540658}
   - component: {fileID: 9149049577227380444}
   m_Layer: 14
@@ -323,10 +321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8073f214099637d439f01fe8327c8803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1692447060130313576}
-  move: {fileID: 1692447060130313568}
-  jump: {fileID: 2260591736451806352}
-  roll: {fileID: 3027364636945540658}
 --- !u!114 &1692447060130313576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,17 +372,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 5
+  MAXJUMPS: 1
+  TOTALJUMPTIME: 0.35
   isJumping: 0
+  jumpCounter: 2
   ceilingCheck: {fileID: 1692447059042925443}
   groundCheck: {fileID: 1692447059535158970}
   groundObjects:
     serializedVersion: 2
     m_Bits: 1280
-  checkRadius: 0
-  MAXJUMPS: 1
-  jumpCounter: 2
-  isGrounded: 0
-  TOTALJUMPTIME: 0.35
   animator: {fileID: 1692447060130313580}
   rb: {fileID: 1692447060130313571}
   gust: {fileID: 324482223384386651}
@@ -411,30 +403,6 @@ MonoBehaviour:
   cooldownDuration: 1
   magicCooldownDuration: 5
   currentProjectile: 0
---- !u!114 &1100624387624777976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692447060130313569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5402901a23e00b240bb543c489180d66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &441241048340462153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692447060130313569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd1515b271bec347a5cdcabc834033c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3027364636945540658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfe2508fd283a445b92300fa6a9c0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRoll: 0
   rollingSpd: 2
   rollingTime: 1
   rollingCooldown: 1

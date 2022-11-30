@@ -6,17 +6,24 @@ public class PlayerRoll : MonoBehaviour
 {
 
     //Player Roll Variables
-    public bool canRoll;
-    public float rollingSpd = 2f;
-    public float rollingTime = 1f;
-    public float rollingCooldown = 1f;
+    private bool canRoll;
+    [SerializeField] private float rollingSpd = 2f;
+    [SerializeField] private float rollingTime = 1f;
+    [SerializeField] private float rollingCooldown = 1f;
 
     int BushLayer;
     int PlayerLayer;
 
     [HideInInspector] PlayerMovement Movement;
 
+    #region Getter Setters
 
+    // Obtain roll ability
+    public bool getRoll()
+    {
+        return canRoll;
+    }
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +32,6 @@ public class PlayerRoll : MonoBehaviour
 
         BushLayer = LayerMask.NameToLayer("RollBlock");
         PlayerLayer = LayerMask.NameToLayer("Player");
-        canRoll = false;
     }
 
     // Update is called once per frame
@@ -36,17 +42,6 @@ public class PlayerRoll : MonoBehaviour
         {
             StartCoroutine(Roll());
         }
-    }
-
-    // Obtain roll ability
-    public bool getRoll()
-    {
-        return canRoll;
-    }
-
-    public void enableRoll()
-    {
-        canRoll = true;
     }
 
     private IEnumerator Roll()

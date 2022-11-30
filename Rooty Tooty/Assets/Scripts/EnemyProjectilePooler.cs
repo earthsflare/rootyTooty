@@ -20,9 +20,10 @@ public class EnemyProjectilePooler : MonoBehaviour
 
     private void addProjectileToPool()
     {
-        GameObject obj = Instantiate(projectilePrefab);
+        GameObject obj = Instantiate(projectilePrefab, enemyProjectilePool.transform);
         obj.SetActive(false);
         pooledProjectiles.Add(obj);
+
     }
 
     // Start is called before the first frame update

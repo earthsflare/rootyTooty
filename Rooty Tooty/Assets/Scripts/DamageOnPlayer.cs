@@ -30,7 +30,7 @@ public class DamageOnPlayer : MonoBehaviour
             timer = 0;
             canTakeDamage = true;
 
-            Player.instance.move.canMove = true;
+            Player.instance.Move.canMove = true;
         }
     }
 
@@ -41,8 +41,8 @@ public class DamageOnPlayer : MonoBehaviour
         {
             canTakeDamage = false;
             timer += time;
-            Player.instance.health.TakeDamage(damage);
-            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
+            Player.instance.Health.TakeDamage(damage);
+            Player.instance.Move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.Move.rb, canKnock, knockBackTime);
             StartCoroutine(damageTimer(time));
         }
     }
@@ -54,8 +54,8 @@ public class DamageOnPlayer : MonoBehaviour
         {
             canTakeDamage = false;
             timer += time;
-            Player.instance.health.TakeDamage(damage);
-            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
+            Player.instance.Health.TakeDamage(damage);
+            Player.instance.Move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.Move.rb, canKnock, knockBackTime);
             StartCoroutine(damageTimer(time));
         }
     }
@@ -69,8 +69,8 @@ public class DamageOnPlayer : MonoBehaviour
             canTakeDamage = false;
             timer += time;
 
-            Player.instance.health.TakeDamage(damage);
-            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
+            Player.instance.Health.TakeDamage(damage);
+            Player.instance.Move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.Move.rb, canKnock, knockBackTime);
             StartCoroutine(damageTimer(time));
         }
     }
@@ -81,6 +81,6 @@ public class DamageOnPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         canTakeDamage = true;
-        Player.instance.move.canMove = true;
+        Player.instance.Move.canMove = true;
     }
 }

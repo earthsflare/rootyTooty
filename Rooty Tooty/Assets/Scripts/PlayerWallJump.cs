@@ -43,7 +43,7 @@ public class PlayerWallJump : MonoBehaviour
         collideRightWall = Physics2D.OverlapCircle(wallCheckRight.position, checkRadius, WallLayer);
         collideLeftWall = Physics2D.OverlapCircle(wallCheckLeft.position, checkRadius, WallLayer);
 
-        if (collideWall && !Player.instance.Jump.isGrounded /*&& Movement.movement.x != 0*/)
+        if (collideWall && !Player.instance.Jump.IsGrounded /*&& Movement.movement.x != 0*/)
         {
             isSliding = true;
         }
@@ -84,14 +84,14 @@ public class PlayerWallJump : MonoBehaviour
     {
         if (isSliding)
         {
-            Jump.jumpCounter = 0;
-            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
+            Jump.SetJumpCounter(0);
+            Jump.JumpAnimator.SetInteger("JumpCount", Jump.JumpCounter);
 
             dust.Play();
             Player.instance.Move.rb.velocity = new Vector2(Player.instance.Move.rb.velocity.x, Mathf.Clamp(Player.instance.Move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if (isWallJumping && Jump.jumpCounter < 1)
+        if (isWallJumping && Jump.JumpCounter < 1)
         {
             StopCollideWall();
             isSliding = false;
@@ -99,10 +99,10 @@ public class PlayerWallJump : MonoBehaviour
             Player.instance.Move.canMove = false;
             Player.instance.Move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
 
-            Jump.jumpCounter++;
-            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
+            Jump.AddJumpCounter(1);
+            Jump.JumpAnimator.SetInteger("JumpCount", Jump.JumpCounter);
         }
-        if (isWallJumping && Jump.jumpCounter > 1)
+        if (isWallJumping && Jump.JumpCounter > 1)
         {
             Player.instance.Move.canMove = true;
         }

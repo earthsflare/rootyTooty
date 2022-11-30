@@ -20,6 +20,9 @@ public class MenuManager : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    private EventSystem eventSystem = null;
+    private StandaloneInputModule standaloneInputModule = null;
+
     void Awake()
     {
         if (instance == null)
@@ -32,8 +35,21 @@ public class MenuManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (eventSystem == null)
+            eventSystem = GetComponent<EventSystem>();
+        if (standaloneInputModule == null)
+            standaloneInputModule = GetComponent<StandaloneInputModule>();
     }
-
+    private void Start()
+    {
+        if(gameManagerScript.instance != null)
+        {
+            eventSystem.enabled = false;
+            Destroy(standaloneInputModule);
+        }
+        else
+            eventSystem.enabled = true;
+    }
     void Update()
     {
         if (GameIsOver == false)

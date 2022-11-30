@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class gameManagerScript : MonoBehaviour
@@ -9,7 +10,7 @@ public class gameManagerScript : MonoBehaviour
     //[SerializeField] private float freezeGameTime = 1f;
     public static bool GameIsFrozen = false;
 
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject playerPrefab;
     [Header("Read Only")]
 
     #region Save Data
@@ -19,14 +20,14 @@ public class gameManagerScript : MonoBehaviour
     //GameManager saves every time player enters a scene or reaches a checkpoint 
 
 
-    [SerializeField] private Vector2 spawnPosition = new Vector2(-19f, -5.5801f);
+    [SerializeField] private Vector2 spawnPosition = new Vector2(-18f, -4f);
     [SerializeField] private int spawnSceneIndex;
 
     [SerializeField] private int playerHealth = 5;
 
-    [SerializeField] private bool rollUnlocked = false;
     [SerializeField] private bool doubleJumpUnlocked = false;
     [SerializeField] private bool fireballUnlocked = false;
+    [SerializeField] private bool rollUnlocked = false;
     [SerializeField] private bool wallJumpUnlocked = false;
 
     public Vector2 SpawnPosition { get => spawnPosition; }
@@ -41,10 +42,18 @@ public class gameManagerScript : MonoBehaviour
 
     public int TitleLevelIndex { get => titleSceneIndex; }
     public void SetTitleIndex(int i) { instance.titleSceneIndex = i; }
+    #endregion
+
+    #region Object References
+    [Header("Object References")]
+    [SerializeField] GameObject cameraManager = null;
+    [SerializeField] Canvas healthUICanvas = null;
+    [SerializeField] private Player playerScript = null;
+    [SerializeField] private MenuManager menuManager = null;
 
     #endregion
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -55,12 +64,50 @@ public class gameManagerScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 
-    void Start()
+    private void Start()
+    {
+        StartUp(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void StartUp(int sceneIndex)
     {
         unfreezeGame();
+
+        if (MenuManager.instance != null)
+        {
+            MenuManager.instance.Resume();
+            MenuManager.GameIsOver = false;
+        }
+        if (titleSceneIndex == sceneIndex)
+        {
+            if (Player.instance != null)
+            {
+                playerScript = Player.instance;
+                playerScript.gameObject.SetActive(false);
+            }
+            if (MenuManager.instance != null)
+            {
+                menuManager = MenuManager.instance;
+                menuManager.gameObject.SetActive(false);
+            }
+            if (cameraManager != null)
+                cameraManager.SetActive(false);
+            if (healthUICanvas != null)
+                healthUICanvas.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            if (playerScript != null)
+                playerScript.gameObject.SetActive(true);
+            if (menuManager != null)
+                menuManager.gameObject.SetActive(true);
+            if (cameraManager != null)
+                cameraManager.SetActive(true);
+            if (healthUICanvas != null)
+                healthUICanvas.gameObject.SetActive(true);
+        }
     }
 
     #region Save Data Related Function
@@ -70,11 +117,23 @@ public class gameManagerScript : MonoBehaviour
     {
         freezeGame();
 
-
-
         //Update Player Data
+        if(Player.instance != null)
+        {
+            if (Player.instance.Health != null)
+                Player.instance.Health.SetLife(playerHealth);
 
-        //levelManager.instance.FadeToLevel();
+            if (Player.instance.Jump != null)
+                Player.instance.Jump.SetMaxJumps((doubleJumpUnlocked) ? 2 : 1);
+            if (Player.instance.Aim != null)
+                Player.instance.Aim.ToggleFireball(fireballUnlocked);
+            if (Player.instance.Roll != null)
+                Player.instance.ToggleRoll(rollUnlocked);
+            if(Player.instance.WallJump != null)
+                Player.instance.ToggleWallJump(wallJumpUnlocked);
+        }
+
+        levelManager.instance.LoadLevel(spawnSceneIndex);
     }
 
     //Resets current local data and save file
@@ -95,7 +154,7 @@ public class gameManagerScript : MonoBehaviour
 
     public void OnSpawnPlayerPrefab()
     {
-        Instantiate(prefab, spawnPosition, Quaternion.identity);
+        Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
     }
 
     public static void UndoDontDestroyOnLoad(GameObject g)

@@ -6,9 +6,9 @@ public class PickUpRoll : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player") && Player.instance.roll.getRoll() == false)
+        if (collider.CompareTag("Player") && Player.instance.Roll.getRoll() == false)
         {
-            Player.instance.roll.enableRoll();
+            Player.instance.ToggleRoll(true);
             Destroy(gameObject);
             Debug.Log("Roll unlocked!");
         }

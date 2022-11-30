@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
+
+        rb.velocity = Vector2.zero;
     }
 
     // Update is called once per frame

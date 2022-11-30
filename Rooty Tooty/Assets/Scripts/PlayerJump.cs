@@ -4,27 +4,51 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
+    [Header("Jump Properties")]
+    [SerializeField] private float jumpHeight = 5f;
+    [SerializeField] private int MAXJUMPS = 1;                    //Double Jumping or more
+    [SerializeField] private float TOTALJUMPTIME = 0.35f;
+    [SerializeField] private float checkRadius = 0.05f; // How many units for groundCheck
 
-    public float jumpHeight = 5f;
-    public bool isJumping = false;
-    public Transform ceilingCheck;              //make sure the character can't jump past a ceiling
-    public Transform groundCheck;               //make sure the character doesn't fall through the ground
-    public LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
-    [HideInInspector] public float checkRadius = 0.1f;
-    [HideInInspector] public int MAXJUMPS = 1;                    //Double Jumping or more
-    public int jumpCounter;                    //Current amount of jumps
-    [HideInInspector] public bool isGrounded;
+    #region Jump Properties: Getter Setters
+    public void SetMaxJumps(int i)
+    {
+        MAXJUMPS = i;
+    }
+
+    #endregion
+
+    [Header("Debug: Read Only")]
+    [SerializeField] private bool isJumping = false;
+    [SerializeField] private int jumpCounter;                    //Current amount of jumps
+    private bool isGrounded;
     private float jumpTimeCounter;
-    public float TOTALJUMPTIME = 0.35f;
-    private bool jumpHold;
+    private bool jumpHold; //True when player is holding the jump button
 
-    public Animator animator;                   //Link the animator to this script so that it will change with the correct input
-    public Rigidbody2D rb;
-    public ParticleSystem gust;                 //gust of wind
-    public ParticleSystem gust2;
+    #region Jump Other: Getter Setters
+    public int JumpCounter { get => jumpCounter; }
+    public bool IsGrounded { get => isGrounded; }
+
+    public void SetJumpCounter(int value) { jumpCounter = value; }
+    public void AddJumpCounter(int value) { jumpCounter += value; }
+    #endregion
+
+    [Header("Object References")]
+    [SerializeField] private Transform ceilingCheck;              //make sure the character can't jump past a ceiling
+    [SerializeField] private Transform groundCheck;               //make sure the character doesn't fall through the ground
+    [SerializeField] private LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
+    [Space(10)]
+    [SerializeField] private Animator animator;                   //Link the animator to this script so that it will change with the correct input
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private ParticleSystem gust;                 //gust of wind
+    [SerializeField] private ParticleSystem gust2;
 
     [HideInInspector] PlayerMovement Movement;
     [HideInInspector] PlayerWallJump WallJump;
+
+    #region Jump Other: Getter Setters
+    public Animator JumpAnimator { get => animator; }
+    #endregion
 
     // Start is called before the first frame update
     void Start()

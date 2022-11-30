@@ -5,28 +5,34 @@ using UnityEngine.SceneManagement; // used whenever we want to change scenes in 
 
 public class MainMenu : MonoBehaviour
 {
+    private static MainMenu instance = null;
+    public static MainMenu Instance { get => instance; }
 
     private void Awake()
     {
-        gameManagerScript.instance.SetTitleIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        if(instance == null)
+            instance = this;
+        if(gameManagerScript.instance != null)
+        {
+            gameManagerScript.instance.SetTitleIndex(SceneManager.GetActiveScene().buildIndex);
+        }
     }
     void Start()
     {
-        MenuManager.instance.Resume();
-        MenuManager.GameIsOver = false;
     }
 
 
     // function that is called when the play button is pressed
     public void PlayGame ()
     {
-        //Set next player position if  levelManager exists (after game over)
+        //Reset local data if gameManager exists (should exist)
         if (gameManagerScript.instance != null)
-            gameManagerScript.instance.SetSpawnPosition(new Vector2(-45f, -7f));
-        
-        // load the next level
-        SceneManager.LoadScene(gameManagerScript.instance.TitleLevelIndex + 1); // loads the next level in the queue
-        // done by getting the currently loaded level and increase it by 1
+        {
+            gameManagerScript.instance.ResetSave();
+            // Have GameManager load the game
+            gameManagerScript.instance.LoadGame();
+
+        }
     }
 
     public void QuitGame ()
