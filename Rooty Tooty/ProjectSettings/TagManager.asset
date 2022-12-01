@@ -56,6 +56,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Platforms
+    uniqueID: 1703418447
+    locked: 0
   - name: Projectile
     uniqueID: 6873123
     locked: 0
