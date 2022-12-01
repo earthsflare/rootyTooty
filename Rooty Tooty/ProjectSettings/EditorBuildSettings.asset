@@ -75,7 +75,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Will_Test/Retro_2/Will - Sample_!.unity
     guid: 0dda8ec05d5116342a535bf59bb7b20e
   - enabled: 1
-    path: Assets/Scenes/Demo1/R2_Menu.unity
+    path: Assets/Scenes/Demo1/RT_Level0_TitleScreen.unity
     guid: 3ec430adc4b96a64ab87f8786f42b718
   - enabled: 1
     path: Assets/Scenes/Demo1/RT_Level1_Tutorial.unity
