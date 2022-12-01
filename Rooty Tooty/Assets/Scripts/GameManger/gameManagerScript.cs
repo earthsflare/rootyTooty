@@ -36,19 +36,10 @@ public class gameManagerScript : MonoBehaviour
     public void SetSpawnSceneIndex(int index) { spawnSceneIndex = index; }
     #endregion
 
-    #region Not Saved Game Data
-    [Header("Other Game Properties")]
-    [SerializeField] private int titleSceneIndex;
-
-    public int TitleLevelIndex { get => titleSceneIndex; }
-    public void SetTitleIndex(int i) { instance.titleSceneIndex = i; }
-    #endregion
-
     #region Object References
     [Header("Object References")]
     [SerializeField] GameObject cameraManager = null;
     [SerializeField] Canvas healthUICanvas = null;
-    [SerializeField] private Player playerScript = null;
     [SerializeField] private MenuManager menuManager = null;
 
     #endregion
@@ -72,6 +63,7 @@ public class gameManagerScript : MonoBehaviour
     }
     public void StartUp(int sceneIndex)
     {
+        spawnSceneIndex = sceneIndex;
         unfreezeGame();
 
         if (MenuManager.instance != null)
@@ -79,12 +71,11 @@ public class gameManagerScript : MonoBehaviour
             MenuManager.instance.Resume();
             MenuManager.GameIsOver = false;
         }
-        if (titleSceneIndex == sceneIndex)
+        if (levelManager.instance.IsLevelTitle(sceneIndex))
         {
             if (Player.instance != null)
             {
-                playerScript = Player.instance;
-                playerScript.gameObject.SetActive(false);
+                Player.DeactivatePlayer();
             }
             if (MenuManager.instance != null)
             {
@@ -95,12 +86,11 @@ public class gameManagerScript : MonoBehaviour
                 cameraManager.SetActive(false);
             if (healthUICanvas != null)
                 healthUICanvas.gameObject.SetActive(false);
-
         }
         else
         {
-            if (playerScript != null)
-                playerScript.gameObject.SetActive(true);
+            if (Player.instance != null)
+                Player.ActivatePlayer();
             if (menuManager != null)
                 menuManager.gameObject.SetActive(true);
             if (cameraManager != null)
@@ -140,7 +130,7 @@ public class gameManagerScript : MonoBehaviour
     public void ResetSave()
     {
         spawnPosition = new Vector2(-19f, -5.5801f);
-        spawnSceneIndex = titleSceneIndex + 1;
+        spawnSceneIndex = (int)LevelIndex.Level1;
 
         playerHealth = 5;
 

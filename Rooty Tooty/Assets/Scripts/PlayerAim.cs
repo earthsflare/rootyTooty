@@ -44,8 +44,7 @@ public class PlayerAim : MonoBehaviour
         if (Input.GetButton("Fire1") && isAvailable && Time.timeScale != 0f)
         {
             // Get projectile from the projectile pool
-            GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
-                currentProjectile);
+            GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(currentProjectile);
 
             if (projectile != null)
             {

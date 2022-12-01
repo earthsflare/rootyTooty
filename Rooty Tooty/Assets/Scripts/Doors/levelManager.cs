@@ -3,72 +3,113 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // for switching scenes
 
-//Controls player level transition and fading animation
+public enum LevelIndex
+{
+    TitleScreen = 0,
+    Level1 = 1,
+    Level2 = 2,
+    Level3 = 3,
+    Level4 = 4,
+    Level5 = 5,
+    Level6 = 6,
+    Level7 = 7,
+    Level8 = 8,
+}
+
+//Controls player level transition, fading animation, and StartUp functions for Persistant scripts
 public class levelManager : MonoBehaviour
 {
     private static levelManager _levelManager;
     public static levelManager instance { get { return _levelManager; } }
 
-    public Animator animator;
-
-    private string levelToLoad;
-
+    [Header("Fade Animation Properties")]
     [SerializeField] private float fadeAlphaSpeed;
     //[SerializeField] private float initialAlpha;
+    //Controls whether script fades in or not
+    private bool doFadeIn = false;
+
+    [Header("Object References")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private Canvas fadeCanvas;
+
+    #region Level Enum Functions / Properties
+    public int TitleLevelIndex { get => (int)LevelIndex.TitleScreen; }
+    public bool OnTitleLevel { get => (int)LevelIndex.TitleScreen == SceneManager.GetActiveScene().buildIndex; }
+    public bool IsLevelTitle(int levelIndex) { return (int)LevelIndex.TitleScreen == levelIndex; }
+    #endregion
 
     private void Awake()
     {
-        animator.SetFloat("AnimationSpeed", fadeAlphaSpeed);
         #region Setup Singleton
         if (_levelManager == null)
             _levelManager = this;
         else if (_levelManager != this)
             Destroy(this);
         #endregion
-    }
 
+        animator.SetFloat("AnimationSpeed", fadeAlphaSpeed);
+    }
     private void Start()
     {
-        StartUp();
+        StartUp(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
+        SceneManager.activeSceneChanged += StartUp;
     }
-
-    private void StartUp()
+    private void OnDisable()
     {
-        //Find and set player position
-        if (Player.instance != null)
-            Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
-        gameManagerScript.instance.SetSpawnSceneIndex(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.activeSceneChanged -= StartUp;
     }
-
-    public void FadeToLevel(string sceneName)
+    private void StartUp(Scene current, Scene next)
     {
-        levelToLoad = sceneName;
+        if (gameManagerScript.instance != null)
+        {
+            //Initiate gameManagerScript startUp
+            gameManagerScript.instance.StartUp(next.buildIndex);
+
+            if (fadeCanvas != null)
+            {
+                if (OnTitleLevel)
+                    fadeCanvas.gameObject.SetActive(false);
+                else
+                    fadeCanvas.gameObject.SetActive(true);
+            }
+        }
+
+        //Activate fade In animation
+        if (doFadeIn)
+            StartCoroutine(FadeInLevel());
+        else         
+            //Find and set player position
+            if (Player.instance != null)
+                Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
+    }
+    public void FadeToLevel(LevelIndex sceneName)
+    {
+        StartCoroutine(FadeOutLevel(sceneName));
+    }
+    private IEnumerator FadeOutLevel(LevelIndex sceneName)
+    {
         animator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(fadeAlphaSpeed);
+        doFadeIn = true;
+        LoadLevel((int)sceneName);
     }
-    public void OnFadeComplete()
+    private IEnumerator FadeInLevel()
     {
+        //Deactivate player until their spawn location is set
+        Player.DeactivatePlayer();
+        yield return (!SpawnLocation.IsSearching);
+        Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
 
-        SceneManager.LoadScene(levelToLoad);
-        if (gameManagerScript.instance != null)
-            gameManagerScript.instance.StartUp(SceneManager.GetSceneByName(levelToLoad).buildIndex);
+        //Spawn in player
+        Player.ActivatePlayer();
+
+        //Activate Fade In Animation
         animator.SetTrigger("FadeIn");
-
-    }
-
-    public void LoadLevel(string sceneName)
-    {
-        if (gameManagerScript.instance != null)
-            gameManagerScript.instance.StartUp(SceneManager.GetSceneByName(sceneName).buildIndex);
-        StartUp();
-        SceneManager.LoadScene(sceneName);
-        
+        doFadeIn = false;
+        yield return new WaitForSeconds(fadeAlphaSpeed);
     }
     public void LoadLevel(int sceneIndex)
     {
-        if (gameManagerScript.instance != null)
-            gameManagerScript.instance.StartUp(sceneIndex);
-        StartUp();
         SceneManager.LoadScene(sceneIndex);
-        
     }
 }

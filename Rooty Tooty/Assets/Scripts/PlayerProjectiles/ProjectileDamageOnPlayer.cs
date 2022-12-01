@@ -6,7 +6,7 @@ public class ProjectileDamageOnPlayer : DamageOnPlayer
 {
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
         }
@@ -16,7 +16,7 @@ public class ProjectileDamageOnPlayer : DamageOnPlayer
     protected override void OnCollisionStay2D(Collision2D collision)
     {
 
-        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
         }
@@ -25,7 +25,7 @@ public class ProjectileDamageOnPlayer : DamageOnPlayer
 
     protected override void OnTriggerEnter2D(Collider2D collider)
     {
-        if (canTakeDamage && collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
         }

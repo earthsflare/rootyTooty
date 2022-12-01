@@ -56,14 +56,14 @@ public class PlayerProjectile : MonoBehaviour
         // Destroy(gameObject);
         if (collider.CompareTag("Enemy"))
         {
-            Debug.Log("PlayerProjectile collided with Enemy: " + collider.name);
+            //Debug.Log("PlayerProjectile collided with Enemy: " + collider.name);
             projectileCollider.enabled = false;
             collider.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
             StartCoroutine(ImpactAnimation());
         }
         else if (collider.CompareTag("Ground"))
         {
-            Debug.Log("PlayerProjectile collided with Ground: " + collider.name);
+            //.Log("PlayerProjectile collided with Ground: " + collider.name);
             projectileCollider.enabled = false;
             StartCoroutine(ImpactAnimation());
         }

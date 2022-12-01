@@ -12,16 +12,7 @@ public class MainMenu : MonoBehaviour
     {
         if(instance == null)
             instance = this;
-        if(gameManagerScript.instance != null)
-        {
-            gameManagerScript.instance.SetTitleIndex(SceneManager.GetActiveScene().buildIndex);
-        }
     }
-    void Start()
-    {
-    }
-
-
     // function that is called when the play button is pressed
     public void PlayGame ()
     {
@@ -34,7 +25,6 @@ public class MainMenu : MonoBehaviour
 
         }
     }
-
     public void QuitGame ()
     {
         Debug.Log("Game has been quit");

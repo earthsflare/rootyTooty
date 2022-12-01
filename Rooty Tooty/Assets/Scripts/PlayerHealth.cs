@@ -15,11 +15,18 @@ public class PlayerHealth : MonoBehaviour
 
     //public int tempPoint = 1; //temp var to place in gameoverscreen
 
+    private void Awake()
+    {
+        dead = false;
+    }
     void Start()
     {
-        currentLife = maxLife;
-        dead = false;
         HealthDisplay.instance.drawHeart(currentLife, maxLife);
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     public int getHealth()
@@ -83,7 +90,6 @@ public class PlayerHealth : MonoBehaviour
         animator.SetBool("Dead", dead);
         yield return new WaitForSeconds(1.09f);
         Debug.Log("Player is dead!");
-        //Delete player
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

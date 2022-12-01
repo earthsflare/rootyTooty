@@ -61,16 +61,12 @@ public class PlayerProjectilePooler : MonoBehaviour
             {
                 return pooledProjectiles[projectileType][i];
             }
+        }
 
-            // Add more projectiles if pool is empty and projectile is requested
-            if (i == poolCount - 1)
-            {
-                addProjectileToPool(projectileType);
-                if (!pooledProjectiles[projectileType][i+1].activeInHierarchy)
-                {
-                    return pooledProjectiles[projectileType][i+1];
-                }
-            }
+        addProjectileToPool(projectileType);
+        if (!pooledProjectiles[projectileType][poolCount - 1].activeInHierarchy)
+        {
+            return pooledProjectiles[projectileType][poolCount - 1];
         }
         return null;
     }

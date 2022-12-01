@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  time: 0.2
+  time: 1
   canKnock: 1
   knockBackTime: 3
   knockbackCenter: {fileID: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
   life: 3
   maxLife: 3
   enemyAnimator: {fileID: 3241425054333609180}
-  deathTime: 1.5
+  deathTime: 3
   drop: {fileID: 0}
 --- !u!1 &3241425055316413669
 GameObject:
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  time: 0.2
+  time: 1
   canKnock: 1
   knockBackTime: 3
   knockbackCenter: {fileID: 3241425054333609183}

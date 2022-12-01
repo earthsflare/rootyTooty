@@ -321,6 +321,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8073f214099637d439f01fe8327c8803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aim: {fileID: 0}
+  health: {fileID: 0}
+  jump: {fileID: 0}
+  move: {fileID: 0}
+  roll: {fileID: 0}
+  wallJump: {fileID: 0}
 --- !u!114 &851081712101719133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda0909b724dc994a9887d5597dffdb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLife: 4
+  maxLife: 5
   animator: {fileID: 851081712101719129}
   gotHitScreen: {fileID: 0}
 --- !u!114 &851081712101719125
@@ -374,6 +380,7 @@ MonoBehaviour:
   jumpHeight: 5
   MAXJUMPS: 1
   TOTALJUMPTIME: 0.35
+  checkRadius: 0.05
   isJumping: 0
   jumpCounter: 2
   ceilingCheck: {fileID: 851081711016456886}

@@ -21,9 +21,13 @@ public class CameraManager : MonoBehaviour
         }
         else if (instance != this)
             gameObject.SetActive(false);
+
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged += StartUp;
     }
     private void OnDisable()
     {
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged -= StartUp;
+
         if (instance != this)
             return;
 
@@ -31,6 +35,18 @@ public class CameraManager : MonoBehaviour
         //gameManagerScript.UndoDontDestroyOnLoad(gameObject);
     }
 
+
+    public void StartUp(UnityEngine.SceneManagement.Scene current, UnityEngine.SceneManagement.Scene next)
+    {
+        if (gameManagerScript.instance != null)
+            if (levelManager.instance.IsLevelTitle(next.buildIndex))
+                return;
+
+        while (Camera.main != mainCam)
+        {
+            Destroy(Camera.main.gameObject);
+        }
+    }
 
     private void Awake()
     {
