@@ -30,8 +30,8 @@ TagManager:
   - RollBlock
   - Background Decorations
   - Wall
-  - 
-  - 
+  - CM_CameraBounds
+  - CameraCollider
   - Player
   - PlayerHurt
   - 

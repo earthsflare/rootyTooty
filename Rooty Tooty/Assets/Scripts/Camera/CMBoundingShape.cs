@@ -4,32 +4,54 @@ using UnityEngine;
 
 public class CMBoundingShape : MonoBehaviour
 {
-    [SerializeField] private static CMBoundingShape instance = null;
-    public static CMBoundingShape I { get => instance; }
 
-    [SerializeField] private PolygonCollider2D boundingCollider = null;
-    public static PolygonCollider2D BoundingCollider { 
-        get
+    [Header("Object References")]
+    [SerializeField] private PolygonCollider2D cameraBounds = null;
+    [SerializeField] private CMPlayerFinder playerFinder = null;
+
+    public bool CameraBoundActive() 
+    {
+        if (cameraBounds == null)
+            return false;
+        return cameraBounds.gameObject.activeInHierarchy; 
+    }
+    private void Start()
+    {
+        //PlayerFinder should be a different child object of CMBoundingShape's parent
+        if (playerFinder == null && transform.parent != null)
+            transform.parent.gameObject.GetComponentInChildren<CMPlayerFinder>();
+        
+        if (cameraBounds == null)
         {
-            if (instance == null)
-                return null;
-            return instance.boundingCollider;
-        } 
-    }
+            cameraBounds = GetComponent<PolygonCollider2D>();
+            if (cameraBounds == null)
+            {
+                Debug.Log(gameObject.name + " Does not have a cameraBounds set");
+                gameObject.SetActive(false);
+                return;
+            }
+        }
+        if (playerFinder == null)
+        {
+            playerFinder = transform.parent.GetComponentInChildren<CMPlayerFinder>();
+            if (playerFinder == null)
+            {
+                Debug.Log(gameObject.name + " does not have a PlayerFinder");
+                gameObject.SetActive(false);
+                return;
+            }
+        }
 
-    private void OnEnable()
-    {
-        if (boundingCollider == null)
-            boundingCollider = GetComponent<PolygonCollider2D>();
-
-        if (instance == null && boundingCollider != null)
-            instance = this;
-        else if (instance != this)
-            gameObject.SetActive(false);
+        cameraBounds.gameObject.SetActive(false);
+        playerFinder.gameObject.SetActive(true);
     }
-    private void OnDisable()
+    public void FoundPlayer()
     {
-        if (instance == this)
-            instance = null;
+        if (cameraBounds.gameObject.activeInHierarchy)
+            return;
+
+        cameraBounds.gameObject.SetActive(true);
+
+        CameraManager.UpdateConfiner(cameraBounds);
     }
 }
