@@ -34,8 +34,6 @@ public class CameraManager : MonoBehaviour
         instance = null;
         //gameManagerScript.UndoDontDestroyOnLoad(gameObject);
     }
-
-
     public void StartUp(UnityEngine.SceneManagement.Scene current, UnityEngine.SceneManagement.Scene next)
     {
         if (gameManagerScript.instance != null)
@@ -71,14 +69,12 @@ public class CameraManager : MonoBehaviour
     {
         if (Player.instance != null && cmVC != null)
             cmVC.Follow = Player.instance.transform;
-        if (CMBoundingShape.I != null && cmConfiner != null)
-            cmConfiner.m_BoundingShape2D = CMBoundingShape.BoundingCollider;
-
     }
-    private void Update()
+    public static void UpdateConfiner(PolygonCollider2D c)
     {
-        if(cmConfiner.m_BoundingShape2D == null)
-            if (CMBoundingShape.I != null && cmConfiner != null)
-                cmConfiner.m_BoundingShape2D = CMBoundingShape.BoundingCollider;
+        if (instance.cmConfiner == null)
+            return;
+
+        instance.cmConfiner.m_BoundingShape2D = c;
     }
 }

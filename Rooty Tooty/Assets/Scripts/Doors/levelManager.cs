@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement; // for switching scenes
 
 public enum LevelIndex
 {
+    NULL_Value = -1,
     TitleScreen = 0,
     Level1 = 1,
     Level2 = 2,
