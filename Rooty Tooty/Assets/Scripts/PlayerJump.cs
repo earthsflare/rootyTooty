@@ -40,6 +40,10 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         //Can't jump while in the middle of rolling animation
+        if (WallJump.isSliding)
+        {
+            return;
+        }
         if (!Movement.canMove)
         {
             return;

@@ -22,7 +22,7 @@ public class PlayerWallJump : MonoBehaviour
     private bool collideWall { get => (collideLeftWall || collideRightWall); }
     private void StopCollideWall() { collideLeftWall = false; collideRightWall = false; }
 
-    private bool isSliding;
+    [HideInInspector] public bool isSliding;
 
     [HideInInspector] public bool isWallJumping;
 
@@ -49,6 +49,8 @@ public class PlayerWallJump : MonoBehaviour
         if (collideWall && !Player.instance.jump.isGrounded /*&& Movement.movement.x != 0*/)
         {
             isSliding = true;
+            Jump.jumpCounter = 0;
+            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
         }
         else
         {
@@ -87,9 +89,6 @@ public class PlayerWallJump : MonoBehaviour
     {
         if (isSliding)
         {
-            Jump.jumpCounter = 0;
-            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
-
             if (collideRightWall)
             {
                 dust.Play();
@@ -124,10 +123,10 @@ public class PlayerWallJump : MonoBehaviour
             Jump.jumpCounter++;
             Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
         }
-        if (isWallJumping && Jump.jumpCounter > 1)
+        /*if (isWallJumping && Jump.jumpCounter > 1)
         {
             Player.instance.move.canMove = true;
-        }
+        }*/
 
     }
 
