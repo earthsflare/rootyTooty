@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 3677857332163932773}
   - component: {fileID: 1441467120}
   - component: {fileID: 1441467121}
+  - component: {fileID: 1188207781163395726}
   m_Layer: 6
   m_Name: Hobbit
   m_TagString: Enemy
@@ -224,6 +225,7 @@ MonoBehaviour:
   rb: {fileID: 3677857332163932770}
   jumpHeight: 0.1
   enemyReactionTime: 0.5
+  cooldownDuration: 1.5
   enemyAnimator: {fileID: 3677857332163932772}
 --- !u!114 &1441467120
 MonoBehaviour:
@@ -240,6 +242,8 @@ MonoBehaviour:
   life: 0
   maxLife: 2
   enemyAnimator: {fileID: 0}
+  deathTime: 1.5
+  drop: {fileID: 4981639773400110553, guid: 2b3c72374bf4d0b44873a046516752ac, type: 3}
 --- !u!114 &1441467121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +256,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7649dda1ea357e74c80a880fdd786860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   time: 1
   canKnock: 1
   knockBackTime: 0
   knockbackCenter: {fileID: 0}
+--- !u!114 &1188207781163395726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677857332163932774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e138d83aeae6b043a0331f069ab18d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

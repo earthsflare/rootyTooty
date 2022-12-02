@@ -9,7 +9,8 @@ public class Potion : MonoBehaviour
         if (collider.CompareTag("Player") && Player.instance.health.getHealth() < Player.instance.health.getMaxHealth() && Player.instance.health.isDead() == false)
         {
             Player.instance.health.AddLife(1);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
