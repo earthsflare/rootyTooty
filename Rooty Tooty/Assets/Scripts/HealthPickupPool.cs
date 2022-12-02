@@ -28,12 +28,9 @@ public class HealthPickupPool : MonoBehaviour
     public void Start()
     {
         pooledObjects = new List<GameObject>();
-        GameObject tmp;
         for(int i = 0; i < amountToPool; i++)
         {
-            tmp = Instantiate(objectToPool);
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
+            addPooledObject();
         }
     }
 
@@ -46,6 +43,15 @@ public class HealthPickupPool : MonoBehaviour
                 return pooledObjects[i];
             }
         }
-        return null;
+        return addPooledObject();
+    }
+
+    private GameObject addPooledObject()
+    {
+        GameObject tmp;
+        tmp = Instantiate(objectToPool, gameObject.transform);
+        tmp.SetActive(false);
+        pooledObjects.Add(tmp);
+        return tmp;
     }
 }
