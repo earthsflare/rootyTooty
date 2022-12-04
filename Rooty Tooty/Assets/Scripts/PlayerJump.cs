@@ -23,6 +23,9 @@ public class PlayerJump : MonoBehaviour
     public ParticleSystem gust;                 //gust of wind
     public ParticleSystem gust2;
 
+    [SerializeField] private AudioSource Jumpsfx;
+    [SerializeField] private AudioSource DoubleJumpsfx;
+
     [HideInInspector] PlayerMovement Movement;
     [HideInInspector] PlayerWallJump WallJump;
 
@@ -109,7 +112,13 @@ public class PlayerJump : MonoBehaviour
             {
                 gust2.Play();
             }
-
+            if (jumpCounter == 0) {
+                Jumpsfx.Play();
+            }
+            else
+            {
+                DoubleJumpsfx.Play();
+            }
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
 
             jumpCounter++;

@@ -15,6 +15,7 @@ public class PlayerRoll : MonoBehaviour
     int PlayerLayer;
 
     [HideInInspector] PlayerMovement Movement;
+    [SerializeField] private AudioSource Rollsfx;
 
 
 
@@ -69,6 +70,7 @@ public class PlayerRoll : MonoBehaviour
         }
        
         Physics2D.IgnoreLayerCollision(BushLayer, PlayerLayer, true);
+        Rollsfx.Play();
         Movement.rb.velocity = new Vector2(Movement.movement.x * rollingSpd, 0f);
 
         yield return new WaitForSeconds(rollingTime);

@@ -23,8 +23,10 @@ public class PlayerWallJump : MonoBehaviour
     private void StopCollideWall() { collideLeftWall = false; collideRightWall = false; }
 
     [HideInInspector] public bool isSliding;
-
     [HideInInspector] public bool isWallJumping;
+
+    [SerializeField] private AudioSource Jumpsfx;
+
 
     [Header("References")]
     [SerializeField] private Transform wallCheckRight;
@@ -118,6 +120,7 @@ public class PlayerWallJump : MonoBehaviour
             }
 
             Player.instance.move.canMove = false;
+            Jumpsfx.Play();
             Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
 
             Jump.jumpCounter++;

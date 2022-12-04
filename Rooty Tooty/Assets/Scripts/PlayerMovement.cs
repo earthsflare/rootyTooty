@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Vector2 movement;                           //vectors store x and y horizontal and vertical
 
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private AudioSource Stepsfx;
 
     void Start()
     {
@@ -82,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        //Stepsfx.Play();
         rb.velocity = new Vector2(movement.x, rb.velocity.y);
 
 
