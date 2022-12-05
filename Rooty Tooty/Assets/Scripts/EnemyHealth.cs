@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public float deathTime = 1.5f;
     public GameObject itemToDrop;
     public HealthDrop EnemyHealthDrop;
+    public GameObject enemyMovementScript;
 
     void Start()
     {
@@ -25,8 +26,33 @@ public class EnemyHealth : MonoBehaviour
             StartCoroutine(Death());
         }
     }
+    private void disableMovementScript()
+    {
+        try
+        {
+            this.GetComponent<OgreMovement>().enabled = true;
+        }
+        catch
+        {
+        }
+        try
+        {
+            this.GetComponent<HobbitMovement>().enabled = true;
+        }
+        catch
+        {
+        }
+        try
+        {
+            this.GetComponent<MinotaurMovement>().enabled = true;
+        }
+        catch
+        {
+        }
+    }
     private IEnumerator Death()
     {
+        disableMovementScript();
         enemyAnimator.Play("export_death");
         yield return new WaitForSeconds(deathTime);
         EnemyHealthDrop.addCounter(gameObject.transform.position);
