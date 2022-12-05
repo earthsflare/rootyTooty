@@ -20,6 +20,7 @@ public class PlayerAim : MonoBehaviour
 
     private bool fireballEnabled = true;
 
+    public bool FireballEnabled { get => fireballEnabled;}
     public void ToggleFireball(bool enabled) { fireballEnabled = enabled; }
 
     // Update is called once per frame

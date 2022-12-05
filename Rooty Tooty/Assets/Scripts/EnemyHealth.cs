@@ -29,6 +29,6 @@ public class EnemyHealth : MonoBehaviour
         enemyAnimator.Play("export_death");
         yield return new WaitForSeconds(deathTime);
         Destroy(gameObject);
-        Instantiate(drop, transform.position, drop.transform.rotation);
+        //Instantiate(drop, transform.position, drop.transform.rotation);
     }
 }

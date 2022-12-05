@@ -18,7 +18,7 @@ public class PlayerRoll : MonoBehaviour
 
     #region Getter Setters
 
-    // Obtain roll ability
+    // Check if player has the roll ability
     public bool getRoll()
     {
         return canRoll;

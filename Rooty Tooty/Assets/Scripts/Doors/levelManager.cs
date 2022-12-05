@@ -25,8 +25,6 @@ public class levelManager : MonoBehaviour
 
     [Header("Fade Animation Properties")]
     [SerializeField] private float fadeAlphaSpeed;
-    //[SerializeField] private float initialAlpha;
-    //Controls whether script fades in or not
     private bool doFadeIn = false;
 
     [Header("Object References")]
@@ -78,10 +76,15 @@ public class levelManager : MonoBehaviour
         //Activate fade In animation
         if (doFadeIn)
             StartCoroutine(FadeInLevel());
-        else         
+        else
+        {
             //Find and set player position
             if (Player.instance != null)
+            {
                 Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
+                Player.ActivatePlayer();
+            }
+        }  
     }
     public void FadeToLevel(LevelIndex sceneName)
     {
@@ -99,9 +102,12 @@ public class levelManager : MonoBehaviour
         //Deactivate player until their spawn location is set
         Player.DeactivatePlayer();
         yield return (!SpawnLocation.IsSearching);
-        Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
+
+        //Save game after getting Spawn position
+        gameManagerScript.instance.SaveGame();
 
         //Spawn in player
+        Player.instance.transform.position = gameManagerScript.instance.SpawnPosition;
         Player.ActivatePlayer();
 
         //Activate Fade In Animation

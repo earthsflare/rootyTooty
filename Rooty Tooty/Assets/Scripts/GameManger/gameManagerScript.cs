@@ -14,26 +14,20 @@ public class gameManagerScript : MonoBehaviour
     [Header("Read Only")]
 
     #region Save Data
-    [Header("Game Save Properties")]
+    private bool newGame = true;
 
+    [Header("Game Save Properties")]
     //Game File saves every time player enters a scene (if implemented, also when player manual saves)
     //GameManager saves every time player enters a scene or reaches a checkpoint 
-
-
     [SerializeField] private Vector2 spawnPosition = new Vector2(-18f, -4f);
     [SerializeField] private int spawnSceneIndex;
 
-    [SerializeField] private int playerHealth = 5;
-
-    [SerializeField] private bool doubleJumpUnlocked = false;
-    [SerializeField] private bool fireballUnlocked = false;
-    [SerializeField] private bool rollUnlocked = false;
-    [SerializeField] private bool wallJumpUnlocked = false;
-
+    public bool NewGame { get => newGame; }
     public Vector2 SpawnPosition { get => spawnPosition; }
 
-    public void SetSpawnPosition(Vector2 newPos) { spawnPosition = newPos; }
-    public void SetSpawnSceneIndex(int index) { spawnSceneIndex = index; }
+    public void ToggleNewGame(bool b) { newGame = b; }
+    public void SetSpawnPosition(Vector2 newSpawn) { spawnPosition = newSpawn; }
+    public void SetSpawnSceneIndex(int levelIndex) { spawnSceneIndex = levelIndex; }
     #endregion
 
     #region Object References
@@ -41,7 +35,6 @@ public class gameManagerScript : MonoBehaviour
     [SerializeField] GameObject cameraManager = null;
     [SerializeField] Canvas healthUICanvas = null;
     [SerializeField] private MenuManager menuManager = null;
-
     #endregion
 
     private void Awake()
@@ -63,7 +56,7 @@ public class gameManagerScript : MonoBehaviour
     }
     public void StartUp(int sceneIndex)
     {
-        spawnSceneIndex = sceneIndex;
+        SetSpawnSceneIndex(sceneIndex);
         unfreezeGame();
 
         if (MenuManager.instance != null)
@@ -89,8 +82,6 @@ public class gameManagerScript : MonoBehaviour
         }
         else
         {
-            if (Player.instance != null)
-                Player.ActivatePlayer();
             if (menuManager != null)
                 menuManager.gameObject.SetActive(true);
             if (cameraManager != null)
@@ -100,46 +91,80 @@ public class gameManagerScript : MonoBehaviour
         }
     }
 
-    #region Save Data Related Function
-
+    #region Save Load 
     //Loads current local data and spawns in scene
-    public void LoadGame()
+    public void StartGame()
     {
         freezeGame();
 
-        //Update Player Data
-        if(Player.instance != null)
-        {
-            if (Player.instance.Health != null)
-                Player.instance.Health.SetLife(playerHealth);
+        SaveData saveData = SaveManager.LoadGameFromFile();
 
-            if (Player.instance.Jump != null)
-                Player.instance.Jump.SetMaxJumps((doubleJumpUnlocked) ? 2 : 1);
-            if (Player.instance.Aim != null)
-                Player.instance.Aim.ToggleFireball(fireballUnlocked);
-            if (Player.instance.Roll != null)
-                Player.instance.ToggleRoll(rollUnlocked);
-            if(Player.instance.WallJump != null)
-                Player.instance.ToggleWallJump(wallJumpUnlocked);
+        if (newGame || saveData == null)
+        {
+            if (!newGame)
+                Debug.Log("Save File not Found");
+
+            spawnPosition = new Vector2(-19f, -5.5801f);
+            spawnSceneIndex = (int)LevelIndex.Level1;
+
+            //Update Player Data
+            if (Player.instance != null)
+            {
+                Player.instance.Health.SetLife(5);
+                Player.instance.ToggleRoll(false);
+                Player.instance.ToggleWallJump(false);
+                Player.instance.Jump.SetMaxJumps(1);
+                Player.instance.Aim.ToggleFireball(false);
+            }
+        }
+
+        
+        if(saveData != null)
+        {
+            spawnPosition = new Vector2(saveData.spawnPosition[0], saveData.spawnPosition[1]);
+            spawnSceneIndex = saveData.spawnSceneIndex;
+
+            //Update Player Data
+            if (Player.instance != null)
+            {
+                if (Player.instance.Health != null)
+                    Player.instance.Health.SetLife(saveData.playerHealth);
+                if (Player.instance.Roll != null)
+                    Player.instance.ToggleRoll(saveData.rollUnlocked);
+                if (Player.instance.WallJump != null)
+                    Player.instance.ToggleWallJump(saveData.wallJumpUnlocked);
+                if (Player.instance.Jump != null)
+                    Player.instance.Jump.SetMaxJumps((saveData.doubleJumpUnlocked) ? 2 : 1);
+                if (Player.instance.Aim != null)
+                    Player.instance.Aim.ToggleFireball(saveData.fireballUnlocked);
+            }
         }
 
         levelManager.instance.LoadLevel(spawnSceneIndex);
     }
 
+    //Saves game to file
+    public void SaveGame()
+    {
+        SaveData saveData = new SaveData();
+
+        saveData.spawnPosition = new float[] { spawnPosition.x, spawnPosition.y };
+        saveData.spawnSceneIndex = spawnSceneIndex;
+        saveData.playerHealth = Player.instance.Health.getHealth();
+
+        saveData.rollUnlocked = Player.instance.Roll.enabled;
+        saveData.wallJumpUnlocked = Player.instance.WallJump.enabled;
+        saveData.doubleJumpUnlocked = Player.instance.Jump.MaxJumps > 1;
+        saveData.fireballUnlocked = Player.instance.Aim.FireballEnabled;
+
+        SaveManager.SaveGameToFile(saveData);
+    }
+
     //Resets current local data and save file
     public void ResetSave()
     {
-        spawnPosition = new Vector2(-19f, -5.5801f);
-        spawnSceneIndex = (int)LevelIndex.Level1;
-
-        playerHealth = 5;
-
-        rollUnlocked = false;
-        doubleJumpUnlocked = false;
-        fireballUnlocked = false;
-        wallJumpUnlocked = false;
+        newGame = true;
     }
-
     #endregion
 
     public void OnSpawnPlayerPrefab()

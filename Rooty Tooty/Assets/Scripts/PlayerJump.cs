@@ -27,6 +27,7 @@ public class PlayerJump : MonoBehaviour
 
     #region Jump Other: Getter Setters
     public int JumpCounter { get => jumpCounter; }
+    public int MaxJumps { get => MAXJUMPS;}
     public bool IsGrounded { get => isGrounded; }
 
     public void SetJumpCounter(int value) { jumpCounter = value; }
