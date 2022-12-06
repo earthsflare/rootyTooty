@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public PlayerMovement move;
     public PlayerJump jump;
     public PlayerRoll roll;
+    public PlayerAim aim;
 
     void Awake()
     {

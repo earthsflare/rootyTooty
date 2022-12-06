@@ -18,7 +18,7 @@ public class PlayerAim : MonoBehaviour
     // Magic weapon cooldown
     public float magicCooldownDuration = 5.0f;
     // Player's current projectile
-    public int currentProjectile = 0;
+    public int currentProjectileType = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +29,17 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("NextProjectile") && canSwitchWeapon)
-        {
-            currentProjectile += 1;
-            if (currentProjectile == PlayerProjectilePooler.playerProjectilePool.getProjectilePrefabCount())
-            {
-                currentProjectile = 0;
-            }
-            Debug.Log("Changed projectile to : " + PlayerProjectilePooler.playerProjectilePool.getProjectileName(currentProjectile));
-        }
+        // Weapon switching system
+        // Currently only supports upgrading the player projectile as a one time thing
+        // if (Input.GetButtonDown("NextProjectile") && canSwitchWeapon)
+        // {
+        //     currentProjectile += 1;
+        //     if (currentProjectile == PlayerProjectilePooler.playerProjectilePool.getProjectilePrefabCount())
+        //     {
+        //         currentProjectile = 0;
+        //     }
+        //     Debug.Log("Changed projectile to : " + PlayerProjectilePooler.playerProjectilePool.getProjectileName(currentProjectile));
+        // }
 
         magicCooldownDuration -= Time.deltaTime;
         if (magicCooldownDuration <= 0f)
@@ -49,7 +51,7 @@ public class PlayerAim : MonoBehaviour
         {
             // Get projectile from the projectile pool
             GameObject projectile = PlayerProjectilePooler.playerProjectilePool.GetPooledObject(
-                currentProjectile);
+                currentProjectileType);
 
             if (projectile != null)
             {
@@ -65,15 +67,21 @@ public class PlayerAim : MonoBehaviour
                 projectile.transform.rotation = firePoint.rotation;
                 projectile.SetActive(true);
 
-                if (currentProjectile > 0)
-                {
-                    currentProjectile = 0;
-                    magicCooldownDuration = 5.0f;
-                    canSwitchWeapon = false;
-                }
+                // Sets a cooldown for switching weapons
+                // if (currentProjectile > 0)
+                // {
+                //     currentProjectile = 0;
+                //     magicCooldownDuration = 5.0f;
+                //     canSwitchWeapon = false;
+                // }
                 StartCoroutine(StartCooldown());
             }
         }
+    }
+
+    public void upgradeWeapon()
+    {
+        currentProjectileType += 1;
     }
 
     // Coroutine for cooldown on player weapon

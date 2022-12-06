@@ -53,22 +53,25 @@ public class PlayerProjectilePooler : MonoBehaviour
 
     public GameObject GetPooledObject(int projectileType)
     {
-        int poolCount = pooledProjectiles[projectileType].Count;
-        for (int i = 0; i < poolCount; i++)
+        if (projectileType < pooledProjectiles.Count)
         {
-            // Return projectile if inactive
-            if (!pooledProjectiles[projectileType][i].activeInHierarchy)
+            int poolCount = pooledProjectiles[projectileType].Count;
+            for (int i = 0; i < poolCount; i++)
             {
-                return pooledProjectiles[projectileType][i];
-            }
-
-            // Add more projectiles if pool is empty and projectile is requested
-            if (i == poolCount - 1)
-            {
-                addProjectileToPool(projectileType);
-                if (!pooledProjectiles[projectileType][i+1].activeInHierarchy)
+                // Return projectile if inactive
+                if (!pooledProjectiles[projectileType][i].activeInHierarchy)
                 {
-                    return pooledProjectiles[projectileType][i+1];
+                    return pooledProjectiles[projectileType][i];
+                }
+
+                // Add more projectiles if pool is empty and projectile is requested
+                if (i == poolCount - 1)
+                {
+                    addProjectileToPool(projectileType);
+                    if (!pooledProjectiles[projectileType][i+1].activeInHierarchy)
+                    {
+                        return pooledProjectiles[projectileType][i+1];
+                    }
                 }
             }
         }
