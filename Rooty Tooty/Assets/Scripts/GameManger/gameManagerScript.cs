@@ -6,17 +6,16 @@ public class gameManagerScript : MonoBehaviour
 {
     //public Text pointsText;
     public static gameManagerScript instance;
-
-    //[SerializeField] private float freezeGameTime = 1f;
     public static bool GameIsFrozen = false;
 
-    [SerializeField] private GameObject playerPrefab;
+    [Header("Game Properties")]
+    [SerializeField] private bool usingPlayFab = false;
+    public bool UsingPlayFab { get => usingPlayFab; }
+
     [Header("Read Only")]
-
     #region Save Data
-    private bool newGame = true;
-
     [Header("Game Save Properties")]
+    private bool newGame = true;
     //Game File saves every time player enters a scene (if implemented, also when player manual saves)
     //GameManager saves every time player enters a scene or reaches a checkpoint 
     [SerializeField] private Vector2 spawnPosition = new Vector2(-18f, -4f);
@@ -166,11 +165,6 @@ public class gameManagerScript : MonoBehaviour
         newGame = true;
     }
     #endregion
-
-    public void OnSpawnPlayerPrefab()
-    {
-        Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
-    }
 
     public static void UndoDontDestroyOnLoad(GameObject g)
     {

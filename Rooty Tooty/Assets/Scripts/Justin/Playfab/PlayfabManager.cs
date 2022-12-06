@@ -9,11 +9,28 @@ using System;
 
 public class PlayfabManager : MonoBehaviour
 {
+    #region Login Screen Object References
     [Header("Login Account")]
     [SerializeField] private TMP_InputField login_EmailInput = null;
-    [SerializeField] private TMP_InputField login_PswdInput = null;
     [SerializeField] private TextMeshProUGUI login_EmailError = null;
+
+    [SerializeField] private TMP_InputField login_PswdInput = null;
     [SerializeField] private TextMeshProUGUI login_PswdError = null;
+    #endregion
+    #region Register Screen Object References
+    [Header("Register Account")]
+    [SerializeField] private TMP_InputField register_UserInput = null;
+    [SerializeField] private TextMeshProUGUI register_UserError = null;
+
+    [SerializeField] private TMP_InputField register_EmailInput = null;
+    [SerializeField] private TextMeshProUGUI register_EmailError = null;
+
+    [SerializeField] private TMP_InputField register_PswdInput = null;
+    [SerializeField] private TextMeshProUGUI register_PswdError = null;
+
+    [SerializeField] private TMP_InputField register_ConfirmInput = null;
+    [SerializeField] private TextMeshProUGUI register_ConfirmError = null;
+    #endregion
 
     private const string otherLetters = "ßàÁâãóôþüúðæåïçèõöÿýòäœêëìíøùîûñé";
 
@@ -30,45 +47,47 @@ public class PlayfabManager : MonoBehaviour
 
         //Most emails shouldn't be more than 150 characters...
         login_EmailInput.characterLimit = 150;
-
     }
 
-
-    #region Valid Information
-
+    #region Error Report
     private enum errorNum
     {
         no_error = 0,
         usernameInvalidSize,
-        usernameInvalidFirstLastChar,
         usernameInvalidChar,
-        usernameNoDoubleSpacePeriod,
 
         pswdInvalidSize,
         pswdMustHaveChar,
         pswdMustMatch,
+        pswdUnknownError,
 
         emailInvalidSize,
         emailInvalidFormat,
 
-        loginInvalidEmailUsername,
-
-        playfabError,
+        UnexpectedError,
+        PlayfabError,
     }
     private void ManageError(errorNum errorCode, string messge = "")
     {
+        Debug.Log("Error: " + errorCode + " " + messge);    
+
         switch (errorCode)
         {
             case errorNum.no_error:
                 return;
             case errorNum.usernameInvalidSize: 
                 return;
+            case errorNum.PlayfabError:
+                Debug.Log(messge);
+                return;
             default:
                 return;
         }
     }
+    #endregion
 
-    //Returns 0 if username is valid
+    #region Validate Information
+    //Returns 0 if username is valid (Username must be 3-20, and cannot contain any special character)
     private int CheckUsername(string user)
     {
         if (string.IsNullOrEmpty(user))
@@ -76,39 +95,9 @@ public class PlayfabManager : MonoBehaviour
         if (user.Length < 3 || user.Length > 20)
             return (int)errorNum.usernameInvalidSize;
 
-        if (!Char.IsLetter(user[0]))
-            return (int)errorNum.usernameInvalidFirstLastChar;
-        if (!Char.IsLetterOrDigit(user[user.Length - 1]))
-            return (int)errorNum.usernameInvalidFirstLastChar;
-
-        bool prevSpace = false;
-        bool prevPeriod = false;
-
-        string allowedChar = "$_" + otherLetters;
-
         foreach(char c in user)
         {
-            if (c == ' ')
-            {
-                if (prevSpace)
-                    return (int)errorNum.usernameNoDoubleSpacePeriod;
-                prevSpace = true;
-                prevPeriod = false;
-                continue;
-            }
-            else if(c == '.')
-            {
-                if(prevPeriod)
-                    return (int)errorNum.usernameNoDoubleSpacePeriod;
-                prevPeriod = true;
-                prevSpace = false;
-            }
-            else
-                prevSpace = prevPeriod = false;
-
             if (Char.IsLetterOrDigit(c))
-                continue;
-            if (allowedChar.Contains(c))
                 continue;
 
             return (int)errorNum.usernameInvalidChar;
@@ -131,8 +120,8 @@ public class PlayfabManager : MonoBehaviour
             return (int)errorNum.emailInvalidFormat;
 
         char last = ' ';
-        string acceptableName = "-_." + otherLetters;
-        string acceptableDomain = "-." + otherLetters;
+        string acceptableName = "-_.";
+        string acceptableDomain = "-.";
 
         if (acceptableName.Contains(info[0][0]) || acceptableName.Contains(info[0][info[0].Length - 1]))
             return (int)errorNum.emailInvalidFormat;
@@ -143,10 +132,11 @@ public class PlayfabManager : MonoBehaviour
         foreach (char c in info[0])
         {
             if (acceptableName.Contains(c))
-                if(c == last)
+            {
+                if (c == last)
                     return (int)errorNum.emailInvalidFormat;
-            else
-                if (!char.IsLetterOrDigit(c))
+            }
+            else if(!char.IsLetterOrDigit(c) && !otherLetters.Contains(c))
                     return (int)errorNum.emailInvalidFormat;
 
             last = c;
@@ -155,11 +145,12 @@ public class PlayfabManager : MonoBehaviour
         last = ' ';
         foreach (char c in info[1])
         {
-            if(acceptableDomain.Contains(c))
-                if(c == last)
+            if (acceptableDomain.Contains(c))
+            {
+                if (c == last)
                     return (int)errorNum.emailInvalidFormat;
-            else
-                if (!char.IsLetterOrDigit(c))
+            }
+            else if (!char.IsLetterOrDigit(c) && !otherLetters.Contains(c))
                     return (int)errorNum.emailInvalidFormat;
             last = c;
         }
@@ -167,82 +158,112 @@ public class PlayfabManager : MonoBehaviour
         return (int)errorNum.no_error;
     }
 
-    //Returns 0 if the password is valid
+    //Returns 0 if the password is valid (Password must be at least 6 characters long. it must contain a letter, a number, and a special character)
     private int CheckPassword(string pswd)
     {
-        if (string.IsNullOrEmpty(pswd))
-            return (int)errorNum.pswdInvalidSize;
-        if (pswd.Length < 6 || pswd.Length > 100)
-            return (int)errorNum.pswdInvalidSize;
-
-        bool hasDigit, hasChar, hasSpec;
-        hasDigit = hasChar = hasSpec = false;
-
-        foreach (char c in pswd)
+        try
         {
-            if (char.IsDigit(c))
-                hasDigit = true;
-            else if (char.IsLetter(c))
-                hasChar = true;
-            else
-                hasSpec = true;
-        }
+            if (string.IsNullOrEmpty(pswd))
+                return (int)errorNum.pswdInvalidSize;
+            if (pswd.Length < 6 || pswd.Length > 100)
+                return (int)errorNum.pswdInvalidSize;
 
-        if (hasDigit && hasChar && hasSpec)
-            return (int)errorNum.no_error;
-        else
-            return (int)errorNum.pswdMustHaveChar;
+            bool hasDigit, hasChar, hasSpec;
+            hasDigit = hasChar = hasSpec = false;
+
+            foreach (char c in pswd)
+            {
+                if (char.IsDigit(c))
+                    hasDigit = true;
+                else if (char.IsLetter(c))
+                    hasChar = true;
+                else
+                    hasSpec = true;
+            }
+
+            if (hasDigit && hasChar && hasSpec)
+                return (int)errorNum.no_error;
+            else
+                return (int)errorNum.pswdMustHaveChar;
+        }
+        catch(Exception ex)
+        {
+            return (int)errorNum.pswdUnknownError;
+        }
     }
 
     //Returns 0 if the passwords matches
-    private int PasswordMatch(string pswd1, string pswd2)
+    private int CheckMatchPassword(string pswd1, string pswd2)
     {
-        if(pswd1.Equals(pswd2))
-            return (int)errorNum.no_error;
+        try
+        {
+            if (pswd1.Equals(pswd2))
+                return (int)errorNum.no_error;
+        }
+        catch (Exception ex) { }
 
         return (int)errorNum.pswdMustMatch;
     }
-
     #endregion
 
     #region Log in
-    private void AttemptLogin()
+    public void AttemptLogin()
     {
         string email = login_EmailInput.text;
         string pswd = login_PswdInput.text;
 
+        Debug.Log(Login(email, pswd));
+    }
 
-
-        int loginError = CheckEmail(email);
-        int pswdError = CheckPassword(pswd);
-
-        if(loginError != 0 || pswdError != 0)
+    private bool Login(string email, string pswd)
+    {
+        //login account
+        try
         {
-            if (loginError != 0)
-                ManageError((errorNum)loginError);
-            if (pswdError != 0)
-                ManageError((errorNum)pswdError);
+            int loginError = CheckEmail(email);
+            int pswdError = CheckPassword(pswd);
 
-            return;
+            if (loginError != 0 || pswdError != 0)
+            {
+                if (loginError != 0)
+                    ManageError((errorNum)loginError);
+                if (pswdError != 0)
+                    ManageError((errorNum)pswdError);
+
+                return false;
+            }
+
+            //Deal with error in function and delete textboxes if success (then go to welcome screen)
+            LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
+            {
+                Email = email,
+                Password = pswd
+            };
+
+            bool success = false;
+
+            PlayFabClientAPI.LoginWithEmailAddress(request,
+                result => {
+                    Debug.Log("Login Successful");
+                    //LeaveLogin();
+                    success = true;
+
+                    //Get status of email verification and sent a verification email if needed
+                    ContactEmailInfoModel contactEmail = result.InfoResultPayload.PlayerProfile.ContactEmailAddresses[0];
+                    if (contactEmail == null)
+                        SendVerificationEmail(contactEmail.EmailAddress);
+                    else if(contactEmail.VerificationStatus != EmailVerificationStatus.Confirmed)
+                        SendVerificationEmail(contactEmail.EmailAddress);
+
+                },
+                error => {
+                    ManageError(errorNum.PlayfabError, error.GenerateErrorReport());
+                });
+            return success;
         }
+        catch { ManageError(errorNum.UnexpectedError); }
 
-        //Deal with error in function and delete textboxes if success (then go to welcome screen)
-        LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
-        {
-            Email = login_EmailInput.text,
-            Password = login_PswdInput.text
-        };
-
-        PlayFabClientAPI.LoginWithEmailAddress(request, 
-            result => {
-                Debug.Log("Login Successful");
-                LeaveLogin();
-            },
-            error => {
-                ManageError(errorNum.playfabError, error.GenerateErrorReport());
-            });
-
-
+        return false;
     }
 
     private void LeaveLogin()
@@ -255,72 +276,118 @@ public class PlayfabManager : MonoBehaviour
         login_PswdError.gameObject.SetActive(false);
         
     }
-
     #endregion
-
-    /*
 
     #region Register Account
-    private void Register()
+    //Function Used for buttons
+    public void AttemptRegisterAccount()
     {
-        RegisterPlayFabUserRequest request = new RegisterPlayFabUserRequest
+        string email = register_EmailInput.text;
+        string user = register_UserInput.text;
+        string pswd = register_PswdInput.text;
+        string confirmPswd = register_ConfirmInput.text;
+
+        RegisterAccount(email, user, pswd, confirmPswd);
+    }
+    private void RegisterAccount(string email, string user, string pswd, string confirmPswd)
+    {
+        try
         {
-            //Have email verification before registering
-            Email = emailInput.text,
-            //Have checks for safe passwords
-            Password = passwordInput.text,
-            RequireBothUsernameAndEmail = false
-        };
-        PlayFabClientAPI.RegisterPlayFabUser(request, RegisterSuccess, PlayFabError);
+            int emailError = CheckEmail(email);
+            int userError = CheckUsername(user);
+            int pswdError = CheckPassword(pswd);
+            int confirmError = CheckMatchPassword(pswd, confirmPswd);
+
+            if (emailError != 0 || pswdError != 0 || userError != 0 || confirmError != 0)
+            {
+                if (emailError != 0)
+                    ManageError((errorNum)emailError);
+                if (userError != 0)
+                    ManageError((errorNum)userError);
+                if (pswdError != 0)
+                    ManageError((errorNum)pswdError);
+                else if (confirmError != 0)
+                    ManageError((errorNum)confirmError);
+                return;
+            }
+
+            //Deal with error in function and delete textboxes if success (then go to welcome screen)
+            RegisterPlayFabUserRequest request = new RegisterPlayFabUserRequest
+            {
+                Username = user,
+                Email = email,
+                Password = pswd,
+            };
+
+            PlayFabClientAPI.RegisterPlayFabUser(request,
+                result => {
+                    Debug.Log("Register Successful");
+                    Login(email, pswd);
+                },
+                error => {
+                    ManageError(errorNum.PlayfabError, error.GenerateErrorReport());
+                });
+        }
+        catch { ManageError(errorNum.UnexpectedError); }
     }
 
-    private void RegisterSuccess(RegisterPlayFabUserResult result)
+    //Send a verification email to the user (after logging in)
+    private void SendVerificationEmail(string email)
     {
-        Debug.Log("Registered and Logged in!");
+        try
+        {
+            AddOrUpdateContactEmailRequest verify = new AddOrUpdateContactEmailRequest
+            {
+                EmailAddress = email,
+            };
+
+            PlayFabClientAPI.AddOrUpdateContactEmail(verify,
+                result =>
+                {
+                    Debug.Log("Verification Email Sent");
+                },
+                error =>
+                {
+                    ManageError(errorNum.PlayfabError, error.GenerateErrorReport());
+                });
+        }
+        catch (Exception ex) { ManageError(errorNum.UnexpectedError, ex.Message); }
+    }
+
+    private void LeaveRegister()
+    {
+        register_UserInput.text = "";
+        register_UserError.gameObject.SetActive(false);
+
+        register_EmailInput.text = "";
+        register_EmailError.gameObject.SetActive(false);
+
+        register_PswdInput.text = "";
+        register_PswdError.gameObject.SetActive(false);
+
+        register_ConfirmInput.text = "";
+        register_ConfirmError.gameObject.SetActive(false);
     }
     #endregion
 
-    #region Reset Password
-
-    private void ResetPassword()
+    #region Reset Info
+    private void ResetPassword(string email)
     {
         SendAccountRecoveryEmailRequest request = new SendAccountRecoveryEmailRequest
         {
-            Email = emailInput.text,
-            TitleId = "A6F68"
+            Email = email,
+            TitleId = "A6F68",
         };
 
-        PlayFabClientAPI.SendAccountRecoveryEmail(request, PasswordResetSuccess, PlayFabError);
-    }
+        PlayFabClientAPI.SendAccountRecoveryEmail(request,
+            result =>
+            {
+                Debug.Log("Password Reset Email Sent");
+            },
+            error => { ManageError(errorNum.PlayfabError, error.GenerateErrorReport()); });
 
-    private void PasswordResetSuccess(SendAccountRecoveryEmailResult result)
-    {
-        Debug.Log("Passward Reset email sent!");
+        ManageError(errorNum.UnexpectedError);
     }
-
     #endregion
 
-    #region Update E-mail
-    private void UpdateEmail()
-    {
-        AddOrUpdateContactEmailRequest request = new AddOrUpdateContactEmailRequest
-        {
-            EmailAddress = emailInput.text
-        };
-
-        PlayFabClientAPI.AddOrUpdateContactEmail(request, UpdateEmailSuccess, PlayFabError);
-    }
-
-    private void UpdateEmailSuccess(AddOrUpdateContactEmailResult result)
-    {
-        Debug.Log("Email Reset email sent!");
-    }
-
-    #endregion
-
-    */
-    private void PlayFabError(PlayFabError error)
-    {
-        Debug.Log(error.ErrorMessage);
-    }
 }
