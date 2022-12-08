@@ -7,8 +7,8 @@ public class LevelTransition : MonoBehaviour
     private bool playerDetected; // a boolean checking for if a player is detected in the range
 
     [Header("Properties")]
-    [SerializeField] private LayerMask whatIsPlayer;// what to check for to change the bool
-    [SerializeField] private LevelIndex nextScene;
+    [SerializeField] private LayerMask whatIsPlayer;// what to check for to change the differentiate player
+    [SerializeField] private LevelIndex nextScene; //Next level in scene
     [SerializeField] private int spawnID;
 
     private bool doorTraveled = false;

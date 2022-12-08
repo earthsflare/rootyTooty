@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
+//GameManager Controls Holds Game Save Data, and game freezing mechanic
 public class gameManagerScript : MonoBehaviour
 {
     // manages over a freeze/unfreeze game function (not in use)

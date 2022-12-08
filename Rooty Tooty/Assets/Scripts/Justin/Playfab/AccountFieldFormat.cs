@@ -28,21 +28,16 @@ public class AccountFieldFormat : FieldFormat
             inputRectTransform = inputField.GetComponent<RectTransform>();
     }
 
-    private void Start()
+    public IEnumerator WaitforFormat()
     {
-        if(above == null)
-            StartCoroutine(Waiting());
-    }
-
-    private IEnumerator Waiting()
-    {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
         FormatFields();
     }
 
     //Make sure fields are spaced out based on spacing variables
     public override void FormatFields()
     {
+        Debug.Log("Formatting");
         //Position inputRectTransform if it's 
         if(above != null)
         {
@@ -86,6 +81,13 @@ public class AccountFieldFormat : FieldFormat
             below.FormatFields();
 
     }
+
+    public IEnumerator WaitforNextFormat()
+    {
+        yield return new WaitForSeconds(0.2f);
+        below.FormatFields();
+    }
+
     public override float GetBottom()
     {
         float height = rectTransform.anchoredPosition.y;

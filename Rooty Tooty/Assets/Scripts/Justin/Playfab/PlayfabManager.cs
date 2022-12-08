@@ -15,9 +15,10 @@ public class PlayfabManager : MonoBehaviour
     private string userEmail = "";
     private string userPswd = "";
     private string userName = "";
-    private bool accountVerified = false;
+    private bool? accountVerified = null;
+    public bool passwordResetted = false; //serves no other purpose than as a trigger for Resetting Password
     public string UserEmail { get => userEmail; }
-    public bool AccountVerified { get => accountVerified; }
+    public bool? AccountVerified { get => accountVerified; }
 
     private const string otherLetters = "ßàÁâãóôþüúðæåïçèõöÿýòäœêëìíøùîûñé";
     private void Awake()
@@ -50,48 +51,50 @@ public class PlayfabManager : MonoBehaviour
         switch (errorCode)
         {
             case errorNum.no_error:
+                textBox.text = "";
+                textBox.gameObject.SetActive(false);
                 return;
             
             //Username related errors
             case errorNum.usernameInvalidSize:
                 Debug.Log("Username must be between 3 to 20 characters long.");
                 textBox.text = "Username must be between 3 to 20 characters long.";
-                return;
+                break;
             case errorNum.usernameInvalidChar:
                 Debug.Log("Username must contain only letters or numbers.");
                 textBox.text = "Username must contain only letters or numbers.";
-                return;
+                break;
 
             //Password related errors
             case errorNum.pswdInvalidSize:
                 Debug.Log("Password must be at least 6 characters long.");
                 textBox.text = "Password must be at least 6 characters long.";
-                return;
+                break;
             case errorNum.pswdMustHaveChar:
                 Debug.Log("Password must contain a letter, a number, and a symbol.");
                 textBox.text = "Password must contain a letter, a number, and a symbol.";
-                return;
+                break;
             case errorNum.pswdMustMatch:
                 Debug.Log("Passwords do not match.");
                 textBox.text = "Passwords do not match.";
-                return;
+                break;
 
             //Email related errors
             case errorNum.emailInvalidFormat:
                 Debug.Log("This is not a valid email for this game.");
                 textBox.text = "This is not a valid email for this game.";
-                return;
+                break;
 
             case errorNum.PlayfabError:
                 Debug.Log("Playfab Error: " + messge);
                 textBox.text = "Playfab Error: " + messge;
-                return;
+                break;
             case errorNum.UnexpectedError:
                 Debug.Log("An unexpected error has occured: " + messge);
                 textBox.text = "An unexpected error has occured.";
-                return;
+                break;
             default:
-                return;
+                break;
         }
 
         if(textBox != null)
@@ -226,18 +229,15 @@ public class PlayfabManager : MonoBehaviour
         //login account
         try
         {
+            ManageError(errorNum.no_error, uError);
             int loginError = CheckEmail(email);
             int pswdError = CheckPassword(pswd);
 
-            if (loginError != 0 || pswdError != 0)
-            {   
-                if (loginError != 0)
-                    ManageError((errorNum)loginError, textBox: eError);
-                if (pswdError != 0)
-                    ManageError((errorNum)pswdError, textBox: pError);
+            ManageError((errorNum)loginError, eError);
+            ManageError((errorNum)pswdError, pError);
 
+            if (loginError != 0 || pswdError != 0)
                 return false;
-            }
 
             //Deal with error in function and delete textboxes if success (then go to welcome screen)
             LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
@@ -295,23 +295,20 @@ public class PlayfabManager : MonoBehaviour
     {
         try
         {
+            ManageError(errorNum.no_error, uError);
+
             int emailError = CheckEmail(email);
             int userError = CheckUsername(user);
             int pswdError = CheckPassword(pswd);
             int confirmError = CheckMatchPassword(pswd, confirmPswd);
 
+            ManageError((errorNum)emailError, eError);
+            ManageError((errorNum)userError, nError);
+            ManageError((errorNum)pswdError, pError);
+            ManageError((errorNum)confirmError, cError);
+
             if (emailError != 0 || pswdError != 0 || userError != 0 || confirmError != 0)
-            {
-                if (emailError != 0)
-                    ManageError((errorNum)emailError, eError);
-                if (userError != 0)
-                    ManageError((errorNum)userError, nError);
-                if (pswdError != 0)
-                    ManageError((errorNum)pswdError, pError);
-                else if (confirmError != 0)
-                    ManageError((errorNum)confirmError, cError);
                 return false;
-            }
 
             //Deal with error in function and delete textboxes if success (then go to welcome screen)
             RegisterPlayFabUserRequest request = new RegisterPlayFabUserRequest
@@ -342,6 +339,8 @@ public class PlayfabManager : MonoBehaviour
     {
         try
         {
+            ManageError(errorNum.no_error, uError);
+
             AddOrUpdateContactEmailRequest verify = new AddOrUpdateContactEmailRequest
             {
                 EmailAddress = email,
@@ -398,7 +397,7 @@ public class PlayfabManager : MonoBehaviour
         userEmail = "";
         userPswd = "";
         userName = "";
-        accountVerified = false;
+        accountVerified = null;
     }
     #endregion
 

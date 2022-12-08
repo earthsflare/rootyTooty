@@ -212,22 +212,23 @@ public class MainMenu : MonoBehaviour
         string email = login_EmailInput.text;
         string pswd = login_PswdInput.text;
 
-        bool result = !PlayfabManager.Instance.Login(email, pswd, login_EmailError, login_PswdError, loginError);
+        PlayfabManager.Instance.Login(email, pswd, login_EmailError, login_PswdError, loginError);
 
         Debug.Log("Logging In: " + PlayfabManager.Instance.AccountVerified + " Verify: " + PlayfabManager.Instance.AccountVerified);
+        StartCoroutine(AttemptVerifyLogin());
+    }
+    private IEnumerator AttemptVerifyLogin()
+    {
+        while(!PlayfabManager.Instance.AccountVerified.HasValue)
+            yield return null;
 
-        if (result)
-            return;
-
-        if (PlayfabManager.Instance.AccountVerified)
-        {
+        if ((bool)PlayfabManager.Instance.AccountVerified)
             ChangeMenu(mainMenuScreen);
-        }
         else
         {
-            StartCoroutine(CheckAccountVerification());
             ChangeMenu(verifyScreen);
         }
+
         LeaveLogin();
     }
     private void LeaveLogin()
@@ -248,14 +249,6 @@ public class MainMenu : MonoBehaviour
     {
         PlayfabManager.Instance.SendVerificationEmail(PlayfabManager.Instance.UserEmail, verifyError);
     }
-    private IEnumerator CheckAccountVerification()
-    {
-        yield return new WaitForSeconds(1);
-        if (PlayfabManager.Instance.AccountVerified)
-            ChangeMenu(mainMenuScreen);
-        else
-            StartCoroutine(CheckAccountVerification());
-    }
     private void LeaveSendVerification()
     {
         verifyError.text = "";
@@ -270,11 +263,10 @@ public class MainMenu : MonoBehaviour
         string pswd = register_PswdInput.text;
         string confirmPswd = register_ConfirmInput.text;
 
-        if (!PlayfabManager.Instance.RegisterAccount(email, user, pswd, confirmPswd, 
-            register_EmailError, register_UserError, register_PswdError, register_ConfirmError, registerError))
-            return;
+        PlayfabManager.Instance.RegisterAccount(email, user, pswd, confirmPswd,
+            register_EmailError, register_UserError, register_PswdError, register_ConfirmError, registerError);
 
-        ChangeMenu(mainMenuScreen);
+        StartCoroutine(AttemptVerifyLogin());
         LeaveRegister();
     }
     private void LeaveRegister()
@@ -298,12 +290,13 @@ public class MainMenu : MonoBehaviour
     #region Reset Password Buttons
     public void AttemptResetPassword()
     {
-        string email = forgot_EmailInput.text;
-
-        if (!PlayfabManager.Instance.ResetPassword(email, forgot_EmailError, forgot_EmailError))
-            return;
+        StartCoroutine(WaitResetPassword(forgot_EmailInput.text));
+    }
+    private IEnumerator WaitResetPassword(string email)
+    {
+        while(!PlayfabManager.Instance.ResetPassword(email, forgot_EmailError, forgot_EmailError))
+            yield return null;
         forgotDescription.gameObject.SetActive(true);
-
     }
     private void LeaveResetPassword()
     {
