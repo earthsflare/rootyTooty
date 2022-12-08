@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 4314995096652772724}
   - component: {fileID: 4314995096652772725}
   - component: {fileID: 4314995096652772722}
+  - component: {fileID: 2145347804420153787}
   - component: {fileID: 4314995096652772723}
   - component: {fileID: 5727490863327372430}
   - component: {fileID: 2697635041276367331}
@@ -707,18 +708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 851081712101719124, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
+  usingPlayFab: 0
   spawnPosition: {x: -45, y: 7}
   spawnSceneIndex: 0
-  playerHealth: 5
-  doubleJumpUnlocked: 0
-  fireballUnlocked: 0
-  rollUnlocked: 0
-  wallJumpUnlocked: 0
-  titleSceneIndex: 0
   cameraManager: {fileID: 1874356902}
   healthUICanvas: {fileID: 4314995097845182814}
-  playerScript: {fileID: 0}
   menuManager: {fileID: 0}
 --- !u!114 &4314995096652772722
 MonoBehaviour:
@@ -735,6 +729,18 @@ MonoBehaviour:
   fadeAlphaSpeed: 1
   animator: {fileID: 4314995096652772723}
   fadeCanvas: {fileID: 4314995096245936519}
+--- !u!114 &2145347804420153787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314995096652772720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8608eb951d558049b075dfa3e3ce204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &4314995096652772723
 Animator:
   serializedVersion: 4

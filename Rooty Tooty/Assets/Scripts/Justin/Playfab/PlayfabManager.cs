@@ -9,80 +9,94 @@ using System;
 
 public class PlayfabManager : MonoBehaviour
 {
-    #region Login Screen Object References
-    [Header("Login Account")]
-    [SerializeField] private TMP_InputField login_EmailInput = null;
-    [SerializeField] private TextMeshProUGUI login_EmailError = null;
+    private static PlayfabManager instance;
+    public static PlayfabManager Instance { get => instance; }
 
-    [SerializeField] private TMP_InputField login_PswdInput = null;
-    [SerializeField] private TextMeshProUGUI login_PswdError = null;
-    #endregion
-    #region Register Screen Object References
-    [Header("Register Account")]
-    [SerializeField] private TMP_InputField register_UserInput = null;
-    [SerializeField] private TextMeshProUGUI register_UserError = null;
-
-    [SerializeField] private TMP_InputField register_EmailInput = null;
-    [SerializeField] private TextMeshProUGUI register_EmailError = null;
-
-    [SerializeField] private TMP_InputField register_PswdInput = null;
-    [SerializeField] private TextMeshProUGUI register_PswdError = null;
-
-    [SerializeField] private TMP_InputField register_ConfirmInput = null;
-    [SerializeField] private TextMeshProUGUI register_ConfirmError = null;
-    #endregion
+    private string userEmail = "";
+    private string userPswd = "";
+    private string userName = "";
+    private bool accountVerified = false;
+    public string UserEmail { get => userEmail; }
+    public bool AccountVerified { get => accountVerified; }
 
     private const string otherLetters = "ßàÁâãóôþüúðæåïçèõöÿýòäœêëìíøùîûñé";
-
     private void Awake()
     {
-        //Playfab: username should be 3-20 characters
-        
-
-        //Playfab: pswd should be 6-100 characters
-        login_PswdInput.characterLimit = 100;
-
-        //Make sure pswd display is hidden
-        login_PswdInput.contentType = TMP_InputField.ContentType.Password;
-
-        //Most emails shouldn't be more than 150 characters...
-        login_EmailInput.characterLimit = 150;
+        if(instance == null)
+            instance = this;
     }
 
     #region Error Report
     private enum errorNum
     {
         no_error = 0,
+
         usernameInvalidSize,
         usernameInvalidChar,
 
         pswdInvalidSize,
         pswdMustHaveChar,
         pswdMustMatch,
-        pswdUnknownError,
 
-        emailInvalidSize,
         emailInvalidFormat,
 
         UnexpectedError,
         PlayfabError,
     }
-    private void ManageError(errorNum errorCode, string messge = "")
+    private void ManageError(errorNum errorCode, TextMeshProUGUI textBox, string messge = "")
     {
-        Debug.Log("Error: " + errorCode + " " + messge);    
+        Debug.Log("Error: " + errorCode);    
 
         switch (errorCode)
         {
             case errorNum.no_error:
                 return;
-            case errorNum.usernameInvalidSize: 
+            
+            //Username related errors
+            case errorNum.usernameInvalidSize:
+                Debug.Log("Username must be between 3 to 20 characters long.");
+                textBox.text = "Username must be between 3 to 20 characters long.";
                 return;
+            case errorNum.usernameInvalidChar:
+                Debug.Log("Username must contain only letters or numbers.");
+                textBox.text = "Username must contain only letters or numbers.";
+                return;
+
+            //Password related errors
+            case errorNum.pswdInvalidSize:
+                Debug.Log("Password must be at least 6 characters long.");
+                textBox.text = "Password must be at least 6 characters long.";
+                return;
+            case errorNum.pswdMustHaveChar:
+                Debug.Log("Password must contain a letter, a number, and a symbol.");
+                textBox.text = "Password must contain a letter, a number, and a symbol.";
+                return;
+            case errorNum.pswdMustMatch:
+                Debug.Log("Passwords do not match.");
+                textBox.text = "Passwords do not match.";
+                return;
+
+            //Email related errors
+            case errorNum.emailInvalidFormat:
+                Debug.Log("This is not a valid email for this game.");
+                textBox.text = "This is not a valid email for this game.";
+                return;
+
             case errorNum.PlayfabError:
-                Debug.Log(messge);
+                Debug.Log("Playfab Error: " + messge);
+                textBox.text = "Playfab Error: " + messge;
+                return;
+            case errorNum.UnexpectedError:
+                Debug.Log("An unexpected error has occured: " + messge);
+                textBox.text = "An unexpected error has occured.";
                 return;
             default:
                 return;
         }
+
+        if(textBox != null)
+            if(textBox.text != "")
+                textBox.gameObject.SetActive(true);
     }
     #endregion
 
@@ -110,7 +124,7 @@ public class PlayfabManager : MonoBehaviour
     private int CheckEmail(string email)
     {
         if (email.Length < 5)
-            return (int)errorNum.emailInvalidSize;
+            return (int)errorNum.emailInvalidFormat;
 
         string[] info = email.Split('@');
         if (info.Length != 2)
@@ -188,7 +202,7 @@ public class PlayfabManager : MonoBehaviour
         }
         catch(Exception ex)
         {
-            return (int)errorNum.pswdUnknownError;
+            return (int)errorNum.UnexpectedError;
         }
     }
 
@@ -207,15 +221,7 @@ public class PlayfabManager : MonoBehaviour
     #endregion
 
     #region Log in
-    public void AttemptLogin()
-    {
-        string email = login_EmailInput.text;
-        string pswd = login_PswdInput.text;
-
-        Debug.Log(Login(email, pswd));
-    }
-
-    private bool Login(string email, string pswd)
+    public bool Login(string email, string pswd, TextMeshProUGUI eError, TextMeshProUGUI pError, TextMeshProUGUI uError)
     {
         //login account
         try
@@ -224,11 +230,11 @@ public class PlayfabManager : MonoBehaviour
             int pswdError = CheckPassword(pswd);
 
             if (loginError != 0 || pswdError != 0)
-            {
+            {   
                 if (loginError != 0)
-                    ManageError((errorNum)loginError);
+                    ManageError((errorNum)loginError, textBox: eError);
                 if (pswdError != 0)
-                    ManageError((errorNum)pswdError);
+                    ManageError((errorNum)pswdError, textBox: pError);
 
                 return false;
             }
@@ -237,59 +243,55 @@ public class PlayfabManager : MonoBehaviour
             LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
             {
                 Email = email,
-                Password = pswd
+                Password = pswd,
+                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+                {
+                    GetPlayerProfile = true,
+                    ProfileConstraints = new PlayerProfileViewConstraints()
+                    {
+                        ShowContactEmailAddresses = true,
+                    },
+
+                },
+                TitleId = "A6F68",
             };
 
             bool success = false;
 
             PlayFabClientAPI.LoginWithEmailAddress(request,
                 result => {
-                    Debug.Log("Login Successful");
                     //LeaveLogin();
                     success = true;
 
-                    //Get status of email verification and sent a verification email if needed
-                    ContactEmailInfoModel contactEmail = result.InfoResultPayload.PlayerProfile.ContactEmailAddresses[0];
-                    if (contactEmail == null)
-                        SendVerificationEmail(contactEmail.EmailAddress);
-                    else if(contactEmail.VerificationStatus != EmailVerificationStatus.Confirmed)
-                        SendVerificationEmail(contactEmail.EmailAddress);
+                    //Setup login invormation for future saving
+                    userEmail = email;
+                    userPswd = pswd;
 
+                    //Get status of email verification and sent a verification email if needed
+                    List<ContactEmailInfoModel> contactEmail = result.InfoResultPayload.PlayerProfile.ContactEmailAddresses;
+                    if(contactEmail.Count < 0)
+                        SendVerificationEmail(userEmail, uError);
+                    else if (contactEmail[0].VerificationStatus != EmailVerificationStatus.Confirmed)
+                        SendVerificationEmail(userEmail, uError);
+                    else
+                        accountVerified = true;
+
+                    Debug.Log("Login Successful");
                 },
                 error => {
-                    ManageError(errorNum.PlayfabError, error.GenerateErrorReport());
+                    ManageError(errorNum.PlayfabError, uError,error.GenerateErrorReport());
                 });
             return success;
         }
-        catch { ManageError(errorNum.UnexpectedError); }
+        catch (Exception ex) { ManageError(errorNum.UnexpectedError, uError, ex.Message); }
 
         return false;
-    }
-
-    private void LeaveLogin()
-    {
-        login_EmailInput.text = "";
-        login_PswdInput.text = "";
-        login_EmailError.text = "";
-        login_PswdError.text = "";
-        login_EmailError.gameObject.SetActive(false);
-        login_PswdError.gameObject.SetActive(false);
-        
     }
     #endregion
 
     #region Register Account
-    //Function Used for buttons
-    public void AttemptRegisterAccount()
-    {
-        string email = register_EmailInput.text;
-        string user = register_UserInput.text;
-        string pswd = register_PswdInput.text;
-        string confirmPswd = register_ConfirmInput.text;
-
-        RegisterAccount(email, user, pswd, confirmPswd);
-    }
-    private void RegisterAccount(string email, string user, string pswd, string confirmPswd)
+    public bool RegisterAccount(string email, string user, string pswd, string confirmPswd, 
+        TextMeshProUGUI eError, TextMeshProUGUI nError, TextMeshProUGUI pError, TextMeshProUGUI cError, TextMeshProUGUI uError)
     {
         try
         {
@@ -301,14 +303,14 @@ public class PlayfabManager : MonoBehaviour
             if (emailError != 0 || pswdError != 0 || userError != 0 || confirmError != 0)
             {
                 if (emailError != 0)
-                    ManageError((errorNum)emailError);
+                    ManageError((errorNum)emailError, eError);
                 if (userError != 0)
-                    ManageError((errorNum)userError);
+                    ManageError((errorNum)userError, nError);
                 if (pswdError != 0)
-                    ManageError((errorNum)pswdError);
+                    ManageError((errorNum)pswdError, pError);
                 else if (confirmError != 0)
-                    ManageError((errorNum)confirmError);
-                return;
+                    ManageError((errorNum)confirmError, cError);
+                return false;
             }
 
             //Deal with error in function and delete textboxes if success (then go to welcome screen)
@@ -319,20 +321,24 @@ public class PlayfabManager : MonoBehaviour
                 Password = pswd,
             };
 
+            bool success = false;
             PlayFabClientAPI.RegisterPlayFabUser(request,
                 result => {
                     Debug.Log("Register Successful");
-                    Login(email, pswd);
+                    Login(email, pswd, null, null, null);
+                    success = true;
                 },
                 error => {
-                    ManageError(errorNum.PlayfabError, error.GenerateErrorReport());
+                    ManageError(errorNum.PlayfabError, uError, error.GenerateErrorReport());
                 });
+            return success;
         }
-        catch { ManageError(errorNum.UnexpectedError); }
+        catch (Exception ex) { ManageError(errorNum.UnexpectedError, uError, ex.Message); }
+        return false;
     }
 
     //Send a verification email to the user (after logging in)
-    private void SendVerificationEmail(string email)
+    public bool SendVerificationEmail(string email, TextMeshProUGUI uError)
     {
         try
         {
@@ -341,52 +347,58 @@ public class PlayfabManager : MonoBehaviour
                 EmailAddress = email,
             };
 
+            bool succeeded = false;
+
             PlayFabClientAPI.AddOrUpdateContactEmail(verify,
                 result =>
                 {
+                    succeeded = true;
                     Debug.Log("Verification Email Sent");
                 },
                 error =>
                 {
-                    ManageError(errorNum.PlayfabError, error.GenerateErrorReport());
+                    ManageError(errorNum.PlayfabError, uError, error.GenerateErrorReport());
                 });
+            return succeeded;
         }
-        catch (Exception ex) { ManageError(errorNum.UnexpectedError, ex.Message); }
-    }
+        catch (Exception ex) { ManageError(errorNum.UnexpectedError, uError, ex.Message); }
 
-    private void LeaveRegister()
-    {
-        register_UserInput.text = "";
-        register_UserError.gameObject.SetActive(false);
-
-        register_EmailInput.text = "";
-        register_EmailError.gameObject.SetActive(false);
-
-        register_PswdInput.text = "";
-        register_PswdError.gameObject.SetActive(false);
-
-        register_ConfirmInput.text = "";
-        register_ConfirmError.gameObject.SetActive(false);
+        return false;
     }
     #endregion
 
     #region Reset Info
-    private void ResetPassword(string email)
+    public bool ResetPassword(string email, TextMeshProUGUI eError, TextMeshProUGUI uError)
     {
-        SendAccountRecoveryEmailRequest request = new SendAccountRecoveryEmailRequest
+        try
         {
-            Email = email,
-            TitleId = "A6F68",
-        };
-
-        PlayFabClientAPI.SendAccountRecoveryEmail(request,
-            result =>
+            SendAccountRecoveryEmailRequest request = new SendAccountRecoveryEmailRequest
             {
-                Debug.Log("Password Reset Email Sent");
-            },
-            error => { ManageError(errorNum.PlayfabError, error.GenerateErrorReport()); });
+                Email = email,
+                TitleId = "A6F68",
+            };
 
-        ManageError(errorNum.UnexpectedError);
+            bool success = false;
+            PlayFabClientAPI.SendAccountRecoveryEmail(request,
+                result =>
+                {
+                    success = true;
+                    Debug.Log("Password Reset Email Sent");
+                },
+                error => { ManageError(errorNum.PlayfabError, uError, error.GenerateErrorReport()); });
+
+            return success;
+        }
+        catch(Exception ex) { ManageError(errorNum.UnexpectedError, uError, ex.Message); }
+
+        return false;
+    }
+    public void LogOut()
+    {
+        userEmail = "";
+        userPswd = "";
+        userName = "";
+        accountVerified = false;
     }
     #endregion
 

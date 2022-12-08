@@ -5,6 +5,7 @@ using TMPro;
 
 public class AccountFieldFormat : FieldFormat
 {
+    [Header("Account Field References")]
     [SerializeField] private TMP_Text label = null;
     [SerializeField] private TMP_InputField inputField = null;
     private RectTransform inputRectTransform;
