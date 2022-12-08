@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
     private bool dead;
     public GameObject gotHitScreen; //reference to the damage screen
 
+    [SerializeField] private AudioSource Healthsfx;
+
     //public int tempPoint = 1; //temp var to place in gameoverscreen
 
     void Start()
@@ -44,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
             currentLife -= d;
             HealthDisplay.instance.drawHeart(currentLife, maxLife);
             gotHurtUI.instance.gotHurt(); // apply the gothitscreen
+            Healthsfx.Play();
             if (currentLife < 1)
             {
                 dead = true;
