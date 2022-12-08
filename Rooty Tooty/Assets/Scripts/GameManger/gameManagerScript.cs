@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class gameManagerScript : MonoBehaviour
 {
+    // manages over a freeze/unfreeze game function (not in use)
+    // 
+
     //public Text pointsText;
     public static gameManagerScript instance;
     public static bool GameIsFrozen = false;
