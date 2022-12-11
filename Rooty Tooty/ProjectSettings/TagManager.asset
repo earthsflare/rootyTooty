@@ -31,7 +31,7 @@ TagManager:
   - Background Decorations
   - Wall
   - CM_CameraBounds
-  - CameraCollider
+  - CameraPlayerFinder
   - Player
   - PlayerHurt
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2718625145
+    locked: 0
+  - name: CameraVisuals
+    uniqueID: 483519945
     locked: 0
   - name: Default
     uniqueID: 0

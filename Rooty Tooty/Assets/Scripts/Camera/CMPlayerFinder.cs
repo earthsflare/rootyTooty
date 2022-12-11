@@ -6,33 +6,19 @@ using UnityEngine;
 public class CMPlayerFinder : MonoBehaviour
 {
     [Header("Object References")]
-    [SerializeField] private CMBoundingShape cameraBounds = null;
+    [SerializeField] private CMBoundingShape cmBoundingShapeScript = null;
+    //Collider for OnTriggerEnter
     [SerializeField] private BoxCollider2D boxCollider = null;
+    //Used for finding size of BoxCollider
     [SerializeField] private SpriteRenderer visualAid = null;
     private void Awake()
     {
         if(visualAid == null)
             visualAid = GetComponent<SpriteRenderer>();
-        if (boxCollider == null)
-        {
+        if(cmBoundingShapeScript == null)
+            cmBoundingShapeScript = GetComponentInParent<CMBoundingShape>();
+        if(boxCollider == null)
             boxCollider = GetComponent<BoxCollider2D>();
-            if (boxCollider == null)
-            {
-                Debug.Log(gameObject.name + " Does not have a collisionBounds set");
-                gameObject.SetActive(false);
-                return;
-            }
-        }
-        if (cameraBounds == null)
-        {
-            cameraBounds = GetComponentInParent<CMBoundingShape>();
-            if (cameraBounds == null)
-            {
-                Debug.Log(gameObject.name + " Does not have a collisionBounds set");
-                gameObject.SetActive(false);
-                return;
-            }
-        }
 
         if (visualAid != null)
             visualAid.enabled = false;
@@ -40,11 +26,9 @@ public class CMPlayerFinder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision");
-
         if (collision.gameObject != Player.instance.gameObject)
             return;
-
-        cameraBounds.FoundPlayer();
+        Debug.Log("Collision with Camera");
+        cmBoundingShapeScript.FoundPlayer();
     }
 }

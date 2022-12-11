@@ -12,6 +12,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera cmVC = null;
     [SerializeField] private CinemachineConfiner cmConfiner = null;
 
+    //Old parent transform of current boundingShape
+    private Transform oldParent = null;
+
     private void OnEnable()
     {
         if (instance == null)
@@ -44,6 +47,9 @@ public class CameraManager : MonoBehaviour
         {
             Destroy(Camera.main.gameObject);
         }
+
+        if (cmConfiner.m_BoundingShape2D != null)
+            Destroy(cmConfiner.m_BoundingShape2D);
     }
 
     private void Awake()
@@ -74,6 +80,16 @@ public class CameraManager : MonoBehaviour
     {
         if (instance.cmConfiner == null)
             return;
+
+        //Put back old bounding box
+        if(instance.cmConfiner.m_BoundingShape2D != null)
+        {
+            instance.cmConfiner.m_BoundingShape2D.transform.parent = instance.oldParent;
+        }
+
+        instance.oldParent = c.transform.parent;
+
+        c.transform.parent = instance.transform;
 
         instance.cmConfiner.m_BoundingShape2D = c;
     }

@@ -1322,6 +1322,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519420031, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 519420031, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 519420031, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4314995096652772720, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1380,7 +1392,7 @@ PrefabInstance:
       objectReference: {fileID: 1932455601}
     - target: {fileID: 4314995096652772725, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
       propertyPath: usingPlayFab
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
