@@ -2770,7 +2770,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496751223}
-  - component: {fileID: 496751222}
   m_Layer: 5
   m_Name: E-mail Field
   m_TagString: Untagged
@@ -2778,26 +2777,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &496751222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496751221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7027633a8113d4fb64b06322369203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  above: {fileID: 0}
-  below: {fileID: 2142008557}
-  label: {fileID: 1425994959}
-  inputField: {fileID: 826515943}
-  error: {fileID: 366998563}
-  forgotButton: {fileID: 0}
-  description: {fileID: 0}
-  accountFieldOffset: 10
 --- !u!224 &496751223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14599,7 +14578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6a6c93dbd8eb6449da83a6ff18b6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  above: {fileID: 2142008557}
+  above: {fileID: 0}
   below: {fileID: 0}
   button: {fileID: 309911413}
   buttonOffset: 50
@@ -15092,7 +15071,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142008558}
-  - component: {fileID: 2142008557}
   m_Layer: 5
   m_Name: Password Field
   m_TagString: Untagged
@@ -15100,26 +15078,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2142008557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142008556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7027633a8113d4fb64b06322369203, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  above: {fileID: 496751222}
-  below: {fileID: 2110568056}
-  label: {fileID: 755651051}
-  inputField: {fileID: 1419960727}
-  error: {fileID: 707661607}
-  forgotButton: {fileID: 2121923811}
-  description: {fileID: 0}
-  accountFieldOffset: 25
 --- !u!224 &2142008558
 RectTransform:
   m_ObjectHideFlags: 0

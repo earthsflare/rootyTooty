@@ -104,6 +104,7 @@ public class levelManager : MonoBehaviour
         yield return (!SpawnLocation.IsSearching);
 
         //Save game after getting Spawn position
+        Debug.Log("Saving Game. Game Save state: " + PlayfabManager.Instance.gameSaved);
         gameManagerScript.instance.SaveGame();
 
         //Spawn in player

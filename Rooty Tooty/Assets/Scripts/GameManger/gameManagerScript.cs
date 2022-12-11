@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ public class gameManagerScript : MonoBehaviour
     public static bool GameIsFrozen = false;
 
     [Header("Game Properties")]
+    //Is set in the inspector
     [SerializeField] private bool usingPlayFab = false;
     public bool UsingPlayFab { get => usingPlayFab; }
 
@@ -100,7 +102,26 @@ public class gameManagerScript : MonoBehaviour
     {
         freezeGame();
 
-        SaveData saveData = SaveManager.LoadGameFromFile();
+        SaveData saveData;
+
+        if (usingPlayFab)
+        {
+            if (!PlayfabManager.Instance.FinishedLoadingGame.HasValue)
+            {
+                StartCoroutine(StartGame_Playfab());
+                return;
+            }
+            else if (!PlayfabManager.Instance.FinishedLoadingGame.Value)
+                return;
+
+            saveData = PlayfabManager.Instance.LoadedSave;
+            PlayfabManager.Instance.SetLoadedSave(null);
+            PlayfabManager.Instance.SetFinishedLoadingGame(null);
+        }
+        else
+        {
+            saveData = SaveManager.LoadGameFromFile();
+        }
 
         if (newGame || saveData == null)
         {
@@ -121,8 +142,7 @@ public class gameManagerScript : MonoBehaviour
             }
         }
 
-        
-        if(saveData != null)
+        if (saveData != null)
         {
             spawnPosition = new Vector2(saveData.spawnPosition[0], saveData.spawnPosition[1]);
             spawnSceneIndex = saveData.spawnSceneIndex;
@@ -145,6 +165,25 @@ public class gameManagerScript : MonoBehaviour
 
         levelManager.instance.LoadLevel(spawnSceneIndex);
     }
+    private IEnumerator StartGame_Playfab()
+    {
+        StartCoroutine(SaveManager.LoadGameFromPlayfab(PlayfabManager.Instance.UserPlayfabID));
+
+        //Check if login was successful
+        while(!PlayfabManager.Instance.ReLoginAttempt.HasValue)
+            yield return null;
+        if (!PlayfabManager.Instance.ReLoginAttempt.Value)
+        {
+            PlayfabManager.Instance.NotifyErrorLoadingGame();
+            yield break;
+        }
+
+        //Check if save data was found
+        while (!PlayfabManager.Instance.FinishedLoadingGame.Value)
+            yield return null;
+
+        StartGame();
+    }
 
     //Saves game to file
     public void SaveGame()
@@ -160,9 +199,32 @@ public class gameManagerScript : MonoBehaviour
         saveData.doubleJumpUnlocked = Player.instance.Jump.MaxJumps > 1;
         saveData.fireballUnlocked = Player.instance.Aim.FireballEnabled;
 
+        if (usingPlayFab)
+        {
+            if (!PlayfabManager.Instance.gameSaved.HasValue)
+            {
+                StartCoroutine(SaveGame_Playfab(saveData));
+            }
+            return;
+        }
+
         SaveManager.SaveGameToFile(saveData);
     }
-
+    private IEnumerator SaveGame_Playfab(SaveData saveData)
+    {
+        StartCoroutine(SaveManager.SaveGameToPlayfab(saveData));
+        while(!PlayfabManager.Instance.gameSaved.HasValue)
+            yield return null;
+        if (PlayfabManager.Instance.gameSaved.Value == true)
+        {
+            PlayfabManager.Instance.gameSaved = null;
+            Debug.Log("Save Successful");
+            yield break;
+        }
+        yield return new WaitForSeconds(1);
+        Debug.Log("Trying to Save");
+        StartCoroutine(SaveGame_Playfab(saveData));
+    }
     //Resets current local data and save file
     public void ResetSave()
     {
@@ -189,18 +251,4 @@ public class gameManagerScript : MonoBehaviour
         Time.timeScale = 1f;
         GameIsFrozen = false;
     }
-    
-    /*
-    void Update()
-    {
-        if (GameIsFrozen == true)
-        {
-            freezeGameTime -= Time.deltaTime;
-            if (freezeGameTime <= 0)
-            {
-                unfreezeGame();
-            }
-        }
-    }
-    */
 }

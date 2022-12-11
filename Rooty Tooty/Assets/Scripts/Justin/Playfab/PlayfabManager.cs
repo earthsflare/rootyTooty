@@ -15,14 +15,46 @@ public class PlayfabManager : MonoBehaviour
     private string userEmail = "";
     private string userPswd = "";
     private string userName = "";
-    private bool? accountVerified = null;
-    public bool passwordResetted = false; //serves no other purpose than as a trigger for Resetting Password
+    private string userPlayfabID = "";
+
+    private bool? accountVerified = null; //When null it means account is not logged in
+
+    //serves no other purpose than as a trigger for Resetting Password
+    public bool passwordResetted = false;
+    private bool? reLoginAttempt = null;
+
+    public bool? gameSaved = null;
+    //Is null when attempt isn't being made. Is false when loading game is in progress
+    private bool? finishedLoadingGame = null;
+    private SaveData loadedSave = null;
+
+    private bool errorLoadingGame = false;
+
     public string UserEmail { get => userEmail; }
+    public string UserPlayfabID { get => userPlayfabID; }
     public bool? AccountVerified { get => accountVerified; }
+    public bool? ReLoginAttempt { get => reLoginAttempt; }
+    public bool? FinishedLoadingGame { get => finishedLoadingGame; }
+    public SaveData LoadedSave { get => loadedSave;}
+    public bool ErrorLoadingGame { get => errorLoadingGame; }
+    public void ResetAccountVerified() { accountVerified = null; }
+    public void SetLoadedSave(SaveData saveData) 
+    { 
+        loadedSave = saveData; 
+    }
+    public void SetFinishedLoadingGame(bool? value) { finishedLoadingGame = value; }
+    public void NotifyErrorLoadingGame()
+    {
+        errorLoadingGame = true;
+    }
 
     private const string otherLetters = "ßàÁâãóôþüúðæåïçèõöÿýòäœêëìíøùîûñé";
     private void Awake()
     {
+        if (gameManagerScript.instance != null)
+            if (!gameManagerScript.instance.UsingPlayFab)
+                Destroy(this);
+
         if(instance == null)
             instance = this;
     }
@@ -46,7 +78,8 @@ public class PlayfabManager : MonoBehaviour
     }
     private void ManageError(errorNum errorCode, TextMeshProUGUI textBox, string messge = "")
     {
-        Debug.Log("Error: " + errorCode);    
+        if(errorCode != errorNum.no_error)
+            Debug.Log("Error: " + errorCode);
 
         switch (errorCode)
         {
@@ -251,7 +284,6 @@ public class PlayfabManager : MonoBehaviour
                     {
                         ShowContactEmailAddresses = true,
                     },
-
                 },
                 TitleId = "A6F68",
             };
@@ -262,10 +294,10 @@ public class PlayfabManager : MonoBehaviour
                 result => {
                     //LeaveLogin();
                     success = true;
-
                     //Setup login invormation for future saving
                     userEmail = email;
                     userPswd = pswd;
+                    userPlayfabID = result.PlayFabId;
 
                     //Get status of email verification and sent a verification email if needed
                     List<ContactEmailInfoModel> contactEmail = result.InfoResultPayload.PlayerProfile.ContactEmailAddresses;
@@ -286,6 +318,41 @@ public class PlayfabManager : MonoBehaviour
         catch (Exception ex) { ManageError(errorNum.UnexpectedError, uError, ex.Message); }
 
         return false;
+    }
+    //Used for saving playfab data (does not update any player information other than save data)
+    public void ReLogin()
+    {
+        reLoginAttempt = null;
+
+        try
+        {
+            LoginWithEmailAddressRequest request = new LoginWithEmailAddressRequest
+            {
+                Email = userEmail,
+                Password = userPswd,
+                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+                {
+                    GetPlayerProfile = true,
+                    ProfileConstraints = new PlayerProfileViewConstraints()
+                    {
+                        ShowContactEmailAddresses = true,
+                    },
+
+                },
+                TitleId = "A6F68",
+            };
+
+            PlayFabClientAPI.LoginWithEmailAddress(request,
+                result => { reLoginAttempt = true; },
+                error => {
+                    Debug.Log("Login Error: " + error);
+                    reLoginAttempt = false;
+                });
+        }
+        catch (Exception ex) { 
+            Debug.LogException(ex);
+            reLoginAttempt = false;
+        }
     }
     #endregion
 

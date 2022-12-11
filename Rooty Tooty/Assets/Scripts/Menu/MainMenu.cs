@@ -95,7 +95,11 @@ public class MainMenu : MonoBehaviour
         //Change startGame to reflect if save is a newgame or not (check to see if file exists)
         if (newGameTxt != null)
         {
-            if (SaveManager.LoadGameFromFile() == null)
+            if (gameManagerScript.instance.UsingPlayFab)
+            {
+                StartCoroutine(SetNewGameTxtOnLogin());
+            }
+            else if (SaveManager.LoadGameFromFile() == null)
             {
                 gameManagerScript.instance.ToggleNewGame(false);
                 newGameTxt.text = "New Game";
@@ -143,10 +147,59 @@ public class MainMenu : MonoBehaviour
             LeaveSendVerification();
             #endregion
 
-            loginScreen.gameObject.SetActive(true);
-            CloseAllMenus(loginScreen);
+            if (!PlayfabManager.Instance.AccountVerified.HasValue)
+            {
+                loginScreen.gameObject.SetActive(true);
+                CloseAllMenus(loginScreen);
+            }
+            else if (PlayfabManager.Instance.AccountVerified.Value)
+            {
+                mainMenuScreen.gameObject.SetActive(true);
+                CloseAllMenus(mainMenuScreen);
+            }
+            //Case player is logged in but not verified (unreachable use case)
+            else
+            {
+                verifyScreen.gameObject.SetActive(true);
+                CloseAllMenus(verifyScreen);
+            }
+            
         }
         #endregion
+    }
+
+    private IEnumerator SetNewGameTxtOnLogin()
+    {
+
+        while (!PlayfabManager.Instance.AccountVerified.HasValue)
+            yield return null;
+
+        StartCoroutine(SaveManager.LoadGameFromPlayfab(PlayfabManager.Instance.UserPlayfabID));
+
+        while (!PlayfabManager.Instance.ReLoginAttempt.HasValue)
+            yield return null;
+
+        while (!PlayfabManager.Instance.FinishedLoadingGame.Value)
+            yield return null;
+
+        //Sections runs if relogin attempt failed (attempts to login again)
+        if (!PlayfabManager.Instance.ReLoginAttempt.Value)
+        {
+            yield return new WaitForSeconds(1);
+            StartCoroutine(SetNewGameTxtOnLogin());
+        }
+        //case save found
+        else if (PlayfabManager.Instance.LoadedSave == null)
+        {
+            gameManagerScript.instance.ToggleNewGame(false);
+            newGameTxt.text = "New Game";
+        }
+        //case user has no save
+        else
+        {
+            gameManagerScript.instance.ToggleNewGame(true);
+            newGameTxt.text = "Continue";
+        }
     }
 
     #region Navigation Functions / Buttons
