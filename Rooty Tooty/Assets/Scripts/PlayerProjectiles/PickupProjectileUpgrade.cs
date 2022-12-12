@@ -9,7 +9,7 @@ public class PickupProjectileUpgrade : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            Player.instance.aim.upgradeWeapon();
+            Player.instance.Aim.upgradeWeapon();
             Debug.Log("Weapon upgraded!");
         }
     }

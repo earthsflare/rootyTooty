@@ -21,7 +21,7 @@ public class HealthDrop : MonoBehaviour
             counter += 1;
         }
 
-        if(tmp == counter && counter >= check && Player.instance.health.getHealth() < Player.instance.health.getMaxHealth())
+        if(tmp == counter && counter >= check && Player.instance.Health.getHealth() < Player.instance.Health.getMaxHealth())
         {
             counter += 1;
         }

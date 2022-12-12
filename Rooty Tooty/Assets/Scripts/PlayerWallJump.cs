@@ -19,7 +19,7 @@ public class PlayerWallJump : MonoBehaviour
     private bool collideWall { get => (collideLeftWall || collideRightWall); }
     private void StopCollideWall() { collideLeftWall = false; collideRightWall = false; }
 
-    private bool isSliding;
+    public bool isSliding;
 
     [HideInInspector] public bool isWallJumping;
 

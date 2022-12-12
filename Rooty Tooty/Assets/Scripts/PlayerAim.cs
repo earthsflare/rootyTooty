@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-    // Main Camera for mouse aiming calculations
-    private Camera mainCam;
     // Transform for the origin of the player projectile
     public Transform firePoint;
 
@@ -20,11 +18,10 @@ public class PlayerAim : MonoBehaviour
     // Player's current projectile
     public int currentProjectileType = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        mainCam = Camera.main;
-    }
+    private bool fireballEnabled = true;
+
+    public bool FireballEnabled { get => fireballEnabled; }
+    public void ToggleFireball(bool enabled) { fireballEnabled = enabled; }
 
     // Update is called once per frame
     void Update()
@@ -57,7 +54,7 @@ public class PlayerAim : MonoBehaviour
             {
                 // Code to calculate projectile trajectory
                 Vector2 mouse = Input.mousePosition;
-                Vector2 screenPoint = mainCam.WorldToScreenPoint(transform.localPosition);
+                Vector2 screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
                 Vector2 offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
                 float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
                 firePoint.rotation = Quaternion.Euler(0f, 0f, angle);

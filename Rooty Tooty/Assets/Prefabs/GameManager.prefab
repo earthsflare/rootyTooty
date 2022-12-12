@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 4314995096652772725}
   - component: {fileID: 4314995096652772722}
   - component: {fileID: 4314995096652772723}
+  - component: {fileID: 4216319905397734856}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -415,9 +416,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57615b0a963fdd04097a92a509a869b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1692447060130313569, guid: 7673a8429721fc647b25d21cf8281a12, type: 3}
+  usingPlayFab: 0
   spawnPosition: {x: -45, y: 7}
-  freezeGameTime: 1
+  spawnSceneIndex: 0
+  cameraManager: {fileID: 0}
+  healthUICanvas: {fileID: 0}
+  menuManager: {fileID: 0}
 --- !u!114 &4314995096652772722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,9 +434,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7b1d635674aff49bef2cab599de7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 4314995096652772723}
   fadeAlphaSpeed: 1
-  nextLevelPosition: {x: -45, y: -7}
+  animator: {fileID: 4314995096652772723}
+  fadeCanvas: {fileID: 0}
 --- !u!95 &4314995096652772723
 Animator:
   serializedVersion: 4
@@ -453,6 +457,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4216319905397734856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4314995096652772720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8608eb951d558049b075dfa3e3ce204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passwordResetted: 0
 --- !u!1 &4314995096822135481
 GameObject:
   m_ObjectHideFlags: 0
