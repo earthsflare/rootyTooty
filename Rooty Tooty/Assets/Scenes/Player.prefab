@@ -330,10 +330,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8073f214099637d439f01fe8327c8803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aim: {fileID: 0}
   health: {fileID: 1692447060130313576}
-  move: {fileID: 1692447060130313568}
   jump: {fileID: 2260591736451806352}
+  move: {fileID: 1692447060130313568}
   roll: {fileID: 3027364636945540658}
+  wallJump: {fileID: 0}
 --- !u!114 &1692447060130313576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +351,7 @@ MonoBehaviour:
   maxLife: 5
   animator: {fileID: 1692447060130313580}
   gotHitScreen: {fileID: 0}
+  Healthsfx: {fileID: 0}
 --- !u!114 &1692447060130313568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,17 +389,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 5
+  MAXJUMPS: 1
+  TOTALJUMPTIME: 0.35
+  checkRadius: 0
   isJumping: 0
+  jumpCounter: 2
   ceilingCheck: {fileID: 1692447059042925443}
   groundCheck: {fileID: 1692447059535158970}
   groundObjects:
     serializedVersion: 2
     m_Bits: 1280
-  checkRadius: 0
-  MAXJUMPS: 1
-  jumpCounter: 2
-  isGrounded: 0
-  TOTALJUMPTIME: 0.35
   animator: {fileID: 1692447060130313580}
   rb: {fileID: 1692447060130313571}
   gust: {fileID: 324482223384386651}
@@ -420,7 +422,7 @@ MonoBehaviour:
   canSwitchWeapon: 1
   cooldownDuration: 1
   magicCooldownDuration: 5
-  currentProjectile: 0
+  currentProjectileType: 0
 --- !u!114 &1100624387624777976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfe2508fd283a445b92300fa6a9c0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRoll: 0
   rollingSpd: 2
   rollingTime: 1
   rollingCooldown: 1
@@ -483,12 +484,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   dust: {fileID: 3143885809125637161}
-  dustLeft: {fileID: 4117314522200743250}
-  WallGust: {fileID: 5844507503025573543}
-  WallGustLeft: {fileID: 6244486410701672405}
   isSliding: 0
   isWallJumping: 0
-  Jumpsfx: {fileID: 2157559347832148032}
   wallCheckRight: {fileID: 3391506209929081828}
   wallCheckLeft: {fileID: 8575990271890074561}
 --- !u!82 &2157559347832148032
