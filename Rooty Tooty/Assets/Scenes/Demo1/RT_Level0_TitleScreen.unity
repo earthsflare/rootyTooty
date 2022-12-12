@@ -1394,6 +1394,14 @@ PrefabInstance:
       propertyPath: usingPlayFab
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4314995096652772725, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: cameraManager
+      value: 
+      objectReference: {fileID: 582994395}
+    - target: {fileID: 4314995096652772725, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: healthUICanvas
+      value: 
+      objectReference: {fileID: 1209154153}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
 --- !u!1 &309911412
@@ -3004,6 +3012,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570728202}
   m_CullTransparentMesh: 1
+--- !u!1 &582994395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8730992083534427901, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+  m_PrefabInstance: {fileID: 282889829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &588063446
 GameObject:
   m_ObjectHideFlags: 0
@@ -8385,6 +8398,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175581593}
   m_CullTransparentMesh: 1
+--- !u!223 &1209154153 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4314995097845182814, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+  m_PrefabInstance: {fileID: 282889829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1244223056
 GameObject:
   m_ObjectHideFlags: 0
