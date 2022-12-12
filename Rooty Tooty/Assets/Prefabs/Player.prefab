@@ -392,6 +392,7 @@ MonoBehaviour:
   checkRadius: 0.05
   isJumping: 0
   jumpCounter: 2
+  isGrounded: 0
   ceilingCheck: {fileID: 851081711016456886}
   groundCheck: {fileID: 851081711488898959}
   groundObjects:
@@ -457,9 +458,13 @@ MonoBehaviour:
   WallLayer:
     serializedVersion: 2
     m_Bits: 0
-  dust: {fileID: 1304937168041777980}
+  dust: {fileID: 2078197861764420656}
+  dustLeft: {fileID: 1304937168041777980}
+  WallGust: {fileID: 5196723409909556269}
+  WallGustLeft: {fileID: 294941723661072649}
   isSliding: 0
   isWallJumping: 0
+  Jumpsfx: {fileID: 1594748309137063850}
   wallCheckRight: {fileID: 2960496788149672362}
   wallCheckLeft: {fileID: 2313355371638668488}
 --- !u!82 &1594748309137063850

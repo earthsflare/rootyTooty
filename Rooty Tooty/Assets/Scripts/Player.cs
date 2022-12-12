@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     public static Player instance { get; private set; }
     [SerializeField] private PlayerAim aim;
     [SerializeField] private PlayerHealth health;
-    [SerializeField] private PlayerJump jump;
-    [SerializeField] private PlayerMovement move;
+    [SerializeField] public PlayerJump jump;
+    [SerializeField] public PlayerMovement move;
     [SerializeField] private PlayerRoll roll;
     [SerializeField] private PlayerWallJump wallJump;
 
