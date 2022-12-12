@@ -12,6 +12,9 @@ public class PlayerWallJump : MonoBehaviour
     [SerializeField] private LayerMask WallLayer;
 
     public ParticleSystem dust;
+    public ParticleSystem dustLeft;
+    public ParticleSystem WallGust;
+    public ParticleSystem WallGustLeft;
 
     private bool collideLeftWall = false;
     private bool collideRightWall = false;
@@ -19,9 +22,11 @@ public class PlayerWallJump : MonoBehaviour
     private bool collideWall { get => (collideLeftWall || collideRightWall); }
     private void StopCollideWall() { collideLeftWall = false; collideRightWall = false; }
 
-    public bool isSliding;
-
+    [HideInInspector] public bool isSliding;
     [HideInInspector] public bool isWallJumping;
+
+    [SerializeField] private AudioSource Jumpsfx;
+
 
     [Header("References")]
     [SerializeField] private Transform wallCheckRight;
@@ -43,9 +48,11 @@ public class PlayerWallJump : MonoBehaviour
         collideRightWall = Physics2D.OverlapCircle(wallCheckRight.position, checkRadius, WallLayer);
         collideLeftWall = Physics2D.OverlapCircle(wallCheckLeft.position, checkRadius, WallLayer);
 
-        if (collideWall && !Player.instance.Jump.IsGrounded /*&& Movement.movement.x != 0*/)
+        if (collideWall && !Player.instance.jump.isGrounded /*&& Movement.movement.x != 0*/)
         {
             isSliding = true;
+            Jump.jumpCounter = 0;
+            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
         }
         else
         {
@@ -65,7 +72,7 @@ public class PlayerWallJump : MonoBehaviour
             if (collideRightWall)
             {
                 wallJumpDirection = -1;
-                
+
             }
             else
             {
@@ -75,7 +82,7 @@ public class PlayerWallJump : MonoBehaviour
             isWallJumping = true;
             Invoke("SetWallJumping", wallJumpTime);
         }
-        else if(!isWallJumping)
+        else if (!isWallJumping)
             wallJumpDirection = 0;
 
     }
@@ -84,35 +91,52 @@ public class PlayerWallJump : MonoBehaviour
     {
         if (isSliding)
         {
-            Jump.SetJumpCounter(0);
-            Jump.JumpAnimator.SetInteger("JumpCount", Jump.JumpCounter);
-
-            dust.Play();
-            Player.instance.Move.rb.velocity = new Vector2(Player.instance.Move.rb.velocity.x, Mathf.Clamp(Player.instance.Move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+            if (collideRightWall)
+            {
+                dust.Play();
+            }
+            else
+            {
+                dustLeft.Play();
+            }
+            Player.instance.move.rb.velocity = new Vector2(Player.instance.move.rb.velocity.x, Mathf.Clamp(Player.instance.move.rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if (isWallJumping && Jump.JumpCounter < 1)
+        if (isWallJumping && Jump.jumpCounter < 1)
         {
             StopCollideWall();
             isSliding = false;
             dust.Stop();
-            Player.instance.Move.canMove = false;
-            Player.instance.Move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
+            dustLeft.Stop();
 
-            Jump.AddJumpCounter(1);
-            Jump.JumpAnimator.SetInteger("JumpCount", Jump.JumpCounter);
+            if (wallJumpDirection < 0)
+            {
+                WallGust.Play();
+
+            }
+            else
+            {
+                WallGustLeft.Play();
+            }
+
+            Player.instance.move.canMove = false;
+            Jumpsfx.Play();
+            Player.instance.move.rb.velocity = new Vector2(wallJumpForcex * wallJumpDirection, wallJumpForcey);
+
+            Jump.jumpCounter++;
+            Jump.animator.SetInteger("JumpCount", Jump.jumpCounter);
         }
-        if (isWallJumping && Jump.JumpCounter > 1)
+        /*if (isWallJumping && Jump.jumpCounter > 1)
         {
-            Player.instance.Move.canMove = true;
-        }
+            Player.instance.move.canMove = true;
+        }*/
 
     }
 
     void SetWallJumping()
     {
         isWallJumping = false;
-        Player.instance.Move.canMove = true;
+        Player.instance.move.canMove = true;
     }
 
 

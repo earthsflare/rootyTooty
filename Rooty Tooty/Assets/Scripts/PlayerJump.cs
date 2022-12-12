@@ -20,8 +20,8 @@ public class PlayerJump : MonoBehaviour
 
     [Header("Debug: Read Only")]
     [SerializeField] private bool isJumping = false;
-    [SerializeField] private int jumpCounter;                    //Current amount of jumps
-    private bool isGrounded;
+    [SerializeField] public int jumpCounter;                    //Current amount of jumps
+    public bool isGrounded;
     private float jumpTimeCounter;
     private bool jumpHold; //True when player is holding the jump button
 
@@ -39,7 +39,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] private Transform groundCheck;               //make sure the character doesn't fall through the ground
     [SerializeField] private LayerMask groundObjects;             //layer to assign the platforms and ground to ground so that we can check when the player is landed.
     [Space(10)]
-    [SerializeField] private Animator animator;                   //Link the animator to this script so that it will change with the correct input
+    [SerializeField] public Animator animator;                   //Link the animator to this script so that it will change with the correct input
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private ParticleSystem gust;                 //gust of wind
     [SerializeField] private ParticleSystem gust2;
