@@ -15,6 +15,8 @@ public enum LevelIndex
     Level6 = 6,
     Level7 = 7,
     Level8 = 8,
+    Level9 = 9,
+    Level10 = 10,
 }
 
 //Controls player level transition, fading animation, and StartUp functions for Persistant scripts

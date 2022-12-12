@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7351414817758981050}
   - component: {fileID: 8105637832438049716}
   m_Layer: 0
-  m_Name: PickUpJump
+  m_Name: PickUpDoubleJump
   m_TagString: PickUpJump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
