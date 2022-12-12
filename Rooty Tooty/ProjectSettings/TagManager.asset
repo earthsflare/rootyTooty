@@ -63,6 +63,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Decorations
+    uniqueID: 3858723841
+    locked: 0
   - name: Platforms
     uniqueID: 1703418447
     locked: 0
