@@ -23,7 +23,7 @@ public class gotHurtUI : MonoBehaviour
     {
         if(gotHurtScreen == null)
         {
-            Debug.Log("Hurt Screen Doesn't Exist");
+            //Debug.Log("Hurt Screen Doesn't Exist");
             return;
         }
 

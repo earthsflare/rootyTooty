@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 3241425054333609180}
   - component: {fileID: 6741776238066335690}
   - component: {fileID: 1183076977315148500}
-  - component: {fileID: 7010670158793559561}
   m_Layer: 6
   m_Name: Ogre
   m_TagString: Enemy
@@ -199,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  time: 0.2
+  time: 1
   canKnock: 1
   knockBackTime: 3
   knockbackCenter: {fileID: 0}
@@ -218,21 +217,8 @@ MonoBehaviour:
   life: 3
   maxLife: 3
   enemyAnimator: {fileID: 3241425054333609180}
-  deathTime: 1.5
-  itemToDrop: {fileID: 4981639773400110553, guid: 2b3c72374bf4d0b44873a046516752ac, type: 3}
-  EnemyHealthDrop: {fileID: 7010670158793559561}
---- !u!114 &7010670158793559561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3241425053727012868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e138d83aeae6b043a0331f069ab18d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  deathTime: 3
+  drop: {fileID: 0}
 --- !u!1 &3241425055316413669
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  time: 0.2
+  time: 1
   canKnock: 1
   knockBackTime: 3
   knockbackCenter: {fileID: 3241425054333609183}

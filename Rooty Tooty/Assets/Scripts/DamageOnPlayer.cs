@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageOnPlayer : MonoBehaviour
 {
     [SerializeField] protected int damage = 1;
-    protected static bool canTakeDamage = true;
+    protected static bool canHurtPlayer = true;
     [SerializeField] protected float time = 3;
     [SerializeField] protected bool canKnock = true;
     public int knockBackTime = 3;
@@ -19,68 +19,60 @@ public class DamageOnPlayer : MonoBehaviour
             knockbackCenter = transform;
     }
 
-    protected void Update()
+    protected void OnDisable()
+    {
+        if (timer != 0 && !canHurtPlayer)
+            canHurtPlayer = true;
+    }
+
+    protected void FixedUpdate()
     {
         if (timer <= 0)
             return;
-
-        timer -= Time.deltaTime;
-        if(timer <= 0)
+        timer -= Time.fixedDeltaTime;
+        if (timer <= 0)
         {
             timer = 0;
-            canTakeDamage = true;
+            canHurtPlayer = true;
 
-            Player.instance.move.canMove = true;
+            //Player.instance.Move.canMove = true;
         }
     }
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        if (canHurtPlayer && collision.gameObject.CompareTag("Player"))
         {
-            canTakeDamage = false;
-            timer += time;
-            Player.instance.health.TakeDamage(damage);
-            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
-            StartCoroutine(damageTimer(time));
+            AttackPlayer();
         }
     }
 
     protected virtual void OnCollisionStay2D(Collision2D collision)
     {
 
-        if (canTakeDamage && collision.gameObject.CompareTag("Player"))
+        if (canHurtPlayer && collision.gameObject.CompareTag("Player"))
         {
-            canTakeDamage = false;
-            timer += time;
-            Player.instance.health.TakeDamage(damage);
-            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
-            StartCoroutine(damageTimer(time));
+            AttackPlayer();
         }
     }
 
     // PlayerSingletonManager.instance.health
     protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
-        if (canTakeDamage && collider.gameObject.CompareTag("Player"))
+        if (canHurtPlayer && collider.gameObject.CompareTag("Player"))
         {
-
-            canTakeDamage = false;
-            timer += time;
-
-            Player.instance.health.TakeDamage(damage);
-            Player.instance.move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.move.rb, canKnock, knockBackTime);
-            StartCoroutine(damageTimer(time));
+            AttackPlayer();
         }
     }
 
-
-
-    private IEnumerator damageTimer(float t)
+    protected void AttackPlayer()
     {
-        yield return new WaitForSeconds(t);
-        canTakeDamage = true;
-        Player.instance.move.canMove = true;
+        Debug.Log("Attacking Player");
+        canHurtPlayer = false;
+        timer = time;
+        Player.instance.Health.TakeDamage(damage);
+        //Player.instance.Move.canMove = false;
+        //Player.instance.Move.knockBack(gameObject.transform.position, Player.instance.transform.position, Player.instance.Move.rb, canKnock, knockBackTime);
     }
 }

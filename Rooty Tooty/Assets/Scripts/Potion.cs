@@ -6,11 +6,10 @@ public class Potion : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player") && Player.instance.health.getHealth() < Player.instance.health.getMaxHealth() && Player.instance.health.isDead() == false)
+        if (collider.CompareTag("Player") && Player.instance.Health.getHealth() < Player.instance.Health.getMaxHealth() && Player.instance.Health.isDead() == false)
         {
-            Player.instance.health.AddLife(1);
-            //Destroy(gameObject);
-            gameObject.SetActive(false);
+            Player.instance.Health.AddLife(1);
+            Destroy(gameObject);
         }
     }
 }

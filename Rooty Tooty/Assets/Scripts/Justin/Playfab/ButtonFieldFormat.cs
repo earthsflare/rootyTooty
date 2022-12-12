@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ButtonFieldFormat : FieldFormat
 {
+    [Header("Button Field References")]
     [SerializeField] private RectTransform button;
     private RectTransform rectTransform;
-
+    [Header("Properties")]
     [SerializeField] private float buttonOffset = 1f;
     private void Awake()
     {

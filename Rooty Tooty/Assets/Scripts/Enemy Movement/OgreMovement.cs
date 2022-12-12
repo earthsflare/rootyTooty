@@ -174,7 +174,7 @@ public class OgreMovement : MonoBehaviour
     //Coroutine that is called when first entering aggro range. Turns the enemy sprite to face the player, waits, jumps, waits the same amount, then is ready to begin chasing.
     IEnumerator StartCharge()
     {
-        Debug.Log("Coroutine Called");
+        //Debug.Log("Coroutine Called");
         FaceTowardsPlayer();
         CheckSpriteDirection();
         enemyAnimator.SetBool("isMoving", false);
@@ -204,19 +204,19 @@ public class OgreMovement : MonoBehaviour
         //checks the triggers tag to ensure it is the aggro range
         if (collider.CompareTag("PlayerAggroRange"))
         {
-            Debug.Log("Entering Player Range");
+            //Debug.Log("Entering Player Range");
             inAggroRange = true;
             StartCoroutine(StartCharge());
         }
         else if (collider.CompareTag("MeleeAttackRange"))
         {
-            Debug.Log("Entering Melee Range");
+            //Debug.Log("Entering Melee Range");
             inMeleeRange = true;
         }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("OnCollisionEnter2D");
+        //Debug.Log("OnCollisionEnter2D");
         if (col.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
@@ -228,21 +228,21 @@ public class OgreMovement : MonoBehaviour
         //checks the triggers tag to ensure it is the aggro range
         if (collider.CompareTag("PlayerAggroRange"))
         {
-            Debug.Log("Exiting Player Range");
+            //Debug.Log("Exiting Player Range");
             inAggroRange = false;
             readyToChase = false;
             StopAllCoroutines();
         }
         else if (collider.CompareTag("MeleeAttackRange"))
         {
-            Debug.Log("Exiting Melee Range");
+            //Debug.Log("Exiting Melee Range");
             inMeleeRange = false;
             enemyAnimator.ResetTrigger("Attack");
         }
     }
     void OnCollisionExit2D(Collision2D col)
     {
-        Debug.Log("OnCollisionExit2D");
+        //Debug.Log("OnCollisionExit2D");
         if (col.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;

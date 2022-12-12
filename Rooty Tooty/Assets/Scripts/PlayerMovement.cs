@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool facingRight = true;            //Which direction the player sprite is facing
 
     public bool canRoll = false;
-    [HideInInspector] public bool canMove;
+    /*[HideInInspector]*/ public bool canMove;
     [HideInInspector] public bool isRolling;
 
     public float knockBackPower;
@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(spriteRenderer == null)
             spriteRenderer = GetComponent<SpriteRenderer>();
+
+        rb.velocity = Vector2.zero;
     }
 
     // Update is called once per frame

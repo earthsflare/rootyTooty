@@ -20,6 +20,9 @@ public class MenuManager : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
+    private EventSystem eventSystem = null;
+    private StandaloneInputModule standaloneInputModule = null;
+
     void Awake()
     {
         if (instance == null)
@@ -32,8 +35,22 @@ public class MenuManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (eventSystem == null)
+            eventSystem = GetComponent<EventSystem>();
+        if (standaloneInputModule == null)
+            standaloneInputModule = GetComponent<StandaloneInputModule>();
     }
-
+    private void Start()
+    {
+        //This is so there's only one Event System on the scene at a time
+        if(gameManagerScript.instance != null)
+        {
+            eventSystem.enabled = false;
+            Destroy(standaloneInputModule);
+        }
+        else
+            eventSystem.enabled = true;
+    }
     void Update()
     {
         if (GameIsOver == false)
@@ -41,7 +58,7 @@ public class MenuManager : MonoBehaviour
             goMenuUI.SetActive(false);
             if (gameManagerScript.GameIsFrozen == true)
             {
-                Debug.Log("GameIsFrozen");
+                //Debug.Log("GameIsFrozen");
             }
             else
             {
@@ -60,7 +77,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Works");
+            //Debug.Log("Works");
         }
     }
 
@@ -83,7 +100,8 @@ public class MenuManager : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        goMenuUI.SetActive(false);
+        SceneManager.LoadScene(levelManager.instance.TitleLevelIndex);
         Resume();
     }
 
@@ -100,12 +118,5 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 0f;
         GameIsOver = true;
         //  pointsText.text = score.ToString() + " POINTS";
-    }
-
-    public void ExitButton()
-    {
-        //before or after
-        goMenuUI.SetActive(false);
-        SceneManager.LoadScene("Menu");
     }
 }

@@ -12,6 +12,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera cmVC = null;
     [SerializeField] private CinemachineConfiner cmConfiner = null;
 
+    //Old parent transform of current boundingShape
+    private Transform oldParent = null;
+
     private void OnEnable()
     {
         if (instance == null)
@@ -21,16 +24,33 @@ public class CameraManager : MonoBehaviour
         }
         else if (instance != this)
             gameObject.SetActive(false);
+
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged += StartUp;
     }
     private void OnDisable()
     {
+        UnityEngine.SceneManagement.SceneManager.activeSceneChanged -= StartUp;
+
         if (instance != this)
             return;
 
         instance = null;
         //gameManagerScript.UndoDontDestroyOnLoad(gameObject);
     }
+    public void StartUp(UnityEngine.SceneManagement.Scene current, UnityEngine.SceneManagement.Scene next)
+    {
+        if (gameManagerScript.instance != null)
+            if (levelManager.instance.IsLevelTitle(next.buildIndex))
+                return;
 
+        while (Camera.main != mainCam)
+        {
+            Destroy(Camera.main.gameObject);
+        }
+
+        if (cmConfiner.m_BoundingShape2D != null)
+            Destroy(cmConfiner.m_BoundingShape2D);
+    }
 
     private void Awake()
     {
@@ -55,14 +75,22 @@ public class CameraManager : MonoBehaviour
     {
         if (Player.instance != null && cmVC != null)
             cmVC.Follow = Player.instance.transform;
-        if (CMBoundingShape.I != null && cmConfiner != null)
-            cmConfiner.m_BoundingShape2D = CMBoundingShape.BoundingCollider;
-
     }
-    private void Update()
+    public static void UpdateConfiner(PolygonCollider2D c)
     {
-        if(cmConfiner.m_BoundingShape2D == null)
-            if (CMBoundingShape.I != null && cmConfiner != null)
-                cmConfiner.m_BoundingShape2D = CMBoundingShape.BoundingCollider;
+        if (instance.cmConfiner == null)
+            return;
+
+        //Put back old bounding box
+        if(instance.cmConfiner.m_BoundingShape2D != null)
+        {
+            instance.cmConfiner.m_BoundingShape2D.transform.parent = instance.oldParent;
+        }
+
+        instance.oldParent = c.transform.parent;
+
+        c.transform.parent = instance.transform;
+
+        instance.cmConfiner.m_BoundingShape2D = c;
     }
 }

@@ -4,32 +4,33 @@ using UnityEngine;
 
 public class CMBoundingShape : MonoBehaviour
 {
-    [SerializeField] private static CMBoundingShape instance = null;
-    public static CMBoundingShape I { get => instance; }
 
-    [SerializeField] private PolygonCollider2D boundingCollider = null;
-    public static PolygonCollider2D BoundingCollider { 
-        get
-        {
-            if (instance == null)
-                return null;
-            return instance.boundingCollider;
-        } 
-    }
+    [Header("Object References")]
+    //Bounds
+    [SerializeField] private PolygonCollider2D cameraBounds = null;
+    [SerializeField] private SpriteRenderer camBoundVisualAid = null;
+    [SerializeField] private CMPlayerFinder playerFinder = null;
 
-    private void OnEnable()
+    public bool CameraBoundActive() 
     {
-        if (boundingCollider == null)
-            boundingCollider = GetComponent<PolygonCollider2D>();
-
-        if (instance == null && boundingCollider != null)
-            instance = this;
-        else if (instance != this)
-            gameObject.SetActive(false);
+        if (cameraBounds == null)
+            return false;
+        return cameraBounds.gameObject.activeInHierarchy; 
     }
-    private void OnDisable()
+    private void Start()
     {
-        if (instance == this)
-            instance = null;
+        playerFinder.gameObject.SetActive(true);
+        if(camBoundVisualAid != null)
+            camBoundVisualAid.enabled = false;
+    }
+    public void FoundPlayer()
+    {
+        //Ignore call if camerabounds is already enabled
+        if (cameraBounds.gameObject.activeInHierarchy)
+            return;
+
+        cameraBounds.gameObject.SetActive(true);
+
+        CameraManager.UpdateConfiner(cameraBounds);
     }
 }

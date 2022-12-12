@@ -16,6 +16,7 @@ TagManager:
   - PickUpRoll
   - RangedAttackRange
   - Wall
+  - Background Decorations
   layers:
   - Default
   - TransparentFX
@@ -27,10 +28,10 @@ TagManager:
   - Potion
   - Ground
   - RollBlock
+  - Background Decorations
   - Wall
-  - 
-  - 
-  - 
+  - CM_CameraBounds
+  - CameraPlayerFinder
   - Player
   - PlayerHurt
   - 
@@ -50,11 +51,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background Decorations
+    uniqueID: 4106772047
+    locked: 0
   - name: Background
     uniqueID: 2718625145
     locked: 0
+  - name: CameraVisuals
+    uniqueID: 483519945
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Decorations
+    uniqueID: 3858723841
+    locked: 0
+  - name: Platforms
+    uniqueID: 1703418447
     locked: 0
   - name: Projectile
     uniqueID: 6873123
