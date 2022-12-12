@@ -78,6 +78,7 @@ public class PlayerAim : MonoBehaviour
 
     public void upgradeWeapon()
     {
+        fireballEnabled = true;
         currentProjectileType += 1;
     }
 
