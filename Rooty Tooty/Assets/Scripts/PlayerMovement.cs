@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Stepsfx.Play();
-        rb.velocity = new Vector2(movement.x, rb.velocity.y);
+        rb.velocity = new Vector2(movement.x, Mathf.Clamp(rb.velocity.y, -19.62f, 19.62f));
 
 
         if (movement.x > 0 && !facingRight)

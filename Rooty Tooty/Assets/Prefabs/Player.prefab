@@ -374,6 +374,7 @@ MonoBehaviour:
   movement: {x: 0, y: 0}
   spriteRenderer: {fileID: 851081712101719128}
   Stepsfx: {fileID: 1594748309137063850}
+  canSprint: 0
 --- !u!114 &282704065387527589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,8 +435,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfe2508fd283a445b92300fa6a9c0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollingSpd: 2
-  rollingTime: 1
+  rollingSpd: 4
+  rollingTime: 0.1
   rollingCooldown: 1
   Rollsfx: {fileID: 1594748309137063850}
 --- !u!114 &4395971370690804048

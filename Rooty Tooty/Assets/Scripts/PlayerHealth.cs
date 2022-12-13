@@ -67,7 +67,8 @@ public class PlayerHealth : MonoBehaviour
             currentLife -= d;
             HealthDisplay.instance.drawHeart(currentLife, maxLife);
             gotHurtUI.instance.gotHurt(); // apply the gothitscreen
-            Healthsfx.Play();
+            if(Healthsfx != null)  
+                Healthsfx.Play();
             if (currentLife < 1)
             {
                 dead = true;

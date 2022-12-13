@@ -1334,6 +1334,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4314995096245936519, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4314995096652772720, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1402,6 +1406,18 @@ PrefabInstance:
       propertyPath: healthUICanvas
       value: 
       objectReference: {fileID: 1209154153}
+    - target: {fileID: 4314995096822135481, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314995096822135483, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314995096822135483, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6fff9a7e50aca948a797a2ec50ddcb7, type: 3}
 --- !u!1 &309911412
@@ -12375,6 +12391,14 @@ PrefabInstance:
     - target: {fileID: 4395971370690804048, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
       propertyPath: WallLayer.m_Bits
       value: 2304
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269461705763231427, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
+      propertyPath: rollingSpd
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269461705763231427, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
+      propertyPath: rollingTime
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61db12da58136a046affa287aefa2cf5, type: 3}

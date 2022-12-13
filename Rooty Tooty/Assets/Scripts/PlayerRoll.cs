@@ -6,7 +6,7 @@ public class PlayerRoll : MonoBehaviour
 {
 
     //Player Roll Variables
-    private bool canRoll;
+    private bool canRoll = true;
     [SerializeField] private float rollingSpd = 2f;
     [SerializeField] private float rollingTime = 1f;
     [SerializeField] private float rollingCooldown = 1f;
