@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthDrop : MonoBehaviour
 {
-    static int counter = 0;
+    static int counter = 9;
     const int check = 7;
     const int reset = 10;
 
