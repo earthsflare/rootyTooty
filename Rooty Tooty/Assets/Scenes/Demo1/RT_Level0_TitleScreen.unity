@@ -12372,6 +12372,10 @@ PrefabInstance:
       propertyPath: wallJump
       value: 
       objectReference: {fileID: 75124518}
+    - target: {fileID: 4395971370690804048, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
+      propertyPath: WallLayer.m_Bits
+      value: 2304
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61db12da58136a046affa287aefa2cf5, type: 3}
 --- !u!1 &1684111464

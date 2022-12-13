@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private AudioSource Stepsfx;
 
+    //Sprinting is used for debugging only
+    [SerializeField] private bool canSprint = false;
+
     void Start()
     {
         if(spriteRenderer == null)
@@ -57,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal") * characterSpeed;
 
         //If user presses Shift the character will sprint this is for testing purposes
-        if (Input.GetButton("Sprint"))
+        if (Input.GetButton("Sprint") && canSprint)
         {
             characterSpeed = regSpeed * 2;
         }

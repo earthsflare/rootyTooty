@@ -451,13 +451,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallSlidingSpeed: 2
-  wallJumpForcex: 1
-  wallJumpForcey: 1
+  wallJumpForcex: 6
+  wallJumpForcey: 10
   wallJumpTime: 0.2
   checkRadius: 0.2
   WallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2304
   dust: {fileID: 2078197861764420656}
   dustLeft: {fileID: 1304937168041777980}
   WallGust: {fileID: 5196723409909556269}

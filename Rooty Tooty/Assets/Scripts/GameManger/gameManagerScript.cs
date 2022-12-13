@@ -135,7 +135,7 @@ public class gameManagerScript : MonoBehaviour
             if (Player.instance != null)
             {
                 Player.instance.Health.SetLife(5);
-                Player.instance.ToggleRoll(false);
+                Player.instance.ToggleRoll(true);
                 Player.instance.ToggleWallJump(false);
                 Player.instance.Jump.SetMaxJumps(1);
                 Player.instance.Aim.ToggleFireball(false);
